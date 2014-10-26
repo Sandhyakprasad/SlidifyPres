@@ -40,15 +40,7 @@ slidifyUI(
 ```
 
 ---
-## NVD3 Plot Inline
 
-```{r nvd3plot, results = 'asis', comment = NA, message = F, echo = F}
-require(rCharts)
-n1 <- nPlot(mpg ~ wt, data = mtcars, type = 'scatterChart')
-n1$show('inline')
-```
-
----
 ## Design Of The App
 
 1. Designed using R **Shiny** Application.
