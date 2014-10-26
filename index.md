@@ -1,0 +1,71 @@
+---
+title       : Stock Trend App
+subtitle    : ShinyApp
+author      : Sandhya K Prasad
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [bootstrap, quiz, shiny, interactive]     # {mathjax, quiz, bootstrap,shiny,interactive}
+ext_widgets: {rCharts: [libraries/nvd3]}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Stock Trend App Key Features
+
+1. Easy and Intuitive User InterFace.
+2. Fetches the stock quote over a date range .
+3. Displays the stock price Trend using a Plot.
+4. Calculates and displays the stock percent change for the provided date range.
+5. Displays the retrieved information of the stock as a table. 
+
+---
+
+## App in Action
+
+<div class="row-fluid">
+  <div class="span4">
+    <form class="well">
+      <label class="control-label" for="symbol">Choose Symbol</label>
+      <select id="symbol"><option value="AAPL" selected>AAPL</option>
+<option value="GOOG">GOOG</option>
+<option value="FB">FB</option>
+<option value="VZ">VZ</option>
+<option value="TSLA">TSLA</option>
+<option value="TWTR">TWTR</option></select>
+      <script type="application/json" data-for="symbol" data-nonempty="">{}</script>
+    </form>
+  </div>
+  <div class="span8">
+    <div id="plot" class="shiny-html-output nvd3 rChart"></div>
+    <h3 align="center">
+      <div id="percentChange" class="shiny-text-output"></div>
+    </h3>
+  </div>
+</div>
+
+---
+
+## Design Of The App
+
+1. Designed using R **Shiny** Application.
+2. Stock Quote Data retrieval is powered by the **Quantmod** R package .
+3. Data source is obtained from **Yahoo Finance** Data .
+4. Application is served by the **shinyapps.io** server.
+5. These slides are generated using **slidify** and **rCharts** packages.
+
+---
+
+## Quick Links
+
+1. [Stock Price Trend App](https://sandykp.shinyapps.io/StockTrendApp/)
+
+2. [Documentation](https://sandykp.shinyapps.io/StockTrendApp/stockTrendShinyApp.html)
+
+3. [Github Code Repository](https://github.com/Sandhyakprasad/DevelopingDataProducts.git)
+
+
+
+
+
