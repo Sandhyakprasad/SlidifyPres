@@ -1,5 +1,7 @@
 library(rCharts)
 library(quantmod)
+library(shiny)
+library(devtools)
 output$plot <- renderChart({
 #         haireye = as.data.frame(HairEyeColor)
 #         n1 <- nPlot(Freq ~ Hair, group = 'Eye', type = 'multiBarChart',
