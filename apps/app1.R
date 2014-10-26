@@ -2,13 +2,9 @@ library(rCharts)
 library(quantmod)
 library(shiny)
 library(devtools)
+library(slidify)
+library(slidifyLibraries)
 output$plot <- renderChart({
-#         haireye = as.data.frame(HairEyeColor)
-#         n1 <- nPlot(Freq ~ Hair, group = 'Eye', type = 'multiBarChart',
-#                     data = subset(haireye, Sex == 'Male')
-#         )
-#         n1$set(dom = 'plot', width = 600)
-#         n1
         
         stockDf <- getSymbols(input$symbol,src="yahoo", auto.assign = FALSE)
         quoteDf  <- data.frame(stockDf)
