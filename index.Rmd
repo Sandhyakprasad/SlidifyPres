@@ -24,19 +24,32 @@ knit        : slidify::knit2slides
 
 ## App in Action
 
-```{r opts.label='shiny'}
-slidifyUI(
-        sidebarPanel(
-                selectInput('symbol','Choose Symbol',c("AAPL","GOOG","FB","VZ","TSLA","TWTR"))
-                
-         ),
-        mainPanel(
-                tags$div(id='plot',class='shiny-html-output nvd3 rChart'),
-                h3(textOutput("percentChange"),align="center")
-                
-        )
+```{r echo=FALSE,results='asis',opts.label='shiny'}
+require(rCharts)
+
+stockDf <- getSymbols("AAPL",src="yahoo", auto.assign = FALSE)
+        quoteDf  <- data.frame(stockDf)
+        quoteDf$date  <- as.Date(rownames(quoteDf))
+        colnames(quoteDf)[4]  <- 'price'
         
-)
+        n <- nrow(quoteDf)
+        percent  <- round((((quoteDf[n,4]-quoteDf[1,4])/quoteDf[1,4])*100),2)
+        label <- "The percent change in stock value for the shown date range is :"
+        #output$percentChange <- renderText(paste(label,percent,"%")) 
+        
+        n1 <- nPlot(price ~ date, type = 'lineChart',
+                    data = quoteDf
+        )
+        n1$xAxis(
+                tickFormat =   "#!
+                function(d) {return d3.time.format('%m-%d-%y')(new Date(d*1000*3600*24));}
+                !#"
+                #rotateLabels = -90
+        )       
+        #n1$set(dom = 'plot', width = 600)
+        n1$print('chart1')
+                
+
 ```
 
 ---

@@ -24,462 +24,17734 @@ knit        : slidify::knit2slides
 
 ## App in Action
 
-<div class="row-fluid">
-  <div class="span4">
-    <form class="well">
-      <label class="control-label" for="symbol">Choose Symbol</label>
-      <select id="symbol"><option value="AAPL" selected>AAPL</option>
-<option value="GOOG">GOOG</option>
-<option value="FB">FB</option>
-<option value="VZ">VZ</option>
-<option value="TSLA">TSLA</option>
-<option value="TWTR">TWTR</option></select>
-      <script type="application/json" data-for="symbol" data-nonempty="">{}</script>
-    </form>
-  </div>
-  <div class="span8">
-    <div id="plot" class="shiny-html-output nvd3 rChart"></div>
-    <h3 align="center">
-      <div id="percentChange" class="shiny-text-output"></div>
-    </h3>
-  </div>
-</div>
 
----
-## NVD3 Plot Inline
-
-
-<div id = 'chart15922b00d08f' class = 'rChart nvd3'></div>
+<div id = 'chart1' class = 'rChart nvd3'></div>
 <script type='text/javascript'>
  $(document).ready(function(){
-      drawchart15922b00d08f()
+      drawchart1()
     });
-    function drawchart15922b00d08f(){  
+    function drawchart1(){  
       var opts = {
- "dom": "chart15922b00d08f",
+ "dom": "chart1",
 "width":    800,
 "height":    400,
-"x": "wt",
-"y": "mpg",
-"type": "scatterChart",
-"id": "chart15922b00d08f" 
+"x": "date",
+"y": "price",
+"type": "lineChart",
+"id": "chart1" 
 },
         data = [
  {
- "mpg":             21,
-"cyl":              6,
-"disp":            160,
-"hp":            110,
-"drat":            3.9,
-"wt":           2.62,
-"qsec":          16.46,
-"vs":              0,
-"am":              1,
-"gear":              4,
-"carb":              4 
+ "AAPL.Open":          86.29,
+"AAPL.High":          86.58,
+"AAPL.Low":           81.9,
+"price":           83.8,
+"AAPL.Volume":      309579900,
+"AAPL.Adjusted":          11.39,
+"date":          13516 
 },
 {
- "mpg":             21,
-"cyl":              6,
-"disp":            160,
-"hp":            110,
-"drat":            3.9,
-"wt":          2.875,
-"qsec":          17.02,
-"vs":              0,
-"am":              1,
-"gear":              4,
-"carb":              4 
+ "AAPL.Open":          84.05,
+"AAPL.High":          85.95,
+"AAPL.Low":          83.82,
+"price":          85.66,
+"AAPL.Volume":      211815100,
+"AAPL.Adjusted":          11.64,
+"date":          13517 
 },
 {
- "mpg":           22.8,
-"cyl":              4,
-"disp":            108,
-"hp":             93,
-"drat":           3.85,
-"wt":           2.32,
-"qsec":          18.61,
-"vs":              1,
-"am":              1,
-"gear":              4,
-"carb":              1 
+ "AAPL.Open":          85.77,
+"AAPL.High":           86.2,
+"AAPL.Low":           84.4,
+"price":          85.05,
+"AAPL.Volume":      208685400,
+"AAPL.Adjusted":          11.56,
+"date":          13518 
 },
 {
- "mpg":           21.4,
-"cyl":              6,
-"disp":            258,
-"hp":            110,
-"drat":           3.08,
-"wt":          3.215,
-"qsec":          19.44,
-"vs":              1,
-"am":              0,
-"gear":              3,
-"carb":              1 
+ "AAPL.Open":          85.96,
+"AAPL.High":          86.53,
+"AAPL.Low":          85.28,
+"price":          85.47,
+"AAPL.Volume":      199276700,
+"AAPL.Adjusted":          11.61,
+"date":          13521 
 },
 {
- "mpg":           18.7,
-"cyl":              8,
-"disp":            360,
-"hp":            175,
-"drat":           3.15,
-"wt":           3.44,
-"qsec":          17.02,
-"vs":              0,
-"am":              0,
-"gear":              3,
-"carb":              2 
+ "AAPL.Open":          86.45,
+"AAPL.High":          92.98,
+"AAPL.Low":          85.15,
+"price":          92.57,
+"AAPL.Volume":      837324600,
+"AAPL.Adjusted":          12.58,
+"date":          13522 
 },
 {
- "mpg":           18.1,
-"cyl":              6,
-"disp":            225,
-"hp":            105,
-"drat":           2.76,
-"wt":           3.46,
-"qsec":          20.22,
-"vs":              1,
-"am":              0,
-"gear":              3,
-"carb":              1 
+ "AAPL.Open":          94.75,
+"AAPL.High":           97.8,
+"AAPL.Low":          93.45,
+"price":             97,
+"AAPL.Volume":      738220000,
+"AAPL.Adjusted":          13.18,
+"date":          13523 
 },
 {
- "mpg":           14.3,
-"cyl":              8,
-"disp":            360,
-"hp":            245,
-"drat":           3.21,
-"wt":           3.57,
-"qsec":          15.84,
-"vs":              0,
-"am":              0,
-"gear":              3,
-"carb":              4 
+ "AAPL.Open":          95.94,
+"AAPL.High":          96.78,
+"AAPL.Low":           95.1,
+"price":           95.8,
+"AAPL.Volume":      360063200,
+"AAPL.Adjusted":          13.02,
+"date":          13524 
 },
 {
- "mpg":           24.4,
-"cyl":              4,
-"disp":          146.7,
-"hp":             62,
-"drat":           3.69,
-"wt":           3.19,
-"qsec":             20,
-"vs":              1,
-"am":              0,
-"gear":              4,
-"carb":              2 
+ "AAPL.Open":          94.59,
+"AAPL.High":          95.06,
+"AAPL.Low":          93.23,
+"price":          94.62,
+"AAPL.Volume":      328172600,
+"AAPL.Adjusted":          12.86,
+"date":          13525 
 },
 {
- "mpg":           22.8,
-"cyl":              4,
-"disp":          140.8,
-"hp":             95,
-"drat":           3.92,
-"wt":           3.15,
-"qsec":           22.9,
-"vs":              1,
-"am":              0,
-"gear":              4,
-"carb":              2 
+ "AAPL.Open":          95.68,
+"AAPL.High":          97.25,
+"AAPL.Low":          95.45,
+"price":           97.1,
+"AAPL.Volume":      311019100,
+"AAPL.Adjusted":          13.19,
+"date":          13529 
 },
 {
- "mpg":           19.2,
-"cyl":              6,
-"disp":          167.6,
-"hp":            123,
-"drat":           3.92,
-"wt":           3.44,
-"qsec":           18.3,
-"vs":              1,
-"am":              0,
-"gear":              4,
-"carb":              4 
+ "AAPL.Open":          97.56,
+"AAPL.High":           97.6,
+"AAPL.Low":          94.82,
+"price":          94.95,
+"AAPL.Volume":      411565000,
+"AAPL.Adjusted":           12.9,
+"date":          13530 
 },
 {
- "mpg":           17.8,
-"cyl":              6,
-"disp":          167.6,
-"hp":            123,
-"drat":           3.92,
-"wt":           3.44,
-"qsec":           18.9,
-"vs":              1,
-"am":              0,
-"gear":              4,
-"carb":              4 
+ "AAPL.Open":           92.1,
+"AAPL.High":          92.11,
+"AAPL.Low":          89.05,
+"price":          89.07,
+"AAPL.Volume":      591151400,
+"AAPL.Adjusted":           12.1,
+"date":          13531 
 },
 {
- "mpg":           16.4,
-"cyl":              8,
-"disp":          275.8,
-"hp":            180,
-"drat":           3.07,
-"wt":           4.07,
-"qsec":           17.4,
-"vs":              0,
-"am":              0,
-"gear":              3,
-"carb":              3 
+ "AAPL.Open":          88.63,
+"AAPL.High":          89.65,
+"AAPL.Low":          88.12,
+"price":           88.5,
+"AAPL.Volume":      341118400,
+"AAPL.Adjusted":          12.02,
+"date":          13532 
 },
 {
- "mpg":           17.3,
-"cyl":              8,
-"disp":          275.8,
-"hp":            180,
-"drat":           3.07,
-"wt":           3.73,
-"qsec":           17.6,
-"vs":              0,
-"am":              0,
-"gear":              3,
-"carb":              3 
+ "AAPL.Open":          89.14,
+"AAPL.High":          89.16,
+"AAPL.Low":          85.65,
+"price":          86.79,
+"AAPL.Volume":      363506500,
+"AAPL.Adjusted":          11.79,
+"date":          13535 
 },
 {
- "mpg":           15.2,
-"cyl":              8,
-"disp":          275.8,
-"hp":            180,
-"drat":           3.07,
-"wt":           3.78,
-"qsec":             18,
-"vs":              0,
-"am":              0,
-"gear":              3,
-"carb":              3 
+ "AAPL.Open":          85.73,
+"AAPL.High":          87.51,
+"AAPL.Low":          85.51,
+"price":           85.7,
+"AAPL.Volume":      301856100,
+"AAPL.Adjusted":          11.64,
+"date":          13536 
 },
 {
- "mpg":           10.4,
-"cyl":              8,
-"disp":            472,
-"hp":            205,
-"drat":           2.93,
-"wt":           5.25,
-"qsec":          17.98,
-"vs":              0,
-"am":              0,
-"gear":              3,
-"carb":              4 
+ "AAPL.Open":          86.68,
+"AAPL.High":          87.15,
+"AAPL.Low":          86.08,
+"price":           86.7,
+"AAPL.Volume":      231953400,
+"AAPL.Adjusted":          11.78,
+"date":          13537 
 },
 {
- "mpg":           10.4,
-"cyl":              8,
-"disp":            460,
-"hp":            215,
-"drat":              3,
-"wt":          5.424,
-"qsec":          17.82,
-"vs":              0,
-"am":              0,
-"gear":              3,
-"carb":              4 
+ "AAPL.Open":          87.11,
+"AAPL.High":           88.5,
+"AAPL.Low":          86.03,
+"price":          86.25,
+"AAPL.Volume":      226493400,
+"AAPL.Adjusted":          11.72,
+"date":          13538 
 },
 {
- "mpg":           14.7,
-"cyl":              8,
-"disp":            440,
-"hp":            230,
-"drat":           3.23,
-"wt":          5.345,
-"qsec":          17.42,
-"vs":              0,
-"am":              0,
-"gear":              3,
-"carb":              4 
+ "AAPL.Open":          87.11,
+"AAPL.High":          87.37,
+"AAPL.Low":          84.99,
+"price":          85.38,
+"AAPL.Volume":      246718500,
+"AAPL.Adjusted":           11.6,
+"date":          13539 
 },
 {
- "mpg":           32.4,
-"cyl":              4,
-"disp":           78.7,
-"hp":             66,
-"drat":           4.08,
-"wt":            2.2,
-"qsec":          19.47,
-"vs":              1,
-"am":              1,
-"gear":              4,
-"carb":              1 
+ "AAPL.Open":           86.3,
+"AAPL.High":          86.65,
+"AAPL.Low":          85.53,
+"price":          85.94,
+"AAPL.Volume":      225416100,
+"AAPL.Adjusted":          11.68,
+"date":          13542 
 },
 {
- "mpg":           30.4,
-"cyl":              4,
-"disp":           75.7,
-"hp":             52,
-"drat":           4.93,
-"wt":          1.615,
-"qsec":          18.52,
-"vs":              1,
-"am":              1,
-"gear":              4,
-"carb":              2 
+ "AAPL.Open":          86.43,
+"AAPL.High":          86.49,
+"AAPL.Low":          85.25,
+"price":          85.55,
+"AAPL.Volume":      144492600,
+"AAPL.Adjusted":          11.62,
+"date":          13543 
 },
 {
- "mpg":           33.9,
-"cyl":              4,
-"disp":           71.1,
-"hp":             65,
-"drat":           4.22,
-"wt":          1.835,
-"qsec":           19.9,
-"vs":              1,
-"am":              1,
-"gear":              4,
-"carb":              1 
+ "AAPL.Open":          84.86,
+"AAPL.High":             86,
+"AAPL.Low":          84.35,
+"price":          85.73,
+"AAPL.Volume":      214017300,
+"AAPL.Adjusted":          11.65,
+"date":          13544 
 },
 {
- "mpg":           21.5,
-"cyl":              4,
-"disp":          120.1,
-"hp":             97,
-"drat":            3.7,
-"wt":          2.465,
-"qsec":          20.01,
-"vs":              1,
-"am":              0,
-"gear":              3,
-"carb":              1 
+ "AAPL.Open":          86.23,
+"AAPL.High":          86.27,
+"AAPL.Low":          84.74,
+"price":          84.74,
+"AAPL.Volume":      166085500,
+"AAPL.Adjusted":          11.51,
+"date":          13545 
 },
 {
- "mpg":           15.5,
-"cyl":              8,
-"disp":            318,
-"hp":            150,
-"drat":           2.76,
-"wt":           3.52,
-"qsec":          16.87,
-"vs":              0,
-"am":              0,
-"gear":              3,
-"carb":              2 
+ "AAPL.Open":          84.12,
+"AAPL.High":          85.25,
+"AAPL.Low":           83.7,
+"price":          84.75,
+"AAPL.Volume":      155382500,
+"AAPL.Adjusted":          11.51,
+"date":          13546 
 },
 {
- "mpg":           15.2,
-"cyl":              8,
-"disp":            304,
-"hp":            150,
-"drat":           3.15,
-"wt":          3.435,
-"qsec":           17.3,
-"vs":              0,
-"am":              0,
-"gear":              3,
-"carb":              2 
+ "AAPL.Open":           84.3,
+"AAPL.High":          85.23,
+"AAPL.Low":          83.94,
+"price":          83.94,
+"AAPL.Volume":      144713100,
+"AAPL.Adjusted":           11.4,
+"date":          13549 
 },
 {
- "mpg":           13.3,
-"cyl":              8,
-"disp":            350,
-"hp":            245,
-"drat":           3.73,
-"wt":           3.84,
-"qsec":          15.41,
-"vs":              0,
-"am":              0,
-"gear":              3,
-"carb":              4 
+ "AAPL.Open":          84.45,
+"AAPL.High":          84.47,
+"AAPL.Low":          82.86,
+"price":          84.15,
+"AAPL.Volume":      216098400,
+"AAPL.Adjusted":          11.43,
+"date":          13550 
 },
 {
- "mpg":           19.2,
-"cyl":              8,
-"disp":            400,
-"hp":            175,
-"drat":           3.08,
-"wt":          3.845,
-"qsec":          17.05,
-"vs":              0,
-"am":              0,
-"gear":              3,
-"carb":              2 
+ "AAPL.Open":          84.48,
+"AAPL.High":          86.38,
+"AAPL.Low":          83.55,
+"price":          86.15,
+"AAPL.Volume":      266706300,
+"AAPL.Adjusted":          11.71,
+"date":          13551 
 },
 {
- "mpg":           27.3,
-"cyl":              4,
-"disp":             79,
-"hp":             66,
-"drat":           4.08,
-"wt":          1.935,
-"qsec":           18.9,
-"vs":              1,
-"am":              1,
-"gear":              4,
-"carb":              1 
+ "AAPL.Open":          85.43,
+"AAPL.High":          86.51,
+"AAPL.Low":          85.41,
+"price":          86.18,
+"AAPL.Volume":      169757700,
+"AAPL.Adjusted":          11.71,
+"date":          13552 
 },
 {
- "mpg":             26,
-"cyl":              4,
-"disp":          120.3,
-"hp":             91,
-"drat":           4.43,
-"wt":           2.14,
-"qsec":           16.7,
-"vs":              0,
-"am":              1,
-"gear":              5,
-"carb":              2 
+ "AAPL.Open":          85.88,
+"AAPL.High":           86.2,
+"AAPL.Low":          83.21,
+"price":          83.27,
+"AAPL.Volume":      215135200,
+"AAPL.Adjusted":          11.31,
+"date":          13553 
 },
 {
- "mpg":           30.4,
-"cyl":              4,
-"disp":           95.1,
-"hp":            113,
-"drat":           3.77,
-"wt":          1.513,
-"qsec":           16.9,
-"vs":              1,
-"am":              1,
-"gear":              5,
-"carb":              2 
+ "AAPL.Open":          84.43,
+"AAPL.High":          85.18,
+"AAPL.Low":          83.63,
+"price":          84.88,
+"AAPL.Volume":      181017900,
+"AAPL.Adjusted":          11.53,
+"date":          13556 
 },
 {
- "mpg":           15.8,
-"cyl":              8,
-"disp":            351,
-"hp":            264,
-"drat":           4.22,
-"wt":           3.17,
-"qsec":           14.5,
-"vs":              0,
-"am":              1,
-"gear":              5,
-"carb":              4 
+ "AAPL.Open":          85.16,
+"AAPL.High":          85.29,
+"AAPL.Low":           84.3,
+"price":           84.7,
+"AAPL.Volume":      145246500,
+"AAPL.Adjusted":          11.51,
+"date":          13557 
 },
 {
- "mpg":           19.7,
-"cyl":              6,
-"disp":            145,
-"hp":            175,
-"drat":           3.62,
-"wt":           2.77,
-"qsec":           15.5,
-"vs":              0,
-"am":              1,
-"gear":              5,
-"carb":              6 
+ "AAPL.Open":          84.63,
+"AAPL.High":          85.64,
+"AAPL.Low":          84.57,
+"price":           85.3,
+"AAPL.Volume":      126995400,
+"AAPL.Adjusted":          11.59,
+"date":          13558 
 },
 {
- "mpg":             15,
-"cyl":              8,
-"disp":            301,
-"hp":            335,
-"drat":           3.54,
-"wt":           3.57,
-"qsec":           14.6,
-"vs":              0,
-"am":              1,
-"gear":              5,
-"carb":              8 
+ "AAPL.Open":          85.44,
+"AAPL.High":          85.62,
+"AAPL.Low":          84.78,
+"price":          85.21,
+"AAPL.Volume":       90915300,
+"AAPL.Adjusted":          11.58,
+"date":          13559 
 },
 {
- "mpg":           21.4,
-"cyl":              4,
-"disp":            121,
-"hp":            109,
-"drat":           4.11,
-"wt":           2.78,
-"qsec":           18.6,
-"vs":              1,
-"am":              1,
-"gear":              4,
-"carb":              2 
+ "AAPL.Open":          85.25,
+"AAPL.High":          85.41,
+"AAPL.Low":          84.66,
+"price":          84.83,
+"AAPL.Volume":       99967000,
+"AAPL.Adjusted":          11.53,
+"date":          13560 
+},
+{
+ "AAPL.Open":          84.65,
+"AAPL.High":          86.16,
+"AAPL.Low":          84.16,
+"price":           85.9,
+"AAPL.Volume":      154425600,
+"AAPL.Adjusted":          11.67,
+"date":          13564 
+},
+{
+ "AAPL.Open":          85.98,
+"AAPL.High":          89.49,
+"AAPL.Low":          85.96,
+"price":           89.2,
+"AAPL.Volume":      288828400,
+"AAPL.Adjusted":          12.12,
+"date":          13565 
+},
+{
+ "AAPL.Open":           90.8,
+"AAPL.High":          90.81,
+"AAPL.Low":          88.53,
+"price":          89.51,
+"AAPL.Volume":      209556200,
+"AAPL.Adjusted":          12.16,
+"date":          13566 
+},
+{
+ "AAPL.Open":          89.16,
+"AAPL.High":          90.34,
+"AAPL.Low":          88.85,
+"price":          89.07,
+"AAPL.Volume":      129473400,
+"AAPL.Adjusted":           12.1,
+"date":          13567 
+},
+{
+ "AAPL.Open":          89.84,
+"AAPL.High":             90,
+"AAPL.Low":          87.61,
+"price":          88.51,
+"AAPL.Volume":      153962200,
+"AAPL.Adjusted":          12.03,
+"date":          13570 
+},
+{
+ "AAPL.Open":           86.3,
+"AAPL.High":          87.08,
+"AAPL.Low":          83.41,
+"price":          83.93,
+"AAPL.Volume":      286453300,
+"AAPL.Adjusted":           11.4,
+"date":          13571 
+},
+{
+ "AAPL.Open":             83,
+"AAPL.High":           85.6,
+"AAPL.Low":             83,
+"price":          84.61,
+"AAPL.Volume":      229868800,
+"AAPL.Adjusted":           11.5,
+"date":          13572 
+},
+{
+ "AAPL.Open":          84.03,
+"AAPL.High":          88.31,
+"AAPL.Low":          83.75,
+"price":          87.06,
+"AAPL.Volume":      353882200,
+"AAPL.Adjusted":          11.83,
+"date":          13573 
+},
+{
+ "AAPL.Open":          86.77,
+"AAPL.High":          87.54,
+"AAPL.Low":          85.21,
+"price":          85.41,
+"AAPL.Volume":      215000100,
+"AAPL.Adjusted":           11.6,
+"date":          13574 
+},
+{
+ "AAPL.Open":          85.89,
+"AAPL.High":          88.65,
+"AAPL.Low":          85.76,
+"price":          86.32,
+"AAPL.Volume":      209724900,
+"AAPL.Adjusted":          11.73,
+"date":          13577 
+},
+{
+ "AAPL.Open":           87.8,
+"AAPL.High":          88.31,
+"AAPL.Low":           87.4,
+"price":          88.19,
+"AAPL.Volume":      180796700,
+"AAPL.Adjusted":          11.98,
+"date":          13578 
+},
+{
+ "AAPL.Open":          88.05,
+"AAPL.High":          88.97,
+"AAPL.Low":          87.45,
+"price":          87.72,
+"AAPL.Volume":      156571100,
+"AAPL.Adjusted":          11.92,
+"date":          13579 
+},
+{
+ "AAPL.Open":          88.59,
+"AAPL.High":          88.72,
+"AAPL.Low":          87.46,
+"price":             88,
+"AAPL.Volume":      127752800,
+"AAPL.Adjusted":          11.96,
+"date":          13580 
+},
+{
+ "AAPL.Open":           88.8,
+"AAPL.High":          88.85,
+"AAPL.Low":           87.4,
+"price":          87.97,
+"AAPL.Volume":      112959000,
+"AAPL.Adjusted":          11.95,
+"date":          13581 
+},
+{
+ "AAPL.Open":          88.07,
+"AAPL.High":          89.99,
+"AAPL.Low":          87.99,
+"price":          89.87,
+"AAPL.Volume":      182352100,
+"AAPL.Adjusted":          12.21,
+"date":          13584 
+},
+{
+ "AAPL.Open":          89.41,
+"AAPL.High":           90.6,
+"AAPL.Low":           88.4,
+"price":           88.4,
+"AAPL.Volume":      216972700,
+"AAPL.Adjusted":          12.01,
+"date":          13585 
+},
+{
+ "AAPL.Open":           88.6,
+"AAPL.High":             90,
+"AAPL.Low":          87.92,
+"price":             90,
+"AAPL.Volume":      199146500,
+"AAPL.Adjusted":          12.23,
+"date":          13586 
+},
+{
+ "AAPL.Open":          89.96,
+"AAPL.High":          90.36,
+"AAPL.Low":          89.31,
+"price":          89.57,
+"AAPL.Volume":      139874700,
+"AAPL.Adjusted":          12.17,
+"date":          13587 
+},
+{
+ "AAPL.Open":          89.54,
+"AAPL.High":          89.99,
+"AAPL.Low":          89.32,
+"price":          89.59,
+"AAPL.Volume":      142926000,
+"AAPL.Adjusted":          12.17,
+"date":          13588 
+},
+{
+ "AAPL.Open":          90.24,
+"AAPL.High":          91.55,
+"AAPL.Low":          89.59,
+"price":          91.13,
+"AAPL.Volume":      178240300,
+"AAPL.Adjusted":          12.38,
+"date":          13591 
+},
+{
+ "AAPL.Open":          91.35,
+"AAPL.High":          91.84,
+"AAPL.Low":          91.06,
+"price":          91.48,
+"AAPL.Volume":      122229100,
+"AAPL.Adjusted":          12.43,
+"date":          13592 
+},
+{
+ "AAPL.Open":          91.99,
+"AAPL.High":             94,
+"AAPL.Low":          91.65,
+"price":          93.87,
+"AAPL.Volume":      171724000,
+"AAPL.Adjusted":          12.75,
+"date":          13593 
+},
+{
+ "AAPL.Open":          93.73,
+"AAPL.High":          94.36,
+"AAPL.Low":             93,
+"price":          93.96,
+"AAPL.Volume":      140373100,
+"AAPL.Adjusted":          12.77,
+"date":          13594 
+},
+{
+ "AAPL.Open":          93.35,
+"AAPL.High":          94.07,
+"AAPL.Low":           93.3,
+"price":          93.52,
+"AAPL.Volume":      112721000,
+"AAPL.Adjusted":          12.71,
+"date":          13595 
+},
+{
+ "AAPL.Open":          93.99,
+"AAPL.High":           95.9,
+"AAPL.Low":           93.3,
+"price":          95.85,
+"AAPL.Volume":      216246800,
+"AAPL.Adjusted":          13.02,
+"date":          13598 
+},
+{
+ "AAPL.Open":          95.71,
+"AAPL.High":          96.83,
+"AAPL.Low":             95,
+"price":          95.46,
+"AAPL.Volume":      233013200,
+"AAPL.Adjusted":          12.97,
+"date":          13599 
+},
+{
+ "AAPL.Open":          94.88,
+"AAPL.High":           95.4,
+"AAPL.Low":          93.15,
+"price":          93.24,
+"AAPL.Volume":      235584300,
+"AAPL.Adjusted":          12.67,
+"date":          13600 
+},
+{
+ "AAPL.Open":          94.19,
+"AAPL.High":          94.19,
+"AAPL.Low":          92.23,
+"price":          93.75,
+"AAPL.Volume":      181430900,
+"AAPL.Adjusted":          12.74,
+"date":          13601 
+},
+{
+ "AAPL.Open":          94.28,
+"AAPL.High":          94.68,
+"AAPL.Low":          92.75,
+"price":          92.91,
+"AAPL.Volume":      150139500,
+"AAPL.Adjusted":          12.62,
+"date":          13602 
+},
+{
+ "AAPL.Open":          94.14,
+"AAPL.High":          94.25,
+"AAPL.Low":          93.02,
+"price":          93.65,
+"AAPL.Volume":      125498100,
+"AAPL.Adjusted":          12.72,
+"date":          13605 
+},
+{
+ "AAPL.Open":          94.14,
+"AAPL.High":          95.23,
+"AAPL.Low":          93.76,
+"price":           94.5,
+"AAPL.Volume":      145983600,
+"AAPL.Adjusted":          12.84,
+"date":          13606 
+},
+{
+ "AAPL.Open":          94.94,
+"AAPL.High":          95.14,
+"AAPL.Low":          94.13,
+"price":          94.27,
+"AAPL.Volume":      119196000,
+"AAPL.Adjusted":          12.81,
+"date":          13607 
+},
+{
+ "AAPL.Open":          94.12,
+"AAPL.High":          94.68,
+"AAPL.Low":          93.52,
+"price":          94.68,
+"AAPL.Volume":       88879000,
+"AAPL.Adjusted":          12.86,
+"date":          13608 
+},
+{
+ "AAPL.Open":          95.21,
+"AAPL.High":           95.3,
+"AAPL.Low":          93.04,
+"price":          93.65,
+"AAPL.Volume":      103335400,
+"AAPL.Adjusted":          12.72,
+"date":          13612 
+},
+{
+ "AAPL.Open":          93.67,
+"AAPL.High":          94.26,
+"AAPL.Low":          93.41,
+"price":          94.25,
+"AAPL.Volume":       88116700,
+"AAPL.Adjusted":          12.81,
+"date":          13613 
+},
+{
+ "AAPL.Open":           93.9,
+"AAPL.High":          93.95,
+"AAPL.Low":          92.33,
+"price":          92.59,
+"AAPL.Volume":      137254600,
+"AAPL.Adjusted":          12.58,
+"date":          13614 
+},
+{
+ "AAPL.Open":          92.04,
+"AAPL.High":          92.31,
+"AAPL.Low":          90.72,
+"price":          92.19,
+"AAPL.Volume":      164168900,
+"AAPL.Adjusted":          12.53,
+"date":          13615 
+},
+{
+ "AAPL.Open":           90.9,
+"AAPL.High":           91.4,
+"AAPL.Low":          90.06,
+"price":          90.24,
+"AAPL.Volume":      179985400,
+"AAPL.Adjusted":          12.26,
+"date":          13616 
+},
+{
+ "AAPL.Open":          90.57,
+"AAPL.High":           91.5,
+"AAPL.Low":          90.25,
+"price":          91.43,
+"AAPL.Volume":      152258400,
+"AAPL.Adjusted":          12.42,
+"date":          13619 
+},
+{
+ "AAPL.Open":             92,
+"AAPL.High":           92.3,
+"AAPL.Low":           89.7,
+"price":          90.35,
+"AAPL.Volume":      187980100,
+"AAPL.Adjusted":          12.28,
+"date":          13620 
+},
+{
+ "AAPL.Open":          90.16,
+"AAPL.High":          90.85,
+"AAPL.Low":           89.6,
+"price":           90.4,
+"AAPL.Volume":      116011000,
+"AAPL.Adjusted":          12.28,
+"date":          13621 
+},
+{
+ "AAPL.Open":          90.19,
+"AAPL.High":          91.25,
+"AAPL.Low":          89.83,
+"price":          90.27,
+"AAPL.Volume":      106478400,
+"AAPL.Adjusted":          12.26,
+"date":          13622 
+},
+{
+ "AAPL.Open":          90.89,
+"AAPL.High":          91.18,
+"AAPL.Low":          90.55,
+"price":          90.97,
+"AAPL.Volume":      130694900,
+"AAPL.Adjusted":          12.36,
+"date":          13623 
+},
+{
+ "AAPL.Open":          91.59,
+"AAPL.High":           93.8,
+"AAPL.Low":          91.42,
+"price":          93.51,
+"AAPL.Volume":      195072500,
+"AAPL.Adjusted":          12.71,
+"date":          13626 
+},
+{
+ "AAPL.Open":          93.96,
+"AAPL.High":          96.39,
+"AAPL.Low":           91.3,
+"price":          93.24,
+"AAPL.Volume":      263813200,
+"AAPL.Adjusted":          12.67,
+"date":          13627 
+},
+{
+ "AAPL.Open":          94.23,
+"AAPL.High":           95.4,
+"AAPL.Low":           93.8,
+"price":          95.35,
+"AAPL.Volume":      296786000,
+"AAPL.Adjusted":          12.96,
+"date":          13628 
+},
+{
+ "AAPL.Open":         101.58,
+"AAPL.High":          102.5,
+"AAPL.Low":           98.3,
+"price":          98.84,
+"AAPL.Volume":      434444500,
+"AAPL.Adjusted":          13.43,
+"date":          13629 
+},
+{
+ "AAPL.Open":          98.18,
+"AAPL.High":          99.95,
+"AAPL.Low":          97.69,
+"price":          99.92,
+"AAPL.Volume":      174850900,
+"AAPL.Adjusted":          13.58,
+"date":          13630 
+},
+{
+ "AAPL.Open":         100.09,
+"AAPL.High":            101,
+"AAPL.Low":          99.67,
+"price":           99.8,
+"AAPL.Volume":      154127400,
+"AAPL.Adjusted":          13.56,
+"date":          13633 
+},
+{
+ "AAPL.Open":          99.59,
+"AAPL.High":         100.35,
+"AAPL.Low":          98.55,
+"price":          99.47,
+"AAPL.Volume":      133130900,
+"AAPL.Adjusted":          13.51,
+"date":          13634 
+},
+{
+ "AAPL.Open":          99.65,
+"AAPL.High":         100.54,
+"AAPL.Low":          99.47,
+"price":         100.39,
+"AAPL.Volume":      126286300,
+"AAPL.Adjusted":          13.64,
+"date":          13635 
+},
+{
+ "AAPL.Open":         100.73,
+"AAPL.High":         101.45,
+"AAPL.Low":         100.01,
+"price":          100.4,
+"AAPL.Volume":      144019400,
+"AAPL.Adjusted":          13.64,
+"date":          13636 
+},
+{
+ "AAPL.Open":          100.8,
+"AAPL.High":          101.6,
+"AAPL.Low":          100.5,
+"price":         100.81,
+"AAPL.Volume":       95496800,
+"AAPL.Adjusted":           13.7,
+"date":          13637 
+},
+{
+ "AAPL.Open":         101.08,
+"AAPL.High":         104.35,
+"AAPL.Low":         101.01,
+"price":         103.92,
+"AAPL.Volume":      215389300,
+"AAPL.Adjusted":          14.12,
+"date":          13640 
+},
+{
+ "AAPL.Open":         103.47,
+"AAPL.High":         105.15,
+"AAPL.Low":         103.42,
+"price":         105.06,
+"AAPL.Volume":      195999300,
+"AAPL.Adjusted":          14.27,
+"date":          13641 
+},
+{
+ "AAPL.Open":         104.91,
+"AAPL.High":         106.96,
+"AAPL.Low":         104.89,
+"price":         106.88,
+"AAPL.Volume":      179439400,
+"AAPL.Adjusted":          14.52,
+"date":          13642 
+},
+{
+ "AAPL.Open":         106.63,
+"AAPL.High":         108.84,
+"AAPL.Low":         105.92,
+"price":         107.34,
+"AAPL.Volume":      299314400,
+"AAPL.Adjusted":          14.58,
+"date":          13643 
+},
+{
+ "AAPL.Open":         107.74,
+"AAPL.High":         109.13,
+"AAPL.Low":         106.78,
+"price":         108.74,
+"AAPL.Volume":      163424100,
+"AAPL.Adjusted":          14.77,
+"date":          13644 
+},
+{
+ "AAPL.Open":         109.62,
+"AAPL.High":            110,
+"AAPL.Low":         108.25,
+"price":         109.36,
+"AAPL.Volume":      162986600,
+"AAPL.Adjusted":          14.86,
+"date":          13647 
+},
+{
+ "AAPL.Open":         109.57,
+"AAPL.High":          110.2,
+"AAPL.Low":         106.48,
+"price":         107.52,
+"AAPL.Volume":      238628600,
+"AAPL.Adjusted":          14.61,
+"date":          13648 
+},
+{
+ "AAPL.Open":         108.53,
+"AAPL.High":         108.83,
+"AAPL.Low":         103.42,
+"price":         107.34,
+"AAPL.Volume":      281691900,
+"AAPL.Adjusted":          14.58,
+"date":          13649 
+},
+{
+ "AAPL.Open":         107.15,
+"AAPL.High":         109.87,
+"AAPL.Low":         107.15,
+"price":         109.44,
+"AAPL.Volume":      183822800,
+"AAPL.Adjusted":          14.87,
+"date":          13650 
+},
+{
+ "AAPL.Open":         110.23,
+"AAPL.High":         110.64,
+"AAPL.Low":         109.77,
+"price":         110.02,
+"AAPL.Volume":      155336300,
+"AAPL.Adjusted":          14.95,
+"date":          13651 
+},
+{
+ "AAPL.Open":         110.31,
+"AAPL.High":         112.45,
+"AAPL.Low":         110.05,
+"price":         111.98,
+"AAPL.Volume":      159973100,
+"AAPL.Adjusted":          15.21,
+"date":          13654 
+},
+{
+ "AAPL.Open":         112.49,
+"AAPL.High":         113.75,
+"AAPL.Low":         112.01,
+"price":         113.54,
+"AAPL.Volume":      143102400,
+"AAPL.Adjusted":          15.43,
+"date":          13655 
+},
+{
+ "AAPL.Open":         114.02,
+"AAPL.High":            115,
+"AAPL.Low":         112.59,
+"price":         112.89,
+"AAPL.Volume":      227843700,
+"AAPL.Adjusted":          15.34,
+"date":          13656 
+},
+{
+ "AAPL.Open":         112.81,
+"AAPL.High":         114.46,
+"AAPL.Low":         110.37,
+"price":         110.69,
+"AAPL.Volume":      221840500,
+"AAPL.Adjusted":          15.04,
+"date":          13657 
+},
+{
+ "AAPL.Open":            112,
+"AAPL.High":         113.78,
+"AAPL.Low":          111.5,
+"price":         113.62,
+"AAPL.Volume":      158239900,
+"AAPL.Adjusted":          15.44,
+"date":          13658 
+},
+{
+ "AAPL.Open":         114.45,
+"AAPL.High":         114.86,
+"AAPL.Low":         112.69,
+"price":         114.35,
+"AAPL.Volume":      161423500,
+"AAPL.Adjusted":          15.54,
+"date":          13662 
+},
+{
+ "AAPL.Open":          114.3,
+"AAPL.High":         118.88,
+"AAPL.Low":         113.53,
+"price":         118.77,
+"AAPL.Volume":      369611200,
+"AAPL.Adjusted":          16.14,
+"date":          13663 
+},
+{
+ "AAPL.Open":         120.07,
+"AAPL.High":         122.17,
+"AAPL.Low":         119.54,
+"price":         121.19,
+"AAPL.Volume":      324266600,
+"AAPL.Adjusted":          16.47,
+"date":          13664 
+},
+{
+ "AAPL.Open":          121.1,
+"AAPL.High":         121.19,
+"AAPL.Low":         118.29,
+"price":          118.4,
+"AAPL.Volume":      221315500,
+"AAPL.Adjusted":          16.09,
+"date":          13665 
+},
+{
+ "AAPL.Open":         118.63,
+"AAPL.High":         121.73,
+"AAPL.Low":          117.9,
+"price":         121.33,
+"AAPL.Volume":      221668300,
+"AAPL.Adjusted":          16.49,
+"date":          13668 
+},
+{
+ "AAPL.Open":         121.41,
+"AAPL.High":         122.69,
+"AAPL.Low":          120.5,
+"price":         122.67,
+"AAPL.Volume":      230196400,
+"AAPL.Adjusted":          16.67,
+"date":          13669 
+},
+{
+ "AAPL.Open":          122.3,
+"AAPL.High":         124.05,
+"AAPL.Low":         121.95,
+"price":         123.64,
+"AAPL.Volume":      278060300,
+"AAPL.Adjusted":           16.8,
+"date":          13670 
+},
+{
+ "AAPL.Open":         124.99,
+"AAPL.High":         127.61,
+"AAPL.Low":         123.19,
+"price":         124.07,
+"AAPL.Volume":      478769900,
+"AAPL.Adjusted":          16.86,
+"date":          13671 
+},
+{
+ "AAPL.Open":         125.82,
+"AAPL.High":         125.83,
+"AAPL.Low":         122.29,
+"price":         124.49,
+"AAPL.Volume":      310420600,
+"AAPL.Adjusted":          16.91,
+"date":          13672 
+},
+{
+ "AAPL.Open":            126,
+"AAPL.High":         126.15,
+"AAPL.Low":         119.54,
+"price":         120.19,
+"AAPL.Volume":      468564600,
+"AAPL.Adjusted":          16.33,
+"date":          13675 
+},
+{
+ "AAPL.Open":         119.35,
+"AAPL.High":         121.71,
+"AAPL.Low":         118.31,
+"price":         120.38,
+"AAPL.Volume":      356641600,
+"AAPL.Adjusted":          16.36,
+"date":          13676 
+},
+{
+ "AAPL.Open":         121.15,
+"AAPL.High":         121.19,
+"AAPL.Low":          115.4,
+"price":          117.5,
+"AAPL.Volume":      430338300,
+"AAPL.Adjusted":          15.96,
+"date":          13677 
+},
+{
+ "AAPL.Open":          117.2,
+"AAPL.High":         119.45,
+"AAPL.Low":         116.42,
+"price":         118.75,
+"AAPL.Volume":      243316500,
+"AAPL.Adjusted":          16.13,
+"date":          13678 
+},
+{
+ "AAPL.Open":         120.62,
+"AAPL.High":         120.67,
+"AAPL.Low":         119.86,
+"price":          120.5,
+"AAPL.Volume":      202804700,
+"AAPL.Adjusted":          16.37,
+"date":          13679 
+},
+{
+ "AAPL.Open":         123.28,
+"AAPL.High":         125.18,
+"AAPL.Low":         122.54,
+"price":         125.09,
+"AAPL.Volume":      227651200,
+"AAPL.Adjusted":             17,
+"date":          13682 
+},
+{
+ "AAPL.Open":         124.69,
+"AAPL.High":         125.01,
+"AAPL.Low":         122.91,
+"price":         123.66,
+"AAPL.Volume":      235756500,
+"AAPL.Adjusted":           16.8,
+"date":          13683 
+},
+{
+ "AAPL.Open":         123.87,
+"AAPL.High":         124.66,
+"AAPL.Low":          121.5,
+"price":         121.55,
+"AAPL.Volume":      224378000,
+"AAPL.Adjusted":          16.51,
+"date":          13684 
+},
+{
+ "AAPL.Open":          121.7,
+"AAPL.High":         124.29,
+"AAPL.Low":         120.72,
+"price":          123.9,
+"AAPL.Volume":      216761300,
+"AAPL.Adjusted":          16.83,
+"date":          13685 
+},
+{
+ "AAPL.Open":         123.85,
+"AAPL.High":         124.45,
+"AAPL.Low":         122.38,
+"price":            123,
+"AAPL.Volume":      157969000,
+"AAPL.Adjusted":          16.71,
+"date":          13686 
+},
+{
+ "AAPL.Open":         124.19,
+"AAPL.High":         125.09,
+"AAPL.Low":         121.06,
+"price":         122.34,
+"AAPL.Volume":      241350900,
+"AAPL.Adjusted":          16.62,
+"date":          13689 
+},
+{
+ "AAPL.Open":         123.98,
+"AAPL.High":            124,
+"AAPL.Low":         118.72,
+"price":         119.65,
+"AAPL.Volume":      336251300,
+"AAPL.Adjusted":          16.26,
+"date":          13690 
+},
+{
+ "AAPL.Open":         120.61,
+"AAPL.High":         122.04,
+"AAPL.Low":         119.26,
+"price":         121.89,
+"AAPL.Volume":      243674200,
+"AAPL.Adjusted":          16.56,
+"date":          13691 
+},
+{
+ "AAPL.Open":         122.36,
+"AAPL.High":         122.49,
+"AAPL.Low":            120,
+"price":         120.56,
+"AAPL.Volume":      209535900,
+"AAPL.Adjusted":          16.38,
+"date":          13692 
+},
+{
+ "AAPL.Open":         121.97,
+"AAPL.High":            124,
+"AAPL.Low":         121.09,
+"price":         122.04,
+"AAPL.Volume":      284460400,
+"AAPL.Adjusted":          16.58,
+"date":          13693 
+},
+{
+ "AAPL.Open":         121.05,
+"AAPL.High":         122.09,
+"AAPL.Low":          119.3,
+"price":         121.26,
+"AAPL.Volume":      248715600,
+"AAPL.Adjusted":          16.48,
+"date":          13696 
+},
+{
+ "AAPL.Open":            122,
+"AAPL.High":          127.4,
+"AAPL.Low":          121.5,
+"price":         127.17,
+"AAPL.Volume":      290620400,
+"AAPL.Adjusted":          17.28,
+"date":          13697 
+},
+{
+ "AAPL.Open":          128.8,
+"AAPL.High":         132.97,
+"AAPL.Low":         128.69,
+"price":         132.75,
+"AAPL.Volume":      363262900,
+"AAPL.Adjusted":          18.04,
+"date":          13699 
+},
+{
+ "AAPL.Open":         133.13,
+"AAPL.High":         133.34,
+"AAPL.Low":          130.4,
+"price":          132.3,
+"AAPL.Volume":      218673700,
+"AAPL.Adjusted":          17.98,
+"date":          13700 
+},
+{
+ "AAPL.Open":         132.38,
+"AAPL.High":          132.9,
+"AAPL.Low":         129.18,
+"price":         130.33,
+"AAPL.Volume":      248955000,
+"AAPL.Adjusted":          17.71,
+"date":          13703 
+},
+{
+ "AAPL.Open":         128.88,
+"AAPL.High":          134.5,
+"AAPL.Low":         128.81,
+"price":         132.35,
+"AAPL.Volume":      313751900,
+"AAPL.Adjusted":          17.98,
+"date":          13704 
+},
+{
+ "AAPL.Open":         132.07,
+"AAPL.High":          133.7,
+"AAPL.Low":         131.31,
+"price":         132.39,
+"AAPL.Volume":      205443000,
+"AAPL.Adjusted":          17.99,
+"date":          13705 
+},
+{
+ "AAPL.Open":         133.85,
+"AAPL.High":         134.24,
+"AAPL.Low":         132.39,
+"price":         134.07,
+"AAPL.Volume":      176152200,
+"AAPL.Adjusted":          18.22,
+"date":          13706 
+},
+{
+ "AAPL.Open":         135.03,
+"AAPL.High":         137.85,
+"AAPL.Low":         134.52,
+"price":         137.73,
+"AAPL.Volume":      226901500,
+"AAPL.Adjusted":          18.71,
+"date":          13707 
+},
+{
+ "AAPL.Open":         138.39,
+"AAPL.High":         139.98,
+"AAPL.Low":          137.5,
+"price":          138.1,
+"AAPL.Volume":      234028200,
+"AAPL.Adjusted":          18.76,
+"date":          13710 
+},
+{
+ "AAPL.Open":          138.3,
+"AAPL.High":          139.6,
+"AAPL.Low":          137.5,
+"price":         138.91,
+"AAPL.Volume":      177489900,
+"AAPL.Adjusted":          18.87,
+"date":          13711 
+},
+{
+ "AAPL.Open":         138.19,
+"AAPL.High":         138.44,
+"AAPL.Low":         136.04,
+"price":         138.12,
+"AAPL.Volume":      189214200,
+"AAPL.Adjusted":          18.77,
+"date":          13712 
+},
+{
+ "AAPL.Open":          140.3,
+"AAPL.High":         140.81,
+"AAPL.Low":         139.65,
+"price":            140,
+"AAPL.Volume":      183222900,
+"AAPL.Adjusted":          19.02,
+"date":          13713 
+},
+{
+ "AAPL.Open":         141.65,
+"AAPL.High":         144.18,
+"AAPL.Low":            140,
+"price":         143.75,
+"AAPL.Volume":      291943400,
+"AAPL.Adjusted":          19.53,
+"date":          13714 
+},
+{
+ "AAPL.Open":         143.31,
+"AAPL.High":         145.22,
+"AAPL.Low":         140.93,
+"price":          143.7,
+"AAPL.Volume":      259122500,
+"AAPL.Adjusted":          19.52,
+"date":          13717 
+},
+{
+ "AAPL.Open":         138.88,
+"AAPL.High":            141,
+"AAPL.Low":         134.15,
+"price":         134.89,
+"AAPL.Volume":      448823200,
+"AAPL.Adjusted":          18.33,
+"date":          13718 
+},
+{
+ "AAPL.Open":         137.35,
+"AAPL.High":         138.36,
+"AAPL.Low":            135,
+"price":         137.26,
+"AAPL.Volume":      374045700,
+"AAPL.Adjusted":          18.65,
+"date":          13719 
+},
+{
+ "AAPL.Open":         145.91,
+"AAPL.High":          148.5,
+"AAPL.Low":         136.96,
+"price":            146,
+"AAPL.Volume":      546657300,
+"AAPL.Adjusted":          19.84,
+"date":          13720 
+},
+{
+ "AAPL.Open":         146.19,
+"AAPL.High":         148.92,
+"AAPL.Low":         143.78,
+"price":         143.85,
+"AAPL.Volume":      290274600,
+"AAPL.Adjusted":          19.54,
+"date":          13721 
+},
+{
+ "AAPL.Open":         144.33,
+"AAPL.High":         145.45,
+"AAPL.Low":         139.57,
+"price":         141.43,
+"AAPL.Volume":      276747100,
+"AAPL.Adjusted":          19.22,
+"date":          13724 
+},
+{
+ "AAPL.Open":         142.97,
+"AAPL.High":         143.48,
+"AAPL.Low":         131.52,
+"price":         131.76,
+"AAPL.Volume":      440598200,
+"AAPL.Adjusted":           17.9,
+"date":          13725 
+},
+{
+ "AAPL.Open":         133.64,
+"AAPL.High":         135.38,
+"AAPL.Low":         127.77,
+"price":            135,
+"AAPL.Volume":      437539200,
+"AAPL.Adjusted":          18.34,
+"date":          13726 
+},
+{
+ "AAPL.Open":         136.65,
+"AAPL.High":         136.96,
+"AAPL.Low":         134.15,
+"price":         136.49,
+"AAPL.Volume":      213161200,
+"AAPL.Adjusted":          18.54,
+"date":          13727 
+},
+{
+ "AAPL.Open":         135.26,
+"AAPL.High":         135.95,
+"AAPL.Low":          131.5,
+"price":         131.85,
+"AAPL.Volume":      169796900,
+"AAPL.Adjusted":          17.91,
+"date":          13728 
+},
+{
+ "AAPL.Open":          132.9,
+"AAPL.High":         135.27,
+"AAPL.Low":          128.3,
+"price":         135.25,
+"AAPL.Volume":      231292600,
+"AAPL.Adjusted":          18.38,
+"date":          13731 
+},
+{
+ "AAPL.Open":         134.94,
+"AAPL.High":         137.24,
+"AAPL.Low":         132.63,
+"price":         135.03,
+"AAPL.Volume":      237484100,
+"AAPL.Adjusted":          18.35,
+"date":          13732 
+},
+{
+ "AAPL.Open":         136.76,
+"AAPL.High":         136.86,
+"AAPL.Low":            132,
+"price":         134.01,
+"AAPL.Volume":      202024200,
+"AAPL.Adjusted":          18.21,
+"date":          13733 
+},
+{
+ "AAPL.Open":         131.11,
+"AAPL.High":            133,
+"AAPL.Low":         125.09,
+"price":         126.39,
+"AAPL.Volume":      281348900,
+"AAPL.Adjusted":          17.17,
+"date":          13734 
+},
+{
+ "AAPL.Open":         123.12,
+"AAPL.High":         127.75,
+"AAPL.Low":          120.3,
+"price":            125,
+"AAPL.Volume":      352687300,
+"AAPL.Adjusted":          16.98,
+"date":          13735 
+},
+{
+ "AAPL.Open":         128.32,
+"AAPL.High":         129.35,
+"AAPL.Low":          126.5,
+"price":         127.79,
+"AAPL.Volume":      188227900,
+"AAPL.Adjusted":          17.36,
+"date":          13738 
+},
+{
+ "AAPL.Open":         128.29,
+"AAPL.High":          128.3,
+"AAPL.Low":         123.71,
+"price":         124.03,
+"AAPL.Volume":      184751700,
+"AAPL.Adjusted":          16.85,
+"date":          13739 
+},
+{
+ "AAPL.Open":         122.74,
+"AAPL.High":         124.86,
+"AAPL.Low":         119.65,
+"price":          119.9,
+"AAPL.Volume":      248213000,
+"AAPL.Adjusted":          16.29,
+"date":          13740 
+},
+{
+ "AAPL.Open":         117.01,
+"AAPL.High":          118.5,
+"AAPL.Low":         111.62,
+"price":         117.05,
+"AAPL.Volume":      466672500,
+"AAPL.Adjusted":           15.9,
+"date":          13741 
+},
+{
+ "AAPL.Open":         122.01,
+"AAPL.High":          123.5,
+"AAPL.Low":         119.82,
+"price":         122.06,
+"AAPL.Volume":      298765600,
+"AAPL.Adjusted":          16.58,
+"date":          13742 
+},
+{
+ "AAPL.Open":         123.96,
+"AAPL.High":          124.5,
+"AAPL.Low":          120.5,
+"price":         122.22,
+"AAPL.Volume":      200829300,
+"AAPL.Adjusted":          16.61,
+"date":          13745 
+},
+{
+ "AAPL.Open":         122.21,
+"AAPL.High":         128.96,
+"AAPL.Low":            121,
+"price":         127.57,
+"AAPL.Volume":      325761800,
+"AAPL.Adjusted":          17.33,
+"date":          13746 
+},
+{
+ "AAPL.Open":         131.22,
+"AAPL.High":         132.75,
+"AAPL.Low":         130.33,
+"price":         132.51,
+"AAPL.Volume":      265441400,
+"AAPL.Adjusted":             18,
+"date":          13747 
+},
+{
+ "AAPL.Open":         133.09,
+"AAPL.High":         133.34,
+"AAPL.Low":         129.76,
+"price":         131.07,
+"AAPL.Volume":      216709500,
+"AAPL.Adjusted":          17.81,
+"date":          13748 
+},
+{
+ "AAPL.Open":         130.53,
+"AAPL.High":         135.37,
+"AAPL.Low":         129.81,
+"price":          135.3,
+"AAPL.Volume":      227958500,
+"AAPL.Adjusted":          18.38,
+"date":          13749 
+},
+{
+ "AAPL.Open":         133.39,
+"AAPL.High":         134.66,
+"AAPL.Low":          132.1,
+"price":         132.25,
+"AAPL.Volume":      176859900,
+"AAPL.Adjusted":          17.97,
+"date":          13752 
+},
+{
+ "AAPL.Open":         130.99,
+"AAPL.High":         132.41,
+"AAPL.Low":         126.63,
+"price":         126.82,
+"AAPL.Volume":      294841400,
+"AAPL.Adjusted":          17.23,
+"date":          13753 
+},
+{
+ "AAPL.Open":         129.88,
+"AAPL.High":         134.18,
+"AAPL.Low":         129.54,
+"price":         134.08,
+"AAPL.Volume":      291715200,
+"AAPL.Adjusted":          18.22,
+"date":          13754 
+},
+{
+ "AAPL.Open":         132.67,
+"AAPL.High":         138.25,
+"AAPL.Low":          132.3,
+"price":         136.25,
+"AAPL.Volume":      358895600,
+"AAPL.Adjusted":          18.51,
+"date":          13755 
+},
+{
+ "AAPL.Open":         139.49,
+"AAPL.High":         139.65,
+"AAPL.Low":         137.41,
+"price":         138.48,
+"AAPL.Volume":      219221800,
+"AAPL.Adjusted":          18.82,
+"date":          13756 
+},
+{
+ "AAPL.Open":         139.94,
+"AAPL.High":         145.73,
+"AAPL.Low":         139.84,
+"price":         144.16,
+"AAPL.Volume":      329210700,
+"AAPL.Adjusted":          19.59,
+"date":          13760 
+},
+{
+ "AAPL.Open":         144.97,
+"AAPL.High":         145.84,
+"AAPL.Low":          136.1,
+"price":         136.76,
+"AAPL.Volume":      582055600,
+"AAPL.Adjusted":          18.58,
+"date":          13761 
+},
+{
+ "AAPL.Open":         135.56,
+"AAPL.High":         137.57,
+"AAPL.Low":         132.71,
+"price":         135.01,
+"AAPL.Volume":      475315400,
+"AAPL.Adjusted":          18.34,
+"date":          13762 
+},
+{
+ "AAPL.Open":         132.01,
+"AAPL.High":          132.3,
+"AAPL.Low":            130,
+"price":         131.77,
+"AAPL.Volume":      357644000,
+"AAPL.Adjusted":           17.9,
+"date":          13763 
+},
+{
+ "AAPL.Open":         136.99,
+"AAPL.High":         138.04,
+"AAPL.Low":         133.95,
+"price":         136.71,
+"AAPL.Volume":      371959700,
+"AAPL.Adjusted":          18.57,
+"date":          13766 
+},
+{
+ "AAPL.Open":          137.9,
+"AAPL.High":          138.3,
+"AAPL.Low":         133.75,
+"price":         135.49,
+"AAPL.Volume":      242971400,
+"AAPL.Adjusted":          18.41,
+"date":          13767 
+},
+{
+ "AAPL.Open":         135.99,
+"AAPL.High":          139.4,
+"AAPL.Low":         135.75,
+"price":         136.85,
+"AAPL.Volume":      255692500,
+"AAPL.Adjusted":          18.59,
+"date":          13768 
+},
+{
+ "AAPL.Open":         138.83,
+"AAPL.High":            139,
+"AAPL.Low":         136.65,
+"price":          137.2,
+"AAPL.Volume":      164040800,
+"AAPL.Adjusted":          18.64,
+"date":          13769 
+},
+{
+ "AAPL.Open":         136.57,
+"AAPL.High":         138.98,
+"AAPL.Low":          136.2,
+"price":         138.81,
+"AAPL.Volume":      151830000,
+"AAPL.Adjusted":          18.86,
+"date":          13770 
+},
+{
+ "AAPL.Open":         138.99,
+"AAPL.High":         140.59,
+"AAPL.Low":          137.6,
+"price":         138.41,
+"AAPL.Volume":      198342900,
+"AAPL.Adjusted":          18.81,
+"date":          13773 
+},
+{
+ "AAPL.Open":         139.06,
+"AAPL.High":         142.85,
+"AAPL.Low":         137.83,
+"price":         140.92,
+"AAPL.Volume":      266022400,
+"AAPL.Adjusted":          19.15,
+"date":          13774 
+},
+{
+ "AAPL.Open":         143.02,
+"AAPL.High":         143.16,
+"AAPL.Low":          139.4,
+"price":         140.77,
+"AAPL.Volume":      256720100,
+"AAPL.Adjusted":          19.13,
+"date":          13775 
+},
+{
+ "AAPL.Open":         140.15,
+"AAPL.High":         141.79,
+"AAPL.Low":         139.32,
+"price":         140.31,
+"AAPL.Volume":      172960200,
+"AAPL.Adjusted":          19.06,
+"date":          13776 
+},
+{
+ "AAPL.Open":         141.14,
+"AAPL.High":         144.65,
+"AAPL.Low":         140.31,
+"price":         144.15,
+"AAPL.Volume":      284720100,
+"AAPL.Adjusted":          19.59,
+"date":          13777 
+},
+{
+ "AAPL.Open":         146.73,
+"AAPL.High":         149.85,
+"AAPL.Low":         146.65,
+"price":         148.28,
+"AAPL.Volume":      263040400,
+"AAPL.Adjusted":          20.15,
+"date":          13780 
+},
+{
+ "AAPL.Open":         146.84,
+"AAPL.High":         153.22,
+"AAPL.Low":         146.82,
+"price":         153.18,
+"AAPL.Volume":      298137700,
+"AAPL.Adjusted":          20.81,
+"date":          13781 
+},
+{
+ "AAPL.Open":         154.47,
+"AAPL.High":            155,
+"AAPL.Low":         151.25,
+"price":         152.77,
+"AAPL.Volume":      243817000,
+"AAPL.Adjusted":          20.76,
+"date":          13782 
+},
+{
+ "AAPL.Open":         153.77,
+"AAPL.High":         154.52,
+"AAPL.Low":         152.32,
+"price":          154.5,
+"AAPL.Volume":      164549700,
+"AAPL.Adjusted":          20.99,
+"date":          13783 
+},
+{
+ "AAPL.Open":         153.44,
+"AAPL.High":          154.6,
+"AAPL.Low":         152.75,
+"price":         153.47,
+"AAPL.Volume":      153775300,
+"AAPL.Adjusted":          20.85,
+"date":          13784 
+},
+{
+ "AAPL.Open":         154.63,
+"AAPL.High":         157.41,
+"AAPL.Low":         152.93,
+"price":         156.34,
+"AAPL.Volume":      209267100,
+"AAPL.Adjusted":          21.24,
+"date":          13787 
+},
+{
+ "AAPL.Open":         156.55,
+"AAPL.High":         158.59,
+"AAPL.Low":         155.89,
+"price":         158.45,
+"AAPL.Volume":      198017400,
+"AAPL.Adjusted":          21.53,
+"date":          13788 
+},
+{
+ "AAPL.Open":         157.78,
+"AAPL.High":         159.18,
+"AAPL.Low":         157.01,
+"price":         157.92,
+"AAPL.Volume":      173129600,
+"AAPL.Adjusted":          21.46,
+"date":          13789 
+},
+{
+ "AAPL.Open":            158,
+"AAPL.High":         158.08,
+"AAPL.Low":          153.5,
+"price":         156.24,
+"AAPL.Volume":      164239600,
+"AAPL.Adjusted":          21.23,
+"date":          13790 
+},
+{
+ "AAPL.Open":         158.37,
+"AAPL.High":         161.58,
+"AAPL.Low":          157.7,
+"price":         161.45,
+"AAPL.Volume":      235867800,
+"AAPL.Adjusted":          21.94,
+"date":          13791 
+},
+{
+ "AAPL.Open":         163.49,
+"AAPL.High":         167.91,
+"AAPL.Low":         162.97,
+"price":         167.91,
+"AAPL.Volume":      208982200,
+"AAPL.Adjusted":          22.81,
+"date":          13794 
+},
+{
+ "AAPL.Open":          170.2,
+"AAPL.High":         171.11,
+"AAPL.Low":         166.68,
+"price":         167.86,
+"AAPL.Volume":      276071600,
+"AAPL.Adjusted":          22.81,
+"date":          13795 
+},
+{
+ "AAPL.Open":         167.55,
+"AAPL.High":         167.88,
+"AAPL.Low":          165.6,
+"price":         166.79,
+"AAPL.Volume":      166897500,
+"AAPL.Adjusted":          22.66,
+"date":          13796 
+},
+{
+ "AAPL.Open":         169.49,
+"AAPL.High":         171.88,
+"AAPL.Low":         153.21,
+"price":         162.23,
+"AAPL.Volume":      410998000,
+"AAPL.Adjusted":          22.04,
+"date":          13797 
+},
+{
+ "AAPL.Open":         163.01,
+"AAPL.High":         167.28,
+"AAPL.Low":          161.8,
+"price":         167.25,
+"AAPL.Volume":      247044000,
+"AAPL.Adjusted":          22.72,
+"date":          13798 
+},
+{
+ "AAPL.Open":         167.98,
+"AAPL.High":         169.57,
+"AAPL.Low":          163.5,
+"price":         166.98,
+"AAPL.Volume":      269482500,
+"AAPL.Adjusted":          22.69,
+"date":          13801 
+},
+{
+ "AAPL.Open":         165.54,
+"AAPL.High":         170.18,
+"AAPL.Low":         165.15,
+"price":         169.58,
+"AAPL.Volume":      266957600,
+"AAPL.Adjusted":          23.04,
+"date":          13802 
+},
+{
+ "AAPL.Open":         172.69,
+"AAPL.High":         173.04,
+"AAPL.Low":         169.18,
+"price":         172.75,
+"AAPL.Volume":      281903300,
+"AAPL.Adjusted":          23.47,
+"date":          13803 
+},
+{
+ "AAPL.Open":          171.5,
+"AAPL.High":         174.19,
+"AAPL.Low":         171.05,
+"price":          173.5,
+"AAPL.Volume":      205919000,
+"AAPL.Adjusted":          23.57,
+"date":          13804 
+},
+{
+ "AAPL.Open":         174.24,
+"AAPL.High":         174.63,
+"AAPL.Low":            170,
+"price":         170.42,
+"AAPL.Volume":      322945000,
+"AAPL.Adjusted":          23.15,
+"date":          13805 
+},
+{
+ "AAPL.Open":         170.35,
+"AAPL.High":          174.9,
+"AAPL.Low":         169.96,
+"price":         174.36,
+"AAPL.Volume":      412374900,
+"AAPL.Adjusted":          23.69,
+"date":          13808 
+},
+{
+ "AAPL.Open":         188.56,
+"AAPL.High":          188.6,
+"AAPL.Low":         182.76,
+"price":         186.16,
+"AAPL.Volume":      448791000,
+"AAPL.Adjusted":          25.29,
+"date":          13809 
+},
+{
+ "AAPL.Open":         185.81,
+"AAPL.High":         187.21,
+"AAPL.Low":         179.24,
+"price":         185.93,
+"AAPL.Volume":      322120400,
+"AAPL.Adjusted":          25.26,
+"date":          13810 
+},
+{
+ "AAPL.Open":         184.87,
+"AAPL.High":          185.9,
+"AAPL.Low":         181.66,
+"price":         182.78,
+"AAPL.Volume":      243400500,
+"AAPL.Adjusted":          24.83,
+"date":          13811 
+},
+{
+ "AAPL.Open":         185.29,
+"AAPL.High":         185.37,
+"AAPL.Low":         182.88,
+"price":          184.7,
+"AAPL.Volume":      176719200,
+"AAPL.Adjusted":           25.1,
+"date":          13812 
+},
+{
+ "AAPL.Open":         185.45,
+"AAPL.High":         186.59,
+"AAPL.Low":          184.7,
+"price":         185.09,
+"AAPL.Volume":      135138500,
+"AAPL.Adjusted":          25.15,
+"date":          13815 
+},
+{
+ "AAPL.Open":         186.18,
+"AAPL.High":         189.37,
+"AAPL.Low":         184.73,
+"price":            187,
+"AAPL.Volume":      234853500,
+"AAPL.Adjusted":          25.41,
+"date":          13816 
+},
+{
+ "AAPL.Open":         187.63,
+"AAPL.High":         190.12,
+"AAPL.Low":         184.95,
+"price":         189.95,
+"AAPL.Volume":      208327700,
+"AAPL.Adjusted":          25.81,
+"date":          13817 
+},
+{
+ "AAPL.Open":          188.6,
+"AAPL.High":          190.1,
+"AAPL.Low":            180,
+"price":         187.44,
+"AAPL.Volume":      201259100,
+"AAPL.Adjusted":          25.47,
+"date":          13818 
+},
+{
+ "AAPL.Open":         189.21,
+"AAPL.High":         189.44,
+"AAPL.Low":         183.49,
+"price":         187.87,
+"AAPL.Volume":      250528600,
+"AAPL.Adjusted":          25.53,
+"date":          13819 
+},
+{
+ "AAPL.Open":         185.29,
+"AAPL.High":         188.96,
+"AAPL.Low":         184.24,
+"price":         186.18,
+"AAPL.Volume":      201044200,
+"AAPL.Adjusted":           25.3,
+"date":          13822 
+},
+{
+ "AAPL.Open":         187.05,
+"AAPL.High":            192,
+"AAPL.Low":         185.27,
+"price":         191.79,
+"AAPL.Volume":      238681800,
+"AAPL.Adjusted":          26.06,
+"date":          13823 
+},
+{
+ "AAPL.Open":         190.61,
+"AAPL.High":         192.68,
+"AAPL.Low":         186.13,
+"price":          186.3,
+"AAPL.Volume":      248581900,
+"AAPL.Adjusted":          25.31,
+"date":          13824 
+},
+{
+ "AAPL.Open":         186.67,
+"AAPL.High":          186.9,
+"AAPL.Low":         167.77,
+"price":         175.47,
+"AAPL.Volume":      472594500,
+"AAPL.Adjusted":          23.84,
+"date":          13825 
+},
+{
+ "AAPL.Open":         171.15,
+"AAPL.High":         175.12,
+"AAPL.Low":         165.21,
+"price":         165.37,
+"AAPL.Volume":      381595200,
+"AAPL.Adjusted":          22.47,
+"date":          13826 
+},
+{
+ "AAPL.Open":         165.28,
+"AAPL.High":          167.7,
+"AAPL.Low":         150.63,
+"price":         153.76,
+"AAPL.Volume":      442266300,
+"AAPL.Adjusted":          20.89,
+"date":          13829 
+},
+{
+ "AAPL.Open":         160.85,
+"AAPL.High":         170.98,
+"AAPL.Low":         153.76,
+"price":         169.96,
+"AAPL.Volume":      434861700,
+"AAPL.Adjusted":          23.09,
+"date":          13830 
+},
+{
+ "AAPL.Open":         177.16,
+"AAPL.High":         177.57,
+"AAPL.Low":         163.74,
+"price":         166.11,
+"AAPL.Volume":      362292000,
+"AAPL.Adjusted":          22.57,
+"date":          13831 
+},
+{
+ "AAPL.Open":         166.39,
+"AAPL.High":         169.59,
+"AAPL.Low":          160.3,
+"price":          164.3,
+"AAPL.Volume":      371852600,
+"AAPL.Adjusted":          22.32,
+"date":          13832 
+},
+{
+ "AAPL.Open":          165.3,
+"AAPL.High":         167.02,
+"AAPL.Low":         159.33,
+"price":         166.39,
+"AAPL.Volume":      345873500,
+"AAPL.Adjusted":          22.61,
+"date":          13833 
+},
+{
+ "AAPL.Open":          166.1,
+"AAPL.High":          168.2,
+"AAPL.Low":          162.1,
+"price":         163.95,
+"AAPL.Volume":      288607200,
+"AAPL.Adjusted":          22.28,
+"date":          13836 
+},
+{
+ "AAPL.Open":         165.67,
+"AAPL.High":         171.79,
+"AAPL.Low":         163.53,
+"price":         168.85,
+"AAPL.Volume":      385910700,
+"AAPL.Adjusted":          22.94,
+"date":          13837 
+},
+{
+ "AAPL.Open":         165.84,
+"AAPL.High":         172.35,
+"AAPL.Low":         164.67,
+"price":         168.46,
+"AAPL.Volume":      304452400,
+"AAPL.Adjusted":          22.89,
+"date":          13838 
+},
+{
+ "AAPL.Open":            172,
+"AAPL.High":         172.05,
+"AAPL.Low":         169.75,
+"price":         171.54,
+"AAPL.Volume":      116439400,
+"AAPL.Adjusted":          23.31,
+"date":          13840 
+},
+{
+ "AAPL.Open":         173.59,
+"AAPL.High":         177.27,
+"AAPL.Low":         172.35,
+"price":         172.54,
+"AAPL.Volume":      326438700,
+"AAPL.Adjusted":          23.44,
+"date":          13843 
+},
+{
+ "AAPL.Open":         175.22,
+"AAPL.High":         175.79,
+"AAPL.Low":         170.01,
+"price":         174.81,
+"AAPL.Volume":      329257600,
+"AAPL.Adjusted":          23.75,
+"date":          13844 
+},
+{
+ "AAPL.Open":         176.82,
+"AAPL.High":          180.6,
+"AAPL.Low":         175.35,
+"price":         180.22,
+"AAPL.Volume":      287728000,
+"AAPL.Adjusted":          24.49,
+"date":          13845 
+},
+{
+ "AAPL.Open":         179.43,
+"AAPL.High":         185.17,
+"AAPL.Low":         179.15,
+"price":         184.29,
+"AAPL.Volume":      262731700,
+"AAPL.Adjusted":          25.04,
+"date":          13846 
+},
+{
+ "AAPL.Open":         187.34,
+"AAPL.High":          187.7,
+"AAPL.Low":          179.7,
+"price":         182.22,
+"AAPL.Volume":      296950500,
+"AAPL.Adjusted":          24.76,
+"date":          13847 
+},
+{
+ "AAPL.Open":         181.86,
+"AAPL.High":         184.14,
+"AAPL.Low":          177.7,
+"price":         178.86,
+"AAPL.Volume":      240367400,
+"AAPL.Adjusted":           24.3,
+"date":          13850 
+},
+{
+ "AAPL.Open":         177.15,
+"AAPL.High":          180.9,
+"AAPL.Low":         176.99,
+"price":         179.81,
+"AAPL.Volume":      193449900,
+"AAPL.Adjusted":          24.43,
+"date":          13851 
+},
+{
+ "AAPL.Open":         182.89,
+"AAPL.High":            186,
+"AAPL.Low":         182.41,
+"price":          185.5,
+"AAPL.Volume":      223100500,
+"AAPL.Adjusted":           25.2,
+"date":          13852 
+},
+{
+ "AAPL.Open":         186.19,
+"AAPL.High":          190.1,
+"AAPL.Low":         186.12,
+"price":         189.95,
+"AAPL.Volume":      224952700,
+"AAPL.Adjusted":          25.81,
+"date":          13853 
+},
+{
+ "AAPL.Open":         190.54,
+"AAPL.High":         194.99,
+"AAPL.Low":         188.04,
+"price":          194.3,
+"AAPL.Volume":      266516600,
+"AAPL.Adjusted":           26.4,
+"date":          13854 
+},
+{
+ "AAPL.Open":         193.59,
+"AAPL.High":         195.66,
+"AAPL.Low":         192.69,
+"price":         194.21,
+"AAPL.Volume":      180594400,
+"AAPL.Adjusted":          26.39,
+"date":          13857 
+},
+{
+ "AAPL.Open":         194.75,
+"AAPL.High":         196.83,
+"AAPL.Low":         187.39,
+"price":         188.54,
+"AAPL.Volume":      277731300,
+"AAPL.Adjusted":          25.62,
+"date":          13858 
+},
+{
+ "AAPL.Open":         193.44,
+"AAPL.High":         194.48,
+"AAPL.Low":         185.76,
+"price":         190.86,
+"AAPL.Volume":      306415200,
+"AAPL.Adjusted":          25.93,
+"date":          13859 
+},
+{
+ "AAPL.Open":         190.19,
+"AAPL.High":         192.12,
+"AAPL.Low":         187.82,
+"price":         191.83,
+"AAPL.Volume":      216154400,
+"AAPL.Adjusted":          26.06,
+"date":          13860 
+},
+{
+ "AAPL.Open":         190.37,
+"AAPL.High":          193.2,
+"AAPL.Low":         189.54,
+"price":         190.39,
+"AAPL.Volume":      168578200,
+"AAPL.Adjusted":          25.87,
+"date":          13861 
+},
+{
+ "AAPL.Open":         190.72,
+"AAPL.High":         192.65,
+"AAPL.Low":         182.98,
+"price":          184.4,
+"AAPL.Volume":      256173400,
+"AAPL.Adjusted":          25.05,
+"date":          13864 
+},
+{
+ "AAPL.Open":         186.52,
+"AAPL.High":         187.33,
+"AAPL.Low":          178.6,
+"price":         182.98,
+"AAPL.Volume":      305650800,
+"AAPL.Adjusted":          24.86,
+"date":          13865 
+},
+{
+ "AAPL.Open":         182.98,
+"AAPL.High":         184.64,
+"AAPL.Low":          180.9,
+"price":         183.12,
+"AAPL.Volume":      206869600,
+"AAPL.Adjusted":          24.88,
+"date":          13866 
+},
+{
+ "AAPL.Open":         185.43,
+"AAPL.High":         187.83,
+"AAPL.Low":         183.33,
+"price":         187.21,
+"AAPL.Volume":      193514300,
+"AAPL.Adjusted":          25.44,
+"date":          13867 
+},
+{
+ "AAPL.Open":         190.12,
+"AAPL.High":         193.91,
+"AAPL.Low":         189.89,
+"price":         193.91,
+"AAPL.Volume":      248490200,
+"AAPL.Adjusted":          26.35,
+"date":          13868 
+},
+{
+ "AAPL.Open":         195.03,
+"AAPL.High":         199.33,
+"AAPL.Low":         194.79,
+"price":          198.8,
+"AAPL.Volume":      120050700,
+"AAPL.Adjusted":          27.01,
+"date":          13871 
+},
+{
+ "AAPL.Open":         199.01,
+"AAPL.High":         200.96,
+"AAPL.Low":         196.82,
+"price":         198.95,
+"AAPL.Volume":      175933100,
+"AAPL.Adjusted":          27.03,
+"date":          13873 
+},
+{
+ "AAPL.Open":         198.95,
+"AAPL.High":         202.96,
+"AAPL.Low":          197.8,
+"price":         198.57,
+"AAPL.Volume":      198881900,
+"AAPL.Adjusted":          26.98,
+"date":          13874 
+},
+{
+ "AAPL.Open":         200.59,
+"AAPL.High":         201.56,
+"AAPL.Low":         196.88,
+"price":         199.83,
+"AAPL.Volume":      174911800,
+"AAPL.Adjusted":          27.15,
+"date":          13875 
+},
+{
+ "AAPL.Open":          199.5,
+"AAPL.High":          200.5,
+"AAPL.Low":         197.75,
+"price":         198.08,
+"AAPL.Volume":      134833300,
+"AAPL.Adjusted":          26.91,
+"date":          13878 
+},
+{
+ "AAPL.Open":         199.27,
+"AAPL.High":         200.26,
+"AAPL.Low":         192.55,
+"price":         194.84,
+"AAPL.Volume":      269794700,
+"AAPL.Adjusted":          26.47,
+"date":          13880 
+},
+{
+ "AAPL.Open":         195.41,
+"AAPL.High":         197.39,
+"AAPL.Low":         192.69,
+"price":         194.93,
+"AAPL.Volume":      210516600,
+"AAPL.Adjusted":          26.49,
+"date":          13881 
+},
+{
+ "AAPL.Open":         191.45,
+"AAPL.High":            193,
+"AAPL.Low":         178.89,
+"price":         180.05,
+"AAPL.Volume":      363958000,
+"AAPL.Adjusted":          24.46,
+"date":          13882 
+},
+{
+ "AAPL.Open":         181.25,
+"AAPL.High":          183.6,
+"AAPL.Low":         170.23,
+"price":         177.64,
+"AAPL.Volume":      518048300,
+"AAPL.Adjusted":          24.14,
+"date":          13885 
+},
+{
+ "AAPL.Open":         180.14,
+"AAPL.High":         182.46,
+"AAPL.Low":          170.8,
+"price":         171.25,
+"AAPL.Volume":      380954000,
+"AAPL.Adjusted":          23.27,
+"date":          13886 
+},
+{
+ "AAPL.Open":          171.3,
+"AAPL.High":          179.5,
+"AAPL.Low":          168.3,
+"price":          179.4,
+"AAPL.Volume":      453470500,
+"AAPL.Adjusted":          24.37,
+"date":          13887 
+},
+{
+ "AAPL.Open":         177.58,
+"AAPL.High":            181,
+"AAPL.Low":         175.41,
+"price":         178.02,
+"AAPL.Volume":      370743800,
+"AAPL.Adjusted":          24.19,
+"date":          13888 
+},
+{
+ "AAPL.Open":            176,
+"AAPL.High":         177.85,
+"AAPL.Low":            170,
+"price":         172.69,
+"AAPL.Volume":      308071400,
+"AAPL.Adjusted":          23.46,
+"date":          13889 
+},
+{
+ "AAPL.Open":         177.52,
+"AAPL.High":         179.42,
+"AAPL.Low":         175.17,
+"price":         178.78,
+"AAPL.Volume":      275112600,
+"AAPL.Adjusted":          24.29,
+"date":          13892 
+},
+{
+ "AAPL.Open":         177.72,
+"AAPL.High":         179.22,
+"AAPL.Low":         164.66,
+"price":         169.04,
+"AAPL.Volume":      585819500,
+"AAPL.Adjusted":          22.97,
+"date":          13893 
+},
+{
+ "AAPL.Open":         165.23,
+"AAPL.High":         169.01,
+"AAPL.Low":          156.7,
+"price":         159.64,
+"AAPL.Volume":      553461300,
+"AAPL.Adjusted":          21.69,
+"date":          13894 
+},
+{
+ "AAPL.Open":         161.51,
+"AAPL.High":         165.36,
+"AAPL.Low":         158.42,
+"price":         160.89,
+"AAPL.Volume":      439464900,
+"AAPL.Adjusted":          21.86,
+"date":          13895 
+},
+{
+ "AAPL.Open":         161.71,
+"AAPL.High":         165.75,
+"AAPL.Low":         159.61,
+"price":         161.36,
+"AAPL.Volume":      431085900,
+"AAPL.Adjusted":          21.92,
+"date":          13896 
+},
+{
+ "AAPL.Open":         148.06,
+"AAPL.High":         159.98,
+"AAPL.Low":            146,
+"price":         155.64,
+"AAPL.Volume":      608688500,
+"AAPL.Adjusted":          21.15,
+"date":          13900 
+},
+{
+ "AAPL.Open":         136.19,
+"AAPL.High":            140,
+"AAPL.Low":         126.14,
+"price":         139.07,
+"AAPL.Volume":      843242400,
+"AAPL.Adjusted":           18.9,
+"date":          13901 
+},
+{
+ "AAPL.Open":         139.99,
+"AAPL.High":          140.7,
+"AAPL.Low":         132.01,
+"price":          135.6,
+"AAPL.Volume":      501466700,
+"AAPL.Adjusted":          18.42,
+"date":          13902 
+},
+{
+ "AAPL.Open":         138.99,
+"AAPL.High":         139.09,
+"AAPL.Low":         129.61,
+"price":         130.01,
+"AAPL.Volume":      388684800,
+"AAPL.Adjusted":          17.66,
+"date":          13903 
+},
+{
+ "AAPL.Open":         128.16,
+"AAPL.High":          133.2,
+"AAPL.Low":         126.45,
+"price":         130.01,
+"AAPL.Volume":      368711000,
+"AAPL.Adjusted":          17.66,
+"date":          13906 
+},
+{
+ "AAPL.Open":         131.15,
+"AAPL.High":         132.79,
+"AAPL.Low":         129.05,
+"price":         131.54,
+"AAPL.Volume":      274995700,
+"AAPL.Adjusted":          17.87,
+"date":          13907 
+},
+{
+ "AAPL.Open":         131.37,
+"AAPL.High":         135.45,
+"AAPL.Low":            130,
+"price":         132.18,
+"AAPL.Volume":      310762900,
+"AAPL.Adjusted":          17.96,
+"date":          13908 
+},
+{
+ "AAPL.Open":         129.45,
+"AAPL.High":         136.65,
+"AAPL.Low":          129.4,
+"price":         135.36,
+"AAPL.Volume":      336418600,
+"AAPL.Adjusted":          18.39,
+"date":          13909 
+},
+{
+ "AAPL.Open":         136.24,
+"AAPL.High":         136.59,
+"AAPL.Low":         132.18,
+"price":         133.75,
+"AAPL.Volume":      252686000,
+"AAPL.Adjusted":          18.17,
+"date":          13910 
+},
+{
+ "AAPL.Open":         134.21,
+"AAPL.High":          135.9,
+"AAPL.Low":         131.42,
+"price":         131.65,
+"AAPL.Volume":      224808500,
+"AAPL.Adjusted":          17.89,
+"date":          13913 
+},
+{
+ "AAPL.Open":         130.43,
+"AAPL.High":            134,
+"AAPL.Low":          128.9,
+"price":         129.36,
+"AAPL.Volume":      285260500,
+"AAPL.Adjusted":          17.58,
+"date":          13914 
+},
+{
+ "AAPL.Open":         130.83,
+"AAPL.High":         131.92,
+"AAPL.Low":         121.77,
+"price":            122,
+"AAPL.Volume":      393318100,
+"AAPL.Adjusted":          16.58,
+"date":          13915 
+},
+{
+ "AAPL.Open":         119.97,
+"AAPL.High":         124.78,
+"AAPL.Low":         117.27,
+"price":         121.24,
+"AAPL.Volume":      520832900,
+"AAPL.Adjusted":          16.47,
+"date":          13916 
+},
+{
+ "AAPL.Open":         122.08,
+"AAPL.High":          125.7,
+"AAPL.Low":          121.6,
+"price":         125.48,
+"AAPL.Volume":      338993200,
+"AAPL.Adjusted":          17.05,
+"date":          13917 
+},
+{
+ "AAPL.Open":         128.01,
+"AAPL.High":         129.98,
+"AAPL.Low":          127.2,
+"price":         129.45,
+"AAPL.Volume":      300358100,
+"AAPL.Adjusted":          17.59,
+"date":          13920 
+},
+{
+ "AAPL.Open":          130.7,
+"AAPL.High":            131,
+"AAPL.Low":         123.62,
+"price":         124.86,
+"AAPL.Volume":      306495000,
+"AAPL.Adjusted":          16.96,
+"date":          13921 
+},
+{
+ "AAPL.Open":         126.68,
+"AAPL.High":         129.78,
+"AAPL.Low":         125.63,
+"price":          129.4,
+"AAPL.Volume":      242133500,
+"AAPL.Adjusted":          17.58,
+"date":          13922 
+},
+{
+ "AAPL.Open":          129.4,
+"AAPL.High":          130.8,
+"AAPL.Low":         127.01,
+"price":         127.46,
+"AAPL.Volume":      238524300,
+"AAPL.Adjusted":          17.32,
+"date":          13923 
+},
+{
+ "AAPL.Open":         126.27,
+"AAPL.High":         127.08,
+"AAPL.Low":         124.06,
+"price":         124.63,
+"AAPL.Volume":      225325100,
+"AAPL.Adjusted":          16.93,
+"date":          13924 
+},
+{
+ "AAPL.Open":         125.99,
+"AAPL.High":         126.75,
+"AAPL.Low":         121.44,
+"price":         122.18,
+"AAPL.Volume":      251261500,
+"AAPL.Adjusted":           16.6,
+"date":          13928 
+},
+{
+ "AAPL.Open":          122.2,
+"AAPL.High":          124.6,
+"AAPL.Low":         121.68,
+"price":         123.82,
+"AAPL.Volume":      241859800,
+"AAPL.Adjusted":          16.82,
+"date":          13929 
+},
+{
+ "AAPL.Open":         126.05,
+"AAPL.High":         126.47,
+"AAPL.Low":         120.86,
+"price":         121.54,
+"AAPL.Volume":      234528700,
+"AAPL.Adjusted":          16.51,
+"date":          13930 
+},
+{
+ "AAPL.Open":         122.48,
+"AAPL.High":         122.51,
+"AAPL.Low":         115.87,
+"price":         119.46,
+"AAPL.Volume":      382469500,
+"AAPL.Adjusted":          16.23,
+"date":          13931 
+},
+{
+ "AAPL.Open":         118.59,
+"AAPL.High":         120.17,
+"AAPL.Low":         116.66,
+"price":         119.74,
+"AAPL.Volume":      314193600,
+"AAPL.Adjusted":          16.27,
+"date":          13934 
+},
+{
+ "AAPL.Open":         117.64,
+"AAPL.High":         121.09,
+"AAPL.Low":         115.44,
+"price":         119.15,
+"AAPL.Volume":      376222000,
+"AAPL.Adjusted":          16.19,
+"date":          13935 
+},
+{
+ "AAPL.Open":         118.23,
+"AAPL.High":         123.05,
+"AAPL.Low":         118.09,
+"price":         122.96,
+"AAPL.Volume":      368784500,
+"AAPL.Adjusted":          16.71,
+"date":          13936 
+},
+{
+ "AAPL.Open":          127.2,
+"AAPL.High":          132.2,
+"AAPL.Low":         125.77,
+"price":         129.91,
+"AAPL.Volume":      404563600,
+"AAPL.Adjusted":          17.65,
+"date":          13937 
+},
+{
+ "AAPL.Open":         129.29,
+"AAPL.High":         130.21,
+"AAPL.Low":          124.8,
+"price":         125.02,
+"AAPL.Volume":      313870200,
+"AAPL.Adjusted":          16.99,
+"date":          13938 
+},
+{
+ "AAPL.Open":         124.44,
+"AAPL.High":         125.98,
+"AAPL.Low":            118,
+"price":         121.73,
+"AAPL.Volume":      398260800,
+"AAPL.Adjusted":          16.54,
+"date":          13941 
+},
+{
+ "AAPL.Open":         121.99,
+"AAPL.High":         124.88,
+"AAPL.Low":          120.4,
+"price":         124.62,
+"AAPL.Volume":      446345900,
+"AAPL.Adjusted":          16.93,
+"date":          13942 
+},
+{
+ "AAPL.Open":         123.58,
+"AAPL.High":         125.14,
+"AAPL.Low":         122.25,
+"price":         124.49,
+"AAPL.Volume":      305459000,
+"AAPL.Adjusted":          16.91,
+"date":          13943 
+},
+{
+ "AAPL.Open":         124.61,
+"AAPL.High":          127.5,
+"AAPL.Low":         120.81,
+"price":         120.93,
+"AAPL.Volume":      368424700,
+"AAPL.Adjusted":          16.43,
+"date":          13944 
+},
+{
+ "AAPL.Open":         120.41,
+"AAPL.High":         122.98,
+"AAPL.Low":         119.05,
+"price":         122.25,
+"AAPL.Volume":      307615700,
+"AAPL.Adjusted":          16.61,
+"date":          13945 
+},
+{
+ "AAPL.Open":         121.98,
+"AAPL.High":         123.46,
+"AAPL.Low":         119.37,
+"price":         119.69,
+"AAPL.Volume":      249897200,
+"AAPL.Adjusted":          16.26,
+"date":          13948 
+},
+{
+ "AAPL.Open":          124.1,
+"AAPL.High":         127.48,
+"AAPL.Low":            122,
+"price":         127.35,
+"AAPL.Volume":      290985800,
+"AAPL.Adjusted":           17.3,
+"date":          13949 
+},
+{
+ "AAPL.Open":         127.04,
+"AAPL.High":         128.68,
+"AAPL.Low":         125.17,
+"price":         126.03,
+"AAPL.Volume":      264907300,
+"AAPL.Adjusted":          17.12,
+"date":          13950 
+},
+{
+ "AAPL.Open":          124.1,
+"AAPL.High":          129.5,
+"AAPL.Low":            123,
+"price":         127.94,
+"AAPL.Volume":      315525700,
+"AAPL.Adjusted":          17.38,
+"date":          13951 
+},
+{
+ "AAPL.Open":         129.88,
+"AAPL.High":          130.3,
+"AAPL.Low":          124.2,
+"price":         126.61,
+"AAPL.Volume":      289160200,
+"AAPL.Adjusted":           17.2,
+"date":          13952 
+},
+{
+ "AAPL.Open":         122.55,
+"AAPL.High":         128.59,
+"AAPL.Low":         122.55,
+"price":         126.73,
+"AAPL.Volume":      268149700,
+"AAPL.Adjusted":          17.22,
+"date":          13955 
+},
+{
+ "AAPL.Open":         129.18,
+"AAPL.High":            133,
+"AAPL.Low":         128.67,
+"price":         132.82,
+"AAPL.Volume":      301280000,
+"AAPL.Adjusted":          18.05,
+"date":          13956 
+},
+{
+ "AAPL.Open":         133.12,
+"AAPL.High":         134.29,
+"AAPL.Low":         129.67,
+"price":         129.67,
+"AAPL.Volume":      252634200,
+"AAPL.Adjusted":          17.62,
+"date":          13957 
+},
+{
+ "AAPL.Open":         131.12,
+"AAPL.High":         133.29,
+"AAPL.Low":         129.18,
+"price":         133.27,
+"AAPL.Volume":      227196900,
+"AAPL.Adjusted":          18.11,
+"date":          13958 
+},
+{
+ "AAPL.Open":         134.01,
+"AAPL.High":         140.85,
+"AAPL.Low":         133.64,
+"price":         139.53,
+"AAPL.Volume":      266730100,
+"AAPL.Adjusted":          18.96,
+"date":          13962 
+},
+{
+ "AAPL.Open":         139.96,
+"AAPL.High":          143.1,
+"AAPL.Low":         137.33,
+"price":         140.98,
+"AAPL.Volume":      263097800,
+"AAPL.Adjusted":          19.15,
+"date":          13963 
+},
+{
+ "AAPL.Open":         140.87,
+"AAPL.High":         145.74,
+"AAPL.Low":         140.64,
+"price":         145.06,
+"AAPL.Volume":      295521100,
+"AAPL.Adjusted":          19.71,
+"date":          13964 
+},
+{
+ "AAPL.Open":         144.95,
+"AAPL.High":         145.31,
+"AAPL.Low":         139.99,
+"price":         140.25,
+"AAPL.Volume":      249957400,
+"AAPL.Adjusted":          19.06,
+"date":          13965 
+},
+{
+ "AAPL.Open":          141.8,
+"AAPL.High":         144.65,
+"AAPL.Low":          141.6,
+"price":         143.01,
+"AAPL.Volume":      178652600,
+"AAPL.Adjusted":          19.43,
+"date":          13966 
+},
+{
+ "AAPL.Open":         143.27,
+"AAPL.High":         145.71,
+"AAPL.Low":         142.52,
+"price":          143.5,
+"AAPL.Volume":      192016300,
+"AAPL.Adjusted":           19.5,
+"date":          13969 
+},
+{
+ "AAPL.Open":          146.3,
+"AAPL.High":         149.66,
+"AAPL.Low":         143.61,
+"price":         149.53,
+"AAPL.Volume":      258141800,
+"AAPL.Adjusted":          20.32,
+"date":          13970 
+},
+{
+ "AAPL.Open":         148.78,
+"AAPL.High":          151.2,
+"AAPL.Low":         145.85,
+"price":         147.49,
+"AAPL.Volume":      261242100,
+"AAPL.Adjusted":          20.04,
+"date":          13971 
+},
+{
+ "AAPL.Open":         147.06,
+"AAPL.High":         153.63,
+"AAPL.Low":            147,
+"price":         151.61,
+"AAPL.Volume":      262892000,
+"AAPL.Adjusted":           20.6,
+"date":          13972 
+},
+{
+ "AAPL.Open":         152.19,
+"AAPL.High":         154.71,
+"AAPL.Low":         150.75,
+"price":         153.08,
+"AAPL.Volume":      213604300,
+"AAPL.Adjusted":           20.8,
+"date":          13973 
+},
+{
+ "AAPL.Open":         156.13,
+"AAPL.High":         159.69,
+"AAPL.Low":         155.11,
+"price":         155.89,
+"AAPL.Volume":      289581600,
+"AAPL.Adjusted":          21.18,
+"date":          13976 
+},
+{
+ "AAPL.Open":         153.55,
+"AAPL.High":         156.45,
+"AAPL.Low":         152.32,
+"price":         152.84,
+"AAPL.Volume":      253573600,
+"AAPL.Adjusted":          20.77,
+"date":          13977 
+},
+{
+ "AAPL.Open":         153.31,
+"AAPL.High":         153.89,
+"AAPL.Low":         150.46,
+"price":         151.44,
+"AAPL.Volume":      218349600,
+"AAPL.Adjusted":          20.58,
+"date":          13978 
+},
+{
+ "AAPL.Open":         151.13,
+"AAPL.High":         155.42,
+"AAPL.Low":          150.6,
+"price":         154.55,
+"AAPL.Volume":      238940800,
+"AAPL.Adjusted":             21,
+"date":          13979 
+},
+{
+ "AAPL.Open":         152.72,
+"AAPL.High":          153.3,
+"AAPL.Low":          146.4,
+"price":         147.14,
+"AAPL.Volume":      302519000,
+"AAPL.Adjusted":          19.99,
+"date":          13980 
+},
+{
+ "AAPL.Open":         146.77,
+"AAPL.High":         149.25,
+"AAPL.Low":         144.54,
+"price":         147.78,
+"AAPL.Volume":      211271900,
+"AAPL.Adjusted":          20.08,
+"date":          13983 
+},
+{
+ "AAPL.Open":          149.4,
+"AAPL.High":         149.72,
+"AAPL.Low":         145.72,
+"price":         148.38,
+"AAPL.Volume":      174509300,
+"AAPL.Adjusted":          20.16,
+"date":          13984 
+},
+{
+ "AAPL.Open":         151.72,
+"AAPL.High":          154.1,
+"AAPL.Low":         150.62,
+"price":          153.7,
+"AAPL.Volume":      198943500,
+"AAPL.Adjusted":          20.88,
+"date":          13985 
+},
+{
+ "AAPL.Open":         154.17,
+"AAPL.High":            156,
+"AAPL.Low":         153.35,
+"price":         154.49,
+"AAPL.Volume":      176066800,
+"AAPL.Adjusted":          20.99,
+"date":          13986 
+},
+{
+ "AAPL.Open":         159.12,
+"AAPL.High":         162.26,
+"AAPL.Low":         158.38,
+"price":         161.04,
+"AAPL.Volume":      256691400,
+"AAPL.Adjusted":          21.88,
+"date":          13987 
+},
+{
+ "AAPL.Open":         162.21,
+"AAPL.High":          168.5,
+"AAPL.Low":         161.76,
+"price":         168.16,
+"AAPL.Volume":      259788200,
+"AAPL.Adjusted":          22.85,
+"date":          13990 
+},
+{
+ "AAPL.Open":          167.4,
+"AAPL.High":            168,
+"AAPL.Low":         158.09,
+"price":          160.2,
+"AAPL.Volume":      359893100,
+"AAPL.Adjusted":          21.77,
+"date":          13991 
+},
+{
+ "AAPL.Open":         164.05,
+"AAPL.High":         164.84,
+"AAPL.Low":         161.08,
+"price":         162.89,
+"AAPL.Volume":      376047700,
+"AAPL.Adjusted":          22.13,
+"date":          13992 
+},
+{
+ "AAPL.Open":         165.34,
+"AAPL.High":         169.98,
+"AAPL.Low":         159.19,
+"price":         168.94,
+"AAPL.Volume":      424016600,
+"AAPL.Adjusted":          22.95,
+"date":          13993 
+},
+{
+ "AAPL.Open":          170.7,
+"AAPL.High":          171.1,
+"AAPL.Low":         166.42,
+"price":         169.73,
+"AAPL.Volume":      248118500,
+"AAPL.Adjusted":          23.06,
+"date":          13994 
+},
+{
+ "AAPL.Open":         169.75,
+"AAPL.High":         173.75,
+"AAPL.Low":         169.13,
+"price":         172.24,
+"AAPL.Volume":      196803600,
+"AAPL.Adjusted":           23.4,
+"date":          13997 
+},
+{
+ "AAPL.Open":         171.11,
+"AAPL.High":         175.66,
+"AAPL.Low":         170.25,
+"price":         175.05,
+"AAPL.Volume":      230869100,
+"AAPL.Adjusted":          23.78,
+"date":          13998 
+},
+{
+ "AAPL.Open":         176.19,
+"AAPL.High":            180,
+"AAPL.Low":         172.92,
+"price":         173.95,
+"AAPL.Volume":      284881100,
+"AAPL.Adjusted":          23.63,
+"date":          13999 
+},
+{
+ "AAPL.Open":         174.96,
+"AAPL.High":            180,
+"AAPL.Low":         174.86,
+"price":            180,
+"AAPL.Volume":      225894200,
+"AAPL.Adjusted":          24.46,
+"date":          14000 
+},
+{
+ "AAPL.Open":         180.19,
+"AAPL.High":         181.92,
+"AAPL.Low":         178.55,
+"price":         180.94,
+"AAPL.Volume":      251520500,
+"AAPL.Adjusted":          24.58,
+"date":          14001 
+},
+{
+ "AAPL.Open":         181.92,
+"AAPL.High":         185.31,
+"AAPL.Low":         181.05,
+"price":         184.73,
+"AAPL.Volume":      213639300,
+"AAPL.Adjusted":           25.1,
+"date":          14004 
+},
+{
+ "AAPL.Open":         184.66,
+"AAPL.High":         187.12,
+"AAPL.Low":         182.18,
+"price":         186.66,
+"AAPL.Volume":      229717600,
+"AAPL.Adjusted":          25.36,
+"date":          14005 
+},
+{
+ "AAPL.Open":         186.05,
+"AAPL.High":          188.2,
+"AAPL.Low":         180.54,
+"price":         182.59,
+"AAPL.Volume":      289283400,
+"AAPL.Adjusted":          24.81,
+"date":          14006 
+},
+{
+ "AAPL.Open":         183.77,
+"AAPL.High":          186.5,
+"AAPL.Low":         183.07,
+"price":         185.06,
+"AAPL.Volume":      224771400,
+"AAPL.Adjusted":          25.14,
+"date":          14007 
+},
+{
+ "AAPL.Open":         183.16,
+"AAPL.High":         184.25,
+"AAPL.Low":         181.37,
+"price":         183.45,
+"AAPL.Volume":      168268100,
+"AAPL.Adjusted":          24.93,
+"date":          14008 
+},
+{
+ "AAPL.Open":         185.21,
+"AAPL.High":         188.87,
+"AAPL.Low":         182.85,
+"price":         188.16,
+"AAPL.Volume":      204640800,
+"AAPL.Adjusted":          25.57,
+"date":          14011 
+},
+{
+ "AAPL.Open":         188.61,
+"AAPL.High":         191.45,
+"AAPL.Low":         187.86,
+"price":         189.96,
+"AAPL.Volume":      205809100,
+"AAPL.Adjusted":          25.81,
+"date":          14012 
+},
+{
+ "AAPL.Open":         191.23,
+"AAPL.High":         192.24,
+"AAPL.Low":         185.57,
+"price":         186.26,
+"AAPL.Volume":      229205900,
+"AAPL.Adjusted":          25.31,
+"date":          14013 
+},
+{
+ "AAPL.Open":         186.81,
+"AAPL.High":          189.9,
+"AAPL.Low":          184.2,
+"price":         189.73,
+"AAPL.Volume":      218302000,
+"AAPL.Adjusted":          25.78,
+"date":          14014 
+},
+{
+ "AAPL.Open":         190.11,
+"AAPL.High":          190.3,
+"AAPL.Low":            187,
+"price":         187.62,
+"AAPL.Volume":      191442300,
+"AAPL.Adjusted":          25.49,
+"date":          14015 
+},
+{
+ "AAPL.Open":         187.86,
+"AAPL.High":         188.69,
+"AAPL.Low":          181.3,
+"price":          183.6,
+"AAPL.Volume":      236455100,
+"AAPL.Adjusted":          24.95,
+"date":          14018 
+},
+{
+ "AAPL.Open":         181.82,
+"AAPL.High":         186.16,
+"AAPL.Low":         180.12,
+"price":          185.9,
+"AAPL.Volume":      242462500,
+"AAPL.Adjusted":          25.26,
+"date":          14019 
+},
+{
+ "AAPL.Open":         185.67,
+"AAPL.High":         187.95,
+"AAPL.Low":         176.25,
+"price":         178.19,
+"AAPL.Volume":      289414300,
+"AAPL.Adjusted":          24.21,
+"date":          14020 
+},
+{
+ "AAPL.Open":         179.26,
+"AAPL.High":         181.33,
+"AAPL.Low":            172,
+"price":         177.05,
+"AAPL.Volume":      301683900,
+"AAPL.Adjusted":          24.06,
+"date":          14021 
+},
+{
+ "AAPL.Open":         180.77,
+"AAPL.High":         181.99,
+"AAPL.Low":          177.8,
+"price":         181.17,
+"AAPL.Volume":      226729300,
+"AAPL.Adjusted":          24.62,
+"date":          14022 
+},
+{
+ "AAPL.Open":         182.75,
+"AAPL.High":         186.43,
+"AAPL.Low":         181.84,
+"price":         186.43,
+"AAPL.Volume":      197476300,
+"AAPL.Adjusted":          25.33,
+"date":          14026 
+},
+{
+ "AAPL.Open":         187.41,
+"AAPL.High":         187.95,
+"AAPL.Low":         183.72,
+"price":         187.01,
+"AAPL.Volume":      185994900,
+"AAPL.Adjusted":          25.41,
+"date":          14027 
+},
+{
+ "AAPL.Open":         186.76,
+"AAPL.High":          188.2,
+"AAPL.Low":          185.5,
+"price":         186.69,
+"AAPL.Volume":      161796600,
+"AAPL.Adjusted":          25.37,
+"date":          14028 
+},
+{
+ "AAPL.Open":         187.45,
+"AAPL.High":         189.54,
+"AAPL.Low":         187.38,
+"price":         188.75,
+"AAPL.Volume":      152546100,
+"AAPL.Adjusted":          25.65,
+"date":          14029 
+},
+{
+ "AAPL.Open":          188.6,
+"AAPL.High":         189.65,
+"AAPL.Low":         184.53,
+"price":          186.1,
+"AAPL.Volume":      169960000,
+"AAPL.Adjusted":          25.29,
+"date":          14032 
+},
+{
+ "AAPL.Open":         186.86,
+"AAPL.High":          188.2,
+"AAPL.Low":         182.34,
+"price":         185.37,
+"AAPL.Volume":      187630100,
+"AAPL.Adjusted":          25.19,
+"date":          14033 
+},
+{
+ "AAPL.Open":         184.02,
+"AAPL.High":         187.09,
+"AAPL.Low":         183.23,
+"price":         185.19,
+"AAPL.Volume":      181745900,
+"AAPL.Adjusted":          25.16,
+"date":          14034 
+},
+{
+ "AAPL.Open":         186.34,
+"AAPL.High":         189.84,
+"AAPL.Low":          185.7,
+"price":         189.43,
+"AAPL.Volume":      188861400,
+"AAPL.Adjusted":          25.74,
+"date":          14035 
+},
+{
+ "AAPL.Open":            188,
+"AAPL.High":         189.95,
+"AAPL.Low":         185.55,
+"price":         185.64,
+"AAPL.Volume":      241605700,
+"AAPL.Adjusted":          25.22,
+"date":          14036 
+},
+{
+ "AAPL.Open":         184.79,
+"AAPL.High":         184.94,
+"AAPL.Low":         175.75,
+"price":         181.61,
+"AAPL.Volume":      472098200,
+"AAPL.Adjusted":          24.68,
+"date":          14039 
+},
+{
+ "AAPL.Open":         180.51,
+"AAPL.High":         186.78,
+"AAPL.Low":         179.02,
+"price":         185.64,
+"AAPL.Volume":      285235300,
+"AAPL.Adjusted":          25.22,
+"date":          14040 
+},
+{
+ "AAPL.Open":         184.34,
+"AAPL.High":            186,
+"AAPL.Low":         179.59,
+"price":         180.81,
+"AAPL.Volume":      240387700,
+"AAPL.Adjusted":          24.57,
+"date":          14041 
+},
+{
+ "AAPL.Open":         181.49,
+"AAPL.High":          182.6,
+"AAPL.Low":          171.2,
+"price":         173.26,
+"AAPL.Volume":      327083400,
+"AAPL.Adjusted":          23.54,
+"date":          14042 
+},
+{
+ "AAPL.Open":         171.64,
+"AAPL.High":         174.16,
+"AAPL.Low":         165.31,
+"price":         172.37,
+"AAPL.Volume":      336489300,
+"AAPL.Adjusted":          23.42,
+"date":          14043 
+},
+{
+ "AAPL.Open":          171.3,
+"AAPL.High":          177.9,
+"AAPL.Low":         169.07,
+"price":         176.84,
+"AAPL.Volume":      262932600,
+"AAPL.Adjusted":          24.03,
+"date":          14046 
+},
+{
+ "AAPL.Open":          178.1,
+"AAPL.High":         181.99,
+"AAPL.Low":         177.41,
+"price":         181.43,
+"AAPL.Volume":      224914200,
+"AAPL.Adjusted":          24.65,
+"date":          14047 
+},
+{
+ "AAPL.Open":         181.12,
+"AAPL.High":          182.2,
+"AAPL.Low":         177.35,
+"price":         178.75,
+"AAPL.Volume":      202867000,
+"AAPL.Adjusted":          24.29,
+"date":          14048 
+},
+{
+ "AAPL.Open":         178.55,
+"AAPL.High":         182.34,
+"AAPL.Low":          176.8,
+"price":          180.9,
+"AAPL.Volume":      197987300,
+"AAPL.Adjusted":          24.58,
+"date":          14049 
+},
+{
+ "AAPL.Open":         179.35,
+"AAPL.High":            181,
+"AAPL.Low":            175,
+"price":         175.27,
+"AAPL.Volume":      222091800,
+"AAPL.Adjusted":          23.81,
+"date":          14050 
+},
+{
+ "AAPL.Open":         174.74,
+"AAPL.High":         175.88,
+"AAPL.Low":         171.56,
+"price":         173.16,
+"AAPL.Volume":      161445200,
+"AAPL.Adjusted":          23.53,
+"date":          14053 
+},
+{
+ "AAPL.Open":         172.37,
+"AAPL.High":         175.78,
+"AAPL.Low":         171.63,
+"price":         173.25,
+"AAPL.Volume":      155486800,
+"AAPL.Adjusted":          23.54,
+"date":          14054 
+},
+{
+ "AAPL.Open":         174.61,
+"AAPL.High":         178.83,
+"AAPL.Low":         173.88,
+"price":         177.39,
+"AAPL.Volume":      161112700,
+"AAPL.Adjusted":           24.1,
+"date":          14055 
+},
+{
+ "AAPL.Open":         174.07,
+"AAPL.High":         174.84,
+"AAPL.Low":         168.01,
+"price":         168.26,
+"AAPL.Volume":      217402500,
+"AAPL.Adjusted":          22.86,
+"date":          14056 
+},
+{
+ "AAPL.Open":         166.51,
+"AAPL.High":         170.57,
+"AAPL.Low":         164.15,
+"price":         170.09,
+"AAPL.Volume":      260562400,
+"AAPL.Adjusted":          23.11,
+"date":          14057 
+},
+{
+ "AAPL.Open":         170.19,
+"AAPL.High":            172,
+"AAPL.Low":         166.62,
+"price":         167.44,
+"AAPL.Volume":      171049200,
+"AAPL.Adjusted":          22.75,
+"date":          14060 
+},
+{
+ "AAPL.Open":         164.23,
+"AAPL.High":         174.72,
+"AAPL.Low":            164,
+"price":         174.68,
+"AAPL.Volume":      277820200,
+"AAPL.Adjusted":          23.73,
+"date":          14061 
+},
+{
+ "AAPL.Open":          175.2,
+"AAPL.High":         177.45,
+"AAPL.Low":         168.18,
+"price":         168.18,
+"AAPL.Volume":      209379800,
+"AAPL.Adjusted":          22.85,
+"date":          14062 
+},
+{
+ "AAPL.Open":         169.59,
+"AAPL.High":         172.17,
+"AAPL.Low":         165.75,
+"price":         170.12,
+"AAPL.Volume":      130840500,
+"AAPL.Adjusted":          23.11,
+"date":          14063 
+},
+{
+ "AAPL.Open":         173.16,
+"AAPL.High":         177.13,
+"AAPL.Low":          171.9,
+"price":         175.16,
+"AAPL.Volume":      205097900,
+"AAPL.Adjusted":           23.8,
+"date":          14067 
+},
+{
+ "AAPL.Open":          175.4,
+"AAPL.High":          179.7,
+"AAPL.Low":         172.74,
+"price":         179.55,
+"AAPL.Volume":      222087600,
+"AAPL.Adjusted":           24.4,
+"date":          14068 
+},
+{
+ "AAPL.Open":          180.2,
+"AAPL.High":         180.91,
+"AAPL.Low":         174.14,
+"price":         174.25,
+"AAPL.Volume":      223944000,
+"AAPL.Adjusted":          23.68,
+"date":          14069 
+},
+{
+ "AAPL.Open":         174.92,
+"AAPL.High":         177.34,
+"AAPL.Low":         171.37,
+"price":         176.63,
+"AAPL.Volume":      210172200,
+"AAPL.Adjusted":             24,
+"date":          14070 
+},
+{
+ "AAPL.Open":         175.47,
+"AAPL.High":         177.11,
+"AAPL.Low":            171,
+"price":         172.58,
+"AAPL.Volume":      232502900,
+"AAPL.Adjusted":          23.45,
+"date":          14071 
+},
+{
+ "AAPL.Open":         179.24,
+"AAPL.High":          179.3,
+"AAPL.Low":         173.08,
+"price":         173.88,
+"AAPL.Volume":      221513600,
+"AAPL.Adjusted":          23.62,
+"date":          14074 
+},
+{
+ "AAPL.Open":         172.48,
+"AAPL.High":         173.74,
+"AAPL.Low":         166.39,
+"price":         169.64,
+"AAPL.Volume":      260010800,
+"AAPL.Adjusted":          23.05,
+"date":          14075 
+},
+{
+ "AAPL.Open":          170.2,
+"AAPL.High":         172.93,
+"AAPL.Low":          168.6,
+"price":         172.81,
+"AAPL.Volume":      186947600,
+"AAPL.Adjusted":          23.48,
+"date":          14076 
+},
+{
+ "AAPL.Open":          174.1,
+"AAPL.High":         174.98,
+"AAPL.Low":         171.39,
+"price":         171.81,
+"AAPL.Volume":      189381500,
+"AAPL.Adjusted":          23.34,
+"date":          14077 
+},
+{
+ "AAPL.Open":         168.52,
+"AAPL.High":         169.65,
+"AAPL.Low":            165,
+"price":         165.15,
+"AAPL.Volume":      217103600,
+"AAPL.Adjusted":          22.44,
+"date":          14078 
+},
+{
+ "AAPL.Open":          166.9,
+"AAPL.High":          167.5,
+"AAPL.Low":         161.12,
+"price":         166.29,
+"AAPL.Volume":      340117400,
+"AAPL.Adjusted":          22.59,
+"date":          14081 
+},
+{
+ "AAPL.Open":            149,
+"AAPL.High":         162.76,
+"AAPL.Low":         146.53,
+"price":         162.02,
+"AAPL.Volume":      469898100,
+"AAPL.Adjusted":          22.01,
+"date":          14082 
+},
+{
+ "AAPL.Open":         164.99,
+"AAPL.High":         168.37,
+"AAPL.Low":         161.56,
+"price":         166.26,
+"AAPL.Volume":      265442100,
+"AAPL.Adjusted":          22.59,
+"date":          14083 
+},
+{
+ "AAPL.Open":         164.32,
+"AAPL.High":         165.26,
+"AAPL.Low":         158.45,
+"price":         159.03,
+"AAPL.Volume":      209904800,
+"AAPL.Adjusted":          21.61,
+"date":          14084 
+},
+{
+ "AAPL.Open":          160.4,
+"AAPL.High":            163,
+"AAPL.Low":         158.65,
+"price":         162.12,
+"AAPL.Volume":      158409300,
+"AAPL.Adjusted":          22.03,
+"date":          14085 
+},
+{
+ "AAPL.Open":         162.34,
+"AAPL.High":         162.47,
+"AAPL.Low":         154.02,
+"price":          154.4,
+"AAPL.Volume":      195178200,
+"AAPL.Adjusted":          20.98,
+"date":          14088 
+},
+{
+ "AAPL.Open":         155.41,
+"AAPL.High":         159.45,
+"AAPL.Low":         153.65,
+"price":         157.08,
+"AAPL.Volume":      171017700,
+"AAPL.Adjusted":          21.34,
+"date":          14089 
+},
+{
+ "AAPL.Open":         157.78,
+"AAPL.High":         160.49,
+"AAPL.Low":         156.08,
+"price":         159.88,
+"AAPL.Volume":      181295800,
+"AAPL.Adjusted":          21.72,
+"date":          14090 
+},
+{
+ "AAPL.Open":         157.54,
+"AAPL.High":          162.2,
+"AAPL.Low":         156.98,
+"price":         158.95,
+"AAPL.Volume":      159374600,
+"AAPL.Adjusted":           21.6,
+"date":          14091 
+},
+{
+ "AAPL.Open":          159.9,
+"AAPL.High":         159.99,
+"AAPL.Low":         155.75,
+"price":         156.66,
+"AAPL.Volume":      136159800,
+"AAPL.Adjusted":          21.29,
+"date":          14092 
+},
+{
+ "AAPL.Open":          156.6,
+"AAPL.High":          157.9,
+"AAPL.Low":         152.91,
+"price":         153.23,
+"AAPL.Volume":      148131900,
+"AAPL.Adjusted":          20.82,
+"date":          14095 
+},
+{
+ "AAPL.Open":         155.42,
+"AAPL.High":          160.8,
+"AAPL.Low":         154.82,
+"price":         160.64,
+"AAPL.Volume":      172092900,
+"AAPL.Adjusted":          21.83,
+"date":          14096 
+},
+{
+ "AAPL.Open":         159.97,
+"AAPL.High":          167.4,
+"AAPL.Low":            158,
+"price":         164.19,
+"AAPL.Volume":      197852200,
+"AAPL.Adjusted":          22.31,
+"date":          14097 
+},
+{
+ "AAPL.Open":         162.71,
+"AAPL.High":         166.15,
+"AAPL.Low":          161.5,
+"price":         163.57,
+"AAPL.Volume":      168093100,
+"AAPL.Adjusted":          22.22,
+"date":          14098 
+},
+{
+ "AAPL.Open":         163.86,
+"AAPL.High":         169.65,
+"AAPL.Low":         163.75,
+"price":         169.55,
+"AAPL.Volume":      178499300,
+"AAPL.Adjusted":          23.04,
+"date":          14099 
+},
+{
+ "AAPL.Open":         170.07,
+"AAPL.High":          176.5,
+"AAPL.Low":         169.67,
+"price":         173.56,
+"AAPL.Volume":      222826100,
+"AAPL.Adjusted":          23.58,
+"date":          14102 
+},
+{
+ "AAPL.Open":         173.52,
+"AAPL.High":         179.29,
+"AAPL.Low":         173.51,
+"price":         176.73,
+"AAPL.Volume":      209069700,
+"AAPL.Adjusted":          24.01,
+"date":          14103 
+},
+{
+ "AAPL.Open":         177.98,
+"AAPL.High":            180,
+"AAPL.Low":          175.9,
+"price":          179.3,
+"AAPL.Volume":      210586600,
+"AAPL.Adjusted":          24.36,
+"date":          14104 
+},
+{
+ "AAPL.Open":         178.33,
+"AAPL.High":         180.45,
+"AAPL.Low":         177.84,
+"price":         179.32,
+"AAPL.Volume":      177825200,
+"AAPL.Adjusted":          24.36,
+"date":          14105 
+},
+{
+ "AAPL.Open":         179.04,
+"AAPL.High":         179.75,
+"AAPL.Low":         175.05,
+"price":         175.74,
+"AAPL.Volume":      177062900,
+"AAPL.Adjusted":          23.88,
+"date":          14106 
+},
+{
+ "AAPL.Open":         175.57,
+"AAPL.High":         177.81,
+"AAPL.Low":         173.82,
+"price":         175.39,
+"AAPL.Volume":      138003600,
+"AAPL.Adjusted":          23.83,
+"date":          14109 
+},
+{
+ "AAPL.Open":         174.54,
+"AAPL.High":         177.07,
+"AAPL.Low":         171.81,
+"price":         173.53,
+"AAPL.Volume":      154051100,
+"AAPL.Adjusted":          23.58,
+"date":          14110 
+},
+{
+ "AAPL.Open":         174.77,
+"AAPL.High":         176.94,
+"AAPL.Low":         173.61,
+"price":         175.84,
+"AAPL.Volume":      126737800,
+"AAPL.Adjusted":          23.89,
+"date":          14111 
+},
+{
+ "AAPL.Open":         174.47,
+"AAPL.High":         175.45,
+"AAPL.Low":         171.89,
+"price":         174.29,
+"AAPL.Volume":      134936200,
+"AAPL.Adjusted":          23.68,
+"date":          14112 
+},
+{
+ "AAPL.Open":         175.82,
+"AAPL.High":          177.5,
+"AAPL.Low":         175.57,
+"price":         176.79,
+"AAPL.Volume":      109902800,
+"AAPL.Adjusted":          24.02,
+"date":          14113 
+},
+{
+ "AAPL.Open":         176.15,
+"AAPL.High":         176.23,
+"AAPL.Low":         171.66,
+"price":         172.55,
+"AAPL.Volume":      121106300,
+"AAPL.Adjusted":          23.44,
+"date":          14116 
+},
+{
+ "AAPL.Open":         172.76,
+"AAPL.High":         174.88,
+"AAPL.Low":         172.61,
+"price":         173.64,
+"AAPL.Volume":      111387500,
+"AAPL.Adjusted":          23.59,
+"date":          14117 
+},
+{
+ "AAPL.Open":         173.31,
+"AAPL.High":         175.76,
+"AAPL.Low":         172.19,
+"price":         174.67,
+"AAPL.Volume":      119445200,
+"AAPL.Adjusted":          23.73,
+"date":          14118 
+},
+{
+ "AAPL.Open":         175.28,
+"AAPL.High":         176.25,
+"AAPL.Low":         172.75,
+"price":         173.74,
+"AAPL.Volume":      107846200,
+"AAPL.Adjusted":          23.61,
+"date":          14119 
+},
+{
+ "AAPL.Open":         172.96,
+"AAPL.High":          173.5,
+"AAPL.Low":         169.04,
+"price":         169.53,
+"AAPL.Volume":      149822400,
+"AAPL.Adjusted":          23.03,
+"date":          14120 
+},
+{
+ "AAPL.Open":          172.4,
+"AAPL.High":          173.5,
+"AAPL.Low":            165,
+"price":         166.19,
+"AAPL.Volume":      195190800,
+"AAPL.Adjusted":          22.58,
+"date":          14124 
+},
+{
+ "AAPL.Open":         166.84,
+"AAPL.High":         168.68,
+"AAPL.Low":            164,
+"price":         166.96,
+"AAPL.Volume":      183708700,
+"AAPL.Adjusted":          22.68,
+"date":          14125 
+},
+{
+ "AAPL.Open":         165.86,
+"AAPL.High":         167.91,
+"AAPL.Low":         160.81,
+"price":         161.22,
+"AAPL.Volume":      185846500,
+"AAPL.Adjusted":           21.9,
+"date":          14126 
+},
+{
+ "AAPL.Open":         158.59,
+"AAPL.High":          162.4,
+"AAPL.Low":         157.65,
+"price":         160.18,
+"AAPL.Volume":      196721000,
+"AAPL.Adjusted":          21.76,
+"date":          14127 
+},
+{
+ "AAPL.Open":         164.57,
+"AAPL.High":         164.89,
+"AAPL.Low":         151.46,
+"price":         157.92,
+"AAPL.Volume":      261494800,
+"AAPL.Adjusted":          21.46,
+"date":          14130 
+},
+{
+ "AAPL.Open":         156.86,
+"AAPL.High":         159.96,
+"AAPL.Low":         149.79,
+"price":         151.68,
+"AAPL.Volume":      311256400,
+"AAPL.Adjusted":          20.61,
+"date":          14131 
+},
+{
+ "AAPL.Open":         152.32,
+"AAPL.High":         154.99,
+"AAPL.Low":          148.8,
+"price":         151.61,
+"AAPL.Volume":      243285700,
+"AAPL.Adjusted":           20.6,
+"date":          14132 
+},
+{
+ "AAPL.Open":         148.18,
+"AAPL.High":         152.99,
+"AAPL.Low":            146,
+"price":         152.65,
+"AAPL.Volume":      242783800,
+"AAPL.Adjusted":          20.74,
+"date":          14133 
+},
+{
+ "AAPL.Open":         150.91,
+"AAPL.High":         150.91,
+"AAPL.Low":          146.5,
+"price":         148.94,
+"AAPL.Volume":      198256800,
+"AAPL.Adjusted":          20.24,
+"date":          14134 
+},
+{
+ "AAPL.Open":         142.03,
+"AAPL.High":         147.69,
+"AAPL.Low":         140.36,
+"price":         140.36,
+"AAPL.Volume":      230158600,
+"AAPL.Adjusted":          19.07,
+"date":          14137 
+},
+{
+ "AAPL.Open":         133.86,
+"AAPL.High":          142.5,
+"AAPL.Low":         132.15,
+"price":         139.88,
+"AAPL.Volume":      299959100,
+"AAPL.Adjusted":          19.01,
+"date":          14138 
+},
+{
+ "AAPL.Open":         138.49,
+"AAPL.High":         138.51,
+"AAPL.Low":         127.83,
+"price":         127.83,
+"AAPL.Volume":      300113800,
+"AAPL.Adjusted":          17.37,
+"date":          14139 
+},
+{
+ "AAPL.Open":         130.57,
+"AAPL.High":         135.43,
+"AAPL.Low":         120.68,
+"price":         134.09,
+"AAPL.Volume":      419063400,
+"AAPL.Adjusted":          18.22,
+"date":          14140 
+},
+{
+ "AAPL.Open":          142.6,
+"AAPL.High":          144.2,
+"AAPL.Low":         136.31,
+"price":         140.91,
+"AAPL.Volume":      357718900,
+"AAPL.Adjusted":          19.15,
+"date":          14141 
+},
+{
+ "AAPL.Open":         139.94,
+"AAPL.High":         140.25,
+"AAPL.Low":         130.66,
+"price":         131.05,
+"AAPL.Volume":      214178300,
+"AAPL.Adjusted":          17.81,
+"date":          14144 
+},
+{
+ "AAPL.Open":         131.85,
+"AAPL.High":          135.8,
+"AAPL.Low":         126.66,
+"price":         126.84,
+"AAPL.Volume":      320091100,
+"AAPL.Adjusted":          17.23,
+"date":          14145 
+},
+{
+ "AAPL.Open":         127.27,
+"AAPL.High":         130.95,
+"AAPL.Low":         125.15,
+"price":         128.71,
+"AAPL.Volume":      261753800,
+"AAPL.Adjusted":          17.49,
+"date":          14146 
+},
+{
+ "AAPL.Open":          129.8,
+"AAPL.High":         134.79,
+"AAPL.Low":         128.52,
+"price":         131.93,
+"AAPL.Volume":      251511400,
+"AAPL.Adjusted":          17.93,
+"date":          14147 
+},
+{
+ "AAPL.Open":         124.91,
+"AAPL.High":          129.8,
+"AAPL.Low":            123,
+"price":         128.24,
+"AAPL.Volume":      281612800,
+"AAPL.Adjusted":          17.42,
+"date":          14148 
+},
+{
+ "AAPL.Open":         119.62,
+"AAPL.High":         119.68,
+"AAPL.Low":         100.59,
+"price":         105.26,
+"AAPL.Volume":      655514300,
+"AAPL.Adjusted":           14.3,
+"date":          14151 
+},
+{
+ "AAPL.Open":         108.25,
+"AAPL.High":            115,
+"AAPL.Low":          106.3,
+"price":         113.66,
+"AAPL.Volume":      406670600,
+"AAPL.Adjusted":          15.44,
+"date":          14152 
+},
+{
+ "AAPL.Open":         111.92,
+"AAPL.High":         112.36,
+"AAPL.Low":         107.39,
+"price":         109.12,
+"AAPL.Volume":      324121000,
+"AAPL.Adjusted":          14.83,
+"date":          14153 
+},
+{
+ "AAPL.Open":         108.01,
+"AAPL.High":         108.79,
+"AAPL.Low":            100,
+"price":          100.1,
+"AAPL.Volume":      402341100,
+"AAPL.Adjusted":           13.6,
+"date":          14154 
+},
+{
+ "AAPL.Open":            104,
+"AAPL.High":          106.5,
+"AAPL.Low":          94.65,
+"price":          97.07,
+"AAPL.Volume":      573599600,
+"AAPL.Adjusted":          13.19,
+"date":          14155 
+},
+{
+ "AAPL.Open":          91.96,
+"AAPL.High":          98.78,
+"AAPL.Low":          87.54,
+"price":          98.14,
+"AAPL.Volume":      526854300,
+"AAPL.Adjusted":          13.33,
+"date":          14158 
+},
+{
+ "AAPL.Open":         100.48,
+"AAPL.High":          101.5,
+"AAPL.Low":          88.95,
+"price":          89.16,
+"AAPL.Volume":      469693000,
+"AAPL.Adjusted":          12.11,
+"date":          14159 
+},
+{
+ "AAPL.Open":          85.91,
+"AAPL.High":          96.33,
+"AAPL.Low":          85.68,
+"price":          89.79,
+"AAPL.Volume":      551935300,
+"AAPL.Adjusted":           12.2,
+"date":          14160 
+},
+{
+ "AAPL.Open":          93.35,
+"AAPL.High":           95.8,
+"AAPL.Low":           86.6,
+"price":          88.74,
+"AAPL.Volume":      404345900,
+"AAPL.Adjusted":          12.06,
+"date":          14161 
+},
+{
+ "AAPL.Open":           85.7,
+"AAPL.High":            100,
+"AAPL.Low":             85,
+"price":           96.8,
+"AAPL.Volume":      554824900,
+"AAPL.Adjusted":          13.15,
+"date":          14162 
+},
+{
+ "AAPL.Open":         104.55,
+"AAPL.High":         110.53,
+"AAPL.Low":         101.02,
+"price":         110.26,
+"AAPL.Volume":      384769000,
+"AAPL.Adjusted":          14.98,
+"date":          14165 
+},
+{
+ "AAPL.Open":         116.26,
+"AAPL.High":          116.4,
+"AAPL.Low":         103.14,
+"price":         104.08,
+"AAPL.Volume":      495248600,
+"AAPL.Adjusted":          14.14,
+"date":          14166 
+},
+{
+ "AAPL.Open":         103.84,
+"AAPL.High":            107,
+"AAPL.Low":          97.89,
+"price":          97.95,
+"AAPL.Volume":      396043900,
+"AAPL.Adjusted":          13.31,
+"date":          14167 
+},
+{
+ "AAPL.Open":          99.77,
+"AAPL.High":         103.43,
+"AAPL.Low":          91.74,
+"price":         101.89,
+"AAPL.Volume":      495130300,
+"AAPL.Adjusted":          13.84,
+"date":          14168 
+},
+{
+ "AAPL.Open":           99.6,
+"AAPL.High":         102.04,
+"AAPL.Low":          85.89,
+"price":           97.4,
+"AAPL.Volume":      440556900,
+"AAPL.Adjusted":          13.23,
+"date":          14169 
+},
+{
+ "AAPL.Open":          99.78,
+"AAPL.High":         100.03,
+"AAPL.Low":          93.64,
+"price":          98.44,
+"AAPL.Volume":      387292500,
+"AAPL.Adjusted":          13.37,
+"date":          14172 
+},
+{
+ "AAPL.Open":          96.95,
+"AAPL.High":           97.9,
+"AAPL.Low":          91.16,
+"price":          91.49,
+"AAPL.Volume":      548415000,
+"AAPL.Adjusted":          12.43,
+"date":          14173 
+},
+{
+ "AAPL.Open":          97.37,
+"AAPL.High":         101.25,
+"AAPL.Low":          92.93,
+"price":          96.87,
+"AAPL.Volume":      562202200,
+"AAPL.Adjusted":          13.16,
+"date":          14174 
+},
+{
+ "AAPL.Open":          96.51,
+"AAPL.High":          99.25,
+"AAPL.Low":           91.9,
+"price":          98.23,
+"AAPL.Volume":      418857600,
+"AAPL.Adjusted":          13.35,
+"date":          14175 
+},
+{
+ "AAPL.Open":          90.33,
+"AAPL.High":           97.9,
+"AAPL.Low":          90.11,
+"price":          96.38,
+"AAPL.Volume":      397514600,
+"AAPL.Adjusted":           13.1,
+"date":          14176 
+},
+{
+ "AAPL.Open":          95.07,
+"AAPL.High":          97.63,
+"AAPL.Low":          91.86,
+"price":          92.09,
+"AAPL.Volume":      302192800,
+"AAPL.Adjusted":          12.51,
+"date":          14179 
+},
+{
+ "AAPL.Open":          95.43,
+"AAPL.High":          100.5,
+"AAPL.Low":          92.37,
+"price":          99.91,
+"AAPL.Volume":      408533300,
+"AAPL.Adjusted":          13.57,
+"date":          14180 
+},
+{
+ "AAPL.Open":         100.86,
+"AAPL.High":         109.54,
+"AAPL.Low":          99.94,
+"price":         104.55,
+"AAPL.Volume":      487744600,
+"AAPL.Adjusted":          14.21,
+"date":          14181 
+},
+{
+ "AAPL.Open":         108.23,
+"AAPL.High":         112.19,
+"AAPL.Low":         107.61,
+"price":         111.04,
+"AAPL.Volume":      409522400,
+"AAPL.Adjusted":          15.09,
+"date":          14182 
+},
+{
+ "AAPL.Open":          107.4,
+"AAPL.High":         110.78,
+"AAPL.Low":         105.14,
+"price":         107.59,
+"AAPL.Volume":      414939000,
+"AAPL.Adjusted":          14.62,
+"date":          14183 
+},
+{
+ "AAPL.Open":         105.93,
+"AAPL.High":          109.1,
+"AAPL.Low":         104.86,
+"price":         106.96,
+"AAPL.Volume":      264484500,
+"AAPL.Adjusted":          14.53,
+"date":          14186 
+},
+{
+ "AAPL.Open":         109.99,
+"AAPL.High":         111.79,
+"AAPL.Low":         106.67,
+"price":         110.99,
+"AAPL.Volume":      349670300,
+"AAPL.Adjusted":          15.08,
+"date":          14187 
+},
+{
+ "AAPL.Open":         108.91,
+"AAPL.High":         109.72,
+"AAPL.Low":         102.99,
+"price":          103.3,
+"AAPL.Volume":      314113800,
+"AAPL.Adjusted":          14.04,
+"date":          14188 
+},
+{
+ "AAPL.Open":         101.05,
+"AAPL.High":         102.78,
+"AAPL.Low":             98,
+"price":           99.1,
+"AAPL.Volume":      329768600,
+"AAPL.Adjusted":          13.46,
+"date":          14189 
+},
+{
+ "AAPL.Open":          99.24,
+"AAPL.High":          99.85,
+"AAPL.Low":          95.72,
+"price":          98.24,
+"AAPL.Volume":      273813400,
+"AAPL.Adjusted":          13.35,
+"date":          14190 
+},
+{
+ "AAPL.Open":         100.17,
+"AAPL.High":          100.4,
+"AAPL.Low":           94.5,
+"price":          95.88,
+"AAPL.Volume":      280955500,
+"AAPL.Adjusted":          13.03,
+"date":          14193 
+},
+{
+ "AAPL.Open":          94.81,
+"AAPL.High":          97.17,
+"AAPL.Low":          92.26,
+"price":          94.77,
+"AAPL.Volume":      306134500,
+"AAPL.Adjusted":          12.88,
+"date":          14194 
+},
+{
+ "AAPL.Open":          92.43,
+"AAPL.High":          93.24,
+"AAPL.Low":          90.01,
+"price":          90.12,
+"AAPL.Volume":      294744100,
+"AAPL.Adjusted":          12.24,
+"date":          14195 
+},
+{
+ "AAPL.Open":          89.87,
+"AAPL.High":          96.44,
+"AAPL.Low":          86.02,
+"price":          96.44,
+"AAPL.Volume":      463521800,
+"AAPL.Adjusted":           13.1,
+"date":          14196 
+},
+{
+ "AAPL.Open":          93.76,
+"AAPL.High":          93.99,
+"AAPL.Low":             90,
+"price":          90.24,
+"AAPL.Volume":      351316700,
+"AAPL.Adjusted":          12.26,
+"date":          14197 
+},
+{
+ "AAPL.Open":          88.48,
+"AAPL.High":          90.55,
+"AAPL.Low":          87.26,
+"price":          88.14,
+"AAPL.Volume":      290631600,
+"AAPL.Adjusted":          11.98,
+"date":          14200 
+},
+{
+ "AAPL.Open":          89.64,
+"AAPL.High":          90.99,
+"AAPL.Low":          86.86,
+"price":          89.91,
+"AAPL.Volume":      302423800,
+"AAPL.Adjusted":          12.22,
+"date":          14201 
+},
+{
+ "AAPL.Open":          89.44,
+"AAPL.High":          91.58,
+"AAPL.Low":          86.21,
+"price":          86.29,
+"AAPL.Volume":      292975200,
+"AAPL.Adjusted":          11.72,
+"date":          14202 
+},
+{
+ "AAPL.Open":          85.24,
+"AAPL.High":          86.45,
+"AAPL.Low":             80,
+"price":          80.49,
+"AAPL.Volume":      429203600,
+"AAPL.Adjusted":          10.94,
+"date":          14203 
+},
+{
+ "AAPL.Open":          81.93,
+"AAPL.High":          84.12,
+"AAPL.Low":          79.14,
+"price":          82.58,
+"AAPL.Volume":      392317800,
+"AAPL.Adjusted":          11.22,
+"date":          14204 
+},
+{
+ "AAPL.Open":          85.21,
+"AAPL.High":          94.79,
+"AAPL.Low":          84.84,
+"price":          92.95,
+"AAPL.Volume":      360564400,
+"AAPL.Adjusted":          12.63,
+"date":          14207 
+},
+{
+ "AAPL.Open":          94.63,
+"AAPL.High":          94.71,
+"AAPL.Low":          88.16,
+"price":           90.8,
+"AAPL.Volume":      308823200,
+"AAPL.Adjusted":          12.34,
+"date":          14208 
+},
+{
+ "AAPL.Open":          89.92,
+"AAPL.High":          95.25,
+"AAPL.Low":          89.85,
+"price":             95,
+"AAPL.Volume":      224959000,
+"AAPL.Adjusted":          12.91,
+"date":          14209 
+},
+{
+ "AAPL.Open":           94.7,
+"AAPL.High":          94.76,
+"AAPL.Low":          91.86,
+"price":          92.67,
+"AAPL.Volume":       74443600,
+"AAPL.Adjusted":          12.59,
+"date":          14211 
+},
+{
+ "AAPL.Open":           91.3,
+"AAPL.High":          92.27,
+"AAPL.Low":          88.92,
+"price":          88.93,
+"AAPL.Volume":      230941900,
+"AAPL.Adjusted":          12.08,
+"date":          14214 
+},
+{
+ "AAPL.Open":          90.03,
+"AAPL.High":          92.65,
+"AAPL.Low":           86.5,
+"price":          92.47,
+"AAPL.Volume":      287180600,
+"AAPL.Adjusted":          12.56,
+"date":          14215 
+},
+{
+ "AAPL.Open":           89.4,
+"AAPL.High":          96.23,
+"AAPL.Low":           88.8,
+"price":           95.9,
+"AAPL.Volume":      334670000,
+"AAPL.Adjusted":          13.03,
+"date":          14216 
+},
+{
+ "AAPL.Open":          94.43,
+"AAPL.High":          95.21,
+"AAPL.Low":          89.06,
+"price":          91.41,
+"AAPL.Volume":      272842500,
+"AAPL.Adjusted":          12.42,
+"date":          14217 
+},
+{
+ "AAPL.Open":          90.35,
+"AAPL.High":          94.49,
+"AAPL.Low":          88.86,
+"price":             94,
+"AAPL.Volume":      260948800,
+"AAPL.Adjusted":          12.77,
+"date":          14218 
+},
+{
+ "AAPL.Open":          97.28,
+"AAPL.High":          100.8,
+"AAPL.Low":           95.8,
+"price":          99.72,
+"AAPL.Volume":      296285500,
+"AAPL.Adjusted":          13.55,
+"date":          14221 
+},
+{
+ "AAPL.Open":          98.04,
+"AAPL.High":          103.6,
+"AAPL.Low":          97.21,
+"price":         100.06,
+"AAPL.Volume":      300874000,
+"AAPL.Adjusted":           13.6,
+"date":          14222 
+},
+{
+ "AAPL.Open":          97.87,
+"AAPL.High":          99.49,
+"AAPL.Low":           96.5,
+"price":          98.21,
+"AAPL.Volume":      234511900,
+"AAPL.Adjusted":          13.34,
+"date":          14223 
+},
+{
+ "AAPL.Open":          97.35,
+"AAPL.High":         101.24,
+"AAPL.Low":          94.83,
+"price":             95,
+"AAPL.Volume":      260154300,
+"AAPL.Adjusted":          12.91,
+"date":          14224 
+},
+{
+ "AAPL.Open":           92.8,
+"AAPL.High":             99,
+"AAPL.Low":          92.53,
+"price":          98.27,
+"AAPL.Volume":      260293600,
+"AAPL.Adjusted":          13.35,
+"date":          14225 
+},
+{
+ "AAPL.Open":          95.99,
+"AAPL.High":          96.21,
+"AAPL.Low":             93,
+"price":          94.75,
+"AAPL.Volume":      222939500,
+"AAPL.Adjusted":          12.87,
+"date":          14228 
+},
+{
+ "AAPL.Open":          93.98,
+"AAPL.High":          96.48,
+"AAPL.Low":          92.75,
+"price":          95.43,
+"AAPL.Volume":      273376600,
+"AAPL.Adjusted":          12.97,
+"date":          14229 
+},
+{
+ "AAPL.Open":          91.03,
+"AAPL.High":           91.1,
+"AAPL.Low":          88.02,
+"price":          89.16,
+"AAPL.Volume":      323465100,
+"AAPL.Adjusted":          12.11,
+"date":          14230 
+},
+{
+ "AAPL.Open":          89.31,
+"AAPL.High":          90.83,
+"AAPL.Low":          88.44,
+"price":          89.43,
+"AAPL.Volume":      214354000,
+"AAPL.Adjusted":          12.15,
+"date":          14231 
+},
+{
+ "AAPL.Open":          89.94,
+"AAPL.High":          90.94,
+"AAPL.Low":           88.8,
+"price":             90,
+"AAPL.Volume":      200480000,
+"AAPL.Adjusted":          12.23,
+"date":          14232 
+},
+{
+ "AAPL.Open":          90.02,
+"AAPL.High":          90.03,
+"AAPL.Low":          84.69,
+"price":          85.74,
+"AAPL.Volume":      211185100,
+"AAPL.Adjusted":          11.65,
+"date":          14235 
+},
+{
+ "AAPL.Open":          86.87,
+"AAPL.High":          87.87,
+"AAPL.Low":           85.9,
+"price":          86.38,
+"AAPL.Volume":      158757900,
+"AAPL.Adjusted":          11.74,
+"date":          14236 
+},
+{
+ "AAPL.Open":          86.14,
+"AAPL.High":          86.25,
+"AAPL.Low":          84.55,
+"price":          85.04,
+"AAPL.Volume":       67833500,
+"AAPL.Adjusted":          11.55,
+"date":          14237 
+},
+{
+ "AAPL.Open":          86.64,
+"AAPL.High":          87.42,
+"AAPL.Low":          85.24,
+"price":          85.81,
+"AAPL.Volume":       77081200,
+"AAPL.Adjusted":          11.66,
+"date":          14239 
+},
+{
+ "AAPL.Open":          86.52,
+"AAPL.High":          87.62,
+"AAPL.Low":          85.07,
+"price":          86.61,
+"AAPL.Volume":      171500000,
+"AAPL.Adjusted":          11.77,
+"date":          14242 
+},
+{
+ "AAPL.Open":          87.42,
+"AAPL.High":          88.05,
+"AAPL.Low":          84.72,
+"price":          86.29,
+"AAPL.Volume":      241900400,
+"AAPL.Adjusted":          11.72,
+"date":          14243 
+},
+{
+ "AAPL.Open":          85.97,
+"AAPL.High":          87.74,
+"AAPL.Low":          85.34,
+"price":          85.35,
+"AAPL.Volume":      151885300,
+"AAPL.Adjusted":           11.6,
+"date":          14244 
+},
+{
+ "AAPL.Open":          85.88,
+"AAPL.High":          91.04,
+"AAPL.Low":          85.16,
+"price":          90.75,
+"AAPL.Volume":      186503800,
+"AAPL.Adjusted":          12.33,
+"date":          14246 
+},
+{
+ "AAPL.Open":          93.17,
+"AAPL.High":          96.18,
+"AAPL.Low":          92.71,
+"price":          94.58,
+"AAPL.Volume":      295402100,
+"AAPL.Adjusted":          12.85,
+"date":          14249 
+},
+{
+ "AAPL.Open":          95.95,
+"AAPL.High":          97.17,
+"AAPL.Low":          92.39,
+"price":          93.02,
+"AAPL.Volume":      322327600,
+"AAPL.Adjusted":          12.64,
+"date":          14250 
+},
+{
+ "AAPL.Open":          91.81,
+"AAPL.High":           92.5,
+"AAPL.Low":          90.26,
+"price":          91.01,
+"AAPL.Volume":      188262200,
+"AAPL.Adjusted":          12.37,
+"date":          14251 
+},
+{
+ "AAPL.Open":          90.43,
+"AAPL.High":          93.15,
+"AAPL.Low":          90.04,
+"price":           92.7,
+"AAPL.Volume":      168375200,
+"AAPL.Adjusted":           12.6,
+"date":          14252 
+},
+{
+ "AAPL.Open":          93.21,
+"AAPL.High":          93.38,
+"AAPL.Low":          90.14,
+"price":          90.58,
+"AAPL.Volume":      136711400,
+"AAPL.Adjusted":          12.31,
+"date":          14253 
+},
+{
+ "AAPL.Open":          90.46,
+"AAPL.High":          90.99,
+"AAPL.Low":          87.55,
+"price":          88.66,
+"AAPL.Volume":      154429100,
+"AAPL.Adjusted":          12.05,
+"date":          14256 
+},
+{
+ "AAPL.Open":          88.24,
+"AAPL.High":          89.74,
+"AAPL.Low":          86.35,
+"price":          87.71,
+"AAPL.Volume":      199599400,
+"AAPL.Adjusted":          11.92,
+"date":          14257 
+},
+{
+ "AAPL.Open":          86.24,
+"AAPL.High":          87.25,
+"AAPL.Low":          84.72,
+"price":          85.33,
+"AAPL.Volume":      255416000,
+"AAPL.Adjusted":          11.59,
+"date":          14258 
+},
+{
+ "AAPL.Open":          80.57,
+"AAPL.High":          84.12,
+"AAPL.Low":          80.05,
+"price":          83.38,
+"AAPL.Volume":      457908500,
+"AAPL.Adjusted":          11.33,
+"date":          14259 
+},
+{
+ "AAPL.Open":           84.3,
+"AAPL.High":          84.38,
+"AAPL.Low":           80.4,
+"price":          82.33,
+"AAPL.Volume":      261906400,
+"AAPL.Adjusted":          11.19,
+"date":          14260 
+},
+{
+ "AAPL.Open":          81.93,
+"AAPL.High":             82,
+"AAPL.Low":           78.2,
+"price":           78.2,
+"AAPL.Volume":      229978700,
+"AAPL.Adjusted":          10.62,
+"date":          14264 
+},
+{
+ "AAPL.Open":          79.39,
+"AAPL.High":          82.88,
+"AAPL.Low":          79.31,
+"price":          82.83,
+"AAPL.Volume":      272317500,
+"AAPL.Adjusted":          11.25,
+"date":          14265 
+},
+{
+ "AAPL.Open":          88.04,
+"AAPL.High":             90,
+"AAPL.Low":          85.82,
+"price":          88.36,
+"AAPL.Volume":      352382100,
+"AAPL.Adjusted":          12.01,
+"date":          14266 
+},
+{
+ "AAPL.Open":          86.82,
+"AAPL.High":          89.87,
+"AAPL.Low":           86.5,
+"price":          88.36,
+"AAPL.Volume":      190942500,
+"AAPL.Adjusted":          12.01,
+"date":          14267 
+},
+{
+ "AAPL.Open":          88.86,
+"AAPL.High":          90.97,
+"AAPL.Low":           88.3,
+"price":          89.64,
+"AAPL.Volume":      173059600,
+"AAPL.Adjusted":          12.18,
+"date":          14270 
+},
+{
+ "AAPL.Open":          90.19,
+"AAPL.High":          91.55,
+"AAPL.Low":          89.74,
+"price":          90.73,
+"AAPL.Volume":      154509600,
+"AAPL.Adjusted":          12.33,
+"date":          14271 
+},
+{
+ "AAPL.Open":          92.12,
+"AAPL.High":             95,
+"AAPL.Low":           91.5,
+"price":           94.2,
+"AAPL.Volume":      215351500,
+"AAPL.Adjusted":           12.8,
+"date":          14272 
+},
+{
+ "AAPL.Open":          93.09,
+"AAPL.High":          94.34,
+"AAPL.Low":           92.6,
+"price":             93,
+"AAPL.Volume":      148182300,
+"AAPL.Adjusted":          12.64,
+"date":          14273 
+},
+{
+ "AAPL.Open":           92.6,
+"AAPL.High":          93.62,
+"AAPL.Low":          90.01,
+"price":          90.13,
+"AAPL.Volume":      162869700,
+"AAPL.Adjusted":          12.25,
+"date":          14274 
+},
+{
+ "AAPL.Open":           89.1,
+"AAPL.High":             92,
+"AAPL.Low":           88.9,
+"price":          91.51,
+"AAPL.Volume":      139561800,
+"AAPL.Adjusted":          12.43,
+"date":          14277 
+},
+{
+ "AAPL.Open":          91.92,
+"AAPL.High":          93.38,
+"AAPL.Low":          90.28,
+"price":          92.98,
+"AAPL.Volume":      149827300,
+"AAPL.Adjusted":          12.63,
+"date":          14278 
+},
+{
+ "AAPL.Open":          93.22,
+"AAPL.High":          96.25,
+"AAPL.Low":           93.1,
+"price":          93.55,
+"AAPL.Volume":      202105400,
+"AAPL.Adjusted":          12.71,
+"date":          14279 
+},
+{
+ "AAPL.Open":          92.77,
+"AAPL.High":          97.25,
+"AAPL.Low":          92.62,
+"price":          96.46,
+"AAPL.Volume":      187311600,
+"AAPL.Adjusted":          13.11,
+"date":          14280 
+},
+{
+ "AAPL.Open":          97.02,
+"AAPL.High":            100,
+"AAPL.Low":             97,
+"price":          99.72,
+"AAPL.Volume":      171802400,
+"AAPL.Adjusted":          13.55,
+"date":          14281 
+},
+{
+ "AAPL.Open":            100,
+"AAPL.High":            103,
+"AAPL.Low":           99.5,
+"price":         102.51,
+"AAPL.Volume":      178752700,
+"AAPL.Adjusted":          13.93,
+"date":          14284 
+},
+{
+ "AAPL.Open":         101.33,
+"AAPL.High":         102.51,
+"AAPL.Low":          97.06,
+"price":          97.83,
+"AAPL.Volume":      212265200,
+"AAPL.Adjusted":          13.29,
+"date":          14285 
+},
+{
+ "AAPL.Open":          96.37,
+"AAPL.High":          98.31,
+"AAPL.Low":          95.77,
+"price":          96.82,
+"AAPL.Volume":      168743400,
+"AAPL.Adjusted":          13.15,
+"date":          14286 
+},
+{
+ "AAPL.Open":          95.83,
+"AAPL.High":          99.75,
+"AAPL.Low":          95.83,
+"price":          99.27,
+"AAPL.Volume":      204297100,
+"AAPL.Adjusted":          13.49,
+"date":          14287 
+},
+{
+ "AAPL.Open":          98.99,
+"AAPL.High":          99.94,
+"AAPL.Low":          98.12,
+"price":          99.16,
+"AAPL.Volume":      152244400,
+"AAPL.Adjusted":          13.47,
+"date":          14288 
+},
+{
+ "AAPL.Open":          96.87,
+"AAPL.High":          97.04,
+"AAPL.Low":          94.28,
+"price":          94.53,
+"AAPL.Volume":      169559600,
+"AAPL.Adjusted":          12.84,
+"date":          14292 
+},
+{
+ "AAPL.Open":          95.05,
+"AAPL.High":          95.85,
+"AAPL.Low":          92.72,
+"price":          94.37,
+"AAPL.Volume":      171194800,
+"AAPL.Adjusted":          12.82,
+"date":          14293 
+},
+{
+ "AAPL.Open":          93.37,
+"AAPL.High":          94.25,
+"AAPL.Low":          90.11,
+"price":          90.64,
+"AAPL.Volume":      230701100,
+"AAPL.Adjusted":          12.32,
+"date":          14294 
+},
+{
+ "AAPL.Open":           89.4,
+"AAPL.High":           92.4,
+"AAPL.Low":             89,
+"price":           91.2,
+"AAPL.Volume":      187579000,
+"AAPL.Adjusted":          12.39,
+"date":          14295 
+},
+{
+ "AAPL.Open":          91.65,
+"AAPL.High":             92,
+"AAPL.Low":          86.51,
+"price":          86.95,
+"AAPL.Volume":      196745500,
+"AAPL.Adjusted":          11.81,
+"date":          14298 
+},
+{
+ "AAPL.Open":          87.45,
+"AAPL.High":          90.89,
+"AAPL.Low":             87,
+"price":          90.25,
+"AAPL.Volume":      201776400,
+"AAPL.Adjusted":          12.26,
+"date":          14299 
+},
+{
+ "AAPL.Open":          89.86,
+"AAPL.High":          92.92,
+"AAPL.Low":          89.25,
+"price":          91.16,
+"AAPL.Volume":      208263300,
+"AAPL.Adjusted":          12.39,
+"date":          14300 
+},
+{
+ "AAPL.Open":             92,
+"AAPL.High":          92.92,
+"AAPL.Low":          88.96,
+"price":          89.19,
+"AAPL.Volume":      157467100,
+"AAPL.Adjusted":          12.12,
+"date":          14301 
+},
+{
+ "AAPL.Open":          87.93,
+"AAPL.High":           91.3,
+"AAPL.Low":          87.67,
+"price":          89.31,
+"AAPL.Volume":      176664600,
+"AAPL.Adjusted":          12.13,
+"date":          14302 
+},
+{
+ "AAPL.Open":          88.12,
+"AAPL.High":           91.2,
+"AAPL.Low":          87.67,
+"price":          87.94,
+"AAPL.Volume":      192732400,
+"AAPL.Adjusted":          11.95,
+"date":          14305 
+},
+{
+ "AAPL.Open":          88.93,
+"AAPL.High":          90.74,
+"AAPL.Low":          87.88,
+"price":          88.37,
+"AAPL.Volume":      181085100,
+"AAPL.Adjusted":          12.01,
+"date":          14306 
+},
+{
+ "AAPL.Open":          90.18,
+"AAPL.High":          92.77,
+"AAPL.Low":          89.45,
+"price":          91.17,
+"AAPL.Volume":      185350900,
+"AAPL.Adjusted":          12.39,
+"date":          14307 
+},
+{
+ "AAPL.Open":          90.46,
+"AAPL.High":          91.87,
+"AAPL.Low":          88.45,
+"price":          88.84,
+"AAPL.Volume":      176724800,
+"AAPL.Adjusted":          12.07,
+"date":          14308 
+},
+{
+ "AAPL.Open":          88.34,
+"AAPL.High":           88.4,
+"AAPL.Low":          82.33,
+"price":           85.3,
+"AAPL.Volume":      252786800,
+"AAPL.Adjusted":          11.59,
+"date":          14309 
+},
+{
+ "AAPL.Open":          84.18,
+"AAPL.High":           87.6,
+"AAPL.Low":          82.57,
+"price":          83.11,
+"AAPL.Volume":      174574400,
+"AAPL.Adjusted":          11.29,
+"date":          14312 
+},
+{
+ "AAPL.Open":          84.87,
+"AAPL.High":          89.17,
+"AAPL.Low":          84.36,
+"price":          88.63,
+"AAPL.Volume":      211064700,
+"AAPL.Adjusted":          12.04,
+"date":          14313 
+},
+{
+ "AAPL.Open":          89.81,
+"AAPL.High":          94.07,
+"AAPL.Low":          89.58,
+"price":          92.68,
+"AAPL.Volume":      211593200,
+"AAPL.Adjusted":          12.59,
+"date":          14314 
+},
+{
+ "AAPL.Open":           92.9,
+"AAPL.High":          96.58,
+"AAPL.Low":             92,
+"price":          96.35,
+"AAPL.Volume":      192114300,
+"AAPL.Adjusted":          13.09,
+"date":          14315 
+},
+{
+ "AAPL.Open":           96.3,
+"AAPL.High":           97.2,
+"AAPL.Low":          95.01,
+"price":          95.93,
+"AAPL.Volume":      150292100,
+"AAPL.Adjusted":          13.03,
+"date":          14316 
+},
+{
+ "AAPL.Open":          96.53,
+"AAPL.High":          97.39,
+"AAPL.Low":          94.18,
+"price":          95.42,
+"AAPL.Volume":      199311000,
+"AAPL.Adjusted":          12.96,
+"date":          14319 
+},
+{
+ "AAPL.Open":          95.24,
+"AAPL.High":          99.69,
+"AAPL.Low":          95.07,
+"price":          99.66,
+"AAPL.Volume":      196661500,
+"AAPL.Adjusted":          13.54,
+"date":          14320 
+},
+{
+ "AAPL.Open":          99.91,
+"AAPL.High":         103.48,
+"AAPL.Low":          99.72,
+"price":         101.52,
+"AAPL.Volume":      199009300,
+"AAPL.Adjusted":          13.79,
+"date":          14321 
+},
+{
+ "AAPL.Open":         101.85,
+"AAPL.High":          103.2,
+"AAPL.Low":         100.25,
+"price":         101.62,
+"AAPL.Volume":      125045200,
+"AAPL.Adjusted":          13.81,
+"date":          14322 
+},
+{
+ "AAPL.Open":         102.09,
+"AAPL.High":         103.11,
+"AAPL.Low":         100.57,
+"price":         101.59,
+"AAPL.Volume":      173896800,
+"AAPL.Adjusted":           13.8,
+"date":          14323 
+},
+{
+ "AAPL.Open":         102.71,
+"AAPL.High":         108.16,
+"AAPL.Low":         101.75,
+"price":         107.66,
+"AAPL.Volume":      166599300,
+"AAPL.Adjusted":          14.63,
+"date":          14326 
+},
+{
+ "AAPL.Open":         106.36,
+"AAPL.High":         109.44,
+"AAPL.Low":         105.39,
+"price":          106.5,
+"AAPL.Volume":      160153000,
+"AAPL.Adjusted":          14.47,
+"date":          14327 
+},
+{
+ "AAPL.Open":         107.58,
+"AAPL.High":         108.36,
+"AAPL.Low":         103.86,
+"price":         106.49,
+"AAPL.Volume":      161654500,
+"AAPL.Adjusted":          14.47,
+"date":          14328 
+},
+{
+ "AAPL.Open":         107.83,
+"AAPL.High":         109.98,
+"AAPL.Low":         107.58,
+"price":         109.87,
+"AAPL.Volume":      154063000,
+"AAPL.Adjusted":          14.93,
+"date":          14329 
+},
+{
+ "AAPL.Open":         108.23,
+"AAPL.High":         108.53,
+"AAPL.Low":          106.4,
+"price":         106.85,
+"AAPL.Volume":      123218200,
+"AAPL.Adjusted":          14.52,
+"date":          14330 
+},
+{
+ "AAPL.Open":         104.51,
+"AAPL.High":         105.01,
+"AAPL.Low":         102.61,
+"price":         104.49,
+"AAPL.Volume":      125699000,
+"AAPL.Adjusted":           14.2,
+"date":          14333 
+},
+{
+ "AAPL.Open":         105.45,
+"AAPL.High":         107.45,
+"AAPL.Low":            105,
+"price":         105.12,
+"AAPL.Volume":      142520000,
+"AAPL.Adjusted":          14.28,
+"date":          14334 
+},
+{
+ "AAPL.Open":         104.09,
+"AAPL.High":            109,
+"AAPL.Low":         103.89,
+"price":         108.69,
+"AAPL.Volume":      147343000,
+"AAPL.Adjusted":          14.77,
+"date":          14335 
+},
+{
+ "AAPL.Open":         110.14,
+"AAPL.High":         114.75,
+"AAPL.Low":         109.78,
+"price":         112.71,
+"AAPL.Volume":      203091700,
+"AAPL.Adjusted":          15.31,
+"date":          14336 
+},
+{
+ "AAPL.Open":         114.19,
+"AAPL.High":         116.13,
+"AAPL.Low":         113.52,
+"price":         115.99,
+"AAPL.Volume":      159060300,
+"AAPL.Adjusted":          15.76,
+"date":          14337 
+},
+{
+ "AAPL.Open":         114.94,
+"AAPL.High":         118.75,
+"AAPL.Low":         113.28,
+"price":         118.45,
+"AAPL.Volume":      164516100,
+"AAPL.Adjusted":          16.09,
+"date":          14340 
+},
+{
+ "AAPL.Open":         116.53,
+"AAPL.High":         116.67,
+"AAPL.Low":         114.19,
+"price":            115,
+"AAPL.Volume":      134145200,
+"AAPL.Adjusted":          15.62,
+"date":          14341 
+},
+{
+ "AAPL.Open":         115.43,
+"AAPL.High":         116.79,
+"AAPL.Low":         114.58,
+"price":         116.32,
+"AAPL.Volume":      113907500,
+"AAPL.Adjusted":           15.8,
+"date":          14342 
+},
+{
+ "AAPL.Open":         118.42,
+"AAPL.High":            120,
+"AAPL.Low":         117.96,
+"price":         119.57,
+"AAPL.Volume":      132689200,
+"AAPL.Adjusted":          16.25,
+"date":          14343 
+},
+{
+ "AAPL.Open":         120.01,
+"AAPL.High":         120.98,
+"AAPL.Low":            119,
+"price":         120.22,
+"AAPL.Volume":       97309100,
+"AAPL.Adjusted":          16.33,
+"date":          14347 
+},
+{
+ "AAPL.Open":         119.57,
+"AAPL.High":         120.17,
+"AAPL.Low":         117.25,
+"price":         118.31,
+"AAPL.Volume":      113655500,
+"AAPL.Adjusted":          16.07,
+"date":          14348 
+},
+{
+ "AAPL.Open":          117.2,
+"AAPL.High":         118.25,
+"AAPL.Low":         115.76,
+"price":         117.64,
+"AAPL.Volume":      103220600,
+"AAPL.Adjusted":          15.98,
+"date":          14349 
+},
+{
+ "AAPL.Open":         119.19,
+"AAPL.High":         123.15,
+"AAPL.Low":         118.79,
+"price":         121.45,
+"AAPL.Volume":      148361500,
+"AAPL.Adjusted":           16.5,
+"date":          14350 
+},
+{
+ "AAPL.Open":         121.18,
+"AAPL.High":         124.25,
+"AAPL.Low":         120.25,
+"price":         123.42,
+"AAPL.Volume":      124373900,
+"AAPL.Adjusted":          16.77,
+"date":          14351 
+},
+{
+ "AAPL.Open":         121.73,
+"AAPL.High":         122.99,
+"AAPL.Low":         119.16,
+"price":          120.5,
+"AAPL.Volume":      116616500,
+"AAPL.Adjusted":          16.37,
+"date":          14354 
+},
+{
+ "AAPL.Open":         118.89,
+"AAPL.High":         122.14,
+"AAPL.Low":          118.6,
+"price":         121.76,
+"AAPL.Volume":      117671400,
+"AAPL.Adjusted":          16.54,
+"date":          14355 
+},
+{
+ "AAPL.Open":         122.63,
+"AAPL.High":         125.35,
+"AAPL.Low":          121.2,
+"price":         121.51,
+"AAPL.Volume":      234691800,
+"AAPL.Adjusted":          16.51,
+"date":          14356 
+},
+{
+ "AAPL.Open":         126.62,
+"AAPL.High":          127.2,
+"AAPL.Low":         123.51,
+"price":          125.4,
+"AAPL.Volume":      236289200,
+"AAPL.Adjusted":          17.04,
+"date":          14357 
+},
+{
+ "AAPL.Open":         124.64,
+"AAPL.High":         125.14,
+"AAPL.Low":         122.97,
+"price":          123.9,
+"AAPL.Volume":      135191000,
+"AAPL.Adjusted":          16.83,
+"date":          14358 
+},
+{
+ "AAPL.Open":          122.9,
+"AAPL.High":            125,
+"AAPL.Low":         122.66,
+"price":         124.73,
+"AAPL.Volume":      120172500,
+"AAPL.Adjusted":          16.95,
+"date":          14361 
+},
+{
+ "AAPL.Open":         123.35,
+"AAPL.High":         126.21,
+"AAPL.Low":         123.26,
+"price":          123.9,
+"AAPL.Volume":      113964200,
+"AAPL.Adjusted":          16.83,
+"date":          14362 
+},
+{
+ "AAPL.Open":         124.85,
+"AAPL.High":         126.85,
+"AAPL.Low":         123.83,
+"price":         125.14,
+"AAPL.Volume":      114527700,
+"AAPL.Adjusted":             17,
+"date":          14363 
+},
+{
+ "AAPL.Open":         126.22,
+"AAPL.High":            127,
+"AAPL.Low":         124.92,
+"price":         125.83,
+"AAPL.Volume":      124622400,
+"AAPL.Adjusted":           17.1,
+"date":          14364 
+},
+{
+ "AAPL.Open":          125.8,
+"AAPL.High":         127.95,
+"AAPL.Low":          125.8,
+"price":         127.24,
+"AAPL.Volume":       99379000,
+"AAPL.Adjusted":          17.29,
+"date":          14365 
+},
+{
+ "AAPL.Open":         128.24,
+"AAPL.High":         132.25,
+"AAPL.Low":         127.68,
+"price":         132.07,
+"AAPL.Volume":      152339600,
+"AAPL.Adjusted":          17.94,
+"date":          14368 
+},
+{
+ "AAPL.Open":         131.75,
+"AAPL.High":         132.86,
+"AAPL.Low":         131.12,
+"price":         132.71,
+"AAPL.Volume":       99563800,
+"AAPL.Adjusted":          18.03,
+"date":          14369 
+},
+{
+ "AAPL.Open":         133.33,
+"AAPL.High":          133.5,
+"AAPL.Low":         130.22,
+"price":          132.5,
+"AAPL.Volume":      118384700,
+"AAPL.Adjusted":             18,
+"date":          14370 
+},
+{
+ "AAPL.Open":         132.33,
+"AAPL.High":         132.39,
+"AAPL.Low":          127.9,
+"price":         129.06,
+"AAPL.Volume":      132944000,
+"AAPL.Adjusted":          17.54,
+"date":          14371 
+},
+{
+ "AAPL.Open":         129.04,
+"AAPL.High":         131.23,
+"AAPL.Low":         126.26,
+"price":         129.19,
+"AAPL.Volume":      116991000,
+"AAPL.Adjusted":          17.55,
+"date":          14372 
+},
+{
+ "AAPL.Open":         127.37,
+"AAPL.High":         130.96,
+"AAPL.Low":         127.12,
+"price":         129.57,
+"AAPL.Volume":      101164700,
+"AAPL.Adjusted":           17.6,
+"date":          14375 
+},
+{
+ "AAPL.Open":         129.56,
+"AAPL.High":         129.71,
+"AAPL.Low":         123.25,
+"price":         124.42,
+"AAPL.Volume":      152370400,
+"AAPL.Adjusted":           16.9,
+"date":          14376 
+},
+{
+ "AAPL.Open":         123.21,
+"AAPL.High":         124.02,
+"AAPL.Low":         119.38,
+"price":         119.49,
+"AAPL.Volume":      148992900,
+"AAPL.Adjusted":          16.24,
+"date":          14377 
+},
+{
+ "AAPL.Open":         119.78,
+"AAPL.High":         123.53,
+"AAPL.Low":          119.7,
+"price":         122.95,
+"AAPL.Volume":      111956600,
+"AAPL.Adjusted":          16.71,
+"date":          14378 
+},
+{
+ "AAPL.Open":         122.32,
+"AAPL.High":         124.62,
+"AAPL.Low":         121.61,
+"price":         122.42,
+"AAPL.Volume":       91891800,
+"AAPL.Adjusted":          16.63,
+"date":          14379 
+},
+{
+ "AAPL.Open":         123.73,
+"AAPL.High":          126.7,
+"AAPL.Low":         121.57,
+"price":         126.65,
+"AAPL.Volume":      114710400,
+"AAPL.Adjusted":          17.21,
+"date":          14382 
+},
+{
+ "AAPL.Open":         126.82,
+"AAPL.High":         129.31,
+"AAPL.Low":         125.74,
+"price":         127.45,
+"AAPL.Volume":       93105600,
+"AAPL.Adjusted":          17.32,
+"date":          14383 
+},
+{
+ "AAPL.Open":         127.63,
+"AAPL.High":         129.21,
+"AAPL.Low":          125.3,
+"price":         125.87,
+"AAPL.Volume":       97146000,
+"AAPL.Adjusted":           17.1,
+"date":          14384 
+},
+{
+ "AAPL.Open":         125.15,
+"AAPL.High":         126.78,
+"AAPL.Low":         122.89,
+"price":         124.18,
+"AAPL.Volume":      101986500,
+"AAPL.Adjusted":          16.87,
+"date":          14385 
+},
+{
+ "AAPL.Open":         124.05,
+"AAPL.High":         124.18,
+"AAPL.Low":         121.75,
+"price":          122.5,
+"AAPL.Volume":       74499600,
+"AAPL.Adjusted":          16.64,
+"date":          14386 
+},
+{
+ "AAPL.Open":         124.76,
+"AAPL.High":         130.83,
+"AAPL.Low":         124.55,
+"price":         130.78,
+"AAPL.Volume":      159231800,
+"AAPL.Adjusted":          17.77,
+"date":          14390 
+},
+{
+ "AAPL.Open":         131.78,
+"AAPL.High":         134.98,
+"AAPL.Low":         130.91,
+"price":         133.05,
+"AAPL.Volume":      161605500,
+"AAPL.Adjusted":          18.08,
+"date":          14391 
+},
+{
+ "AAPL.Open":         133.45,
+"AAPL.High":         135.39,
+"AAPL.Low":         132.03,
+"price":         135.07,
+"AAPL.Volume":      121888200,
+"AAPL.Adjusted":          18.35,
+"date":          14392 
+},
+{
+ "AAPL.Open":         135.39,
+"AAPL.High":          135.9,
+"AAPL.Low":         133.85,
+"price":         135.81,
+"AAPL.Volume":      114133600,
+"AAPL.Adjusted":          18.45,
+"date":          14393 
+},
+{
+ "AAPL.Open":         136.47,
+"AAPL.High":         139.99,
+"AAPL.Low":            136,
+"price":         139.35,
+"AAPL.Volume":      113124900,
+"AAPL.Adjusted":          18.93,
+"date":          14396 
+},
+{
+ "AAPL.Open":         138.99,
+"AAPL.High":         141.34,
+"AAPL.Low":         138.35,
+"price":         139.49,
+"AAPL.Volume":      114055900,
+"AAPL.Adjusted":          18.95,
+"date":          14397 
+},
+{
+ "AAPL.Open":            140,
+"AAPL.High":         141.11,
+"AAPL.Low":         139.07,
+"price":         140.95,
+"AAPL.Volume":      141299900,
+"AAPL.Adjusted":          19.15,
+"date":          14398 
+},
+{
+ "AAPL.Open":         140.13,
+"AAPL.High":         144.18,
+"AAPL.Low":         140.04,
+"price":         143.74,
+"AAPL.Volume":      137658500,
+"AAPL.Adjusted":          19.53,
+"date":          14399 
+},
+{
+ "AAPL.Open":         145.31,
+"AAPL.High":          146.4,
+"AAPL.Low":         143.21,
+"price":         144.67,
+"AAPL.Volume":      158179000,
+"AAPL.Adjusted":          19.66,
+"date":          14400 
+},
+{
+ "AAPL.Open":         143.82,
+"AAPL.High":         144.23,
+"AAPL.Low":         139.43,
+"price":         143.85,
+"AAPL.Volume":      232913100,
+"AAPL.Adjusted":          19.54,
+"date":          14403 
+},
+{
+ "AAPL.Open":         143.81,
+"AAPL.High":         144.56,
+"AAPL.Low":         140.55,
+"price":         142.72,
+"AAPL.Volume":      169241100,
+"AAPL.Adjusted":          19.39,
+"date":          14404 
+},
+{
+ "AAPL.Open":         142.28,
+"AAPL.High":         142.35,
+"AAPL.Low":          138.3,
+"price":         140.25,
+"AAPL.Volume":      172155900,
+"AAPL.Adjusted":          19.06,
+"date":          14405 
+},
+{
+ "AAPL.Open":         139.55,
+"AAPL.High":         141.56,
+"AAPL.Low":         138.55,
+"price":         139.95,
+"AAPL.Volume":      131205900,
+"AAPL.Adjusted":          19.01,
+"date":          14406 
+},
+{
+ "AAPL.Open":         138.81,
+"AAPL.High":          139.1,
+"AAPL.Low":         136.04,
+"price":         136.97,
+"AAPL.Volume":      140771400,
+"AAPL.Adjusted":          18.61,
+"date":          14407 
+},
+{
+ "AAPL.Open":         136.01,
+"AAPL.High":         136.93,
+"AAPL.Low":         134.89,
+"price":         136.09,
+"AAPL.Volume":      134937600,
+"AAPL.Adjusted":          18.49,
+"date":          14410 
+},
+{
+ "AAPL.Open":         136.66,
+"AAPL.High":         138.47,
+"AAPL.Low":          136.1,
+"price":         136.35,
+"AAPL.Volume":      128701300,
+"AAPL.Adjusted":          18.53,
+"date":          14411 
+},
+{
+ "AAPL.Open":         136.67,
+"AAPL.High":         137.45,
+"AAPL.Low":         134.53,
+"price":         135.58,
+"AAPL.Volume":      142853200,
+"AAPL.Adjusted":          18.42,
+"date":          14412 
+},
+{
+ "AAPL.Open":         136.11,
+"AAPL.High":            138,
+"AAPL.Low":         135.59,
+"price":         135.88,
+"AAPL.Volume":      106920100,
+"AAPL.Adjusted":          18.46,
+"date":          14413 
+},
+{
+ "AAPL.Open":         138.07,
+"AAPL.High":          139.5,
+"AAPL.Low":          136.9,
+"price":         139.48,
+"AAPL.Volume":      180464200,
+"AAPL.Adjusted":          18.95,
+"date":          14414 
+},
+{
+ "AAPL.Open":         140.67,
+"AAPL.High":         141.56,
+"AAPL.Low":         136.33,
+"price":         137.37,
+"AAPL.Volume":      158728500,
+"AAPL.Adjusted":          18.66,
+"date":          14417 
+},
+{
+ "AAPL.Open":          136.4,
+"AAPL.High":         136.95,
+"AAPL.Low":         132.88,
+"price":         134.01,
+"AAPL.Volume":      176633100,
+"AAPL.Adjusted":          18.21,
+"date":          14418 
+},
+{
+ "AAPL.Open":         135.42,
+"AAPL.High":          137.5,
+"AAPL.Low":         134.86,
+"price":         136.22,
+"AAPL.Volume":      121381400,
+"AAPL.Adjusted":          18.51,
+"date":          14419 
+},
+{
+ "AAPL.Open":         135.75,
+"AAPL.High":          140.2,
+"AAPL.Low":         135.21,
+"price":         139.86,
+"AAPL.Volume":      147361900,
+"AAPL.Adjusted":             19,
+"date":          14420 
+},
+{
+ "AAPL.Open":         139.79,
+"AAPL.High":         143.56,
+"AAPL.Low":         139.74,
+"price":         142.44,
+"AAPL.Volume":      109846100,
+"AAPL.Adjusted":          19.35,
+"date":          14421 
+},
+{
+ "AAPL.Open":         143.46,
+"AAPL.High":         143.95,
+"AAPL.Low":         141.54,
+"price":         141.97,
+"AAPL.Volume":      141904000,
+"AAPL.Adjusted":          19.29,
+"date":          14424 
+},
+{
+ "AAPL.Open":         142.58,
+"AAPL.High":          143.8,
+"AAPL.Low":          141.8,
+"price":         142.43,
+"AAPL.Volume":      108556000,
+"AAPL.Adjusted":          19.35,
+"date":          14425 
+},
+{
+ "AAPL.Open":          143.5,
+"AAPL.High":         144.66,
+"AAPL.Low":         142.52,
+"price":         142.83,
+"AAPL.Volume":      103544700,
+"AAPL.Adjusted":          19.41,
+"date":          14426 
+},
+{
+ "AAPL.Open":         141.25,
+"AAPL.High":         142.83,
+"AAPL.Low":         139.79,
+"price":         140.02,
+"AAPL.Volume":       92619800,
+"AAPL.Adjusted":          19.02,
+"date":          14427 
+},
+{
+ "AAPL.Open":          138.7,
+"AAPL.High":         138.99,
+"AAPL.Low":         136.25,
+"price":         138.61,
+"AAPL.Volume":      124672100,
+"AAPL.Adjusted":          18.83,
+"date":          14431 
+},
+{
+ "AAPL.Open":         138.48,
+"AAPL.High":         139.68,
+"AAPL.Low":         135.18,
+"price":          135.4,
+"AAPL.Volume":      115399200,
+"AAPL.Adjusted":           18.4,
+"date":          14432 
+},
+{
+ "AAPL.Open":         135.92,
+"AAPL.High":         138.04,
+"AAPL.Low":         134.42,
+"price":         137.22,
+"AAPL.Volume":      143982300,
+"AAPL.Adjusted":          18.64,
+"date":          14433 
+},
+{
+ "AAPL.Open":         137.76,
+"AAPL.High":         137.99,
+"AAPL.Low":         135.93,
+"price":         136.36,
+"AAPL.Volume":       85756300,
+"AAPL.Adjusted":          18.53,
+"date":          14434 
+},
+{
+ "AAPL.Open":         136.34,
+"AAPL.High":         138.97,
+"AAPL.Low":         136.32,
+"price":         138.52,
+"AAPL.Volume":      111318900,
+"AAPL.Adjusted":          18.82,
+"date":          14435 
+},
+{
+ "AAPL.Open":         139.54,
+"AAPL.High":         142.34,
+"AAPL.Low":         137.53,
+"price":         142.34,
+"AAPL.Volume":      120875300,
+"AAPL.Adjusted":          19.34,
+"date":          14438 
+},
+{
+ "AAPL.Open":         142.03,
+"AAPL.High":         143.18,
+"AAPL.Low":         141.16,
+"price":         142.27,
+"AAPL.Volume":       86811900,
+"AAPL.Adjusted":          19.33,
+"date":          14439 
+},
+{
+ "AAPL.Open":         145.04,
+"AAPL.High":            147,
+"AAPL.Low":         144.32,
+"price":         146.88,
+"AAPL.Volume":      121396800,
+"AAPL.Adjusted":          19.96,
+"date":          14440 
+},
+{
+ "AAPL.Open":         145.76,
+"AAPL.High":         148.02,
+"AAPL.Low":         145.57,
+"price":         147.52,
+"AAPL.Volume":       98392700,
+"AAPL.Adjusted":          20.04,
+"date":          14441 
+},
+{
+ "AAPL.Open":         149.08,
+"AAPL.High":         152.02,
+"AAPL.Low":         148.63,
+"price":         151.75,
+"AAPL.Volume":      150538500,
+"AAPL.Adjusted":          20.62,
+"date":          14442 
+},
+{
+ "AAPL.Open":         153.27,
+"AAPL.High":         155.04,
+"AAPL.Low":         150.89,
+"price":         152.91,
+"AAPL.Volume":      183881600,
+"AAPL.Adjusted":          20.78,
+"date":          14445 
+},
+{
+ "AAPL.Open":         153.29,
+"AAPL.High":         153.43,
+"AAPL.Low":         149.75,
+"price":         151.51,
+"AAPL.Volume":      218695400,
+"AAPL.Adjusted":          20.59,
+"date":          14446 
+},
+{
+ "AAPL.Open":         157.79,
+"AAPL.High":         158.73,
+"AAPL.Low":         156.11,
+"price":         156.74,
+"AAPL.Volume":      218526000,
+"AAPL.Adjusted":           21.3,
+"date":          14447 
+},
+{
+ "AAPL.Open":         156.63,
+"AAPL.High":         158.44,
+"AAPL.Low":         155.56,
+"price":         157.82,
+"AAPL.Volume":      131740700,
+"AAPL.Adjusted":          21.44,
+"date":          14448 
+},
+{
+ "AAPL.Open":         156.95,
+"AAPL.High":            160,
+"AAPL.Low":          156.5,
+"price":         159.99,
+"AAPL.Volume":      109590600,
+"AAPL.Adjusted":          21.74,
+"date":          14449 
+},
+{
+ "AAPL.Open":         160.17,
+"AAPL.High":         160.88,
+"AAPL.Low":         157.26,
+"price":          160.1,
+"AAPL.Volume":      108327800,
+"AAPL.Adjusted":          21.75,
+"date":          14452 
+},
+{
+ "AAPL.Open":         158.88,
+"AAPL.High":          160.1,
+"AAPL.Low":          157.6,
+"price":            160,
+"AAPL.Volume":       90888700,
+"AAPL.Adjusted":          21.74,
+"date":          14453 
+},
+{
+ "AAPL.Open":          158.9,
+"AAPL.High":         160.45,
+"AAPL.Low":         158.25,
+"price":         160.03,
+"AAPL.Volume":       95539500,
+"AAPL.Adjusted":          21.74,
+"date":          14454 
+},
+{
+ "AAPL.Open":          161.7,
+"AAPL.High":         164.72,
+"AAPL.Low":          161.5,
+"price":         162.79,
+"AAPL.Volume":      117401200,
+"AAPL.Adjusted":          22.12,
+"date":          14455 
+},
+{
+ "AAPL.Open":         162.99,
+"AAPL.High":            165,
+"AAPL.Low":         162.91,
+"price":         163.39,
+"AAPL.Volume":      105634200,
+"AAPL.Adjusted":           22.2,
+"date":          14456 
+},
+{
+ "AAPL.Open":         165.21,
+"AAPL.High":         166.64,
+"AAPL.Low":         164.87,
+"price":         166.43,
+"AAPL.Volume":       98560000,
+"AAPL.Adjusted":          22.61,
+"date":          14459 
+},
+{
+ "AAPL.Open":         164.93,
+"AAPL.High":         165.57,
+"AAPL.Low":         164.21,
+"price":         165.55,
+"AAPL.Volume":       98952700,
+"AAPL.Adjusted":          22.49,
+"date":          14460 
+},
+{
+ "AAPL.Open":         165.75,
+"AAPL.High":         167.39,
+"AAPL.Low":         164.21,
+"price":         165.11,
+"AAPL.Volume":      105795900,
+"AAPL.Adjusted":          22.43,
+"date":          14461 
+},
+{
+ "AAPL.Open":         165.58,
+"AAPL.High":         166.51,
+"AAPL.Low":         163.09,
+"price":         163.91,
+"AAPL.Volume":       85404200,
+"AAPL.Adjusted":          22.27,
+"date":          14462 
+},
+{
+ "AAPL.Open":         165.49,
+"AAPL.High":          166.6,
+"AAPL.Low":          164.8,
+"price":         165.51,
+"AAPL.Volume":       96838700,
+"AAPL.Adjusted":          22.49,
+"date":          14463 
+},
+{
+ "AAPL.Open":         165.66,
+"AAPL.High":          166.6,
+"AAPL.Low":         163.66,
+"price":         164.72,
+"AAPL.Volume":       75073600,
+"AAPL.Adjusted":          22.38,
+"date":          14466 
+},
+{
+ "AAPL.Open":         163.69,
+"AAPL.High":         164.38,
+"AAPL.Low":         161.88,
+"price":         162.83,
+"AAPL.Volume":       88835600,
+"AAPL.Adjusted":          22.12,
+"date":          14467 
+},
+{
+ "AAPL.Open":         162.55,
+"AAPL.High":         166.71,
+"AAPL.Low":         162.46,
+"price":         165.31,
+"AAPL.Volume":      111267800,
+"AAPL.Adjusted":          22.46,
+"date":          14468 
+},
+{
+ "AAPL.Open":         166.65,
+"AAPL.High":         168.67,
+"AAPL.Low":          166.5,
+"price":         168.42,
+"AAPL.Volume":      109995200,
+"AAPL.Adjusted":          22.88,
+"date":          14469 
+},
+{
+ "AAPL.Open":         167.94,
+"AAPL.High":         168.23,
+"AAPL.Low":         165.53,
+"price":         166.78,
+"AAPL.Volume":       76454000,
+"AAPL.Adjusted":          22.66,
+"date":          14470 
+},
+{
+ "AAPL.Open":         163.55,
+"AAPL.High":         163.59,
+"AAPL.Low":         159.42,
+"price":         159.59,
+"AAPL.Volume":      131095300,
+"AAPL.Adjusted":          21.68,
+"date":          14473 
+},
+{
+ "AAPL.Open":         161.63,
+"AAPL.High":         164.24,
+"AAPL.Low":         161.41,
+"price":            164,
+"AAPL.Volume":      107788100,
+"AAPL.Adjusted":          22.28,
+"date":          14474 
+},
+{
+ "AAPL.Open":         162.75,
+"AAPL.High":          165.3,
+"AAPL.Low":         162.45,
+"price":          164.6,
+"AAPL.Volume":      103317900,
+"AAPL.Adjusted":          22.36,
+"date":          14475 
+},
+{
+ "AAPL.Open":         164.98,
+"AAPL.High":         166.72,
+"AAPL.Low":         164.61,
+"price":         166.33,
+"AAPL.Volume":       85507800,
+"AAPL.Adjusted":           22.6,
+"date":          14476 
+},
+{
+ "AAPL.Open":         167.65,
+"AAPL.High":         169.37,
+"AAPL.Low":          166.8,
+"price":         169.22,
+"AAPL.Volume":      104018600,
+"AAPL.Adjusted":          22.99,
+"date":          14477 
+},
+{
+ "AAPL.Open":         170.12,
+"AAPL.High":         170.71,
+"AAPL.Low":         168.27,
+"price":         169.06,
+"AAPL.Volume":      101732400,
+"AAPL.Adjusted":          22.97,
+"date":          14480 
+},
+{
+ "AAPL.Open":         169.46,
+"AAPL.High":         170.94,
+"AAPL.Low":         169.13,
+"price":          169.4,
+"AAPL.Volume":       81088700,
+"AAPL.Adjusted":          23.02,
+"date":          14481 
+},
+{
+ "AAPL.Open":         168.92,
+"AAPL.High":         169.55,
+"AAPL.Low":         166.76,
+"price":         167.41,
+"AAPL.Volume":       75999700,
+"AAPL.Adjusted":          22.75,
+"date":          14482 
+},
+{
+ "AAPL.Open":         168.75,
+"AAPL.High":         169.57,
+"AAPL.Low":         164.83,
+"price":         169.45,
+"AAPL.Volume":      112295400,
+"AAPL.Adjusted":          23.02,
+"date":          14483 
+},
+{
+ "AAPL.Open":         172.27,
+"AAPL.High":         172.49,
+"AAPL.Low":         168.53,
+"price":         170.05,
+"AAPL.Volume":      113425200,
+"AAPL.Adjusted":           23.1,
+"date":          14484 
+},
+{
+ "AAPL.Open":         168.16,
+"AAPL.High":         168.85,
+"AAPL.Low":          166.5,
+"price":         168.21,
+"AAPL.Volume":       77834400,
+"AAPL.Adjusted":          22.85,
+"date":          14487 
+},
+{
+ "AAPL.Open":         167.99,
+"AAPL.High":            170,
+"AAPL.Low":         164.94,
+"price":          165.3,
+"AAPL.Volume":      117257000,
+"AAPL.Adjusted":          22.46,
+"date":          14488 
+},
+{
+ "AAPL.Open":         164.62,
+"AAPL.High":         167.61,
+"AAPL.Low":         164.11,
+"price":         165.18,
+"AAPL.Volume":       91062300,
+"AAPL.Adjusted":          22.44,
+"date":          14489 
+},
+{
+ "AAPL.Open":         166.44,
+"AAPL.High":          167.1,
+"AAPL.Low":            165,
+"price":         166.55,
+"AAPL.Volume":       73488800,
+"AAPL.Adjusted":          22.63,
+"date":          14490 
+},
+{
+ "AAPL.Open":         167.28,
+"AAPL.High":          170.7,
+"AAPL.Low":         167.09,
+"price":         170.31,
+"AAPL.Volume":       93657200,
+"AAPL.Adjusted":          23.14,
+"date":          14491 
+},
+{
+ "AAPL.Open":         172.98,
+"AAPL.High":         173.14,
+"AAPL.Low":            172,
+"price":         172.93,
+"AAPL.Volume":       78761900,
+"AAPL.Adjusted":           23.5,
+"date":          14495 
+},
+{
+ "AAPL.Open":         172.78,
+"AAPL.High":         174.47,
+"AAPL.Low":          169.7,
+"price":         171.14,
+"AAPL.Volume":      202771800,
+"AAPL.Adjusted":          23.25,
+"date":          14496 
+},
+{
+ "AAPL.Open":         172.06,
+"AAPL.High":         173.25,
+"AAPL.Low":         170.81,
+"price":         172.56,
+"AAPL.Volume":      122783500,
+"AAPL.Adjusted":          23.45,
+"date":          14497 
+},
+{
+ "AAPL.Open":         172.91,
+"AAPL.High":         173.18,
+"AAPL.Low":         170.87,
+"price":         172.16,
+"AAPL.Volume":       87240300,
+"AAPL.Adjusted":          23.39,
+"date":          14498 
+},
+{
+ "AAPL.Open":         170.83,
+"AAPL.High":          173.9,
+"AAPL.Low":         170.25,
+"price":         173.72,
+"AAPL.Volume":       80502800,
+"AAPL.Adjusted":           23.6,
+"date":          14501 
+},
+{
+ "AAPL.Open":         174.04,
+"AAPL.High":         175.65,
+"AAPL.Low":         173.59,
+"price":         175.16,
+"AAPL.Volume":      106617700,
+"AAPL.Adjusted":           23.8,
+"date":          14502 
+},
+{
+ "AAPL.Open":         177.99,
+"AAPL.High":         182.75,
+"AAPL.Low":         177.88,
+"price":         181.87,
+"AAPL.Volume":      188505800,
+"AAPL.Adjusted":          24.71,
+"date":          14503 
+},
+{
+ "AAPL.Open":         181.98,
+"AAPL.High":         186.79,
+"AAPL.Low":         181.97,
+"price":         184.55,
+"AAPL.Volume":      202643000,
+"AAPL.Adjusted":          25.07,
+"date":          14504 
+},
+{
+ "AAPL.Open":         185.83,
+"AAPL.High":         186.55,
+"AAPL.Low":         184.76,
+"price":         185.02,
+"AAPL.Volume":      150395700,
+"AAPL.Adjusted":          25.14,
+"date":          14505 
+},
+{
+ "AAPL.Open":         184.29,
+"AAPL.High":         185.16,
+"AAPL.Low":         181.62,
+"price":         184.02,
+"AAPL.Volume":      109428900,
+"AAPL.Adjusted":             25,
+"date":          14508 
+},
+{
+ "AAPL.Open":         185.19,
+"AAPL.High":         185.38,
+"AAPL.Low":         182.85,
+"price":         184.48,
+"AAPL.Volume":       89188400,
+"AAPL.Adjusted":          25.07,
+"date":          14509 
+},
+{
+ "AAPL.Open":          185.4,
+"AAPL.High":          188.9,
+"AAPL.Low":         185.03,
+"price":          185.5,
+"AAPL.Volume":      148390900,
+"AAPL.Adjusted":           25.2,
+"date":          14510 
+},
+{
+ "AAPL.Open":          187.2,
+"AAPL.High":          187.7,
+"AAPL.Low":         182.77,
+"price":         183.82,
+"AAPL.Volume":      137720100,
+"AAPL.Adjusted":          24.98,
+"date":          14511 
+},
+{
+ "AAPL.Open":         182.01,
+"AAPL.High":          185.5,
+"AAPL.Low":         181.44,
+"price":         182.37,
+"AAPL.Volume":      111309800,
+"AAPL.Adjusted":          24.78,
+"date":          14512 
+},
+{
+ "AAPL.Open":         183.87,
+"AAPL.High":         186.68,
+"AAPL.Low":         183.33,
+"price":         186.15,
+"AAPL.Volume":       84361200,
+"AAPL.Adjusted":          25.29,
+"date":          14515 
+},
+{
+ "AAPL.Open":         186.73,
+"AAPL.High":          187.4,
+"AAPL.Low":         184.31,
+"price":         185.38,
+"AAPL.Volume":       86346400,
+"AAPL.Adjusted":          25.19,
+"date":          14516 
+},
+{
+ "AAPL.Open":         186.13,
+"AAPL.High":         186.45,
+"AAPL.Low":         182.61,
+"price":         185.35,
+"AAPL.Volume":      134896300,
+"AAPL.Adjusted":          25.18,
+"date":          14517 
+},
+{
+ "AAPL.Open":         185.35,
+"AAPL.High":         186.22,
+"AAPL.Low":          180.7,
+"price":         180.86,
+"AAPL.Volume":      131177900,
+"AAPL.Adjusted":          24.57,
+"date":          14518 
+},
+{
+ "AAPL.Open":         181.41,
+"AAPL.High":         185.94,
+"AAPL.Low":         181.35,
+"price":          184.9,
+"AAPL.Volume":      138327000,
+"AAPL.Adjusted":          25.12,
+"date":          14519 
+},
+{
+ "AAPL.Open":          186.2,
+"AAPL.High":         186.86,
+"AAPL.Low":         184.27,
+"price":         186.02,
+"AAPL.Volume":      105783300,
+"AAPL.Adjusted":          25.27,
+"date":          14522 
+},
+{
+ "AAPL.Open":         187.74,
+"AAPL.High":         190.01,
+"AAPL.Low":          187.3,
+"price":         190.01,
+"AAPL.Volume":      151271400,
+"AAPL.Adjusted":          25.82,
+"date":          14523 
+},
+{
+ "AAPL.Open":         189.76,
+"AAPL.High":         190.55,
+"AAPL.Low":         189.03,
+"price":         190.25,
+"AAPL.Volume":      116417000,
+"AAPL.Adjusted":          25.85,
+"date":          14524 
+},
+{
+ "AAPL.Open":         190.66,
+"AAPL.High":         191.45,
+"AAPL.Low":         188.89,
+"price":         189.27,
+"AAPL.Volume":      109552800,
+"AAPL.Adjusted":          25.72,
+"date":          14525 
+},
+{
+ "AAPL.Open":         188.97,
+"AAPL.High":          190.7,
+"AAPL.Low":         188.62,
+"price":         190.47,
+"AAPL.Volume":       73318000,
+"AAPL.Adjusted":          25.88,
+"date":          14526 
+},
+{
+ "AAPL.Open":         191.02,
+"AAPL.High":         191.51,
+"AAPL.Low":         189.64,
+"price":         190.81,
+"AAPL.Volume":       72006200,
+"AAPL.Adjusted":          25.93,
+"date":          14529 
+},
+{
+ "AAPL.Open":         190.63,
+"AAPL.High":         191.17,
+"AAPL.Low":          189.7,
+"price":         190.02,
+"AAPL.Volume":       87005100,
+"AAPL.Adjusted":          25.82,
+"date":          14530 
+},
+{
+ "AAPL.Open":         192.25,
+"AAPL.High":         192.32,
+"AAPL.Low":         190.23,
+"price":         191.29,
+"AAPL.Volume":       93877700,
+"AAPL.Adjusted":          25.99,
+"date":          14531 
+},
+{
+ "AAPL.Open":         189.63,
+"AAPL.High":         190.92,
+"AAPL.Low":         189.53,
+"price":         190.56,
+"AAPL.Volume":       93389100,
+"AAPL.Adjusted":          25.89,
+"date":          14532 
+},
+{
+ "AAPL.Open":         189.35,
+"AAPL.High":         190.36,
+"AAPL.Low":         187.84,
+"price":         188.05,
+"AAPL.Volume":      107856700,
+"AAPL.Adjusted":          25.55,
+"date":          14533 
+},
+{
+ "AAPL.Open":         187.85,
+"AAPL.High":            190,
+"AAPL.Low":         185.55,
+"price":         189.86,
+"AAPL.Volume":      235557700,
+"AAPL.Adjusted":           25.8,
+"date":          14536 
+},
+{
+ "AAPL.Open":          200.6,
+"AAPL.High":         201.75,
+"AAPL.Low":         197.85,
+"price":         198.76,
+"AAPL.Volume":      285259800,
+"AAPL.Adjusted":          27.01,
+"date":          14537 
+},
+{
+ "AAPL.Open":         199.52,
+"AAPL.High":         208.71,
+"AAPL.Low":         199.23,
+"price":         204.92,
+"AAPL.Volume":      298431700,
+"AAPL.Adjusted":          27.84,
+"date":          14538 
+},
+{
+ "AAPL.Open":          204.7,
+"AAPL.High":         207.85,
+"AAPL.Low":         202.51,
+"price":          205.2,
+"AAPL.Volume":      197848000,
+"AAPL.Adjusted":          27.88,
+"date":          14539 
+},
+{
+ "AAPL.Open":          205.7,
+"AAPL.High":          205.8,
+"AAPL.Low":         203.23,
+"price":         203.94,
+"AAPL.Volume":      105196700,
+"AAPL.Adjusted":          27.71,
+"date":          14540 
+},
+{
+ "AAPL.Open":         203.67,
+"AAPL.High":         206.75,
+"AAPL.Low":          200.1,
+"price":         202.48,
+"AAPL.Volume":      121084600,
+"AAPL.Adjusted":          27.51,
+"date":          14543 
+},
+{
+ "AAPL.Open":         201.66,
+"AAPL.High":         202.81,
+"AAPL.Low":         196.45,
+"price":         197.37,
+"AAPL.Volume":      189137900,
+"AAPL.Adjusted":          26.82,
+"date":          14544 
+},
+{
+ "AAPL.Open":         197.71,
+"AAPL.High":         198.02,
+"AAPL.Low":          191.1,
+"price":          192.4,
+"AAPL.Volume":      204596700,
+"AAPL.Adjusted":          26.14,
+"date":          14545 
+},
+{
+ "AAPL.Open":            195,
+"AAPL.High":         196.81,
+"AAPL.Low":         192.14,
+"price":         196.35,
+"AAPL.Volume":      142567600,
+"AAPL.Adjusted":          26.68,
+"date":          14546 
+},
+{
+ "AAPL.Open":         196.06,
+"AAPL.High":          196.8,
+"AAPL.Low":         188.17,
+"price":          188.5,
+"AAPL.Volume":      179381300,
+"AAPL.Adjusted":          25.61,
+"date":          14547 
+},
+{
+ "AAPL.Open":          189.8,
+"AAPL.High":         192.88,
+"AAPL.Low":         185.57,
+"price":         189.31,
+"AAPL.Volume":      169745800,
+"AAPL.Adjusted":          25.72,
+"date":          14550 
+},
+{
+ "AAPL.Open":         187.85,
+"AAPL.High":         189.52,
+"AAPL.Low":         185.92,
+"price":         188.75,
+"AAPL.Volume":      130635400,
+"AAPL.Adjusted":          25.65,
+"date":          14551 
+},
+{
+ "AAPL.Open":         190.73,
+"AAPL.High":         193.85,
+"AAPL.Low":         190.23,
+"price":         190.81,
+"AAPL.Volume":      121882600,
+"AAPL.Adjusted":          25.93,
+"date":          14552 
+},
+{
+ "AAPL.Open":          192.4,
+"AAPL.High":            195,
+"AAPL.Low":         191.82,
+"price":         194.03,
+"AAPL.Volume":       96200300,
+"AAPL.Adjusted":          26.36,
+"date":          14553 
+},
+{
+ "AAPL.Open":         192.51,
+"AAPL.High":         195.19,
+"AAPL.Low":          192.4,
+"price":         194.34,
+"AAPL.Volume":       73774400,
+"AAPL.Adjusted":           26.4,
+"date":          14554 
+},
+{
+ "AAPL.Open":         196.94,
+"AAPL.High":          201.9,
+"AAPL.Low":         196.26,
+"price":         201.46,
+"AAPL.Volume":      132213900,
+"AAPL.Adjusted":          27.37,
+"date":          14557 
+},
+{
+ "AAPL.Open":         201.02,
+"AAPL.High":         204.98,
+"AAPL.Low":         201.01,
+"price":         202.98,
+"AAPL.Volume":      100298800,
+"AAPL.Adjusted":          27.58,
+"date":          14558 
+},
+{
+ "AAPL.Open":         204.56,
+"AAPL.High":            205,
+"AAPL.Low":         201.83,
+"price":         203.25,
+"AAPL.Volume":      110967500,
+"AAPL.Adjusted":          27.62,
+"date":          14559 
+},
+{
+ "AAPL.Open":         203.14,
+"AAPL.High":         204.87,
+"AAPL.Low":         201.43,
+"price":         201.99,
+"AAPL.Volume":       90932800,
+"AAPL.Adjusted":          27.44,
+"date":          14560 
+},
+{
+ "AAPL.Open":         202.87,
+"AAPL.High":         204.83,
+"AAPL.Low":         202.07,
+"price":         204.45,
+"AAPL.Volume":       85810200,
+"AAPL.Adjusted":          27.78,
+"date":          14561 
+},
+{
+ "AAPL.Open":         205.48,
+"AAPL.High":            208,
+"AAPL.Low":         205.01,
+"price":         206.63,
+"AAPL.Volume":      121301600,
+"AAPL.Adjusted":          28.07,
+"date":          14564 
+},
+{
+ "AAPL.Open":         206.08,
+"AAPL.High":         207.44,
+"AAPL.Low":            205,
+"price":            207,
+"AAPL.Volume":       99128400,
+"AAPL.Adjusted":          28.12,
+"date":          14565 
+},
+{
+ "AAPL.Open":         206.54,
+"AAPL.High":            207,
+"AAPL.Low":            204,
+"price":         205.96,
+"AAPL.Volume":       93580200,
+"AAPL.Adjusted":          27.98,
+"date":          14566 
+},
+{
+ "AAPL.Open":         204.61,
+"AAPL.High":         204.61,
+"AAPL.Low":          199.8,
+"price":         200.51,
+"AAPL.Volume":      135581600,
+"AAPL.Adjusted":          27.24,
+"date":          14567 
+},
+{
+ "AAPL.Open":         199.15,
+"AAPL.High":         200.39,
+"AAPL.Low":         197.76,
+"price":         199.92,
+"AAPL.Volume":      101666600,
+"AAPL.Adjusted":          27.16,
+"date":          14568 
+},
+{
+ "AAPL.Open":            203,
+"AAPL.High":            206,
+"AAPL.Low":         202.95,
+"price":         205.88,
+"AAPL.Volume":      118724200,
+"AAPL.Adjusted":          27.97,
+"date":          14571 
+},
+{
+ "AAPL.Open":         205.33,
+"AAPL.High":         205.88,
+"AAPL.Low":          202.9,
+"price":         204.44,
+"AAPL.Volume":       79609600,
+"AAPL.Adjusted":          27.78,
+"date":          14572 
+},
+{
+ "AAPL.Open":          205.4,
+"AAPL.High":         205.65,
+"AAPL.Low":         203.76,
+"price":         204.19,
+"AAPL.Volume":       71613500,
+"AAPL.Adjusted":          27.74,
+"date":          14573 
+},
+{
+ "AAPL.Open":         199.22,
+"AAPL.High":         202.96,
+"AAPL.Low":         198.37,
+"price":         200.59,
+"AAPL.Volume":       73814300,
+"AAPL.Adjusted":          27.25,
+"date":          14575 
+},
+{
+ "AAPL.Open":         201.11,
+"AAPL.High":         201.68,
+"AAPL.Low":         198.77,
+"price":         199.91,
+"AAPL.Volume":      106214500,
+"AAPL.Adjusted":          27.16,
+"date":          14578 
+},
+{
+ "AAPL.Open":         202.24,
+"AAPL.High":         202.77,
+"AAPL.Low":         196.83,
+"price":         196.97,
+"AAPL.Volume":      116440800,
+"AAPL.Adjusted":          26.76,
+"date":          14579 
+},
+{
+ "AAPL.Open":         198.96,
+"AAPL.High":         201.42,
+"AAPL.Low":         195.75,
+"price":         196.23,
+"AAPL.Volume":      178815000,
+"AAPL.Adjusted":          26.66,
+"date":          14580 
+},
+{
+ "AAPL.Open":         197.42,
+"AAPL.High":         198.98,
+"AAPL.Low":         196.27,
+"price":         196.48,
+"AAPL.Volume":      112179900,
+"AAPL.Adjusted":           26.7,
+"date":          14581 
+},
+{
+ "AAPL.Open":          199.7,
+"AAPL.High":         199.88,
+"AAPL.Low":         190.28,
+"price":         193.32,
+"AAPL.Volume":      206721200,
+"AAPL.Adjusted":          26.27,
+"date":          14582 
+},
+{
+ "AAPL.Open":         193.32,
+"AAPL.High":         193.77,
+"AAPL.Low":         188.68,
+"price":         188.95,
+"AAPL.Volume":      178689700,
+"AAPL.Adjusted":          25.67,
+"date":          14585 
+},
+{
+ "AAPL.Open":         189.36,
+"AAPL.High":         192.35,
+"AAPL.Low":          188.7,
+"price":         189.87,
+"AAPL.Volume":      172599700,
+"AAPL.Adjusted":           25.8,
+"date":          14586 
+},
+{
+ "AAPL.Open":         191.28,
+"AAPL.High":         198.16,
+"AAPL.Low":         190.31,
+"price":          197.8,
+"AAPL.Volume":      171195500,
+"AAPL.Adjusted":          26.87,
+"date":          14587 
+},
+{
+ "AAPL.Open":          199.5,
+"AAPL.High":          199.7,
+"AAPL.Low":         196.12,
+"price":         196.43,
+"AAPL.Volume":      122417400,
+"AAPL.Adjusted":          26.69,
+"date":          14588 
+},
+{
+ "AAPL.Open":         197.78,
+"AAPL.High":            198,
+"AAPL.Low":         193.43,
+"price":         194.67,
+"AAPL.Volume":      107443700,
+"AAPL.Adjusted":          26.45,
+"date":          14589 
+},
+{
+ "AAPL.Open":         195.37,
+"AAPL.High":         197.43,
+"AAPL.Low":         192.56,
+"price":         196.98,
+"AAPL.Volume":      123947600,
+"AAPL.Adjusted":          26.76,
+"date":          14592 
+},
+{
+ "AAPL.Open":         195.83,
+"AAPL.High":         197.51,
+"AAPL.Low":         193.27,
+"price":         194.17,
+"AAPL.Volume":      104864900,
+"AAPL.Adjusted":          26.38,
+"date":          14593 
+},
+{
+ "AAPL.Open":          195.1,
+"AAPL.High":          196.5,
+"AAPL.Low":         194.55,
+"price":         195.03,
+"AAPL.Volume":       88246200,
+"AAPL.Adjusted":           26.5,
+"date":          14594 
+},
+{
+ "AAPL.Open":         194.26,
+"AAPL.High":            195,
+"AAPL.Low":            191,
+"price":         191.86,
+"AAPL.Volume":       97209700,
+"AAPL.Adjusted":          26.07,
+"date":          14595 
+},
+{
+ "AAPL.Open":         193.17,
+"AAPL.High":          195.5,
+"AAPL.Low":          192.6,
+"price":         195.43,
+"AAPL.Volume":      152192600,
+"AAPL.Adjusted":          26.55,
+"date":          14596 
+},
+{
+ "AAPL.Open":         196.05,
+"AAPL.High":         199.75,
+"AAPL.Low":         195.67,
+"price":         198.23,
+"AAPL.Volume":      152976600,
+"AAPL.Adjusted":          26.93,
+"date":          14599 
+},
+{
+ "AAPL.Open":         199.44,
+"AAPL.High":         200.85,
+"AAPL.Low":         198.66,
+"price":         200.36,
+"AAPL.Volume":       87378900,
+"AAPL.Adjusted":          27.22,
+"date":          14600 
+},
+{
+ "AAPL.Open":          201.2,
+"AAPL.High":         202.38,
+"AAPL.Low":         200.81,
+"price":          202.1,
+"AAPL.Volume":       86381400,
+"AAPL.Adjusted":          27.46,
+"date":          14601 
+},
+{
+ "AAPL.Open":         203.55,
+"AAPL.High":         209.35,
+"AAPL.Low":         203.35,
+"price":         209.04,
+"AAPL.Volume":      125222300,
+"AAPL.Adjusted":           28.4,
+"date":          14602 
+},
+{
+ "AAPL.Open":         211.72,
+"AAPL.High":         213.95,
+"AAPL.Low":         209.61,
+"price":         211.61,
+"AAPL.Volume":      161141400,
+"AAPL.Adjusted":          28.75,
+"date":          14606 
+},
+{
+ "AAPL.Open":         212.63,
+"AAPL.High":         212.72,
+"AAPL.Low":         208.73,
+"price":          209.1,
+"AAPL.Volume":      111301400,
+"AAPL.Adjusted":          28.41,
+"date":          14607 
+},
+{
+ "AAPL.Open":         208.83,
+"AAPL.High":            212,
+"AAPL.Low":         208.31,
+"price":         211.64,
+"AAPL.Volume":      103021100,
+"AAPL.Adjusted":          28.76,
+"date":          14608 
+},
+{
+ "AAPL.Open":         213.13,
+"AAPL.High":         213.35,
+"AAPL.Low":         210.56,
+"price":         210.73,
+"AAPL.Volume":       88102700,
+"AAPL.Adjusted":          28.63,
+"date":          14609 
+},
+{
+ "AAPL.Open":         213.43,
+"AAPL.High":          214.5,
+"AAPL.Low":         212.38,
+"price":         214.01,
+"AAPL.Volume":      123432400,
+"AAPL.Adjusted":          29.08,
+"date":          14613 
+},
+{
+ "AAPL.Open":          214.6,
+"AAPL.High":         215.59,
+"AAPL.Low":         213.25,
+"price":         214.38,
+"AAPL.Volume":      150476200,
+"AAPL.Adjusted":          29.13,
+"date":          14614 
+},
+{
+ "AAPL.Open":         214.38,
+"AAPL.High":         215.23,
+"AAPL.Low":         210.75,
+"price":         210.97,
+"AAPL.Volume":      138040000,
+"AAPL.Adjusted":          28.66,
+"date":          14615 
+},
+{
+ "AAPL.Open":         211.75,
+"AAPL.High":            212,
+"AAPL.Low":         209.05,
+"price":         210.58,
+"AAPL.Volume":      119282800,
+"AAPL.Adjusted":          28.61,
+"date":          14616 
+},
+{
+ "AAPL.Open":          210.3,
+"AAPL.High":            212,
+"AAPL.Low":         209.06,
+"price":         211.98,
+"AAPL.Volume":      111902700,
+"AAPL.Adjusted":           28.8,
+"date":          14617 
+},
+{
+ "AAPL.Open":          212.8,
+"AAPL.High":            213,
+"AAPL.Low":         208.45,
+"price":         210.11,
+"AAPL.Volume":      115557400,
+"AAPL.Adjusted":          28.55,
+"date":          14620 
+},
+{
+ "AAPL.Open":         209.19,
+"AAPL.High":         209.77,
+"AAPL.Low":         206.42,
+"price":         207.72,
+"AAPL.Volume":      148614900,
+"AAPL.Adjusted":          28.22,
+"date":          14621 
+},
+{
+ "AAPL.Open":         207.87,
+"AAPL.High":         210.93,
+"AAPL.Low":          204.1,
+"price":         210.65,
+"AAPL.Volume":      151473000,
+"AAPL.Adjusted":          28.62,
+"date":          14622 
+},
+{
+ "AAPL.Open":         210.11,
+"AAPL.High":         210.46,
+"AAPL.Low":         209.02,
+"price":         209.43,
+"AAPL.Volume":      108223500,
+"AAPL.Adjusted":          28.46,
+"date":          14623 
+},
+{
+ "AAPL.Open":         210.93,
+"AAPL.High":          211.6,
+"AAPL.Low":         205.87,
+"price":         205.93,
+"AAPL.Volume":      148516900,
+"AAPL.Adjusted":          27.98,
+"date":          14624 
+},
+{
+ "AAPL.Open":         208.33,
+"AAPL.High":         215.19,
+"AAPL.Low":         207.24,
+"price":         215.04,
+"AAPL.Volume":      182501900,
+"AAPL.Adjusted":          29.22,
+"date":          14628 
+},
+{
+ "AAPL.Open":         214.91,
+"AAPL.High":         215.55,
+"AAPL.Low":          209.5,
+"price":         211.73,
+"AAPL.Volume":      153038200,
+"AAPL.Adjusted":          28.77,
+"date":          14629 
+},
+{
+ "AAPL.Open":         212.08,
+"AAPL.High":         213.31,
+"AAPL.Low":         207.21,
+"price":         208.07,
+"AAPL.Volume":      152038600,
+"AAPL.Adjusted":          28.27,
+"date":          14630 
+},
+{
+ "AAPL.Open":         206.78,
+"AAPL.High":          207.5,
+"AAPL.Low":         197.16,
+"price":         197.75,
+"AAPL.Volume":      220441900,
+"AAPL.Adjusted":          26.87,
+"date":          14631 
+},
+{
+ "AAPL.Open":         202.51,
+"AAPL.High":          204.7,
+"AAPL.Low":         200.19,
+"price":         203.07,
+"AAPL.Volume":      266424900,
+"AAPL.Adjusted":          27.59,
+"date":          14634 
+},
+{
+ "AAPL.Open":         205.95,
+"AAPL.High":         213.71,
+"AAPL.Low":         202.58,
+"price":         205.94,
+"AAPL.Volume":      466777500,
+"AAPL.Adjusted":          27.98,
+"date":          14635 
+},
+{
+ "AAPL.Open":         206.85,
+"AAPL.High":         210.58,
+"AAPL.Low":         199.53,
+"price":         207.88,
+"AAPL.Volume":      430642100,
+"AAPL.Adjusted":          28.24,
+"date":          14636 
+},
+{
+ "AAPL.Open":         204.93,
+"AAPL.High":          205.5,
+"AAPL.Low":          198.7,
+"price":         199.29,
+"AAPL.Volume":      293375600,
+"AAPL.Adjusted":          27.08,
+"date":          14637 
+},
+{
+ "AAPL.Open":         201.08,
+"AAPL.High":          202.2,
+"AAPL.Low":         190.25,
+"price":         192.06,
+"AAPL.Volume":      311488100,
+"AAPL.Adjusted":           26.1,
+"date":          14638 
+},
+{
+ "AAPL.Open":         192.37,
+"AAPL.High":            196,
+"AAPL.Low":          191.3,
+"price":         194.73,
+"AAPL.Volume":      187469100,
+"AAPL.Adjusted":          26.46,
+"date":          14641 
+},
+{
+ "AAPL.Open":         195.91,
+"AAPL.High":         196.32,
+"AAPL.Low":         193.38,
+"price":         195.86,
+"AAPL.Volume":      174585600,
+"AAPL.Adjusted":          26.61,
+"date":          14642 
+},
+{
+ "AAPL.Open":         195.17,
+"AAPL.High":          200.2,
+"AAPL.Low":         194.42,
+"price":         199.23,
+"AAPL.Volume":      153832000,
+"AAPL.Adjusted":          27.07,
+"date":          14643 
+},
+{
+ "AAPL.Open":         196.73,
+"AAPL.High":         198.37,
+"AAPL.Low":         191.57,
+"price":         192.05,
+"AAPL.Volume":      189413000,
+"AAPL.Adjusted":          26.09,
+"date":          14644 
+},
+{
+ "AAPL.Open":         192.63,
+"AAPL.High":            196,
+"AAPL.Low":         190.85,
+"price":         195.46,
+"AAPL.Volume":      212576700,
+"AAPL.Adjusted":          26.56,
+"date":          14645 
+},
+{
+ "AAPL.Open":         195.69,
+"AAPL.High":         197.88,
+"AAPL.Low":            194,
+"price":         194.12,
+"AAPL.Volume":      119567700,
+"AAPL.Adjusted":          26.37,
+"date":          14648 
+},
+{
+ "AAPL.Open":         196.42,
+"AAPL.High":          197.5,
+"AAPL.Low":         194.75,
+"price":         196.19,
+"AAPL.Volume":      158221700,
+"AAPL.Adjusted":          26.66,
+"date":          14649 
+},
+{
+ "AAPL.Open":         195.89,
+"AAPL.High":          196.6,
+"AAPL.Low":         194.26,
+"price":         195.12,
+"AAPL.Volume":       92590400,
+"AAPL.Adjusted":          26.51,
+"date":          14650 
+},
+{
+ "AAPL.Open":         194.88,
+"AAPL.High":         199.75,
+"AAPL.Low":         194.06,
+"price":         198.67,
+"AAPL.Volume":      137586400,
+"AAPL.Adjusted":          26.99,
+"date":          14651 
+},
+{
+ "AAPL.Open":         198.11,
+"AAPL.High":         201.64,
+"AAPL.Low":          195.5,
+"price":         200.38,
+"AAPL.Volume":      163867200,
+"AAPL.Adjusted":          27.23,
+"date":          14652 
+},
+{
+ "AAPL.Open":         201.94,
+"AAPL.High":         203.69,
+"AAPL.Low":         201.52,
+"price":          203.4,
+"AAPL.Volume":      135934400,
+"AAPL.Adjusted":          27.64,
+"date":          14656 
+},
+{
+ "AAPL.Open":         204.19,
+"AAPL.High":         204.31,
+"AAPL.Low":         200.86,
+"price":         202.55,
+"AAPL.Volume":      109099200,
+"AAPL.Adjusted":          27.52,
+"date":          14657 
+},
+{
+ "AAPL.Open":         201.63,
+"AAPL.High":         203.89,
+"AAPL.Low":         200.92,
+"price":         202.93,
+"AAPL.Volume":      105706300,
+"AAPL.Adjusted":          27.57,
+"date":          14658 
+},
+{
+ "AAPL.Open":         201.86,
+"AAPL.High":          203.2,
+"AAPL.Low":         201.11,
+"price":         201.67,
+"AAPL.Volume":      103867400,
+"AAPL.Adjusted":           27.4,
+"date":          14659 
+},
+{
+ "AAPL.Open":         202.34,
+"AAPL.High":          202.5,
+"AAPL.Low":         199.19,
+"price":         200.42,
+"AAPL.Volume":       97640900,
+"AAPL.Adjusted":          27.23,
+"date":          14662 
+},
+{
+ "AAPL.Open":            200,
+"AAPL.High":         201.33,
+"AAPL.Low":         195.71,
+"price":         197.06,
+"AAPL.Volume":      143773700,
+"AAPL.Adjusted":          26.77,
+"date":          14663 
+},
+{
+ "AAPL.Open":         198.23,
+"AAPL.High":         201.44,
+"AAPL.Low":         197.84,
+"price":         200.66,
+"AAPL.Volume":      115141600,
+"AAPL.Adjusted":          27.26,
+"date":          14664 
+},
+{
+ "AAPL.Open":         197.38,
+"AAPL.High":         202.86,
+"AAPL.Low":         196.89,
+"price":            202,
+"AAPL.Volume":      166281500,
+"AAPL.Adjusted":          27.45,
+"date":          14665 
+},
+{
+ "AAPL.Open":         202.38,
+"AAPL.High":         205.17,
+"AAPL.Low":            202,
+"price":         204.62,
+"AAPL.Volume":      126865200,
+"AAPL.Adjusted":           27.8,
+"date":          14666 
+},
+{
+ "AAPL.Open":         205.75,
+"AAPL.High":          209.5,
+"AAPL.Low":         205.45,
+"price":         208.99,
+"AAPL.Volume":      137523400,
+"AAPL.Adjusted":           28.4,
+"date":          14669 
+},
+{
+ "AAPL.Open":         209.93,
+"AAPL.High":         210.83,
+"AAPL.Low":         207.74,
+"price":         208.85,
+"AAPL.Volume":      141636600,
+"AAPL.Adjusted":          28.38,
+"date":          14670 
+},
+{
+ "AAPL.Open":         208.94,
+"AAPL.High":         209.87,
+"AAPL.Low":         207.94,
+"price":         209.33,
+"AAPL.Volume":       93013200,
+"AAPL.Adjusted":          28.44,
+"date":          14671 
+},
+{
+ "AAPL.Open":         209.28,
+"AAPL.High":         210.92,
+"AAPL.Low":         208.63,
+"price":         210.71,
+"AAPL.Volume":       91510300,
+"AAPL.Adjusted":          28.63,
+"date":          14672 
+},
+{
+ "AAPL.Open":         214.94,
+"AAPL.High":          219.7,
+"AAPL.Low":         214.63,
+"price":         218.95,
+"AAPL.Volume":      224905100,
+"AAPL.Adjusted":          29.75,
+"date":          14673 
+},
+{
+ "AAPL.Open":         220.01,
+"AAPL.High":         220.09,
+"AAPL.Low":         218.25,
+"price":         219.08,
+"AAPL.Volume":      107472400,
+"AAPL.Adjusted":          29.77,
+"date":          14676 
+},
+{
+ "AAPL.Open":         218.31,
+"AAPL.High":            225,
+"AAPL.Low":         217.89,
+"price":         223.02,
+"AAPL.Volume":      230064800,
+"AAPL.Adjusted":           30.3,
+"date":          14677 
+},
+{
+ "AAPL.Open":         223.83,
+"AAPL.High":         225.48,
+"AAPL.Low":          223.2,
+"price":         224.84,
+"AAPL.Volume":      149054500,
+"AAPL.Adjusted":          30.55,
+"date":          14678 
+},
+{
+ "AAPL.Open":         223.91,
+"AAPL.High":          225.5,
+"AAPL.Low":         223.32,
+"price":          225.5,
+"AAPL.Volume":      101425100,
+"AAPL.Adjusted":          30.64,
+"date":          14679 
+},
+{
+ "AAPL.Open":         227.37,
+"AAPL.High":         227.73,
+"AAPL.Low":         225.75,
+"price":          226.6,
+"AAPL.Volume":      104080900,
+"AAPL.Adjusted":          30.79,
+"date":          14680 
+},
+{
+ "AAPL.Open":         225.38,
+"AAPL.High":          225.5,
+"AAPL.Low":         220.25,
+"price":         223.84,
+"AAPL.Volume":      123375700,
+"AAPL.Adjusted":          30.41,
+"date":          14683 
+},
+{
+ "AAPL.Open":         224.18,
+"AAPL.High":         224.98,
+"AAPL.Low":         222.51,
+"price":         224.45,
+"AAPL.Volume":      111727000,
+"AAPL.Adjusted":           30.5,
+"date":          14684 
+},
+{
+ "AAPL.Open":          224.9,
+"AAPL.High":         226.45,
+"AAPL.Low":         223.27,
+"price":         224.12,
+"AAPL.Volume":      112739200,
+"AAPL.Adjusted":          30.45,
+"date":          14685 
+},
+{
+ "AAPL.Open":          224.1,
+"AAPL.High":            225,
+"AAPL.Low":         222.61,
+"price":         224.65,
+"AAPL.Volume":       85527400,
+"AAPL.Adjusted":          30.52,
+"date":          14686 
+},
+{
+ "AAPL.Open":         224.79,
+"AAPL.High":         225.24,
+"AAPL.Low":         221.23,
+"price":         222.25,
+"AAPL.Volume":      139861400,
+"AAPL.Adjusted":           30.2,
+"date":          14687 
+},
+{
+ "AAPL.Open":         220.47,
+"AAPL.High":            226,
+"AAPL.Low":         220.15,
+"price":         224.75,
+"AAPL.Volume":      114104900,
+"AAPL.Adjusted":          30.54,
+"date":          14690 
+},
+{
+ "AAPL.Open":         225.64,
+"AAPL.High":         228.78,
+"AAPL.Low":          224.1,
+"price":         228.36,
+"AAPL.Volume":      150607800,
+"AAPL.Adjusted":          31.03,
+"date":          14691 
+},
+{
+ "AAPL.Open":         227.64,
+"AAPL.High":          230.2,
+"AAPL.Low":         227.51,
+"price":         229.37,
+"AAPL.Volume":      149445100,
+"AAPL.Adjusted":          31.16,
+"date":          14692 
+},
+{
+ "AAPL.Open":         230.92,
+"AAPL.High":         230.97,
+"AAPL.Low":         226.25,
+"price":         226.65,
+"AAPL.Volume":      135571100,
+"AAPL.Adjusted":          30.79,
+"date":          14693 
+},
+{
+ "AAPL.Open":         228.95,
+"AAPL.High":         231.95,
+"AAPL.Low":         228.55,
+"price":          230.9,
+"AAPL.Volume":      160218800,
+"AAPL.Adjusted":          31.37,
+"date":          14694 
+},
+{
+ "AAPL.Open":            233,
+"AAPL.High":         233.87,
+"AAPL.Low":         231.62,
+"price":         232.39,
+"AAPL.Volume":      135186100,
+"AAPL.Adjusted":          31.57,
+"date":          14697 
+},
+{
+ "AAPL.Open":          236.6,
+"AAPL.High":         237.48,
+"AAPL.Low":         234.25,
+"price":         235.85,
+"AAPL.Volume":      131827500,
+"AAPL.Adjusted":          32.04,
+"date":          14698 
+},
+{
+ "AAPL.Open":         235.49,
+"AAPL.High":         236.61,
+"AAPL.Low":         234.46,
+"price":            235,
+"AAPL.Volume":      107664900,
+"AAPL.Adjusted":          31.93,
+"date":          14699 
+},
+{
+ "AAPL.Open":         237.41,
+"AAPL.High":         238.73,
+"AAPL.Low":         232.75,
+"price":         235.97,
+"AAPL.Volume":      150786300,
+"AAPL.Adjusted":          32.06,
+"date":          14700 
+},
+{
+ "AAPL.Open":         234.98,
+"AAPL.High":         238.51,
+"AAPL.Low":         234.77,
+"price":         238.49,
+"AAPL.Volume":      171126900,
+"AAPL.Adjusted":           32.4,
+"date":          14704 
+},
+{
+ "AAPL.Open":          238.2,
+"AAPL.High":         240.24,
+"AAPL.Low":            237,
+"price":         239.54,
+"AAPL.Volume":      111754300,
+"AAPL.Adjusted":          32.55,
+"date":          14705 
+},
+{
+ "AAPL.Open":         239.55,
+"AAPL.High":         241.92,
+"AAPL.Low":         238.66,
+"price":          240.6,
+"AAPL.Volume":      157125500,
+"AAPL.Adjusted":          32.69,
+"date":          14706 
+},
+{
+ "AAPL.Open":         240.44,
+"AAPL.High":         241.54,
+"AAPL.Low":         238.04,
+"price":         239.95,
+"AAPL.Volume":      143247300,
+"AAPL.Adjusted":           32.6,
+"date":          14707 
+},
+{
+ "AAPL.Open":         241.43,
+"AAPL.High":         241.89,
+"AAPL.Low":         240.46,
+"price":         241.79,
+"AAPL.Volume":       83545700,
+"AAPL.Adjusted":          32.85,
+"date":          14708 
+},
+{
+ "AAPL.Open":          242.2,
+"AAPL.High":         243.07,
+"AAPL.Low":         241.81,
+"price":         242.29,
+"AAPL.Volume":       83256600,
+"AAPL.Adjusted":          32.92,
+"date":          14711 
+},
+{
+ "AAPL.Open":         241.86,
+"AAPL.High":          242.8,
+"AAPL.Low":         241.11,
+"price":         242.43,
+"AAPL.Volume":       76552700,
+"AAPL.Adjusted":          32.94,
+"date":          14712 
+},
+{
+ "AAPL.Open":         245.28,
+"AAPL.High":         245.81,
+"AAPL.Low":         244.07,
+"price":         245.69,
+"AAPL.Volume":      101019100,
+"AAPL.Adjusted":          33.38,
+"date":          14713 
+},
+{
+ "AAPL.Open":         245.78,
+"AAPL.High":         249.03,
+"AAPL.Low":         245.51,
+"price":         248.92,
+"AAPL.Volume":       94196200,
+"AAPL.Adjusted":          33.82,
+"date":          14714 
+},
+{
+ "AAPL.Open":         248.57,
+"AAPL.High":         251.14,
+"AAPL.Low":         244.55,
+"price":          247.4,
+"AAPL.Volume":      187636400,
+"AAPL.Adjusted":          33.61,
+"date":          14715 
+},
+{
+ "AAPL.Open":         247.03,
+"AAPL.High":         247.89,
+"AAPL.Low":         241.77,
+"price":         247.07,
+"AAPL.Volume":      141731100,
+"AAPL.Adjusted":          33.57,
+"date":          14718 
+},
+{
+ "AAPL.Open":         248.54,
+"AAPL.High":         249.25,
+"AAPL.Low":         242.96,
+"price":         244.59,
+"AAPL.Volume":      184581600,
+"AAPL.Adjusted":          33.23,
+"date":          14719 
+},
+{
+ "AAPL.Open":          258.8,
+"AAPL.High":         260.25,
+"AAPL.Low":         255.73,
+"price":         259.22,
+"AAPL.Volume":      245597800,
+"AAPL.Adjusted":          35.22,
+"date":          14720 
+},
+{
+ "AAPL.Open":         258.24,
+"AAPL.High":         266.75,
+"AAPL.Low":          256.2,
+"price":         266.47,
+"AAPL.Volume":      198356200,
+"AAPL.Adjusted":          36.21,
+"date":          14721 
+},
+{
+ "AAPL.Open":         267.99,
+"AAPL.High":         272.18,
+"AAPL.Low":            267,
+"price":         270.83,
+"AAPL.Volume":      199238900,
+"AAPL.Adjusted":           36.8,
+"date":          14722 
+},
+{
+ "AAPL.Open":         271.88,
+"AAPL.High":         272.46,
+"AAPL.Low":         268.19,
+"price":          269.5,
+"AAPL.Volume":      119767200,
+"AAPL.Adjusted":          36.62,
+"date":          14725 
+},
+{
+ "AAPL.Open":         267.27,
+"AAPL.High":         267.84,
+"AAPL.Low":         260.52,
+"price":         262.04,
+"AAPL.Volume":      177335900,
+"AAPL.Adjusted":           35.6,
+"date":          14726 
+},
+{
+ "AAPL.Open":         263.25,
+"AAPL.High":            264,
+"AAPL.Low":         256.41,
+"price":          261.6,
+"AAPL.Volume":      189600600,
+"AAPL.Adjusted":          35.54,
+"date":          14727 
+},
+{
+ "AAPL.Open":         263.02,
+"AAPL.High":            270,
+"AAPL.Low":         262.01,
+"price":         268.64,
+"AAPL.Volume":      139710200,
+"AAPL.Adjusted":           36.5,
+"date":          14728 
+},
+{
+ "AAPL.Open":         269.31,
+"AAPL.High":         270.57,
+"AAPL.Low":            261,
+"price":         261.09,
+"AAPL.Volume":      135615900,
+"AAPL.Adjusted":          35.47,
+"date":          14729 
+},
+{
+ "AAPL.Open":         263.84,
+"AAPL.High":         267.88,
+"AAPL.Low":         262.88,
+"price":         266.35,
+"AAPL.Volume":      113585500,
+"AAPL.Adjusted":          36.19,
+"date":          14732 
+},
+{
+ "AAPL.Open":         262.89,
+"AAPL.High":         263.29,
+"AAPL.Low":         256.75,
+"price":         258.68,
+"AAPL.Volume":      180954900,
+"AAPL.Adjusted":          35.15,
+"date":          14733 
+},
+{
+ "AAPL.Open":         253.03,
+"AAPL.High":         258.14,
+"AAPL.Low":         248.73,
+"price":         255.99,
+"AAPL.Volume":      220775800,
+"AAPL.Adjusted":          34.78,
+"date":          14734 
+},
+{
+ "AAPL.Open":         253.83,
+"AAPL.High":         258.25,
+"AAPL.Low":         199.25,
+"price":         246.25,
+"AAPL.Volume":      321465200,
+"AAPL.Adjusted":          33.46,
+"date":          14735 
+},
+{
+ "AAPL.Open":         243.71,
+"AAPL.High":         246.57,
+"AAPL.Low":         225.21,
+"price":         235.86,
+"AAPL.Volume":      419004600,
+"AAPL.Adjusted":          32.05,
+"date":          14736 
+},
+{
+ "AAPL.Open":         250.25,
+"AAPL.High":         254.65,
+"AAPL.Low":         248.53,
+"price":         253.99,
+"AAPL.Volume":      246076600,
+"AAPL.Adjusted":          34.51,
+"date":          14739 
+},
+{
+ "AAPL.Open":         251.84,
+"AAPL.High":         259.89,
+"AAPL.Low":          250.5,
+"price":         256.52,
+"AAPL.Volume":      212226700,
+"AAPL.Adjusted":          34.85,
+"date":          14740 
+},
+{
+ "AAPL.Open":         259.24,
+"AAPL.High":         263.13,
+"AAPL.Low":          258.7,
+"price":         262.09,
+"AAPL.Volume":      163594900,
+"AAPL.Adjusted":          35.61,
+"date":          14741 
+},
+{
+ "AAPL.Open":         263.22,
+"AAPL.High":            265,
+"AAPL.Low":          256.4,
+"price":         258.36,
+"AAPL.Volume":      149928100,
+"AAPL.Adjusted":           35.1,
+"date":          14742 
+},
+{
+ "AAPL.Open":         255.16,
+"AAPL.High":         256.48,
+"AAPL.Low":          249.5,
+"price":         253.82,
+"AAPL.Volume":      189840700,
+"AAPL.Adjusted":          34.49,
+"date":          14743 
+},
+{
+ "AAPL.Open":          254.7,
+"AAPL.High":         256.18,
+"AAPL.Low":         247.71,
+"price":         254.22,
+"AAPL.Volume":      190708700,
+"AAPL.Adjusted":          34.54,
+"date":          14746 
+},
+{
+ "AAPL.Open":         256.98,
+"AAPL.High":         258.55,
+"AAPL.Low":         250.26,
+"price":         252.36,
+"AAPL.Volume":      195669600,
+"AAPL.Adjusted":          34.29,
+"date":          14747 
+},
+{
+ "AAPL.Open":          249.5,
+"AAPL.High":         252.92,
+"AAPL.Low":         244.85,
+"price":         248.34,
+"AAPL.Volume":      256431700,
+"AAPL.Adjusted":          33.74,
+"date":          14748 
+},
+{
+ "AAPL.Open":         241.88,
+"AAPL.High":         243.85,
+"AAPL.Low":         236.21,
+"price":         237.76,
+"AAPL.Volume":      320728800,
+"AAPL.Adjusted":           32.3,
+"date":          14749 
+},
+{
+ "AAPL.Open":         232.82,
+"AAPL.High":          244.5,
+"AAPL.Low":         231.35,
+"price":         242.32,
+"AAPL.Volume":      305972800,
+"AAPL.Adjusted":          32.92,
+"date":          14750 
+},
+{
+ "AAPL.Open":         247.28,
+"AAPL.High":          250.9,
+"AAPL.Low":         246.26,
+"price":         246.76,
+"AAPL.Volume":      188559700,
+"AAPL.Adjusted":          33.53,
+"date":          14753 
+},
+{
+ "AAPL.Open":         239.35,
+"AAPL.High":         246.76,
+"AAPL.Low":         237.16,
+"price":         245.22,
+"AAPL.Volume":      262001600,
+"AAPL.Adjusted":          33.32,
+"date":          14754 
+},
+{
+ "AAPL.Open":         250.08,
+"AAPL.High":         252.13,
+"AAPL.Low":         243.75,
+"price":         244.11,
+"AAPL.Volume":      212663500,
+"AAPL.Adjusted":          33.17,
+"date":          14755 
+},
+{
+ "AAPL.Open":          250.6,
+"AAPL.High":         253.89,
+"AAPL.Low":         249.11,
+"price":         253.35,
+"AAPL.Volume":      166570600,
+"AAPL.Adjusted":          34.42,
+"date":          14756 
+},
+{
+ "AAPL.Open":         259.39,
+"AAPL.High":          259.4,
+"AAPL.Low":         253.35,
+"price":         256.88,
+"AAPL.Volume":      203903700,
+"AAPL.Adjusted":           34.9,
+"date":          14757 
+},
+{
+ "AAPL.Open":         259.69,
+"AAPL.High":         265.94,
+"AAPL.Low":         258.96,
+"price":         260.83,
+"AAPL.Volume":      219118200,
+"AAPL.Adjusted":          35.44,
+"date":          14761 
+},
+{
+ "AAPL.Open":         264.54,
+"AAPL.High":          264.8,
+"AAPL.Low":         260.33,
+"price":         263.95,
+"AAPL.Volume":      172137000,
+"AAPL.Adjusted":          35.86,
+"date":          14762 
+},
+{
+ "AAPL.Open":         265.18,
+"AAPL.High":         265.55,
+"AAPL.Low":         260.41,
+"price":         263.12,
+"AAPL.Volume":      162526700,
+"AAPL.Adjusted":          35.75,
+"date":          14763 
+},
+{
+ "AAPL.Open":         258.21,
+"AAPL.High":          261.9,
+"AAPL.Low":         254.63,
+"price":         255.96,
+"AAPL.Volume":      189576100,
+"AAPL.Adjusted":          34.78,
+"date":          14764 
+},
+{
+ "AAPL.Open":         258.29,
+"AAPL.High":         259.15,
+"AAPL.Low":         250.55,
+"price":         250.94,
+"AAPL.Volume":      221735500,
+"AAPL.Adjusted":           34.1,
+"date":          14767 
+},
+{
+ "AAPL.Open":         253.24,
+"AAPL.High":          253.8,
+"AAPL.Low":         245.65,
+"price":         249.33,
+"AAPL.Volume":      250192600,
+"AAPL.Adjusted":          33.88,
+"date":          14768 
+},
+{
+ "AAPL.Open":         251.47,
+"AAPL.High":          251.9,
+"AAPL.Low":         242.49,
+"price":          243.2,
+"AAPL.Volume":      213657500,
+"AAPL.Adjusted":          33.04,
+"date":          14769 
+},
+{
+ "AAPL.Open":         244.84,
+"AAPL.High":         250.98,
+"AAPL.Low":          242.2,
+"price":         250.51,
+"AAPL.Volume":      194089000,
+"AAPL.Adjusted":          34.04,
+"date":          14770 
+},
+{
+ "AAPL.Open":         248.23,
+"AAPL.High":         253.86,
+"AAPL.Low":         247.37,
+"price":         253.51,
+"AAPL.Volume":      136439800,
+"AAPL.Adjusted":          34.44,
+"date":          14771 
+},
+{
+ "AAPL.Open":         255.96,
+"AAPL.High":         259.15,
+"AAPL.Low":         254.01,
+"price":         254.28,
+"AAPL.Volume":      150740100,
+"AAPL.Adjusted":          34.55,
+"date":          14774 
+},
+{
+ "AAPL.Open":         255.64,
+"AAPL.High":         259.85,
+"AAPL.Low":          255.5,
+"price":         259.69,
+"AAPL.Volume":      146268500,
+"AAPL.Adjusted":          35.28,
+"date":          14775 
+},
+{
+ "AAPL.Open":          261.1,
+"AAPL.High":         267.75,
+"AAPL.Low":         260.63,
+"price":         267.25,
+"AAPL.Volume":      195919500,
+"AAPL.Adjusted":          36.31,
+"date":          14776 
+},
+{
+ "AAPL.Open":          270.6,
+"AAPL.High":          272.9,
+"AAPL.Low":          269.5,
+"price":         271.87,
+"AAPL.Volume":      218213800,
+"AAPL.Adjusted":          36.94,
+"date":          14777 
+},
+{
+ "AAPL.Open":         272.25,
+"AAPL.High":            275,
+"AAPL.Low":         271.42,
+"price":         274.07,
+"AAPL.Volume":      196155400,
+"AAPL.Adjusted":          37.24,
+"date":          14778 
+},
+{
+ "AAPL.Open":         277.69,
+"AAPL.High":         279.01,
+"AAPL.Low":         268.73,
+"price":         270.17,
+"AAPL.Volume":      194122600,
+"AAPL.Adjusted":          36.71,
+"date":          14781 
+},
+{
+ "AAPL.Open":         272.16,
+"AAPL.High":         275.97,
+"AAPL.Low":          271.5,
+"price":         273.85,
+"AAPL.Volume":      179315500,
+"AAPL.Adjusted":          37.21,
+"date":          14782 
+},
+{
+ "AAPL.Open":         274.58,
+"AAPL.High":         274.66,
+"AAPL.Low":          267.9,
+"price":         270.97,
+"AAPL.Volume":      192114300,
+"AAPL.Adjusted":          36.82,
+"date":          14783 
+},
+{
+ "AAPL.Open":            271,
+"AAPL.High":          273.2,
+"AAPL.Low":          268.1,
+"price":            269,
+"AAPL.Volume":      178569300,
+"AAPL.Adjusted":          36.55,
+"date":          14784 
+},
+{
+ "AAPL.Open":         270.06,
+"AAPL.High":         270.27,
+"AAPL.Low":         265.81,
+"price":          266.7,
+"AAPL.Volume":      137485600,
+"AAPL.Adjusted":          36.24,
+"date":          14785 
+},
+{
+ "AAPL.Open":         266.93,
+"AAPL.High":         269.75,
+"AAPL.Low":         264.52,
+"price":          268.3,
+"AAPL.Volume":      146237000,
+"AAPL.Adjusted":          36.45,
+"date":          14788 
+},
+{
+ "AAPL.Open":         264.12,
+"AAPL.High":         264.39,
+"AAPL.Low":          254.3,
+"price":         256.17,
+"AAPL.Volume":      283336200,
+"AAPL.Adjusted":          34.81,
+"date":          14789 
+},
+{
+ "AAPL.Open":         256.71,
+"AAPL.High":         257.97,
+"AAPL.Low":         250.01,
+"price":         251.53,
+"AAPL.Volume":      184863000,
+"AAPL.Adjusted":          34.18,
+"date":          14790 
+},
+{
+ "AAPL.Open":          254.3,
+"AAPL.High":          254.8,
+"AAPL.Low":         243.22,
+"price":         248.48,
+"AAPL.Volume":      255724000,
+"AAPL.Adjusted":          33.76,
+"date":          14791 
+},
+{
+ "AAPL.Open":         250.49,
+"AAPL.High":         250.93,
+"AAPL.Low":          243.2,
+"price":         246.94,
+"AAPL.Volume":      173460700,
+"AAPL.Adjusted":          33.55,
+"date":          14792 
+},
+{
+ "AAPL.Open":            251,
+"AAPL.High":          252.8,
+"AAPL.Low":         246.16,
+"price":         248.63,
+"AAPL.Volume":      153808900,
+"AAPL.Adjusted":          33.78,
+"date":          14796 
+},
+{
+ "AAPL.Open":         250.49,
+"AAPL.High":         258.77,
+"AAPL.Low":         249.75,
+"price":         258.67,
+"AAPL.Volume":      163639000,
+"AAPL.Adjusted":          35.15,
+"date":          14797 
+},
+{
+ "AAPL.Open":         262.48,
+"AAPL.High":          262.9,
+"AAPL.Low":         254.89,
+"price":         258.09,
+"AAPL.Volume":      184536100,
+"AAPL.Adjusted":          35.07,
+"date":          14798 
+},
+{
+ "AAPL.Open":         256.89,
+"AAPL.High":          259.9,
+"AAPL.Low":         255.16,
+"price":         259.62,
+"AAPL.Volume":      108330600,
+"AAPL.Adjusted":          35.27,
+"date":          14799 
+},
+{
+ "AAPL.Open":         258.53,
+"AAPL.High":         261.85,
+"AAPL.Low":         254.86,
+"price":         257.29,
+"AAPL.Volume":      140719600,
+"AAPL.Adjusted":          34.96,
+"date":          14802 
+},
+{
+ "AAPL.Open":         256.32,
+"AAPL.High":          256.4,
+"AAPL.Low":         246.43,
+"price":          251.8,
+"AAPL.Volume":      297731000,
+"AAPL.Adjusted":          34.21,
+"date":          14803 
+},
+{
+ "AAPL.Open":         249.38,
+"AAPL.High":          255.8,
+"AAPL.Low":            249,
+"price":         252.73,
+"AAPL.Volume":      203011900,
+"AAPL.Adjusted":          34.34,
+"date":          14804 
+},
+{
+ "AAPL.Open":         248.23,
+"AAPL.High":         256.97,
+"AAPL.Low":          247.3,
+"price":         251.45,
+"AAPL.Volume":      206216500,
+"AAPL.Adjusted":          34.16,
+"date":          14805 
+},
+{
+ "AAPL.Open":         253.18,
+"AAPL.High":         254.97,
+"AAPL.Low":         248.41,
+"price":          249.9,
+"AAPL.Volume":      259964600,
+"AAPL.Adjusted":          33.95,
+"date":          14806 
+},
+{
+ "AAPL.Open":         249.88,
+"AAPL.High":         249.88,
+"AAPL.Low":          239.6,
+"price":         245.58,
+"AAPL.Volume":      256119500,
+"AAPL.Adjusted":          33.37,
+"date":          14809 
+},
+{
+ "AAPL.Open":          242.9,
+"AAPL.High":          252.9,
+"AAPL.Low":         240.01,
+"price":         251.89,
+"AAPL.Volume":      268737700,
+"AAPL.Adjusted":          34.22,
+"date":          14810 
+},
+{
+ "AAPL.Open":         265.09,
+"AAPL.High":         265.15,
+"AAPL.Low":            254,
+"price":         254.24,
+"AAPL.Volume":      296417800,
+"AAPL.Adjusted":          34.54,
+"date":          14811 
+},
+{
+ "AAPL.Open":         257.68,
+"AAPL.High":            260,
+"AAPL.Low":         255.31,
+"price":         259.02,
+"AAPL.Volume":      161329700,
+"AAPL.Adjusted":          35.19,
+"date":          14812 
+},
+{
+ "AAPL.Open":         257.09,
+"AAPL.High":         260.38,
+"AAPL.Low":         256.28,
+"price":         259.94,
+"AAPL.Volume":      133347200,
+"AAPL.Adjusted":          35.32,
+"date":          14813 
+},
+{
+ "AAPL.Open":            260,
+"AAPL.High":          260.1,
+"AAPL.Low":         257.71,
+"price":         259.28,
+"AAPL.Volume":      105137900,
+"AAPL.Adjusted":          35.23,
+"date":          14816 
+},
+{
+ "AAPL.Open":         260.87,
+"AAPL.High":          264.8,
+"AAPL.Low":          260.3,
+"price":         264.08,
+"AAPL.Volume":      146192900,
+"AAPL.Adjusted":          35.88,
+"date":          14817 
+},
+{
+ "AAPL.Open":         263.67,
+"AAPL.High":         265.99,
+"AAPL.Low":         260.25,
+"price":         260.96,
+"AAPL.Volume":      129996300,
+"AAPL.Adjusted":          35.46,
+"date":          14818 
+},
+{
+ "AAPL.Open":         260.71,
+"AAPL.High":         262.65,
+"AAPL.Low":          256.1,
+"price":         258.11,
+"AAPL.Volume":      160951700,
+"AAPL.Adjusted":          35.07,
+"date":          14819 
+},
+{
+ "AAPL.Open":         255.89,
+"AAPL.High":          259.7,
+"AAPL.Low":          254.9,
+"price":         257.25,
+"AAPL.Volume":      112052500,
+"AAPL.Adjusted":          34.95,
+"date":          14820 
+},
+{
+ "AAPL.Open":         260.44,
+"AAPL.High":         262.59,
+"AAPL.Low":         259.62,
+"price":         261.85,
+"AAPL.Volume":      107013900,
+"AAPL.Adjusted":          35.58,
+"date":          14823 
+},
+{
+ "AAPL.Open":         261.01,
+"AAPL.High":         263.26,
+"AAPL.Low":         259.42,
+"price":         261.93,
+"AAPL.Volume":      104413400,
+"AAPL.Adjusted":          35.59,
+"date":          14824 
+},
+{
+ "AAPL.Open":         262.84,
+"AAPL.High":         264.28,
+"AAPL.Low":         260.31,
+"price":         262.98,
+"AAPL.Volume":      105093800,
+"AAPL.Adjusted":          35.73,
+"date":          14825 
+},
+{
+ "AAPL.Open":         261.73,
+"AAPL.High":         263.18,
+"AAPL.Low":         260.55,
+"price":          261.7,
+"AAPL.Volume":       72274300,
+"AAPL.Adjusted":          35.56,
+"date":          14826 
+},
+{
+ "AAPL.Open":         259.78,
+"AAPL.High":         261.49,
+"AAPL.Low":         257.63,
+"price":         260.09,
+"AAPL.Volume":      111224400,
+"AAPL.Adjusted":          35.34,
+"date":          14827 
+},
+{
+ "AAPL.Open":         261.48,
+"AAPL.High":         262.15,
+"AAPL.Low":         259.57,
+"price":         261.75,
+"AAPL.Volume":       75782000,
+"AAPL.Adjusted":          35.56,
+"date":          14830 
+},
+{
+ "AAPL.Open":         259.85,
+"AAPL.High":         260.45,
+"AAPL.Low":         257.55,
+"price":         259.41,
+"AAPL.Volume":      112980000,
+"AAPL.Adjusted":          35.25,
+"date":          14831 
+},
+{
+ "AAPL.Open":          255.4,
+"AAPL.High":         255.69,
+"AAPL.Low":         249.81,
+"price":         250.19,
+"AAPL.Volume":      155013600,
+"AAPL.Adjusted":          33.99,
+"date":          14832 
+},
+{
+ "AAPL.Open":         246.69,
+"AAPL.High":          253.1,
+"AAPL.Low":         246.12,
+"price":         251.79,
+"AAPL.Volume":      133730100,
+"AAPL.Adjusted":          34.21,
+"date":          14833 
+},
+{
+ "AAPL.Open":         251.65,
+"AAPL.High":         251.88,
+"AAPL.Low":         249.09,
+"price":          249.1,
+"AAPL.Volume":       88717300,
+"AAPL.Adjusted":          33.85,
+"date":          14834 
+},
+{
+ "AAPL.Open":         247.58,
+"AAPL.High":         250.01,
+"AAPL.Low":         246.62,
+"price":         247.64,
+"AAPL.Volume":       79607500,
+"AAPL.Adjusted":          33.65,
+"date":          14837 
+},
+{
+ "AAPL.Open":         250.08,
+"AAPL.High":         254.63,
+"AAPL.Low":          249.2,
+"price":         251.97,
+"AAPL.Volume":      105660100,
+"AAPL.Adjusted":          34.23,
+"date":          14838 
+},
+{
+ "AAPL.Open":         252.36,
+"AAPL.High":         254.67,
+"AAPL.Low":         251.58,
+"price":         253.07,
+"AAPL.Volume":       84924000,
+"AAPL.Adjusted":          34.38,
+"date":          14839 
+},
+{
+ "AAPL.Open":         252.84,
+"AAPL.High":         253.48,
+"AAPL.Low":         248.68,
+"price":         249.88,
+"AAPL.Volume":      106676500,
+"AAPL.Adjusted":          33.95,
+"date":          14840 
+},
+{
+ "AAPL.Open":         249.39,
+"AAPL.High":         253.92,
+"AAPL.Low":            249,
+"price":         249.64,
+"AAPL.Volume":       96057500,
+"AAPL.Adjusted":          33.92,
+"date":          14841 
+},
+{
+ "AAPL.Open":         251.79,
+"AAPL.High":            252,
+"AAPL.Low":         245.25,
+"price":          245.8,
+"AAPL.Volume":      103510400,
+"AAPL.Adjusted":           33.4,
+"date":          14844 
+},
+{
+ "AAPL.Open":         242.67,
+"AAPL.High":            243,
+"AAPL.Low":         238.65,
+"price":         239.93,
+"AAPL.Volume":      150641400,
+"AAPL.Adjusted":           32.6,
+"date":          14845 
+},
+{
+ "AAPL.Open":         238.04,
+"AAPL.High":         243.99,
+"AAPL.Low":          237.2,
+"price":         242.89,
+"AAPL.Volume":      149216900,
+"AAPL.Adjusted":             33,
+"date":          14846 
+},
+{
+ "AAPL.Open":         245.45,
+"AAPL.High":         245.75,
+"AAPL.Low":         240.28,
+"price":         240.28,
+"AAPL.Volume":      116626300,
+"AAPL.Adjusted":          32.65,
+"date":          14847 
+},
+{
+ "AAPL.Open":         241.75,
+"AAPL.High":         242.61,
+"AAPL.Low":         235.56,
+"price":         241.62,
+"AAPL.Volume":      137097800,
+"AAPL.Adjusted":          32.83,
+"date":          14848 
+},
+{
+ "AAPL.Open":         240.76,
+"AAPL.High":         245.75,
+"AAPL.Low":         240.68,
+"price":          242.5,
+"AAPL.Volume":       95822300,
+"AAPL.Adjusted":          32.95,
+"date":          14851 
+},
+{
+ "AAPL.Open":         241.85,
+"AAPL.High":         244.56,
+"AAPL.Low":         240.35,
+"price":          243.1,
+"AAPL.Volume":      105196700,
+"AAPL.Adjusted":          33.03,
+"date":          14852 
+},
+{
+ "AAPL.Open":         247.47,
+"AAPL.High":         251.46,
+"AAPL.Low":         246.28,
+"price":         250.33,
+"AAPL.Volume":      174259400,
+"AAPL.Adjusted":          34.01,
+"date":          14853 
+},
+{
+ "AAPL.Open":         251.26,
+"AAPL.High":         252.17,
+"AAPL.Low":         248.57,
+"price":         252.17,
+"AAPL.Volume":      103856900,
+"AAPL.Adjusted":          34.26,
+"date":          14854 
+},
+{
+ "AAPL.Open":         255.09,
+"AAPL.High":         258.78,
+"AAPL.Low":          254.5,
+"price":         258.77,
+"AAPL.Volume":      130197200,
+"AAPL.Adjusted":          35.16,
+"date":          14855 
+},
+{
+ "AAPL.Open":         256.64,
+"AAPL.High":         259.53,
+"AAPL.Low":         256.25,
+"price":         257.81,
+"AAPL.Volume":       85639400,
+"AAPL.Adjusted":          35.03,
+"date":          14859 
+},
+{
+ "AAPL.Open":         259.78,
+"AAPL.High":         264.39,
+"AAPL.Low":          259.1,
+"price":         262.92,
+"AAPL.Volume":      131637800,
+"AAPL.Adjusted":          35.72,
+"date":          14860 
+},
+{
+ "AAPL.Open":         265.04,
+"AAPL.High":         266.52,
+"AAPL.Low":         262.92,
+"price":         263.07,
+"AAPL.Volume":      109643800,
+"AAPL.Adjusted":          35.74,
+"date":          14861 
+},
+{
+ "AAPL.Open":         263.19,
+"AAPL.High":          264.5,
+"AAPL.Low":          261.4,
+"price":         263.41,
+"AAPL.Volume":       96885600,
+"AAPL.Adjusted":          35.79,
+"date":          14862 
+},
+{
+ "AAPL.Open":         265.82,
+"AAPL.High":         268.28,
+"AAPL.Low":         265.76,
+"price":         267.04,
+"AAPL.Volume":       97195000,
+"AAPL.Adjusted":          36.28,
+"date":          14865 
+},
+{
+ "AAPL.Open":         266.21,
+"AAPL.High":         269.17,
+"AAPL.Low":         265.52,
+"price":         268.06,
+"AAPL.Volume":      102037600,
+"AAPL.Adjusted":          36.42,
+"date":          14866 
+},
+{
+ "AAPL.Open":         268.17,
+"AAPL.High":         270.38,
+"AAPL.Low":         267.84,
+"price":         270.22,
+"AAPL.Volume":      107342200,
+"AAPL.Adjusted":          36.71,
+"date":          14867 
+},
+{
+ "AAPL.Open":         270.24,
+"AAPL.High":         276.67,
+"AAPL.Low":          269.5,
+"price":         276.57,
+"AAPL.Volume":      163025800,
+"AAPL.Adjusted":          37.58,
+"date":          14868 
+},
+{
+ "AAPL.Open":         277.69,
+"AAPL.High":         277.96,
+"AAPL.Low":         273.68,
+"price":         275.37,
+"AAPL.Volume":      158619300,
+"AAPL.Adjusted":          37.41,
+"date":          14869 
+},
+{
+ "AAPL.Open":         276.08,
+"AAPL.High":         283.78,
+"AAPL.Low":         275.85,
+"price":         283.23,
+"AAPL.Volume":      164669400,
+"AAPL.Adjusted":          38.48,
+"date":          14872 
+},
+{
+ "AAPL.Open":         283.86,
+"AAPL.High":         287.35,
+"AAPL.Low":         282.79,
+"price":         283.77,
+"AAPL.Volume":      167018600,
+"AAPL.Adjusted":          38.56,
+"date":          14873 
+},
+{
+ "AAPL.Open":         282.71,
+"AAPL.High":         287.98,
+"AAPL.Low":         282.41,
+"price":         287.75,
+"AAPL.Volume":      146322400,
+"AAPL.Adjusted":           39.1,
+"date":          14874 
+},
+{
+ "AAPL.Open":         286.33,
+"AAPL.High":         292.76,
+"AAPL.Low":            286,
+"price":         288.92,
+"AAPL.Volume":      196529200,
+"AAPL.Adjusted":          39.26,
+"date":          14875 
+},
+{
+ "AAPL.Open":          292.1,
+"AAPL.High":         293.53,
+"AAPL.Low":         290.55,
+"price":         292.32,
+"AAPL.Volume":      162372000,
+"AAPL.Adjusted":          39.72,
+"date":          14876 
+},
+{
+ "AAPL.Open":         293.98,
+"AAPL.High":         294.73,
+"AAPL.Low":         291.01,
+"price":         291.16,
+"AAPL.Volume":      120708700,
+"AAPL.Adjusted":          39.56,
+"date":          14879 
+},
+{
+ "AAPL.Open":         291.77,
+"AAPL.High":         291.77,
+"AAPL.Low":            275,
+"price":         286.86,
+"AAPL.Volume":      258760600,
+"AAPL.Adjusted":          38.98,
+"date":          14880 
+},
+{
+ "AAPL.Open":         287.23,
+"AAPL.High":         289.81,
+"AAPL.Low":            286,
+"price":         287.37,
+"AAPL.Volume":      117411000,
+"AAPL.Adjusted":          39.04,
+"date":          14881 
+},
+{
+ "AAPL.Open":            289,
+"AAPL.High":            290,
+"AAPL.Low":         281.25,
+"price":         283.75,
+"AAPL.Volume":      168347900,
+"AAPL.Adjusted":          38.55,
+"date":          14882 
+},
+{
+ "AAPL.Open":         286.15,
+"AAPL.High":         286.58,
+"AAPL.Low":         281.35,
+"price":         282.52,
+"AAPL.Volume":      112035700,
+"AAPL.Adjusted":          38.39,
+"date":          14883 
+},
+{
+ "AAPL.Open":          281.6,
+"AAPL.High":          282.9,
+"AAPL.Low":         277.77,
+"price":         278.64,
+"AAPL.Volume":      108825500,
+"AAPL.Adjusted":          37.86,
+"date":          14886 
+},
+{
+ "AAPL.Open":            282,
+"AAPL.High":         289.45,
+"AAPL.Low":         281.82,
+"price":         288.94,
+"AAPL.Volume":      125491800,
+"AAPL.Adjusted":          39.26,
+"date":          14887 
+},
+{
+ "AAPL.Open":         289.59,
+"AAPL.High":         291.99,
+"AAPL.Low":         285.26,
+"price":         289.19,
+"AAPL.Volume":      167717200,
+"AAPL.Adjusted":          39.29,
+"date":          14888 
+},
+{
+ "AAPL.Open":         290.34,
+"AAPL.High":         290.48,
+"AAPL.Low":         286.91,
+"price":         289.22,
+"AAPL.Volume":      102099900,
+"AAPL.Adjusted":           39.3,
+"date":          14889 
+},
+{
+ "AAPL.Open":         291.71,
+"AAPL.High":          294.5,
+"AAPL.Low":            290,
+"price":         294.07,
+"AAPL.Volume":      164600800,
+"AAPL.Adjusted":          39.96,
+"date":          14890 
+},
+{
+ "AAPL.Open":         294.74,
+"AAPL.High":         297.24,
+"AAPL.Low":          294.6,
+"price":         295.36,
+"AAPL.Volume":      106938300,
+"AAPL.Adjusted":          40.13,
+"date":          14893 
+},
+{
+ "AAPL.Open":         295.41,
+"AAPL.High":          299.5,
+"AAPL.Low":         292.49,
+"price":         298.54,
+"AAPL.Volume":      139636000,
+"AAPL.Adjusted":          40.56,
+"date":          14894 
+},
+{
+ "AAPL.Open":          300.2,
+"AAPL.High":         301.96,
+"AAPL.Low":          299.8,
+"price":         300.14,
+"AAPL.Volume":      157523100,
+"AAPL.Adjusted":          40.78,
+"date":          14895 
+},
+{
+ "AAPL.Open":         301.69,
+"AAPL.High":         302.47,
+"AAPL.Low":          300.4,
+"price":         302.31,
+"AAPL.Volume":      108824100,
+"AAPL.Adjusted":          41.07,
+"date":          14896 
+},
+{
+ "AAPL.Open":         307.44,
+"AAPL.High":            315,
+"AAPL.Low":         304.91,
+"price":         314.74,
+"AAPL.Volume":      230548500,
+"AAPL.Adjusted":          42.76,
+"date":          14897 
+},
+{
+ "AAPL.Open":         318.47,
+"AAPL.High":            319,
+"AAPL.Low":         314.29,
+"price":            318,
+"AAPL.Volume":      273252700,
+"AAPL.Adjusted":          43.21,
+"date":          14900 
+},
+{
+ "AAPL.Open":          303.4,
+"AAPL.High":         313.77,
+"AAPL.Low":         300.02,
+"price":         309.49,
+"AAPL.Volume":      308196000,
+"AAPL.Adjusted":          42.05,
+"date":          14901 
+},
+{
+ "AAPL.Open":            309,
+"AAPL.High":         314.25,
+"AAPL.Low":         306.87,
+"price":         310.53,
+"AAPL.Volume":      180406100,
+"AAPL.Adjusted":          42.19,
+"date":          14902 
+},
+{
+ "AAPL.Open":         312.36,
+"AAPL.High":         314.74,
+"AAPL.Low":          306.8,
+"price":         309.52,
+"AAPL.Volume":      137865000,
+"AAPL.Adjusted":          42.05,
+"date":          14903 
+},
+{
+ "AAPL.Open":         309.07,
+"AAPL.High":         310.04,
+"AAPL.Low":          306.3,
+"price":         307.47,
+"AAPL.Volume":       93194500,
+"AAPL.Adjusted":          41.78,
+"date":          14904 
+},
+{
+ "AAPL.Open":         309.09,
+"AAPL.High":          311.6,
+"AAPL.Low":         308.44,
+"price":         308.84,
+"AAPL.Volume":       98115500,
+"AAPL.Adjusted":          41.96,
+"date":          14907 
+},
+{
+ "AAPL.Open":         306.87,
+"AAPL.High":         309.74,
+"AAPL.Low":         305.65,
+"price":         308.05,
+"AAPL.Volume":       98232400,
+"AAPL.Adjusted":          41.85,
+"date":          14908 
+},
+{
+ "AAPL.Open":         307.65,
+"AAPL.High":          309.9,
+"AAPL.Low":          305.6,
+"price":         307.83,
+"AAPL.Volume":       99750700,
+"AAPL.Adjusted":          41.82,
+"date":          14909 
+},
+{
+ "AAPL.Open":         307.95,
+"AAPL.High":            308,
+"AAPL.Low":          300.9,
+"price":         305.24,
+"AAPL.Volume":      137762800,
+"AAPL.Adjusted":          41.47,
+"date":          14910 
+},
+{
+ "AAPL.Open":         304.23,
+"AAPL.High":         305.88,
+"AAPL.Low":         300.87,
+"price":         300.98,
+"AAPL.Volume":      107627800,
+"AAPL.Adjusted":          40.89,
+"date":          14911 
+},
+{
+ "AAPL.Open":         302.22,
+"AAPL.High":          305.6,
+"AAPL.Low":          302.2,
+"price":         304.18,
+"AAPL.Volume":      105972300,
+"AAPL.Adjusted":          41.33,
+"date":          14914 
+},
+{
+ "AAPL.Open":            307,
+"AAPL.High":         310.19,
+"AAPL.Low":            307,
+"price":         309.36,
+"AAPL.Volume":      108482500,
+"AAPL.Adjusted":          42.03,
+"date":          14915 
+},
+{
+ "AAPL.Open":         311.37,
+"AAPL.High":         312.88,
+"AAPL.Low":         308.53,
+"price":          312.8,
+"AAPL.Volume":      127087100,
+"AAPL.Adjusted":           42.5,
+"date":          14916 
+},
+{
+ "AAPL.Open":         315.45,
+"AAPL.High":         320.18,
+"AAPL.Low":         315.03,
+"price":         318.27,
+"AAPL.Volume":      160622000,
+"AAPL.Adjusted":          43.24,
+"date":          14917 
+},
+{
+ "AAPL.Open":         317.99,
+"AAPL.High":         319.57,
+"AAPL.Low":         316.75,
+"price":         317.13,
+"AAPL.Volume":       90313300,
+"AAPL.Adjusted":          43.09,
+"date":          14918 
+},
+{
+ "AAPL.Open":          317.2,
+"AAPL.High":         319.77,
+"AAPL.Low":         316.76,
+"price":         318.62,
+"AAPL.Volume":       70439600,
+"AAPL.Adjusted":          43.29,
+"date":          14921 
+},
+{
+ "AAPL.Open":         321.05,
+"AAPL.High":          321.3,
+"AAPL.Low":          314.5,
+"price":         316.08,
+"AAPL.Volume":       95886000,
+"AAPL.Adjusted":          42.95,
+"date":          14922 
+},
+{
+ "AAPL.Open":         316.64,
+"AAPL.High":         318.77,
+"AAPL.Low":         313.55,
+"price":         318.03,
+"AAPL.Volume":       96056800,
+"AAPL.Adjusted":          43.21,
+"date":          14923 
+},
+{
+ "AAPL.Open":            315,
+"AAPL.High":          318.4,
+"AAPL.Low":         314.25,
+"price":         316.65,
+"AAPL.Volume":       90321000,
+"AAPL.Adjusted":          43.02,
+"date":          14924 
+},
+{
+ "AAPL.Open":            316,
+"AAPL.High":          316.5,
+"AAPL.Low":         303.63,
+"price":         308.03,
+"AAPL.Volume":      198961700,
+"AAPL.Adjusted":          41.85,
+"date":          14925 
+},
+{
+ "AAPL.Open":         308.46,
+"AAPL.High":         310.54,
+"AAPL.Low":         306.27,
+"price":         307.04,
+"AAPL.Volume":      100901500,
+"AAPL.Adjusted":          41.72,
+"date":          14928 
+},
+{
+ "AAPL.Open":         305.72,
+"AAPL.High":          307.6,
+"AAPL.Low":         299.32,
+"price":         301.59,
+"AAPL.Volume":      164412500,
+"AAPL.Adjusted":          40.98,
+"date":          14929 
+},
+{
+ "AAPL.Open":          301.2,
+"AAPL.High":         303.99,
+"AAPL.Low":         297.76,
+"price":          300.5,
+"AAPL.Volume":      119862400,
+"AAPL.Adjusted":          40.83,
+"date":          14930 
+},
+{
+ "AAPL.Open":          305.2,
+"AAPL.High":         309.67,
+"AAPL.Low":         304.69,
+"price":         308.43,
+"AAPL.Volume":      123622800,
+"AAPL.Adjusted":          41.91,
+"date":          14931 
+},
+{
+ "AAPL.Open":         307.97,
+"AAPL.High":          308.4,
+"AAPL.Low":         305.24,
+"price":         306.73,
+"AAPL.Volume":       96210800,
+"AAPL.Adjusted":          41.68,
+"date":          14932 
+},
+{
+ "AAPL.Open":         306.68,
+"AAPL.High":         313.36,
+"AAPL.Low":         305.87,
+"price":         313.36,
+"AAPL.Volume":       98268800,
+"AAPL.Adjusted":          42.58,
+"date":          14935 
+},
+{
+ "AAPL.Open":         310.45,
+"AAPL.High":         311.75,
+"AAPL.Low":         306.56,
+"price":         308.73,
+"AAPL.Volume":      129861900,
+"AAPL.Adjusted":          41.95,
+"date":          14936 
+},
+{
+ "AAPL.Open":            312,
+"AAPL.High":          315.4,
+"AAPL.Low":         311.75,
+"price":          314.8,
+"AAPL.Volume":      103431300,
+"AAPL.Adjusted":          42.77,
+"date":          14937 
+},
+{
+ "AAPL.Open":         313.74,
+"AAPL.High":          317.7,
+"AAPL.Low":         312.94,
+"price":            315,
+"AAPL.Volume":       59396400,
+"AAPL.Adjusted":           42.8,
+"date":          14939 
+},
+{
+ "AAPL.Open":          315.5,
+"AAPL.High":         317.48,
+"AAPL.Low":         311.38,
+"price":         316.87,
+"AAPL.Volume":      111446300,
+"AAPL.Adjusted":          43.05,
+"date":          14942 
+},
+{
+ "AAPL.Open":         313.54,
+"AAPL.High":         314.36,
+"AAPL.Low":         310.87,
+"price":         311.15,
+"AAPL.Volume":      125464500,
+"AAPL.Adjusted":          42.28,
+"date":          14943 
+},
+{
+ "AAPL.Open":         315.27,
+"AAPL.High":         317.75,
+"AAPL.Low":            315,
+"price":          316.4,
+"AAPL.Volume":      115437700,
+"AAPL.Adjusted":          42.99,
+"date":          14944 
+},
+{
+ "AAPL.Open":         317.53,
+"AAPL.High":            319,
+"AAPL.Low":         314.89,
+"price":         318.15,
+"AAPL.Volume":      115709300,
+"AAPL.Adjusted":          43.23,
+"date":          14945 
+},
+{
+ "AAPL.Open":         317.01,
+"AAPL.High":         318.65,
+"AAPL.Low":         316.34,
+"price":         317.44,
+"AAPL.Volume":       85523200,
+"AAPL.Adjusted":          43.13,
+"date":          14946 
+},
+{
+ "AAPL.Open":         318.64,
+"AAPL.High":         322.33,
+"AAPL.Low":         318.42,
+"price":         320.15,
+"AAPL.Volume":      112120400,
+"AAPL.Adjusted":           43.5,
+"date":          14949 
+},
+{
+ "AAPL.Open":          323.8,
+"AAPL.High":         323.99,
+"AAPL.Low":         318.12,
+"price":         318.21,
+"AAPL.Volume":       97863500,
+"AAPL.Adjusted":          43.23,
+"date":          14950 
+},
+{
+ "AAPL.Open":         319.63,
+"AAPL.High":         321.02,
+"AAPL.Low":         317.11,
+"price":         321.01,
+"AAPL.Volume":       80483900,
+"AAPL.Adjusted":          43.62,
+"date":          14951 
+},
+{
+ "AAPL.Open":         322.13,
+"AAPL.High":          322.5,
+"AAPL.Low":         319.02,
+"price":         319.76,
+"AAPL.Volume":       73537800,
+"AAPL.Adjusted":          43.45,
+"date":          14952 
+},
+{
+ "AAPL.Open":         319.65,
+"AAPL.High":         321.05,
+"AAPL.Low":          318.6,
+"price":         320.56,
+"AAPL.Volume":       65627800,
+"AAPL.Adjusted":          43.55,
+"date":          14953 
+},
+{
+ "AAPL.Open":         324.37,
+"AAPL.High":         325.06,
+"AAPL.Low":            321,
+"price":         321.67,
+"AAPL.Volume":      109953900,
+"AAPL.Adjusted":          43.71,
+"date":          14956 
+},
+{
+ "AAPL.Open":         321.73,
+"AAPL.High":         322.54,
+"AAPL.Low":            319,
+"price":         320.29,
+"AAPL.Volume":       87752000,
+"AAPL.Adjusted":          43.52,
+"date":          14957 
+},
+{
+ "AAPL.Open":            320,
+"AAPL.High":            323,
+"AAPL.Low":         319.19,
+"price":         320.36,
+"AAPL.Volume":      104328000,
+"AAPL.Adjusted":          43.53,
+"date":          14958 
+},
+{
+ "AAPL.Open":         321.09,
+"AAPL.High":         322.61,
+"AAPL.Low":          320.1,
+"price":         321.25,
+"AAPL.Volume":       80507700,
+"AAPL.Adjusted":          43.65,
+"date":          14959 
+},
+{
+ "AAPL.Open":         321.63,
+"AAPL.High":         321.79,
+"AAPL.Low":         320.23,
+"price":         320.61,
+"AAPL.Volume":       96732300,
+"AAPL.Adjusted":          43.56,
+"date":          14960 
+},
+{
+ "AAPL.Open":          321.6,
+"AAPL.High":         323.25,
+"AAPL.Low":         318.23,
+"price":         322.21,
+"AAPL.Volume":       96402600,
+"AAPL.Adjusted":          43.78,
+"date":          14963 
+},
+{
+ "AAPL.Open":            323,
+"AAPL.High":         324.39,
+"AAPL.Low":         322.05,
+"price":          324.2,
+"AAPL.Volume":       64088500,
+"AAPL.Adjusted":          44.05,
+"date":          14964 
+},
+{
+ "AAPL.Open":         324.36,
+"AAPL.High":         325.72,
+"AAPL.Low":         323.55,
+"price":         325.16,
+"AAPL.Volume":       66480400,
+"AAPL.Adjusted":          44.18,
+"date":          14965 
+},
+{
+ "AAPL.Open":            325,
+"AAPL.High":         325.15,
+"AAPL.Low":         323.17,
+"price":          323.6,
+"AAPL.Volume":       55789300,
+"AAPL.Adjusted":          43.97,
+"date":          14966 
+},
+{
+ "AAPL.Open":         322.85,
+"AAPL.High":         325.44,
+"AAPL.Low":         321.52,
+"price":         324.68,
+"AAPL.Volume":       62454000,
+"AAPL.Adjusted":          44.11,
+"date":          14970 
+},
+{
+ "AAPL.Open":         325.91,
+"AAPL.High":         326.66,
+"AAPL.Low":         325.06,
+"price":         325.47,
+"AAPL.Volume":       43981000,
+"AAPL.Adjusted":          44.22,
+"date":          14971 
+},
+{
+ "AAPL.Open":         326.22,
+"AAPL.High":         326.45,
+"AAPL.Low":          325.1,
+"price":         325.29,
+"AAPL.Volume":       40784800,
+"AAPL.Adjusted":           44.2,
+"date":          14972 
+},
+{
+ "AAPL.Open":         325.48,
+"AAPL.High":         325.51,
+"AAPL.Low":         323.05,
+"price":         323.66,
+"AAPL.Volume":       39373600,
+"AAPL.Adjusted":          43.98,
+"date":          14973 
+},
+{
+ "AAPL.Open":         322.95,
+"AAPL.High":         323.48,
+"AAPL.Low":         321.31,
+"price":         322.56,
+"AAPL.Volume":       48377000,
+"AAPL.Adjusted":          43.83,
+"date":          14974 
+},
+{
+ "AAPL.Open":         325.64,
+"AAPL.High":         330.26,
+"AAPL.Low":         324.84,
+"price":         329.57,
+"AAPL.Volume":      111284600,
+"AAPL.Adjusted":          44.78,
+"date":          14977 
+},
+{
+ "AAPL.Open":         332.44,
+"AAPL.High":          332.5,
+"AAPL.Low":         328.15,
+"price":         331.29,
+"AAPL.Volume":       77270200,
+"AAPL.Adjusted":          45.01,
+"date":          14978 
+},
+{
+ "AAPL.Open":         329.55,
+"AAPL.High":         334.34,
+"AAPL.Low":          329.5,
+"price":            334,
+"AAPL.Volume":       63879900,
+"AAPL.Adjusted":          45.38,
+"date":          14979 
+},
+{
+ "AAPL.Open":         334.72,
+"AAPL.High":         335.25,
+"AAPL.Low":          332.9,
+"price":         333.73,
+"AAPL.Volume":       75107200,
+"AAPL.Adjusted":          45.34,
+"date":          14980 
+},
+{
+ "AAPL.Open":         333.99,
+"AAPL.High":         336.35,
+"AAPL.Low":          331.9,
+"price":         336.12,
+"AAPL.Volume":       77982800,
+"AAPL.Adjusted":          45.67,
+"date":          14981 
+},
+{
+ "AAPL.Open":         338.83,
+"AAPL.High":         343.23,
+"AAPL.Low":         337.17,
+"price":         342.45,
+"AAPL.Volume":      112140000,
+"AAPL.Adjusted":          46.53,
+"date":          14984 
+},
+{
+ "AAPL.Open":         344.88,
+"AAPL.High":         344.96,
+"AAPL.Low":         339.47,
+"price":         341.64,
+"AAPL.Volume":      111027000,
+"AAPL.Adjusted":          46.42,
+"date":          14985 
+},
+{
+ "AAPL.Open":         343.25,
+"AAPL.High":         344.43,
+"AAPL.Low":            342,
+"price":         344.42,
+"AAPL.Volume":       75647600,
+"AAPL.Adjusted":           46.8,
+"date":          14986 
+},
+{
+ "AAPL.Open":         345.16,
+"AAPL.High":         346.64,
+"AAPL.Low":         343.85,
+"price":         345.68,
+"AAPL.Volume":       74195100,
+"AAPL.Adjusted":          46.97,
+"date":          14987 
+},
+{
+ "AAPL.Open":         345.89,
+"AAPL.High":         348.48,
+"AAPL.Low":         344.44,
+"price":         348.48,
+"AAPL.Volume":       77210000,
+"AAPL.Adjusted":          47.35,
+"date":          14988 
+},
+{
+ "AAPL.Open":         329.52,
+"AAPL.High":         344.76,
+"AAPL.Low":            326,
+"price":         340.65,
+"AAPL.Volume":      470249500,
+"AAPL.Adjusted":          46.28,
+"date":          14992 
+},
+{
+ "AAPL.Open":         348.35,
+"AAPL.High":          348.6,
+"AAPL.Low":         336.88,
+"price":         338.84,
+"AAPL.Volume":      283903200,
+"AAPL.Adjusted":          46.04,
+"date":          14993 
+},
+{
+ "AAPL.Open":         336.43,
+"AAPL.High":          338.3,
+"AAPL.Low":         330.12,
+"price":         332.68,
+"AAPL.Volume":      191197300,
+"AAPL.Adjusted":           45.2,
+"date":          14994 
+},
+{
+ "AAPL.Open":         333.77,
+"AAPL.High":         334.88,
+"AAPL.Low":         326.63,
+"price":         326.72,
+"AAPL.Volume":      188600300,
+"AAPL.Adjusted":          44.39,
+"date":          14995 
+},
+{
+ "AAPL.Open":         326.87,
+"AAPL.High":         337.45,
+"AAPL.Low":         326.72,
+"price":         337.45,
+"AAPL.Volume":      143670800,
+"AAPL.Adjusted":          45.85,
+"date":          14998 
+},
+{
+ "AAPL.Open":         336.33,
+"AAPL.High":         341.44,
+"AAPL.Low":         334.57,
+"price":          341.4,
+"AAPL.Volume":      136717000,
+"AAPL.Adjusted":          46.39,
+"date":          14999 
+},
+{
+ "AAPL.Open":         342.96,
+"AAPL.High":          345.6,
+"AAPL.Low":          341.5,
+"price":         343.85,
+"AAPL.Volume":      126718900,
+"AAPL.Adjusted":          46.72,
+"date":          15000 
+},
+{
+ "AAPL.Open":         343.78,
+"AAPL.High":         344.69,
+"AAPL.Low":         342.83,
+"price":         343.21,
+"AAPL.Volume":       71256500,
+"AAPL.Adjusted":          46.63,
+"date":          15001 
+},
+{
+ "AAPL.Open":         344.17,
+"AAPL.High":          344.4,
+"AAPL.Low":         333.53,
+"price":          336.1,
+"AAPL.Volume":      148014300,
+"AAPL.Adjusted":          45.67,
+"date":          15002 
+},
+{
+ "AAPL.Open":          335.8,
+"AAPL.High":         340.04,
+"AAPL.Low":          334.3,
+"price":         339.32,
+"AAPL.Volume":       94311700,
+"AAPL.Adjusted":           46.1,
+"date":          15005 
+},
+{
+ "AAPL.Open":          341.3,
+"AAPL.High":         345.65,
+"AAPL.Low":         340.98,
+"price":         345.03,
+"AAPL.Volume":      106658300,
+"AAPL.Adjusted":          46.88,
+"date":          15006 
+},
+{
+ "AAPL.Open":         344.45,
+"AAPL.High":         345.25,
+"AAPL.Low":         343.55,
+"price":         344.32,
+"AAPL.Volume":       64738800,
+"AAPL.Adjusted":          46.78,
+"date":          15007 
+},
+{
+ "AAPL.Open":          343.8,
+"AAPL.High":         344.24,
+"AAPL.Low":         338.55,
+"price":         343.44,
+"AAPL.Volume":       98449400,
+"AAPL.Adjusted":          46.66,
+"date":          15008 
+},
+{
+ "AAPL.Open":         343.64,
+"AAPL.High":          346.7,
+"AAPL.Low":         343.51,
+"price":          346.5,
+"AAPL.Volume":       80460100,
+"AAPL.Adjusted":          47.08,
+"date":          15009 
+},
+{
+ "AAPL.Open":         347.89,
+"AAPL.High":         353.25,
+"AAPL.Low":         347.64,
+"price":         351.88,
+"AAPL.Volume":      121255400,
+"AAPL.Adjusted":          47.81,
+"date":          15012 
+},
+{
+ "AAPL.Open":         353.68,
+"AAPL.High":         355.52,
+"AAPL.Low":         352.15,
+"price":          355.2,
+"AAPL.Volume":       95260200,
+"AAPL.Adjusted":          48.26,
+"date":          15013 
+},
+{
+ "AAPL.Open":         355.19,
+"AAPL.High":            359,
+"AAPL.Low":         354.87,
+"price":         358.16,
+"AAPL.Volume":      120686300,
+"AAPL.Adjusted":          48.66,
+"date":          15014 
+},
+{
+ "AAPL.Open":         357.39,
+"AAPL.High":            360,
+"AAPL.Low":            348,
+"price":         354.54,
+"AAPL.Volume":      232137500,
+"AAPL.Adjusted":          48.17,
+"date":          15015 
+},
+{
+ "AAPL.Open":         354.75,
+"AAPL.High":          357.8,
+"AAPL.Low":         353.54,
+"price":         356.85,
+"AAPL.Volume":       91893200,
+"AAPL.Adjusted":          48.48,
+"date":          15016 
+},
+{
+ "AAPL.Open":         356.79,
+"AAPL.High":         359.48,
+"AAPL.Low":         356.71,
+"price":         359.18,
+"AAPL.Volume":       77604100,
+"AAPL.Adjusted":           48.8,
+"date":          15019 
+},
+{
+ "AAPL.Open":         359.19,
+"AAPL.High":         359.97,
+"AAPL.Low":         357.55,
+"price":          359.9,
+"AAPL.Volume":       71043700,
+"AAPL.Adjusted":           48.9,
+"date":          15020 
+},
+{
+ "AAPL.Open":          360.8,
+"AAPL.High":          364.9,
+"AAPL.Low":          360.5,
+"price":         363.13,
+"AAPL.Volume":      120289400,
+"AAPL.Adjusted":          49.34,
+"date":          15021 
+},
+{
+ "AAPL.Open":         357.25,
+"AAPL.High":         360.27,
+"AAPL.Low":         356.52,
+"price":          358.3,
+"AAPL.Volume":      132645800,
+"AAPL.Adjusted":          48.68,
+"date":          15022 
+},
+{
+ "AAPL.Open":         358.71,
+"AAPL.High":          359.5,
+"AAPL.Low":         349.52,
+"price":         350.56,
+"AAPL.Volume":      204014300,
+"AAPL.Adjusted":          47.63,
+"date":          15023 
+},
+{
+ "AAPL.Open":         342.15,
+"AAPL.High":          345.4,
+"AAPL.Low":         337.72,
+"price":         338.61,
+"AAPL.Volume":      218138900,
+"AAPL.Adjusted":          46.01,
+"date":          15027 
+},
+{
+ "AAPL.Open":         338.77,
+"AAPL.High":         344.64,
+"AAPL.Low":         338.61,
+"price":         342.62,
+"AAPL.Volume":      167963600,
+"AAPL.Adjusted":          46.55,
+"date":          15028 
+},
+{
+ "AAPL.Open":         344.02,
+"AAPL.High":         345.15,
+"AAPL.Low":         338.37,
+"price":         342.88,
+"AAPL.Volume":      124975200,
+"AAPL.Adjusted":          46.59,
+"date":          15029 
+},
+{
+ "AAPL.Open":         345.26,
+"AAPL.High":         348.43,
+"AAPL.Low":          344.8,
+"price":         348.16,
+"AAPL.Volume":       95004700,
+"AAPL.Adjusted":           47.3,
+"date":          15030 
+},
+{
+ "AAPL.Open":         351.24,
+"AAPL.High":         355.05,
+"AAPL.Low":         351.12,
+"price":         353.21,
+"AAPL.Volume":      100768500,
+"AAPL.Adjusted":          47.99,
+"date":          15033 
+},
+{
+ "AAPL.Open":         355.47,
+"AAPL.High":         355.72,
+"AAPL.Low":         347.68,
+"price":         349.31,
+"AAPL.Volume":      114034200,
+"AAPL.Adjusted":          47.46,
+"date":          15034 
+},
+{
+ "AAPL.Open":         349.96,
+"AAPL.High":         354.35,
+"AAPL.Low":          348.4,
+"price":         352.12,
+"AAPL.Volume":      150647700,
+"AAPL.Adjusted":          47.84,
+"date":          15035 
+},
+{
+ "AAPL.Open":         357.19,
+"AAPL.High":         359.79,
+"AAPL.Low":         355.92,
+"price":         359.56,
+"AAPL.Volume":      125197100,
+"AAPL.Adjusted":          48.85,
+"date":          15036 
+},
+{
+ "AAPL.Open":         360.07,
+"AAPL.High":         360.29,
+"AAPL.Low":         357.75,
+"price":            360,
+"AAPL.Volume":      113316700,
+"AAPL.Adjusted":          48.91,
+"date":          15037 
+},
+{
+ "AAPL.Open":          361.4,
+"AAPL.High":         361.67,
+"AAPL.Low":         351.31,
+"price":         355.36,
+"AAPL.Volume":      136530800,
+"AAPL.Adjusted":          48.28,
+"date":          15040 
+},
+{
+ "AAPL.Open":         354.91,
+"AAPL.High":          357.4,
+"AAPL.Low":         352.25,
+"price":         355.76,
+"AAPL.Volume":       89079200,
+"AAPL.Adjusted":          48.34,
+"date":          15041 
+},
+{
+ "AAPL.Open":         354.69,
+"AAPL.High":         354.76,
+"AAPL.Low":          350.6,
+"price":         352.47,
+"AAPL.Volume":      113326500,
+"AAPL.Adjusted":          47.89,
+"date":          15042 
+},
+{
+ "AAPL.Open":         349.12,
+"AAPL.High":         349.77,
+"AAPL.Low":          344.9,
+"price":         346.67,
+"AAPL.Volume":      126884800,
+"AAPL.Adjusted":           47.1,
+"date":          15043 
+},
+{
+ "AAPL.Open":         345.33,
+"AAPL.High":         352.32,
+"AAPL.Low":            345,
+"price":         351.99,
+"AAPL.Volume":      117770100,
+"AAPL.Adjusted":          47.82,
+"date":          15044 
+},
+{
+ "AAPL.Open":         353.18,
+"AAPL.High":         356.48,
+"AAPL.Low":         351.31,
+"price":         353.56,
+"AAPL.Volume":      108989300,
+"AAPL.Adjusted":          48.04,
+"date":          15047 
+},
+{
+ "AAPL.Open":          342.1,
+"AAPL.High":         347.84,
+"AAPL.Low":          340.1,
+"price":         345.43,
+"AAPL.Volume":      180270300,
+"AAPL.Adjusted":          46.93,
+"date":          15048 
+},
+{
+ "AAPL.Open":            342,
+"AAPL.High":            343,
+"AAPL.Low":         326.26,
+"price":         330.01,
+"AAPL.Volume":      290502800,
+"AAPL.Adjusted":          44.84,
+"date":          15049 
+},
+{
+ "AAPL.Open":         336.83,
+"AAPL.High":         339.61,
+"AAPL.Low":         330.66,
+"price":         334.64,
+"AAPL.Volume":      164855600,
+"AAPL.Adjusted":          45.47,
+"date":          15050 
+},
+{
+ "AAPL.Open":         337.13,
+"AAPL.High":          338.2,
+"AAPL.Low":            330,
+"price":         330.67,
+"AAPL.Volume":      188303500,
+"AAPL.Adjusted":          44.93,
+"date":          15051 
+},
+{
+ "AAPL.Open":         335.99,
+"AAPL.High":         339.74,
+"AAPL.Low":         335.26,
+"price":          339.3,
+"AAPL.Volume":      102350500,
+"AAPL.Adjusted":           46.1,
+"date":          15054 
+},
+{
+ "AAPL.Open":         342.56,
+"AAPL.High":         342.62,
+"AAPL.Low":         339.14,
+"price":          341.2,
+"AAPL.Volume":       81480700,
+"AAPL.Adjusted":          46.36,
+"date":          15055 
+},
+{
+ "AAPL.Open":         339.28,
+"AAPL.High":         340.22,
+"AAPL.Low":         335.95,
+"price":         339.19,
+"AAPL.Volume":       93249100,
+"AAPL.Adjusted":          46.09,
+"date":          15056 
+},
+{
+ "AAPL.Open":         341.85,
+"AAPL.High":            346,
+"AAPL.Low":         338.86,
+"price":         344.97,
+"AAPL.Volume":      101178000,
+"AAPL.Adjusted":          46.87,
+"date":          15057 
+},
+{
+ "AAPL.Open":         348.07,
+"AAPL.High":         352.06,
+"AAPL.Low":         347.02,
+"price":         351.54,
+"AAPL.Volume":      112227500,
+"AAPL.Adjusted":          47.76,
+"date":          15058 
+},
+{
+ "AAPL.Open":         353.15,
+"AAPL.High":         354.32,
+"AAPL.Low":         350.44,
+"price":         350.44,
+"AAPL.Volume":       77338800,
+"AAPL.Adjusted":          47.61,
+"date":          15061 
+},
+{
+ "AAPL.Open":         347.66,
+"AAPL.High":         350.96,
+"AAPL.Low":         346.06,
+"price":         350.96,
+"AAPL.Volume":       88225200,
+"AAPL.Adjusted":          47.68,
+"date":          15062 
+},
+{
+ "AAPL.Open":         350.64,
+"AAPL.High":         350.88,
+"AAPL.Low":         347.44,
+"price":         348.63,
+"AAPL.Volume":       82351500,
+"AAPL.Adjusted":          47.37,
+"date":          15063 
+},
+{
+ "AAPL.Open":         346.36,
+"AAPL.High":          349.8,
+"AAPL.Low":         346.06,
+"price":         348.51,
+"AAPL.Volume":       68504800,
+"AAPL.Adjusted":          47.35,
+"date":          15064 
+},
+{
+ "AAPL.Open":         351.11,
+"AAPL.High":         351.59,
+"AAPL.Low":          343.3,
+"price":         344.56,
+"AAPL.Volume":      104665400,
+"AAPL.Adjusted":          46.82,
+"date":          15065 
+},
+{
+ "AAPL.Open":         344.31,
+"AAPL.High":          344.6,
+"AAPL.Low":          338.4,
+"price":         341.19,
+"AAPL.Volume":      115021200,
+"AAPL.Adjusted":          46.36,
+"date":          15068 
+},
+{
+ "AAPL.Open":         336.99,
+"AAPL.High":         342.25,
+"AAPL.Low":            336,
+"price":         338.89,
+"AAPL.Volume":      120682800,
+"AAPL.Adjusted":          46.04,
+"date":          15069 
+},
+{
+ "AAPL.Open":         341.22,
+"AAPL.High":          343.9,
+"AAPL.Low":         337.14,
+"price":         338.04,
+"AAPL.Volume":      100634800,
+"AAPL.Adjusted":          45.93,
+"date":          15070 
+},
+{
+ "AAPL.Open":          338.1,
+"AAPL.High":         340.43,
+"AAPL.Low":         336.03,
+"price":         338.08,
+"AAPL.Volume":       93361800,
+"AAPL.Adjusted":          45.93,
+"date":          15071 
+},
+{
+ "AAPL.Open":         339.92,
+"AAPL.High":         340.15,
+"AAPL.Low":         333.95,
+"price":         335.06,
+"AAPL.Volume":       94383800,
+"AAPL.Adjusted":          45.52,
+"date":          15072 
+},
+{
+ "AAPL.Open":         334.06,
+"AAPL.High":         335.67,
+"AAPL.Low":         330.02,
+"price":          330.8,
+"AAPL.Volume":       99736700,
+"AAPL.Adjusted":          44.95,
+"date":          15075 
+},
+{
+ "AAPL.Open":         330.49,
+"AAPL.High":         333.73,
+"AAPL.Low":          330.2,
+"price":          332.4,
+"AAPL.Volume":      106409800,
+"AAPL.Adjusted":          45.16,
+"date":          15076 
+},
+{
+ "AAPL.Open":         335.02,
+"AAPL.High":         336.14,
+"AAPL.Low":         332.52,
+"price":         336.13,
+"AAPL.Volume":       86555000,
+"AAPL.Adjusted":          45.67,
+"date":          15077 
+},
+{
+ "AAPL.Open":          334.8,
+"AAPL.High":            336,
+"AAPL.Low":         332.06,
+"price":         332.42,
+"AAPL.Volume":       75450200,
+"AAPL.Adjusted":          45.17,
+"date":          15078 
+},
+{
+ "AAPL.Open":          333.3,
+"AAPL.High":         333.64,
+"AAPL.Low":          326.8,
+"price":         327.46,
+"AAPL.Volume":      113401400,
+"AAPL.Adjusted":          44.49,
+"date":          15079 
+},
+{
+ "AAPL.Open":          326.1,
+"AAPL.High":         332.23,
+"AAPL.Low":         320.16,
+"price":         331.85,
+"AAPL.Volume":      152474700,
+"AAPL.Adjusted":          45.09,
+"date":          15082 
+},
+{
+ "AAPL.Open":          333.1,
+"AAPL.High":         337.98,
+"AAPL.Low":         331.71,
+"price":         337.86,
+"AAPL.Volume":      104844600,
+"AAPL.Adjusted":           45.9,
+"date":          15083 
+},
+{
+ "AAPL.Open":         343.51,
+"AAPL.High":         345.75,
+"AAPL.Low":          341.5,
+"price":         342.41,
+"AAPL.Volume":      175166600,
+"AAPL.Adjusted":          46.52,
+"date":          15084 
+},
+{
+ "AAPL.Open":            355,
+"AAPL.High":         355.13,
+"AAPL.Low":         348.52,
+"price":          350.7,
+"AAPL.Volume":      188452600,
+"AAPL.Adjusted":          47.65,
+"date":          15085 
+},
+{
+ "AAPL.Open":         350.34,
+"AAPL.High":         353.75,
+"AAPL.Low":          350.3,
+"price":         353.01,
+"AAPL.Volume":       66636500,
+"AAPL.Adjusted":          47.96,
+"date":          15089 
+},
+{
+ "AAPL.Open":         353.62,
+"AAPL.High":         354.99,
+"AAPL.Low":         349.35,
+"price":         350.42,
+"AAPL.Volume":       84700000,
+"AAPL.Adjusted":          47.61,
+"date":          15090 
+},
+{
+ "AAPL.Open":         352.24,
+"AAPL.High":         352.35,
+"AAPL.Low":          347.1,
+"price":         350.15,
+"AAPL.Volume":       89053300,
+"AAPL.Adjusted":          47.57,
+"date":          15091 
+},
+{
+ "AAPL.Open":         346.19,
+"AAPL.High":         349.75,
+"AAPL.Low":         345.52,
+"price":         346.75,
+"AAPL.Volume":       90239800,
+"AAPL.Adjusted":          47.11,
+"date":          15092 
+},
+{
+ "AAPL.Open":         346.78,
+"AAPL.High":         353.95,
+"AAPL.Low":         346.67,
+"price":         350.13,
+"AAPL.Volume":      251586300,
+"AAPL.Adjusted":          47.57,
+"date":          15093 
+},
+{
+ "AAPL.Open":         349.74,
+"AAPL.High":         350.47,
+"AAPL.Low":          345.5,
+"price":         346.28,
+"AAPL.Volume":      110678400,
+"AAPL.Adjusted":          47.05,
+"date":          15096 
+},
+{
+ "AAPL.Open":         347.99,
+"AAPL.High":         349.89,
+"AAPL.Low":         345.62,
+"price":          348.2,
+"AAPL.Volume":       78337000,
+"AAPL.Adjusted":          47.31,
+"date":          15097 
+},
+{
+ "AAPL.Open":         348.26,
+"AAPL.High":         351.83,
+"AAPL.Low":         346.88,
+"price":         349.57,
+"AAPL.Volume":       97312600,
+"AAPL.Adjusted":           47.5,
+"date":          15098 
+},
+{
+ "AAPL.Open":          348.4,
+"AAPL.High":         350.95,
+"AAPL.Low":         346.05,
+"price":         346.75,
+"AAPL.Volume":       83992300,
+"AAPL.Adjusted":          47.11,
+"date":          15099 
+},
+{
+ "AAPL.Open":         349.69,
+"AAPL.High":            350,
+"AAPL.Low":         346.21,
+"price":         346.66,
+"AAPL.Volume":       70033600,
+"AAPL.Adjusted":           47.1,
+"date":          15100 
+},
+{
+ "AAPL.Open":         347.86,
+"AAPL.High":          349.2,
+"AAPL.Low":         346.53,
+"price":          347.6,
+"AAPL.Volume":       51186800,
+"AAPL.Adjusted":          47.23,
+"date":          15103 
+},
+{
+ "AAPL.Open":         348.89,
+"AAPL.High":         349.69,
+"AAPL.Low":         346.66,
+"price":         349.45,
+"AAPL.Volume":       70522900,
+"AAPL.Adjusted":          47.48,
+"date":          15104 
+},
+{
+ "AAPL.Open":         349.02,
+"AAPL.High":            350,
+"AAPL.Low":         345.24,
+"price":         347.23,
+"AAPL.Volume":       84000000,
+"AAPL.Adjusted":          47.18,
+"date":          15105 
+},
+{
+ "AAPL.Open":         346.12,
+"AAPL.High":         347.12,
+"AAPL.Low":         342.27,
+"price":         346.57,
+"AAPL.Volume":       80500000,
+"AAPL.Adjusted":          47.09,
+"date":          15106 
+},
+{
+ "AAPL.Open":         345.66,
+"AAPL.High":         346.25,
+"AAPL.Low":         340.35,
+"price":          340.5,
+"AAPL.Volume":       81529000,
+"AAPL.Adjusted":          46.26,
+"date":          15107 
+},
+{
+ "AAPL.Open":          339.2,
+"AAPL.High":         341.22,
+"AAPL.Low":          332.6,
+"price":          333.3,
+"AAPL.Volume":      112443800,
+"AAPL.Adjusted":          45.29,
+"date":          15110 
+},
+{
+ "AAPL.Open":            332,
+"AAPL.High":         336.14,
+"AAPL.Low":         330.73,
+"price":         336.14,
+"AAPL.Volume":      113083600,
+"AAPL.Adjusted":          45.67,
+"date":          15111 
+},
+{
+ "AAPL.Open":         336.47,
+"AAPL.High":         341.05,
+"AAPL.Low":            336,
+"price":         339.87,
+"AAPL.Volume":       83694100,
+"AAPL.Adjusted":          46.18,
+"date":          15112 
+},
+{
+ "AAPL.Open":         342.08,
+"AAPL.High":         342.41,
+"AAPL.Low":         338.67,
+"price":         340.53,
+"AAPL.Volume":       65292500,
+"AAPL.Adjusted":          46.27,
+"date":          15113 
+},
+{
+ "AAPL.Open":         339.56,
+"AAPL.High":         340.95,
+"AAPL.Low":         335.02,
+"price":         335.22,
+"AAPL.Volume":       84492100,
+"AAPL.Adjusted":          45.55,
+"date":          15114 
+},
+{
+ "AAPL.Open":         329.97,
+"AAPL.High":         335.98,
+"AAPL.Low":         329.42,
+"price":          334.4,
+"AAPL.Volume":       95900000,
+"AAPL.Adjusted":          45.43,
+"date":          15117 
+},
+{
+ "AAPL.Open":          335.5,
+"AAPL.High":          335.9,
+"AAPL.Low":         331.34,
+"price":         332.19,
+"AAPL.Volume":       80481800,
+"AAPL.Adjusted":          45.13,
+"date":          15118 
+},
+{
+ "AAPL.Open":         333.43,
+"AAPL.High":         338.56,
+"AAPL.Low":         332.85,
+"price":         336.78,
+"AAPL.Volume":       73556000,
+"AAPL.Adjusted":          45.76,
+"date":          15119 
+},
+{
+ "AAPL.Open":         335.97,
+"AAPL.High":         336.89,
+"AAPL.Low":         334.43,
+"price":            335,
+"AAPL.Volume":       55640200,
+"AAPL.Adjusted":          45.52,
+"date":          15120 
+},
+{
+ "AAPL.Open":          334.8,
+"AAPL.High":         337.63,
+"AAPL.Low":         334.31,
+"price":         337.41,
+"AAPL.Volume":       50899800,
+"AAPL.Adjusted":          45.84,
+"date":          15121 
+},
+{
+ "AAPL.Open":          341.1,
+"AAPL.High":         347.83,
+"AAPL.Low":            341,
+"price":         347.83,
+"AAPL.Volume":      104438600,
+"AAPL.Adjusted":          47.26,
+"date":          15125 
+},
+{
+ "AAPL.Open":         348.87,
+"AAPL.High":         352.13,
+"AAPL.Low":         344.65,
+"price":         345.51,
+"AAPL.Volume":      138670700,
+"AAPL.Adjusted":          46.94,
+"date":          15126 
+},
+{
+ "AAPL.Open":          346.5,
+"AAPL.High":         347.98,
+"AAPL.Low":          344.3,
+"price":          346.1,
+"AAPL.Volume":       84695800,
+"AAPL.Adjusted":          47.02,
+"date":          15127 
+},
+{
+ "AAPL.Open":         343.18,
+"AAPL.High":         345.33,
+"AAPL.Low":         342.01,
+"price":         343.44,
+"AAPL.Volume":       78312500,
+"AAPL.Adjusted":          46.66,
+"date":          15128 
+},
+{
+ "AAPL.Open":          345.7,
+"AAPL.High":         347.05,
+"AAPL.Low":         337.81,
+"price":         338.04,
+"AAPL.Volume":      115485300,
+"AAPL.Adjusted":          45.93,
+"date":          15131 
+},
+{
+ "AAPL.Open":         338.17,
+"AAPL.High":         338.22,
+"AAPL.Low":          331.9,
+"price":         332.04,
+"AAPL.Volume":      132446300,
+"AAPL.Adjusted":          45.11,
+"date":          15132 
+},
+{
+ "AAPL.Open":         331.78,
+"AAPL.High":          334.8,
+"AAPL.Low":         330.65,
+"price":         332.24,
+"AAPL.Volume":       83430900,
+"AAPL.Adjusted":          45.14,
+"date":          15133 
+},
+{
+ "AAPL.Open":         333.25,
+"AAPL.High":         333.67,
+"AAPL.Low":         330.75,
+"price":         331.49,
+"AAPL.Volume":       68772200,
+"AAPL.Adjusted":          45.04,
+"date":          15134 
+},
+{
+ "AAPL.Open":         330.55,
+"AAPL.High":         331.66,
+"AAPL.Low":         325.51,
+"price":          325.9,
+"AAPL.Volume":      108488800,
+"AAPL.Adjusted":          44.28,
+"date":          15135 
+},
+{
+ "AAPL.Open":          327.2,
+"AAPL.High":         328.31,
+"AAPL.Low":         325.07,
+"price":          326.6,
+"AAPL.Volume":       82368300,
+"AAPL.Adjusted":          44.37,
+"date":          15138 
+},
+{
+ "AAPL.Open":            330,
+"AAPL.High":         333.25,
+"AAPL.Low":         329.31,
+"price":         332.44,
+"AAPL.Volume":       83642300,
+"AAPL.Adjusted":          45.17,
+"date":          15139 
+},
+{
+ "AAPL.Open":         329.75,
+"AAPL.High":          330.3,
+"AAPL.Low":         324.88,
+"price":         326.75,
+"AAPL.Volume":       99799000,
+"AAPL.Adjusted":           44.4,
+"date":          15140 
+},
+{
+ "AAPL.Open":          326.9,
+"AAPL.High":         328.68,
+"AAPL.Low":         318.33,
+"price":         325.16,
+"AAPL.Volume":      127647800,
+"AAPL.Adjusted":          44.18,
+"date":          15141 
+},
+{
+ "AAPL.Open":         328.99,
+"AAPL.High":         329.25,
+"AAPL.Low":         319.36,
+"price":         320.26,
+"AAPL.Volume":      153755000,
+"AAPL.Adjusted":          43.51,
+"date":          15142 
+},
+{
+ "AAPL.Open":         317.36,
+"AAPL.High":          317.7,
+"AAPL.Low":          310.5,
+"price":         315.32,
+"AAPL.Volume":      160161400,
+"AAPL.Adjusted":          42.84,
+"date":          15145 
+},
+{
+ "AAPL.Open":         316.68,
+"AAPL.High":          325.8,
+"AAPL.Low":          315.2,
+"price":          325.3,
+"AAPL.Volume":      123345600,
+"AAPL.Adjusted":           44.2,
+"date":          15146 
+},
+{
+ "AAPL.Open":         325.16,
+"AAPL.High":          328.9,
+"AAPL.Low":         322.38,
+"price":         322.61,
+"AAPL.Volume":       97645800,
+"AAPL.Adjusted":          43.83,
+"date":          15147 
+},
+{
+ "AAPL.Open":         318.94,
+"AAPL.High":         331.69,
+"AAPL.Low":         318.12,
+"price":         331.23,
+"AAPL.Volume":      139939800,
+"AAPL.Adjusted":             45,
+"date":          15148 
+},
+{
+ "AAPL.Open":         331.37,
+"AAPL.High":         333.15,
+"AAPL.Low":         325.09,
+"price":         326.35,
+"AAPL.Volume":      109951800,
+"AAPL.Adjusted":          44.34,
+"date":          15149 
+},
+{
+ "AAPL.Open":         327.59,
+"AAPL.High":          333.9,
+"AAPL.Low":         327.25,
+"price":         332.04,
+"AAPL.Volume":       84953400,
+"AAPL.Adjusted":          45.11,
+"date":          15152 
+},
+{
+ "AAPL.Open":         333.65,
+"AAPL.High":          336.7,
+"AAPL.Low":         333.44,
+"price":         335.26,
+"AAPL.Volume":       73574900,
+"AAPL.Adjusted":          45.55,
+"date":          15153 
+},
+{
+ "AAPL.Open":         336.04,
+"AAPL.High":         336.37,
+"AAPL.Low":         331.88,
+"price":         334.04,
+"AAPL.Volume":       88136300,
+"AAPL.Adjusted":          45.39,
+"date":          15154 
+},
+{
+ "AAPL.Open":          334.7,
+"AAPL.High":         336.13,
+"AAPL.Low":         332.84,
+"price":         335.67,
+"AAPL.Volume":       80738700,
+"AAPL.Adjusted":          45.61,
+"date":          15155 
+},
+{
+ "AAPL.Open":         335.95,
+"AAPL.High":          343.5,
+"AAPL.Low":          334.2,
+"price":         343.26,
+"AAPL.Volume":      108828300,
+"AAPL.Adjusted":          46.64,
+"date":          15156 
+},
+{
+ "AAPL.Open":            343,
+"AAPL.High":         349.83,
+"AAPL.Low":          342.5,
+"price":         349.43,
+"AAPL.Volume":       88763500,
+"AAPL.Adjusted":          47.48,
+"date":          15160 
+},
+{
+ "AAPL.Open":         348.95,
+"AAPL.High":          354.1,
+"AAPL.Low":         346.71,
+"price":         351.76,
+"AAPL.Volume":      111156500,
+"AAPL.Adjusted":          47.79,
+"date":          15161 
+},
+{
+ "AAPL.Open":         354.67,
+"AAPL.High":            358,
+"AAPL.Low":            354,
+"price":          357.2,
+"AAPL.Volume":       99915900,
+"AAPL.Adjusted":          48.53,
+"date":          15162 
+},
+{
+ "AAPL.Open":         353.34,
+"AAPL.High":            360,
+"AAPL.Low":          352.2,
+"price":         359.71,
+"AAPL.Volume":      122408300,
+"AAPL.Adjusted":          48.87,
+"date":          15163 
+},
+{
+ "AAPL.Open":         356.34,
+"AAPL.High":         359.77,
+"AAPL.Low":         352.82,
+"price":            354,
+"AAPL.Volume":      110668600,
+"AAPL.Adjusted":           48.1,
+"date":          15166 
+},
+{
+ "AAPL.Open":         353.53,
+"AAPL.High":         357.68,
+"AAPL.Low":         348.62,
+"price":         353.75,
+"AAPL.Volume":      112902300,
+"AAPL.Adjusted":          48.06,
+"date":          15167 
+},
+{
+ "AAPL.Open":         358.33,
+"AAPL.High":            360,
+"AAPL.Low":         356.38,
+"price":         358.02,
+"AAPL.Volume":       97909700,
+"AAPL.Adjusted":          48.64,
+"date":          15168 
+},
+{
+ "AAPL.Open":         361.01,
+"AAPL.High":         361.61,
+"AAPL.Low":         356.34,
+"price":         357.77,
+"AAPL.Volume":      107633400,
+"AAPL.Adjusted":          48.61,
+"date":          15169 
+},
+{
+ "AAPL.Open":         361.17,
+"AAPL.High":            365,
+"AAPL.Low":         359.17,
+"price":         364.92,
+"AAPL.Volume":      121116800,
+"AAPL.Adjusted":          49.58,
+"date":          15170 
+},
+{
+ "AAPL.Open":         365.43,
+"AAPL.High":         374.65,
+"AAPL.Low":         365.28,
+"price":          373.8,
+"AAPL.Volume":      143163300,
+"AAPL.Adjusted":          50.79,
+"date":          15173 
+},
+{
+ "AAPL.Open":            378,
+"AAPL.High":         378.65,
+"AAPL.Low":         373.32,
+"price":         376.85,
+"AAPL.Volume":      204786400,
+"AAPL.Adjusted":           51.2,
+"date":          15174 
+},
+{
+ "AAPL.Open":         396.12,
+"AAPL.High":         396.27,
+"AAPL.Low":            386,
+"price":          386.9,
+"AAPL.Volume":      235335100,
+"AAPL.Adjusted":          52.57,
+"date":          15175 
+},
+{
+ "AAPL.Open":         386.95,
+"AAPL.High":         390.06,
+"AAPL.Low":          383.9,
+"price":         387.29,
+"AAPL.Volume":      131633600,
+"AAPL.Adjusted":          52.62,
+"date":          15176 
+},
+{
+ "AAPL.Open":         388.32,
+"AAPL.High":         395.05,
+"AAPL.Low":         387.75,
+"price":          393.3,
+"AAPL.Volume":      129182200,
+"AAPL.Adjusted":          53.44,
+"date":          15177 
+},
+{
+ "AAPL.Open":         390.35,
+"AAPL.High":            400,
+"AAPL.Low":         389.62,
+"price":          398.5,
+"AAPL.Volume":      147451500,
+"AAPL.Adjusted":          54.14,
+"date":          15180 
+},
+{
+ "AAPL.Open":            400,
+"AAPL.High":          404.5,
+"AAPL.Low":         399.68,
+"price":         403.41,
+"AAPL.Volume":      119145600,
+"AAPL.Adjusted":          54.81,
+"date":          15181 
+},
+{
+ "AAPL.Open":         400.59,
+"AAPL.High":         402.64,
+"AAPL.Low":         392.15,
+"price":         392.59,
+"AAPL.Volume":      164831100,
+"AAPL.Adjusted":          53.34,
+"date":          15182 
+},
+{
+ "AAPL.Open":         391.62,
+"AAPL.High":         396.99,
+"AAPL.Low":         388.13,
+"price":         391.82,
+"AAPL.Volume":      148508500,
+"AAPL.Adjusted":          53.24,
+"date":          15183 
+},
+{
+ "AAPL.Open":         387.64,
+"AAPL.High":         395.15,
+"AAPL.Low":            384,
+"price":         390.48,
+"AAPL.Volume":      158146100,
+"AAPL.Adjusted":          53.05,
+"date":          15184 
+},
+{
+ "AAPL.Open":         397.78,
+"AAPL.High":          399.5,
+"AAPL.Low":         392.37,
+"price":         396.75,
+"AAPL.Volume":      153209000,
+"AAPL.Adjusted":          53.91,
+"date":          15187 
+},
+{
+ "AAPL.Open":         397.65,
+"AAPL.High":          397.9,
+"AAPL.Low":         388.35,
+"price":         388.91,
+"AAPL.Volume":      159884900,
+"AAPL.Adjusted":          52.84,
+"date":          15188 
+},
+{
+ "AAPL.Open":         390.98,
+"AAPL.High":         393.55,
+"AAPL.Low":         382.24,
+"price":         392.57,
+"AAPL.Volume":      183127000,
+"AAPL.Adjusted":          53.34,
+"date":          15189 
+},
+{
+ "AAPL.Open":         389.41,
+"AAPL.High":         391.32,
+"AAPL.Low":         377.35,
+"price":         377.37,
+"AAPL.Volume":      217851900,
+"AAPL.Adjusted":          51.27,
+"date":          15190 
+},
+{
+ "AAPL.Open":         380.44,
+"AAPL.High":          383.5,
+"AAPL.Low":         362.57,
+"price":         373.62,
+"AAPL.Volume":      301147700,
+"AAPL.Adjusted":          50.76,
+"date":          15191 
+},
+{
+ "AAPL.Open":         361.69,
+"AAPL.High":         367.77,
+"AAPL.Low":         353.02,
+"price":         353.21,
+"AAPL.Volume":      285958400,
+"AAPL.Adjusted":          47.99,
+"date":          15194 
+},
+{
+ "AAPL.Open":          361.3,
+"AAPL.High":         374.61,
+"AAPL.Low":            355,
+"price":         374.01,
+"AAPL.Volume":      270645900,
+"AAPL.Adjusted":          50.82,
+"date":          15195 
+},
+{
+ "AAPL.Open":         371.15,
+"AAPL.High":         374.65,
+"AAPL.Low":          362.5,
+"price":         363.69,
+"AAPL.Volume":      219664200,
+"AAPL.Adjusted":          49.41,
+"date":          15196 
+},
+{
+ "AAPL.Open":         370.52,
+"AAPL.High":         375.45,
+"AAPL.Low":         364.72,
+"price":          373.7,
+"AAPL.Volume":      185492300,
+"AAPL.Adjusted":          50.77,
+"date":          15197 
+},
+{
+ "AAPL.Open":         378.07,
+"AAPL.High":         379.64,
+"AAPL.Low":         374.23,
+"price":         376.99,
+"AAPL.Volume":      132244000,
+"AAPL.Adjusted":          51.22,
+"date":          15198 
+},
+{
+ "AAPL.Open":         379.63,
+"AAPL.High":         384.97,
+"AAPL.Low":         378.09,
+"price":         383.41,
+"AAPL.Volume":      115136000,
+"AAPL.Adjusted":          52.09,
+"date":          15201 
+},
+{
+ "AAPL.Open":         381.52,
+"AAPL.High":         383.37,
+"AAPL.Low":         376.06,
+"price":         380.48,
+"AAPL.Volume":      124687500,
+"AAPL.Adjusted":           51.7,
+"date":          15202 
+},
+{
+ "AAPL.Open":         382.31,
+"AAPL.High":         384.52,
+"AAPL.Low":            378,
+"price":         380.44,
+"AAPL.Volume":      110515300,
+"AAPL.Adjusted":          51.69,
+"date":          15203 
+},
+{
+ "AAPL.Open":         370.84,
+"AAPL.High":         372.65,
+"AAPL.Low":         361.37,
+"price":         366.05,
+"AAPL.Volume":      212858800,
+"AAPL.Adjusted":          49.73,
+"date":          15204 
+},
+{
+ "AAPL.Open":         362.17,
+"AAPL.High":            367,
+"AAPL.Low":            356,
+"price":         356.03,
+"AAPL.Volume":      193972100,
+"AAPL.Adjusted":          48.37,
+"date":          15205 
+},
+{
+ "AAPL.Open":         364.51,
+"AAPL.High":         364.88,
+"AAPL.Low":         355.09,
+"price":         356.44,
+"AAPL.Volume":      133828800,
+"AAPL.Adjusted":          48.43,
+"date":          15208 
+},
+{
+ "AAPL.Open":          360.3,
+"AAPL.High":         373.64,
+"AAPL.Low":            357,
+"price":          373.6,
+"AAPL.Volume":      164208800,
+"AAPL.Adjusted":          50.76,
+"date":          15209 
+},
+{
+ "AAPL.Open":         373.47,
+"AAPL.High":         378.96,
+"AAPL.Low":          370.6,
+"price":         376.18,
+"AAPL.Volume":      156566900,
+"AAPL.Adjusted":          51.11,
+"date":          15210 
+},
+{
+ "AAPL.Open":         365.08,
+"AAPL.High":         375.45,
+"AAPL.Low":            365,
+"price":         373.72,
+"AAPL.Volume":      217836500,
+"AAPL.Adjusted":          50.78,
+"date":          15211 
+},
+{
+ "AAPL.Open":         371.17,
+"AAPL.High":          383.8,
+"AAPL.Low":          370.8,
+"price":         383.58,
+"AAPL.Volume":      160369300,
+"AAPL.Adjusted":          52.12,
+"date":          15212 
+},
+{
+ "AAPL.Open":         388.18,
+"AAPL.High":          391.5,
+"AAPL.Low":            388,
+"price":         389.97,
+"AAPL.Volume":      101317300,
+"AAPL.Adjusted":          52.98,
+"date":          15215 
+},
+{
+ "AAPL.Open":         388.25,
+"AAPL.High":         391.84,
+"AAPL.Low":         386.21,
+"price":         389.99,
+"AAPL.Volume":      104480600,
+"AAPL.Adjusted":          52.99,
+"date":          15216 
+},
+{
+ "AAPL.Open":         390.57,
+"AAPL.High":         392.08,
+"AAPL.Low":         381.86,
+"price":         384.83,
+"AAPL.Volume":      130646600,
+"AAPL.Adjusted":          52.29,
+"date":          15217 
+},
+{
+ "AAPL.Open":         385.82,
+"AAPL.High":         387.34,
+"AAPL.Low":         380.72,
+"price":         381.03,
+"AAPL.Volume":       85931300,
+"AAPL.Adjusted":          51.77,
+"date":          15218 
+},
+{
+ "AAPL.Open":         374.74,
+"AAPL.High":            378,
+"AAPL.Low":         371.83,
+"price":         374.05,
+"AAPL.Volume":      109734800,
+"AAPL.Adjusted":          50.82,
+"date":          15219 
+},
+{
+ "AAPL.Open":         367.37,
+"AAPL.High":         380.33,
+"AAPL.Low":         366.48,
+"price":         379.74,
+"AAPL.Volume":      127424500,
+"AAPL.Adjusted":           51.6,
+"date":          15223 
+},
+{
+ "AAPL.Open":         385.56,
+"AAPL.High":          385.6,
+"AAPL.Low":            382,
+"price":         383.93,
+"AAPL.Volume":       87644200,
+"AAPL.Adjusted":          52.16,
+"date":          15224 
+},
+{
+ "AAPL.Open":          382.4,
+"AAPL.High":         388.61,
+"AAPL.Low":         382.31,
+"price":         384.14,
+"AAPL.Volume":      104039600,
+"AAPL.Adjusted":          52.19,
+"date":          15225 
+},
+{
+ "AAPL.Open":         383.93,
+"AAPL.High":            386,
+"AAPL.Low":         375.02,
+"price":         377.48,
+"AAPL.Volume":      141203300,
+"AAPL.Adjusted":          51.29,
+"date":          15226 
+},
+{
+ "AAPL.Open":            373,
+"AAPL.High":         380.88,
+"AAPL.Low":          371.9,
+"price":         379.94,
+"AAPL.Volume":      116958100,
+"AAPL.Adjusted":          51.62,
+"date":          15229 
+},
+{
+ "AAPL.Open":         382.14,
+"AAPL.High":         386.21,
+"AAPL.Low":         380.25,
+"price":         384.62,
+"AAPL.Volume":      110140100,
+"AAPL.Adjusted":          52.26,
+"date":          15230 
+},
+{
+ "AAPL.Open":         387.02,
+"AAPL.High":         392.21,
+"AAPL.Low":         385.76,
+"price":          389.3,
+"AAPL.Volume":      133681100,
+"AAPL.Adjusted":          52.89,
+"date":          15231 
+},
+{
+ "AAPL.Open":         391.43,
+"AAPL.High":         393.66,
+"AAPL.Low":          389.9,
+"price":         392.96,
+"AAPL.Volume":      104454700,
+"AAPL.Adjusted":          53.39,
+"date":          15232 
+},
+{
+ "AAPL.Open":         395.54,
+"AAPL.High":          400.5,
+"AAPL.Low":         395.03,
+"price":          400.5,
+"AAPL.Volume":      174628300,
+"AAPL.Adjusted":          54.42,
+"date":          15233 
+},
+{
+ "AAPL.Open":            397,
+"AAPL.High":         413.23,
+"AAPL.Low":          395.2,
+"price":         411.63,
+"AAPL.Volume":      205965200,
+"AAPL.Adjusted":          55.93,
+"date":          15236 
+},
+{
+ "AAPL.Open":         415.25,
+"AAPL.High":         422.86,
+"AAPL.Low":         411.19,
+"price":         413.45,
+"AAPL.Volume":      193938500,
+"AAPL.Adjusted":          56.18,
+"date":          15237 
+},
+{
+ "AAPL.Open":         419.64,
+"AAPL.High":         421.59,
+"AAPL.Low":            412,
+"price":         412.14,
+"AAPL.Volume":      151494000,
+"AAPL.Adjusted":             56,
+"date":          15238 
+},
+{
+ "AAPL.Open":         401.03,
+"AAPL.High":         409.82,
+"AAPL.Low":          396.7,
+"price":         401.82,
+"AAPL.Volume":      242120200,
+"AAPL.Adjusted":           54.6,
+"date":          15239 
+},
+{
+ "AAPL.Open":         400.28,
+"AAPL.High":         406.74,
+"AAPL.Low":         399.85,
+"price":          404.3,
+"AAPL.Volume":      136569300,
+"AAPL.Adjusted":          54.93,
+"date":          15240 
+},
+{
+ "AAPL.Open":         399.86,
+"AAPL.High":         403.98,
+"AAPL.Low":          391.3,
+"price":         403.17,
+"AAPL.Volume":      203219100,
+"AAPL.Adjusted":          54.78,
+"date":          15243 
+},
+{
+ "AAPL.Open":         408.73,
+"AAPL.High":         409.25,
+"AAPL.Low":         398.06,
+"price":         399.26,
+"AAPL.Volume":      158124400,
+"AAPL.Adjusted":          54.25,
+"date":          15244 
+},
+{
+ "AAPL.Open":         400.19,
+"AAPL.High":         403.74,
+"AAPL.Low":         396.51,
+"price":         397.01,
+"AAPL.Volume":      107409400,
+"AAPL.Adjusted":          53.94,
+"date":          15245 
+},
+{
+ "AAPL.Open":         401.92,
+"AAPL.High":         402.21,
+"AAPL.Low":         386.21,
+"price":         390.57,
+"AAPL.Volume":      162771700,
+"AAPL.Adjusted":          53.07,
+"date":          15246 
+},
+{
+ "AAPL.Open":         387.12,
+"AAPL.High":         388.89,
+"AAPL.Low":         381.18,
+"price":         381.32,
+"AAPL.Volume":      136910200,
+"AAPL.Adjusted":          51.81,
+"date":          15247 
+},
+{
+ "AAPL.Open":         380.37,
+"AAPL.High":         382.64,
+"AAPL.Low":         373.17,
+"price":          374.6,
+"AAPL.Volume":      167274800,
+"AAPL.Adjusted":           50.9,
+"date":          15250 
+},
+{
+ "AAPL.Open":         374.57,
+"AAPL.High":          381.8,
+"AAPL.Low":         354.24,
+"price":          372.5,
+"AAPL.Volume":      308419300,
+"AAPL.Adjusted":          50.61,
+"date":          15251 
+},
+{
+ "AAPL.Open":         367.86,
+"AAPL.High":         379.82,
+"AAPL.Low":          360.3,
+"price":         378.25,
+"AAPL.Volume":      196617400,
+"AAPL.Adjusted":          51.39,
+"date":          15252 
+},
+{
+ "AAPL.Open":         373.33,
+"AAPL.High":         384.78,
+"AAPL.Low":          371.8,
+"price":         377.37,
+"AAPL.Volume":      203145600,
+"AAPL.Adjusted":          51.27,
+"date":          15253 
+},
+{
+ "AAPL.Open":         375.78,
+"AAPL.High":         377.74,
+"AAPL.Low":         368.49,
+"price":          369.8,
+"AAPL.Volume":      133864500,
+"AAPL.Adjusted":          50.24,
+"date":          15254 
+},
+{
+ "AAPL.Open":         379.09,
+"AAPL.High":         388.81,
+"AAPL.Low":         378.21,
+"price":         388.81,
+"AAPL.Volume":      110628700,
+"AAPL.Adjusted":          52.83,
+"date":          15257 
+},
+{
+ "AAPL.Open":         392.57,
+"AAPL.High":         403.18,
+"AAPL.Low":          391.5,
+"price":         400.29,
+"AAPL.Volume":      151421900,
+"AAPL.Adjusted":          54.39,
+"date":          15258 
+},
+{
+ "AAPL.Open":         407.34,
+"AAPL.High":         409.25,
+"AAPL.Low":         400.14,
+"price":         402.19,
+"AAPL.Volume":      155571500,
+"AAPL.Adjusted":          54.65,
+"date":          15259 
+},
+{
+ "AAPL.Open":         404.98,
+"AAPL.High":         408.43,
+"AAPL.Low":         402.85,
+"price":         408.43,
+"AAPL.Volume":      106546300,
+"AAPL.Adjusted":          55.49,
+"date":          15260 
+},
+{
+ "AAPL.Open":         416.83,
+"AAPL.High":            422,
+"AAPL.Low":         415.27,
+"price":            422,
+"AAPL.Volume":      143341800,
+"AAPL.Adjusted":          57.34,
+"date":          15261 
+},
+{
+ "AAPL.Open":         421.74,
+"AAPL.High":          426.7,
+"AAPL.Low":         415.94,
+"price":         419.99,
+"AAPL.Volume":      171511200,
+"AAPL.Adjusted":          57.06,
+"date":          15264 
+},
+{
+ "AAPL.Open":         421.76,
+"AAPL.High":         424.81,
+"AAPL.Low":         415.99,
+"price":         422.24,
+"AAPL.Volume":      220400600,
+"AAPL.Adjusted":          57.37,
+"date":          15265 
+},
+{
+ "AAPL.Open":         401.35,
+"AAPL.High":         408.42,
+"AAPL.Low":          397.8,
+"price":         398.62,
+"AAPL.Volume":      276014900,
+"AAPL.Adjusted":          54.16,
+"date":          15266 
+},
+{
+ "AAPL.Open":            400,
+"AAPL.High":         400.35,
+"AAPL.Low":         394.21,
+"price":         395.31,
+"AAPL.Volume":      137317600,
+"AAPL.Adjusted":          53.71,
+"date":          15267 
+},
+{
+ "AAPL.Open":          398.1,
+"AAPL.High":         399.14,
+"AAPL.Low":         390.75,
+"price":         392.87,
+"AAPL.Volume":      155311100,
+"AAPL.Adjusted":          53.38,
+"date":          15268 
+},
+{
+ "AAPL.Open":         396.18,
+"AAPL.High":          406.5,
+"AAPL.Low":          395.4,
+"price":         405.77,
+"AAPL.Volume":      125534500,
+"AAPL.Adjusted":          55.13,
+"date":          15271 
+},
+{
+ "AAPL.Open":         405.03,
+"AAPL.High":         406.55,
+"AAPL.Low":         397.38,
+"price":         397.77,
+"AAPL.Volume":      107606800,
+"AAPL.Adjusted":          54.04,
+"date":          15272 
+},
+{
+ "AAPL.Open":         401.76,
+"AAPL.High":         402.55,
+"AAPL.Low":         393.15,
+"price":          400.6,
+"AAPL.Volume":      114076200,
+"AAPL.Adjusted":          54.43,
+"date":          15273 
+},
+{
+ "AAPL.Open":         407.56,
+"AAPL.High":            409,
+"AAPL.Low":         401.89,
+"price":         404.69,
+"AAPL.Volume":      123666200,
+"AAPL.Adjusted":          54.98,
+"date":          15274 
+},
+{
+ "AAPL.Open":            403,
+"AAPL.High":         406.35,
+"AAPL.Low":         402.51,
+"price":         404.95,
+"AAPL.Volume":       80710700,
+"AAPL.Adjusted":          55.02,
+"date":          15275 
+},
+{
+ "AAPL.Open":         402.42,
+"AAPL.High":         409.33,
+"AAPL.Low":         401.05,
+"price":         404.78,
+"AAPL.Volume":       96375300,
+"AAPL.Adjusted":             55,
+"date":          15278 
+},
+{
+ "AAPL.Open":         397.41,
+"AAPL.High":          399.5,
+"AAPL.Low":         393.22,
+"price":         396.51,
+"AAPL.Volume":      132947500,
+"AAPL.Adjusted":          53.87,
+"date":          15279 
+},
+{
+ "AAPL.Open":         400.09,
+"AAPL.High":         400.44,
+"AAPL.Low":         395.11,
+"price":         397.41,
+"AAPL.Volume":       81837700,
+"AAPL.Adjusted":             54,
+"date":          15280 
+},
+{
+ "AAPL.Open":         399.07,
+"AAPL.High":          403.4,
+"AAPL.Low":         395.36,
+"price":         403.07,
+"AAPL.Volume":      110346600,
+"AAPL.Adjusted":          54.76,
+"date":          15281 
+},
+{
+ "AAPL.Open":         402.03,
+"AAPL.High":         403.44,
+"AAPL.Low":         399.16,
+"price":         400.24,
+"AAPL.Volume":       75557300,
+"AAPL.Adjusted":          54.38,
+"date":          15282 
+},
+{
+ "AAPL.Open":         399.91,
+"AAPL.High":            400,
+"AAPL.Low":         396.13,
+"price":         399.73,
+"AAPL.Volume":       67568900,
+"AAPL.Adjusted":          54.31,
+"date":          15285 
+},
+{
+ "AAPL.Open":         402.21,
+"AAPL.High":            408,
+"AAPL.Low":         401.56,
+"price":         406.23,
+"AAPL.Volume":      100110500,
+"AAPL.Adjusted":          55.19,
+"date":          15286 
+},
+{
+ "AAPL.Open":         396.97,
+"AAPL.High":         400.89,
+"AAPL.Low":         394.23,
+"price":         395.28,
+"AAPL.Volume":      139671000,
+"AAPL.Adjusted":          53.71,
+"date":          15287 
+},
+{
+ "AAPL.Open":         397.03,
+"AAPL.High":         397.21,
+"AAPL.Low":         382.15,
+"price":         385.22,
+"AAPL.Volume":      186188100,
+"AAPL.Adjusted":          52.34,
+"date":          15288 
+},
+{
+ "AAPL.Open":         386.61,
+"AAPL.High":          388.7,
+"AAPL.Low":         380.26,
+"price":         384.62,
+"AAPL.Volume":      163446500,
+"AAPL.Adjusted":          52.26,
+"date":          15289 
+},
+{
+ "AAPL.Open":         383.52,
+"AAPL.High":         385.25,
+"AAPL.Low":          378.2,
+"price":         379.26,
+"AAPL.Volume":      108226300,
+"AAPL.Adjusted":          51.53,
+"date":          15292 
+},
+{
+ "AAPL.Open":          380.8,
+"AAPL.High":          389.5,
+"AAPL.Low":         379.45,
+"price":         388.83,
+"AAPL.Volume":      107702700,
+"AAPL.Adjusted":          52.83,
+"date":          15293 
+},
+{
+ "AAPL.Open":         389.25,
+"AAPL.High":         391.14,
+"AAPL.Low":         384.32,
+"price":         384.77,
+"AAPL.Volume":       87302600,
+"AAPL.Adjusted":          52.28,
+"date":          15294 
+},
+{
+ "AAPL.Open":         383.98,
+"AAPL.High":         384.58,
+"AAPL.Low":          375.5,
+"price":         377.41,
+"AAPL.Volume":      119975100,
+"AAPL.Adjusted":          51.28,
+"date":          15295 
+},
+{
+ "AAPL.Open":         378.92,
+"AAPL.High":         379.99,
+"AAPL.Low":         374.88,
+"price":         374.94,
+"AAPL.Volume":       92984500,
+"AAPL.Adjusted":          50.94,
+"date":          15296 
+},
+{
+ "AAPL.Open":          370.4,
+"AAPL.High":         371.68,
+"AAPL.Low":         365.91,
+"price":         369.01,
+"AAPL.Volume":      111995100,
+"AAPL.Adjusted":          50.14,
+"date":          15299 
+},
+{
+ "AAPL.Open":         371.02,
+"AAPL.High":         377.93,
+"AAPL.Low":         370.94,
+"price":         376.51,
+"AAPL.Volume":      102255300,
+"AAPL.Adjusted":          51.16,
+"date":          15300 
+},
+{
+ "AAPL.Open":         374.51,
+"AAPL.High":         375.84,
+"AAPL.Low":         366.88,
+"price":         366.99,
+"AAPL.Volume":      107067800,
+"AAPL.Adjusted":          49.86,
+"date":          15301 
+},
+{
+ "AAPL.Open":         368.42,
+"AAPL.High":         371.15,
+"AAPL.Low":         363.32,
+"price":         363.57,
+"AAPL.Volume":       63690200,
+"AAPL.Adjusted":           49.4,
+"date":          15303 
+},
+{
+ "AAPL.Open":         372.35,
+"AAPL.High":         376.72,
+"AAPL.Low":         370.33,
+"price":         376.12,
+"AAPL.Volume":       86603300,
+"AAPL.Adjusted":           51.1,
+"date":          15306 
+},
+{
+ "AAPL.Open":         375.84,
+"AAPL.High":         378.83,
+"AAPL.Low":          370.2,
+"price":          373.2,
+"AAPL.Volume":       93963800,
+"AAPL.Adjusted":          50.71,
+"date":          15307 
+},
+{
+ "AAPL.Open":         381.29,
+"AAPL.High":         382.28,
+"AAPL.Low":          378.3,
+"price":          382.2,
+"AAPL.Volume":      101484600,
+"AAPL.Adjusted":          51.93,
+"date":          15308 
+},
+{
+ "AAPL.Open":         382.54,
+"AAPL.High":            389,
+"AAPL.Low":         380.75,
+"price":         387.93,
+"AAPL.Volume":       96795300,
+"AAPL.Adjusted":          52.71,
+"date":          15309 
+},
+{
+ "AAPL.Open":         389.83,
+"AAPL.High":         393.63,
+"AAPL.Low":         388.58,
+"price":          389.7,
+"AAPL.Volume":       94763900,
+"AAPL.Adjusted":          52.95,
+"date":          15310 
+},
+{
+ "AAPL.Open":         393.49,
+"AAPL.High":         396.41,
+"AAPL.Low":         390.39,
+"price":         393.01,
+"AAPL.Volume":       89302500,
+"AAPL.Adjusted":           53.4,
+"date":          15313 
+},
+{
+ "AAPL.Open":         392.51,
+"AAPL.High":         394.63,
+"AAPL.Low":         389.38,
+"price":         390.95,
+"AAPL.Volume":       70899500,
+"AAPL.Adjusted":          53.12,
+"date":          15314 
+},
+{
+ "AAPL.Open":         389.93,
+"AAPL.High":         390.94,
+"AAPL.Low":         386.76,
+"price":         389.09,
+"AAPL.Volume":       76186600,
+"AAPL.Adjusted":          52.87,
+"date":          15315 
+},
+{
+ "AAPL.Open":         391.45,
+"AAPL.High":          395.5,
+"AAPL.Low":         390.23,
+"price":         390.66,
+"AAPL.Volume":       94089100,
+"AAPL.Adjusted":          53.08,
+"date":          15316 
+},
+{
+ "AAPL.Open":         392.85,
+"AAPL.High":         394.04,
+"AAPL.Low":         391.03,
+"price":         393.62,
+"AAPL.Volume":       74248300,
+"AAPL.Adjusted":          53.48,
+"date":          15317 
+},
+{
+ "AAPL.Open":         391.68,
+"AAPL.High":          393.9,
+"AAPL.Low":         389.45,
+"price":         391.84,
+"AAPL.Volume":       75266800,
+"AAPL.Adjusted":          53.24,
+"date":          15320 
+},
+{
+ "AAPL.Open":            393,
+"AAPL.High":          395.4,
+"AAPL.Low":          387.1,
+"price":         388.81,
+"AAPL.Volume":       84732200,
+"AAPL.Adjusted":          52.83,
+"date":          15321 
+},
+{
+ "AAPL.Open":          386.7,
+"AAPL.High":         387.38,
+"AAPL.Low":         377.68,
+"price":         380.19,
+"AAPL.Volume":      101721900,
+"AAPL.Adjusted":          51.66,
+"date":          15322 
+},
+{
+ "AAPL.Open":         383.33,
+"AAPL.High":         383.74,
+"AAPL.Low":         378.31,
+"price":         378.94,
+"AAPL.Volume":       64050000,
+"AAPL.Adjusted":          51.49,
+"date":          15323 
+},
+{
+ "AAPL.Open":         380.36,
+"AAPL.High":         384.15,
+"AAPL.Low":         379.57,
+"price":         381.02,
+"AAPL.Volume":      105369600,
+"AAPL.Adjusted":          51.77,
+"date":          15324 
+},
+{
+ "AAPL.Open":         382.47,
+"AAPL.High":         384.85,
+"AAPL.Low":         380.48,
+"price":         382.21,
+"AAPL.Volume":       58882600,
+"AAPL.Adjusted":          51.93,
+"date":          15327 
+},
+{
+ "AAPL.Open":         387.76,
+"AAPL.High":          396.1,
+"AAPL.Low":         387.26,
+"price":         395.95,
+"AAPL.Volume":       84303800,
+"AAPL.Adjusted":           53.8,
+"date":          15328 
+},
+{
+ "AAPL.Open":         396.69,
+"AAPL.High":          397.3,
+"AAPL.Low":         392.01,
+"price":         396.45,
+"AAPL.Volume":       65737000,
+"AAPL.Adjusted":          53.87,
+"date":          15329 
+},
+{
+ "AAPL.Open":            397,
+"AAPL.High":         399.13,
+"AAPL.Low":          396.1,
+"price":         398.55,
+"AAPL.Volume":       50589700,
+"AAPL.Adjusted":          54.15,
+"date":          15330 
+},
+{
+ "AAPL.Open":         399.69,
+"AAPL.High":         403.59,
+"AAPL.Low":         399.49,
+"price":         403.33,
+"AAPL.Volume":       67349800,
+"AAPL.Adjusted":           54.8,
+"date":          15331 
+},
+{
+ "AAPL.Open":          403.1,
+"AAPL.High":         409.09,
+"AAPL.Low":         403.02,
+"price":         406.53,
+"AAPL.Volume":       66269000,
+"AAPL.Adjusted":          55.23,
+"date":          15335 
+},
+{
+ "AAPL.Open":         406.89,
+"AAPL.High":         408.25,
+"AAPL.Low":         401.34,
+"price":         402.64,
+"AAPL.Volume":       57165500,
+"AAPL.Adjusted":          54.71,
+"date":          15336 
+},
+{
+ "AAPL.Open":          403.4,
+"AAPL.High":         405.65,
+"AAPL.Low":         400.51,
+"price":         405.12,
+"AAPL.Volume":       53994500,
+"AAPL.Adjusted":          55.04,
+"date":          15337 
+},
+{
+ "AAPL.Open":         403.51,
+"AAPL.High":         406.28,
+"AAPL.Low":         403.49,
+"price":            405,
+"AAPL.Volume":       44915500,
+"AAPL.Adjusted":          55.03,
+"date":          15338 
+},
+{
+ "AAPL.Open":          409.4,
+"AAPL.High":          412.5,
+"AAPL.Low":            409,
+"price":         411.23,
+"AAPL.Volume":       75555200,
+"AAPL.Adjusted":          55.87,
+"date":          15342 
+},
+{
+ "AAPL.Open":            410,
+"AAPL.High":         414.68,
+"AAPL.Low":         409.28,
+"price":         413.44,
+"AAPL.Volume":       65005500,
+"AAPL.Adjusted":          56.17,
+"date":          15343 
+},
+{
+ "AAPL.Open":         414.95,
+"AAPL.High":         418.55,
+"AAPL.Low":         412.67,
+"price":         418.03,
+"AAPL.Volume":       67817400,
+"AAPL.Adjusted":           56.8,
+"date":          15344 
+},
+{
+ "AAPL.Open":         419.77,
+"AAPL.High":         422.75,
+"AAPL.Low":         419.22,
+"price":          422.4,
+"AAPL.Volume":       79573200,
+"AAPL.Adjusted":          57.39,
+"date":          15345 
+},
+{
+ "AAPL.Open":          425.5,
+"AAPL.High":         427.75,
+"AAPL.Low":         421.35,
+"price":         421.73,
+"AAPL.Volume":       98506100,
+"AAPL.Adjusted":           57.3,
+"date":          15348 
+},
+{
+ "AAPL.Open":         425.91,
+"AAPL.High":            426,
+"AAPL.Low":          421.5,
+"price":         423.24,
+"AAPL.Volume":       64549100,
+"AAPL.Adjusted":          57.51,
+"date":          15349 
+},
+{
+ "AAPL.Open":         422.68,
+"AAPL.High":         422.85,
+"AAPL.Low":         419.31,
+"price":         422.55,
+"AAPL.Volume":       53771200,
+"AAPL.Adjusted":          57.41,
+"date":          15350 
+},
+{
+ "AAPL.Open":         422.28,
+"AAPL.High":          422.9,
+"AAPL.Low":         418.75,
+"price":         421.39,
+"AAPL.Volume":       53146800,
+"AAPL.Adjusted":          57.25,
+"date":          15351 
+},
+{
+ "AAPL.Open":          419.7,
+"AAPL.High":         420.45,
+"AAPL.Low":         418.66,
+"price":         419.81,
+"AAPL.Volume":       56505400,
+"AAPL.Adjusted":          57.04,
+"date":          15352 
+},
+{
+ "AAPL.Open":          424.2,
+"AAPL.High":         425.99,
+"AAPL.Low":         422.96,
+"price":          424.7,
+"AAPL.Volume":       60724300,
+"AAPL.Adjusted":           57.7,
+"date":          15356 
+},
+{
+ "AAPL.Open":         426.96,
+"AAPL.High":         429.47,
+"AAPL.Low":          426.3,
+"price":         429.11,
+"AAPL.Volume":       69197800,
+"AAPL.Adjusted":           58.3,
+"date":          15357 
+},
+{
+ "AAPL.Open":         430.15,
+"AAPL.High":         431.37,
+"AAPL.Low":         426.51,
+"price":         427.75,
+"AAPL.Volume":       65434600,
+"AAPL.Adjusted":          58.12,
+"date":          15358 
+},
+{
+ "AAPL.Open":         427.49,
+"AAPL.High":          427.5,
+"AAPL.Low":         419.75,
+"price":          420.3,
+"AAPL.Volume":      103493600,
+"AAPL.Adjusted":          57.11,
+"date":          15359 
+},
+{
+ "AAPL.Open":         422.67,
+"AAPL.High":         428.45,
+"AAPL.Low":          422.3,
+"price":         427.41,
+"AAPL.Volume":       76515600,
+"AAPL.Adjusted":          58.07,
+"date":          15362 
+},
+{
+ "AAPL.Open":          425.1,
+"AAPL.High":          425.1,
+"AAPL.Low":         419.55,
+"price":         420.41,
+"AAPL.Volume":      136909500,
+"AAPL.Adjusted":          57.12,
+"date":          15363 
+},
+{
+ "AAPL.Open":         454.44,
+"AAPL.High":         454.45,
+"AAPL.Low":         443.73,
+"price":         446.66,
+"AAPL.Volume":      239578500,
+"AAPL.Adjusted":          60.69,
+"date":          15364 
+},
+{
+ "AAPL.Open":         448.36,
+"AAPL.High":         448.79,
+"AAPL.Low":         443.14,
+"price":         444.63,
+"AAPL.Volume":       80996300,
+"AAPL.Adjusted":          60.41,
+"date":          15365 
+},
+{
+ "AAPL.Open":         444.34,
+"AAPL.High":         448.48,
+"AAPL.Low":         443.77,
+"price":         447.28,
+"AAPL.Volume":       74927300,
+"AAPL.Adjusted":          60.77,
+"date":          15366 
+},
+{
+ "AAPL.Open":         445.71,
+"AAPL.High":          453.9,
+"AAPL.Low":         445.39,
+"price":         453.01,
+"AAPL.Volume":       94835300,
+"AAPL.Adjusted":          61.55,
+"date":          15369 
+},
+{
+ "AAPL.Open":         455.59,
+"AAPL.High":         458.24,
+"AAPL.Low":         453.07,
+"price":         456.48,
+"AAPL.Volume":       97920900,
+"AAPL.Adjusted":          62.02,
+"date":          15370 
+},
+{
+ "AAPL.Open":         458.41,
+"AAPL.High":         458.99,
+"AAPL.Low":         455.55,
+"price":         456.19,
+"AAPL.Volume":       67511500,
+"AAPL.Adjusted":          61.98,
+"date":          15371 
+},
+{
+ "AAPL.Open":          455.9,
+"AAPL.High":         457.17,
+"AAPL.Low":         453.98,
+"price":         455.12,
+"AAPL.Volume":       46699100,
+"AAPL.Adjusted":          61.84,
+"date":          15372 
+},
+{
+ "AAPL.Open":          457.3,
+"AAPL.High":            460,
+"AAPL.Low":         455.56,
+"price":         459.68,
+"AAPL.Volume":       71649900,
+"AAPL.Adjusted":          62.46,
+"date":          15373 
+},
+{
+ "AAPL.Open":         458.38,
+"AAPL.High":         464.98,
+"AAPL.Low":          458.2,
+"price":         463.97,
+"AAPL.Volume":       62353200,
+"AAPL.Adjusted":          63.04,
+"date":          15376 
+},
+{
+ "AAPL.Open":         465.25,
+"AAPL.High":         469.75,
+"AAPL.Low":         464.58,
+"price":         468.83,
+"AAPL.Volume":       79055900,
+"AAPL.Adjusted":           63.7,
+"date":          15377 
+},
+{
+ "AAPL.Open":          470.5,
+"AAPL.High":         476.79,
+"AAPL.Low":          469.7,
+"price":         476.68,
+"AAPL.Volume":      101972500,
+"AAPL.Adjusted":          64.77,
+"date":          15378 
+},
+{
+ "AAPL.Open":         480.76,
+"AAPL.High":         496.75,
+"AAPL.Low":         480.56,
+"price":         493.17,
+"AAPL.Volume":      221053700,
+"AAPL.Adjusted":          67.01,
+"date":          15379 
+},
+{
+ "AAPL.Open":         490.96,
+"AAPL.High":         497.62,
+"AAPL.Low":         488.55,
+"price":         493.42,
+"AAPL.Volume":      157825500,
+"AAPL.Adjusted":          67.04,
+"date":          15380 
+},
+{
+ "AAPL.Open":         499.53,
+"AAPL.High":         503.83,
+"AAPL.Low":         497.09,
+"price":          502.6,
+"AAPL.Volume":      129304000,
+"AAPL.Adjusted":          68.29,
+"date":          15383 
+},
+{
+ "AAPL.Open":         504.66,
+"AAPL.High":         509.56,
+"AAPL.Low":            502,
+"price":         509.46,
+"AAPL.Volume":      115099600,
+"AAPL.Adjusted":          69.22,
+"date":          15384 
+},
+{
+ "AAPL.Open":         514.26,
+"AAPL.High":         526.29,
+"AAPL.Low":         496.89,
+"price":         497.67,
+"AAPL.Volume":      376530000,
+"AAPL.Adjusted":          67.62,
+"date":          15385 
+},
+{
+ "AAPL.Open":          491.5,
+"AAPL.High":         504.89,
+"AAPL.Low":         486.63,
+"price":         502.21,
+"AAPL.Volume":      236138000,
+"AAPL.Adjusted":          68.23,
+"date":          15386 
+},
+{
+ "AAPL.Open":         503.11,
+"AAPL.High":         507.77,
+"AAPL.Low":          500.3,
+"price":         502.12,
+"AAPL.Volume":      133951300,
+"AAPL.Adjusted":          68.22,
+"date":          15387 
+},
+{
+ "AAPL.Open":         506.88,
+"AAPL.High":         514.85,
+"AAPL.Low":         504.12,
+"price":         514.85,
+"AAPL.Volume":      151398800,
+"AAPL.Adjusted":          69.95,
+"date":          15391 
+},
+{
+ "AAPL.Open":         513.08,
+"AAPL.High":         515.49,
+"AAPL.Low":         509.07,
+"price":         513.04,
+"AAPL.Volume":      120825600,
+"AAPL.Adjusted":          69.71,
+"date":          15392 
+},
+{
+ "AAPL.Open":         515.08,
+"AAPL.High":         517.83,
+"AAPL.Low":          509.5,
+"price":         516.39,
+"AAPL.Volume":      142006900,
+"AAPL.Adjusted":          70.16,
+"date":          15393 
+},
+{
+ "AAPL.Open":         519.67,
+"AAPL.High":          522.9,
+"AAPL.Low":         518.64,
+"price":         522.41,
+"AAPL.Volume":      103768000,
+"AAPL.Adjusted":          70.98,
+"date":          15394 
+},
+{
+ "AAPL.Open":         521.31,
+"AAPL.High":          528.5,
+"AAPL.Low":         516.28,
+"price":         525.76,
+"AAPL.Volume":      136895500,
+"AAPL.Adjusted":          71.43,
+"date":          15397 
+},
+{
+ "AAPL.Open":         527.96,
+"AAPL.High":         535.41,
+"AAPL.Low":         525.85,
+"price":         535.41,
+"AAPL.Volume":      150096800,
+"AAPL.Adjusted":          72.75,
+"date":          15398 
+},
+{
+ "AAPL.Open":         541.56,
+"AAPL.High":         547.61,
+"AAPL.Low":          535.7,
+"price":         542.44,
+"AAPL.Volume":      238002800,
+"AAPL.Adjusted":           73.7,
+"date":          15399 
+},
+{
+ "AAPL.Open":         548.17,
+"AAPL.High":         548.21,
+"AAPL.Low":         538.77,
+"price":         544.47,
+"AAPL.Volume":      170817500,
+"AAPL.Adjusted":          73.98,
+"date":          15400 
+},
+{
+ "AAPL.Open":         544.24,
+"AAPL.High":          546.8,
+"AAPL.Low":         542.52,
+"price":         545.18,
+"AAPL.Volume":      107928100,
+"AAPL.Adjusted":          74.07,
+"date":          15401 
+},
+{
+ "AAPL.Open":         545.42,
+"AAPL.High":         547.48,
+"AAPL.Low":            526,
+"price":         533.16,
+"AAPL.Volume":      202281100,
+"AAPL.Adjusted":          72.44,
+"date":          15404 
+},
+{
+ "AAPL.Open":         523.66,
+"AAPL.High":         533.69,
+"AAPL.Low":         516.22,
+"price":         530.26,
+"AAPL.Volume":      202559700,
+"AAPL.Adjusted":          72.05,
+"date":          15405 
+},
+{
+ "AAPL.Open":          536.8,
+"AAPL.High":         537.78,
+"AAPL.Low":          523.3,
+"price":         530.69,
+"AAPL.Volume":      199630200,
+"AAPL.Adjusted":           72.1,
+"date":          15406 
+},
+{
+ "AAPL.Open":         534.69,
+"AAPL.High":         542.99,
+"AAPL.Low":         532.12,
+"price":         541.99,
+"AAPL.Volume":      129114300,
+"AAPL.Adjusted":          73.64,
+"date":          15407 
+},
+{
+ "AAPL.Open":         544.21,
+"AAPL.High":         547.74,
+"AAPL.Low":         543.11,
+"price":         545.17,
+"AAPL.Volume":      104729800,
+"AAPL.Adjusted":          74.07,
+"date":          15408 
+},
+{
+ "AAPL.Open":         548.98,
+"AAPL.High":            552,
+"AAPL.Low":            547,
+"price":            552,
+"AAPL.Volume":      101820600,
+"AAPL.Adjusted":             75,
+"date":          15411 
+},
+{
+ "AAPL.Open":         557.54,
+"AAPL.High":         568.18,
+"AAPL.Low":         555.75,
+"price":          568.1,
+"AAPL.Volume":      172713800,
+"AAPL.Adjusted":          77.19,
+"date":          15412 
+},
+{
+ "AAPL.Open":         578.05,
+"AAPL.High":         594.72,
+"AAPL.Low":          575.4,
+"price":         589.58,
+"AAPL.Volume":      354711000,
+"AAPL.Adjusted":          80.11,
+"date":          15413 
+},
+{
+ "AAPL.Open":         599.61,
+"AAPL.High":         600.01,
+"AAPL.Low":         578.55,
+"price":         585.56,
+"AAPL.Volume":      289929500,
+"AAPL.Adjusted":          79.56,
+"date":          15414 
+},
+{
+ "AAPL.Open":         584.72,
+"AAPL.High":          589.2,
+"AAPL.Low":            578,
+"price":         585.57,
+"AAPL.Volume":      206371900,
+"AAPL.Adjusted":          79.56,
+"date":          15415 
+},
+{
+ "AAPL.Open":         598.37,
+"AAPL.High":         601.77,
+"AAPL.Low":         589.05,
+"price":          601.1,
+"AAPL.Volume":      225309000,
+"AAPL.Adjusted":          81.67,
+"date":          15418 
+},
+{
+ "AAPL.Open":         599.51,
+"AAPL.High":          606.9,
+"AAPL.Low":         591.48,
+"price":         605.96,
+"AAPL.Volume":      204165500,
+"AAPL.Adjusted":          82.33,
+"date":          15419 
+},
+{
+ "AAPL.Open":         602.74,
+"AAPL.High":         609.65,
+"AAPL.Low":         601.41,
+"price":          602.5,
+"AAPL.Volume":      161010500,
+"AAPL.Adjusted":          81.86,
+"date":          15420 
+},
+{
+ "AAPL.Open":         597.78,
+"AAPL.High":          604.5,
+"AAPL.Low":         595.53,
+"price":         599.34,
+"AAPL.Volume":      155967700,
+"AAPL.Adjusted":          81.43,
+"date":          15421 
+},
+{
+ "AAPL.Open":         600.49,
+"AAPL.High":          601.8,
+"AAPL.Low":          594.4,
+"price":         596.05,
+"AAPL.Volume":      107622200,
+"AAPL.Adjusted":          80.98,
+"date":          15422 
+},
+{
+ "AAPL.Open":         599.79,
+"AAPL.High":         607.15,
+"AAPL.Low":         595.26,
+"price":         606.98,
+"AAPL.Volume":      148935500,
+"AAPL.Adjusted":          82.47,
+"date":          15425 
+},
+{
+ "AAPL.Open":         606.18,
+"AAPL.High":         616.28,
+"AAPL.Low":         606.06,
+"price":         614.48,
+"AAPL.Volume":      151782400,
+"AAPL.Adjusted":          83.49,
+"date":          15426 
+},
+{
+ "AAPL.Open":         618.38,
+"AAPL.High":         621.45,
+"AAPL.Low":         610.31,
+"price":         617.62,
+"AAPL.Volume":      163865100,
+"AAPL.Adjusted":          83.92,
+"date":          15427 
+},
+{
+ "AAPL.Open":         612.78,
+"AAPL.High":         616.56,
+"AAPL.Low":         607.23,
+"price":         609.86,
+"AAPL.Volume":      152059600,
+"AAPL.Adjusted":          82.86,
+"date":          15428 
+},
+{
+ "AAPL.Open":         608.77,
+"AAPL.High":         610.56,
+"AAPL.Low":         597.94,
+"price":         599.55,
+"AAPL.Volume":      182759500,
+"AAPL.Adjusted":          81.46,
+"date":          15429 
+},
+{
+ "AAPL.Open":         601.83,
+"AAPL.High":         618.77,
+"AAPL.Low":         600.38,
+"price":         618.63,
+"AAPL.Volume":      149587900,
+"AAPL.Adjusted":          84.05,
+"date":          15432 
+},
+{
+ "AAPL.Open":          627.3,
+"AAPL.High":         632.21,
+"AAPL.Low":         622.51,
+"price":         629.32,
+"AAPL.Volume":      208639900,
+"AAPL.Adjusted":          85.51,
+"date":          15433 
+},
+{
+ "AAPL.Open":         624.35,
+"AAPL.High":         625.86,
+"AAPL.Low":            617,
+"price":         624.31,
+"AAPL.Volume":      143245200,
+"AAPL.Adjusted":          84.82,
+"date":          15434 
+},
+{
+ "AAPL.Open":         626.98,
+"AAPL.High":         634.66,
+"AAPL.Low":          623.4,
+"price":         633.68,
+"AAPL.Volume":      160324500,
+"AAPL.Adjusted":           86.1,
+"date":          15435 
+},
+{
+ "AAPL.Open":         626.13,
+"AAPL.High":         639.84,
+"AAPL.Low":          625.3,
+"price":         636.23,
+"AAPL.Volume":      149384200,
+"AAPL.Adjusted":          86.44,
+"date":          15439 
+},
+{
+ "AAPL.Open":         639.93,
+"AAPL.High":            644,
+"AAPL.Low":            626,
+"price":         628.44,
+"AAPL.Volume":      222431300,
+"AAPL.Adjusted":          85.39,
+"date":          15440 
+},
+{
+ "AAPL.Open":          636.2,
+"AAPL.High":         636.87,
+"AAPL.Low":         623.34,
+"price":          626.2,
+"AAPL.Volume":      174153700,
+"AAPL.Adjusted":          85.08,
+"date":          15441 
+},
+{
+ "AAPL.Open":            625,
+"AAPL.High":         631.33,
+"AAPL.Low":          620.5,
+"price":         622.77,
+"AAPL.Volume":      153584200,
+"AAPL.Adjusted":          84.62,
+"date":          15442 
+},
+{
+ "AAPL.Open":         624.11,
+"AAPL.High":          624.7,
+"AAPL.Low":         603.51,
+"price":         605.23,
+"AAPL.Volume":      214911200,
+"AAPL.Adjusted":          82.23,
+"date":          15443 
+},
+{
+ "AAPL.Open":         610.06,
+"AAPL.High":         610.28,
+"AAPL.Low":         578.25,
+"price":         580.13,
+"AAPL.Volume":      262696700,
+"AAPL.Adjusted":          78.82,
+"date":          15446 
+},
+{
+ "AAPL.Open":         578.94,
+"AAPL.High":            610,
+"AAPL.Low":         571.91,
+"price":          609.7,
+"AAPL.Volume":      256382000,
+"AAPL.Adjusted":          82.84,
+"date":          15447 
+},
+{
+ "AAPL.Open":         613.72,
+"AAPL.High":         620.25,
+"AAPL.Low":         602.71,
+"price":         608.34,
+"AAPL.Volume":      238632800,
+"AAPL.Adjusted":          82.65,
+"date":          15448 
+},
+{
+ "AAPL.Open":         600.22,
+"AAPL.High":         604.73,
+"AAPL.Low":         584.52,
+"price":         587.44,
+"AAPL.Volume":      208679800,
+"AAPL.Adjusted":          79.82,
+"date":          15449 
+},
+{
+ "AAPL.Open":         591.38,
+"AAPL.High":         594.62,
+"AAPL.Low":         570.42,
+"price":         572.98,
+"AAPL.Volume":      257746300,
+"AAPL.Adjusted":          77.85,
+"date":          15450 
+},
+{
+ "AAPL.Open":         570.61,
+"AAPL.High":         576.67,
+"AAPL.Low":         556.62,
+"price":          571.7,
+"AAPL.Volume":      241632300,
+"AAPL.Adjusted":          77.68,
+"date":          15453 
+},
+{
+ "AAPL.Open":         562.61,
+"AAPL.High":         567.69,
+"AAPL.Low":            555,
+"price":         560.28,
+"AAPL.Volume":      269037300,
+"AAPL.Adjusted":          76.12,
+"date":          15454 
+},
+{
+ "AAPL.Open":         615.64,
+"AAPL.High":            618,
+"AAPL.Low":            606,
+"price":            610,
+"AAPL.Volume":      226444400,
+"AAPL.Adjusted":          82.88,
+"date":          15455 
+},
+{
+ "AAPL.Open":         614.27,
+"AAPL.High":         614.69,
+"AAPL.Low":         602.13,
+"price":          607.7,
+"AAPL.Volume":      134017100,
+"AAPL.Adjusted":          82.57,
+"date":          15456 
+},
+{
+ "AAPL.Open":         605.07,
+"AAPL.High":         606.18,
+"AAPL.Low":          600.5,
+"price":            603,
+"AAPL.Volume":      101680600,
+"AAPL.Adjusted":          81.93,
+"date":          15457 
+},
+{
+ "AAPL.Open":          597.8,
+"AAPL.High":          598.4,
+"AAPL.Low":            583,
+"price":         583.98,
+"AAPL.Volume":      126536200,
+"AAPL.Adjusted":          79.34,
+"date":          15460 
+},
+{
+ "AAPL.Open":          584.9,
+"AAPL.High":         596.76,
+"AAPL.Low":         581.23,
+"price":         582.13,
+"AAPL.Volume":      152749800,
+"AAPL.Adjusted":          79.09,
+"date":          15461 
+},
+{
+ "AAPL.Open":         580.24,
+"AAPL.High":          587.4,
+"AAPL.Low":         578.86,
+"price":         585.98,
+"AAPL.Volume":      106847300,
+"AAPL.Adjusted":          79.62,
+"date":          15462 
+},
+{
+ "AAPL.Open":          590.5,
+"AAPL.High":          591.4,
+"AAPL.Low":          580.3,
+"price":         581.82,
+"AAPL.Volume":       97637400,
+"AAPL.Adjusted":          79.05,
+"date":          15463 
+},
+{
+ "AAPL.Open":         577.08,
+"AAPL.High":         578.36,
+"AAPL.Low":         565.17,
+"price":         565.25,
+"AAPL.Volume":      132498100,
+"AAPL.Adjusted":           76.8,
+"date":          15464 
+},
+{
+ "AAPL.Open":          561.5,
+"AAPL.High":         572.77,
+"AAPL.Low":         561.23,
+"price":         569.48,
+"AAPL.Volume":      115029600,
+"AAPL.Adjusted":          77.37,
+"date":          15467 
+},
+{
+ "AAPL.Open":         569.58,
+"AAPL.High":          571.5,
+"AAPL.Low":         558.73,
+"price":         568.18,
+"AAPL.Volume":      124313000,
+"AAPL.Adjusted":           77.2,
+"date":          15468 
+},
+{
+ "AAPL.Open":          563.7,
+"AAPL.High":         573.98,
+"AAPL.Low":         560.85,
+"price":         569.18,
+"AAPL.Volume":      120176000,
+"AAPL.Adjusted":          77.33,
+"date":          15469 
+},
+{
+ "AAPL.Open":         574.58,
+"AAPL.High":         575.88,
+"AAPL.Low":         568.44,
+"price":         570.52,
+"AAPL.Volume":       83300000,
+"AAPL.Adjusted":          77.52,
+"date":          15470 
+},
+{
+ "AAPL.Open":            565,
+"AAPL.High":         574.47,
+"AAPL.Low":         564.35,
+"price":         566.71,
+"AAPL.Volume":       99886500,
+"AAPL.Adjusted":             77,
+"date":          15471 
+},
+{
+ "AAPL.Open":         562.57,
+"AAPL.High":         567.51,
+"AAPL.Low":          557.6,
+"price":         558.22,
+"AAPL.Volume":       88156600,
+"AAPL.Adjusted":          75.84,
+"date":          15474 
+},
+{
+ "AAPL.Open":         561.45,
+"AAPL.High":         563.22,
+"AAPL.Low":         551.75,
+"price":         553.17,
+"AAPL.Volume":      119084000,
+"AAPL.Adjusted":          75.16,
+"date":          15475 
+},
+{
+ "AAPL.Open":         554.05,
+"AAPL.High":         556.89,
+"AAPL.Low":         541.04,
+"price":         546.08,
+"AAPL.Volume":      140224000,
+"AAPL.Adjusted":           74.2,
+"date":          15476 
+},
+{
+ "AAPL.Open":         545.31,
+"AAPL.High":          547.5,
+"AAPL.Low":         530.12,
+"price":         530.12,
+"AAPL.Volume":      179305000,
+"AAPL.Adjusted":          72.03,
+"date":          15477 
+},
+{
+ "AAPL.Open":         533.96,
+"AAPL.High":         543.41,
+"AAPL.Low":         522.18,
+"price":         530.38,
+"AAPL.Volume":      183073100,
+"AAPL.Adjusted":          72.06,
+"date":          15478 
+},
+{
+ "AAPL.Open":          534.5,
+"AAPL.High":         561.54,
+"AAPL.Low":         534.05,
+"price":         561.28,
+"AAPL.Volume":      157776500,
+"AAPL.Adjusted":          76.26,
+"date":          15481 
+},
+{
+ "AAPL.Open":         569.55,
+"AAPL.High":         573.88,
+"AAPL.Low":         552.58,
+"price":         556.97,
+"AAPL.Volume":      173717600,
+"AAPL.Adjusted":          75.68,
+"date":          15482 
+},
+{
+ "AAPL.Open":          557.5,
+"AAPL.High":          572.8,
+"AAPL.Low":         553.23,
+"price":         570.56,
+"AAPL.Volume":      146224400,
+"AAPL.Adjusted":          77.52,
+"date":          15483 
+},
+{
+ "AAPL.Open":         575.87,
+"AAPL.High":          576.5,
+"AAPL.Low":         561.23,
+"price":         565.32,
+"AAPL.Volume":      124057500,
+"AAPL.Adjusted":          76.81,
+"date":          15484 
+},
+{
+ "AAPL.Open":         564.59,
+"AAPL.High":         565.85,
+"AAPL.Low":         558.47,
+"price":         562.29,
+"AAPL.Volume":       82126800,
+"AAPL.Adjusted":           76.4,
+"date":          15485 
+},
+{
+ "AAPL.Open":          570.9,
+"AAPL.High":            574,
+"AAPL.Low":         565.31,
+"price":         572.27,
+"AAPL.Volume":       95127200,
+"AAPL.Adjusted":          77.75,
+"date":          15489 
+},
+{
+ "AAPL.Open":          569.2,
+"AAPL.High":         579.99,
+"AAPL.Low":         566.56,
+"price":         579.17,
+"AAPL.Volume":      132357400,
+"AAPL.Adjusted":          78.69,
+"date":          15490 
+},
+{
+ "AAPL.Open":         580.74,
+"AAPL.High":          581.5,
+"AAPL.Low":         571.46,
+"price":         577.73,
+"AAPL.Volume":      122918600,
+"AAPL.Adjusted":           78.5,
+"date":          15491 
+},
+{
+ "AAPL.Open":         569.16,
+"AAPL.High":         572.65,
+"AAPL.Low":         560.52,
+"price":         560.99,
+"AAPL.Volume":      130246900,
+"AAPL.Adjusted":          76.22,
+"date":          15492 
+},
+{
+ "AAPL.Open":          561.5,
+"AAPL.High":          567.5,
+"AAPL.Low":          548.5,
+"price":         564.29,
+"AAPL.Volume":      139248900,
+"AAPL.Adjusted":          76.67,
+"date":          15495 
+},
+{
+ "AAPL.Open":         561.27,
+"AAPL.High":         566.47,
+"AAPL.Low":         558.33,
+"price":         562.83,
+"AAPL.Volume":       97053600,
+"AAPL.Adjusted":          76.47,
+"date":          15496 
+},
+{
+ "AAPL.Open":         567.77,
+"AAPL.High":         573.85,
+"AAPL.Low":          565.5,
+"price":         571.46,
+"AAPL.Volume":      100363900,
+"AAPL.Adjusted":          77.64,
+"date":          15497 
+},
+{
+ "AAPL.Open":         577.29,
+"AAPL.High":         577.32,
+"AAPL.Low":          570.5,
+"price":         571.72,
+"AAPL.Volume":       94941700,
+"AAPL.Adjusted":          77.68,
+"date":          15498 
+},
+{
+ "AAPL.Open":          571.6,
+"AAPL.High":         580.58,
+"AAPL.Low":            569,
+"price":         580.32,
+"AAPL.Volume":       86879100,
+"AAPL.Adjusted":          78.85,
+"date":          15499 
+},
+{
+ "AAPL.Open":         587.72,
+"AAPL.High":          588.5,
+"AAPL.Low":         570.63,
+"price":         571.17,
+"AAPL.Volume":      147816200,
+"AAPL.Adjusted":           77.6,
+"date":          15502 
+},
+{
+ "AAPL.Open":         574.46,
+"AAPL.High":         576.62,
+"AAPL.Low":          566.7,
+"price":         576.16,
+"AAPL.Volume":      108845100,
+"AAPL.Adjusted":          78.28,
+"date":          15503 
+},
+{
+ "AAPL.Open":         574.52,
+"AAPL.High":         578.48,
+"AAPL.Low":         570.38,
+"price":         572.16,
+"AAPL.Volume":       73395000,
+"AAPL.Adjusted":          77.74,
+"date":          15504 
+},
+{
+ "AAPL.Open":         571.24,
+"AAPL.High":          573.5,
+"AAPL.Low":         567.26,
+"price":         571.53,
+"AAPL.Volume":       86393300,
+"AAPL.Adjusted":          77.65,
+"date":          15505 
+},
+{
+ "AAPL.Open":            571,
+"AAPL.High":         574.62,
+"AAPL.Low":         569.55,
+"price":         574.13,
+"AAPL.Volume":       83813800,
+"AAPL.Adjusted":          78.01,
+"date":          15506 
+},
+{
+ "AAPL.Open":         570.96,
+"AAPL.High":         587.89,
+"AAPL.Low":         570.37,
+"price":         585.78,
+"AAPL.Volume":      110103000,
+"AAPL.Adjusted":          79.59,
+"date":          15509 
+},
+{
+ "AAPL.Open":          583.4,
+"AAPL.High":            590,
+"AAPL.Low":          583.1,
+"price":         587.41,
+"AAPL.Volume":       90351100,
+"AAPL.Adjusted":          79.81,
+"date":          15510 
+},
+{
+ "AAPL.Open":         588.21,
+"AAPL.High":         589.25,
+"AAPL.Low":          580.8,
+"price":         585.74,
+"AAPL.Volume":       89735800,
+"AAPL.Adjusted":          79.58,
+"date":          15511 
+},
+{
+ "AAPL.Open":         585.44,
+"AAPL.High":         588.22,
+"AAPL.Low":         577.44,
+"price":         577.67,
+"AAPL.Volume":       81587800,
+"AAPL.Adjusted":          78.49,
+"date":          15512 
+},
+{
+ "AAPL.Open":         579.04,
+"AAPL.High":         582.19,
+"AAPL.Low":         575.42,
+"price":          582.1,
+"AAPL.Volume":       71117900,
+"AAPL.Adjusted":          79.09,
+"date":          15513 
+},
+{
+ "AAPL.Open":          577.3,
+"AAPL.High":          579.8,
+"AAPL.Low":         570.37,
+"price":         570.77,
+"AAPL.Volume":       76095600,
+"AAPL.Adjusted":          77.55,
+"date":          15516 
+},
+{
+ "AAPL.Open":         571.33,
+"AAPL.High":         574.49,
+"AAPL.Low":         567.33,
+"price":         572.03,
+"AAPL.Volume":       69134100,
+"AAPL.Adjusted":          77.72,
+"date":          15517 
+},
+{
+ "AAPL.Open":            575,
+"AAPL.High":         576.74,
+"AAPL.Low":         571.92,
+"price":          574.5,
+"AAPL.Volume":       50749300,
+"AAPL.Adjusted":          78.06,
+"date":          15518 
+},
+{
+ "AAPL.Open":         571.67,
+"AAPL.High":            574,
+"AAPL.Low":         565.61,
+"price":         569.05,
+"AAPL.Volume":       70709100,
+"AAPL.Adjusted":          77.32,
+"date":          15519 
+},
+{
+ "AAPL.Open":            578,
+"AAPL.High":            584,
+"AAPL.Low":         574.25,
+"price":            584,
+"AAPL.Volume":      105375200,
+"AAPL.Adjusted":          79.35,
+"date":          15520 
+},
+{
+ "AAPL.Open":         584.73,
+"AAPL.High":         593.47,
+"AAPL.Low":          583.6,
+"price":         592.52,
+"AAPL.Volume":      100023000,
+"AAPL.Adjusted":          80.51,
+"date":          15523 
+},
+{
+ "AAPL.Open":         594.88,
+"AAPL.High":            600,
+"AAPL.Low":            594,
+"price":         599.41,
+"AAPL.Volume":       60428200,
+"AAPL.Adjusted":          81.44,
+"date":          15524 
+},
+{
+ "AAPL.Open":         600.56,
+"AAPL.High":         614.34,
+"AAPL.Low":         599.65,
+"price":         609.94,
+"AAPL.Volume":      121095800,
+"AAPL.Adjusted":          82.87,
+"date":          15526 
+},
+{
+ "AAPL.Open":         607.09,
+"AAPL.High":         608.44,
+"AAPL.Low":         601.58,
+"price":         605.88,
+"AAPL.Volume":      104732600,
+"AAPL.Adjusted":          82.32,
+"date":          15527 
+},
+{
+ "AAPL.Open":          605.3,
+"AAPL.High":          613.9,
+"AAPL.Low":         604.11,
+"price":         613.89,
+"AAPL.Volume":       94851400,
+"AAPL.Adjusted":          83.41,
+"date":          15530 
+},
+{
+ "AAPL.Open":         617.97,
+"AAPL.High":         619.87,
+"AAPL.Low":         605.31,
+"price":         608.21,
+"AAPL.Volume":      127989400,
+"AAPL.Adjusted":          82.64,
+"date":          15531 
+},
+{
+ "AAPL.Open":         606.12,
+"AAPL.High":         607.66,
+"AAPL.Low":         597.22,
+"price":         604.43,
+"AAPL.Volume":      117330500,
+"AAPL.Adjusted":          82.12,
+"date":          15532 
+},
+{
+ "AAPL.Open":         600.24,
+"AAPL.High":         603.47,
+"AAPL.Low":         592.68,
+"price":          598.9,
+"AAPL.Volume":      107010400,
+"AAPL.Adjusted":          81.37,
+"date":          15533 
+},
+{
+ "AAPL.Open":         602.95,
+"AAPL.High":         607.19,
+"AAPL.Low":            600,
+"price":         604.97,
+"AAPL.Volume":       77856800,
+"AAPL.Adjusted":           82.2,
+"date":          15534 
+},
+{
+ "AAPL.Open":         605.12,
+"AAPL.High":         611.62,
+"AAPL.Low":         605.02,
+"price":         606.91,
+"AAPL.Volume":       75315100,
+"AAPL.Adjusted":          82.46,
+"date":          15537 
+},
+{
+ "AAPL.Open":         610.79,
+"AAPL.High":          611.5,
+"AAPL.Low":         603.15,
+"price":         606.94,
+"AAPL.Volume":       73406200,
+"AAPL.Adjusted":          82.46,
+"date":          15538 
+},
+{
+ "AAPL.Open":         606.59,
+"AAPL.High":         608.34,
+"AAPL.Low":         603.56,
+"price":         606.26,
+"AAPL.Volume":       63175000,
+"AAPL.Adjusted":          82.37,
+"date":          15539 
+},
+{
+ "AAPL.Open":         611.28,
+"AAPL.High":         615.35,
+"AAPL.Low":            606,
+"price":         614.32,
+"AAPL.Volume":      109215400,
+"AAPL.Adjusted":          83.47,
+"date":          15540 
+},
+{
+ "AAPL.Open":         613.03,
+"AAPL.High":         614.44,
+"AAPL.Low":          603.7,
+"price":          604.3,
+"AAPL.Volume":       99367800,
+"AAPL.Adjusted":          82.11,
+"date":          15541 
+},
+{
+ "AAPL.Open":          594.4,
+"AAPL.High":          605.9,
+"AAPL.Low":         587.71,
+"price":         603.83,
+"AAPL.Volume":      121993900,
+"AAPL.Adjusted":          82.04,
+"date":          15544 
+},
+{
+ "AAPL.Open":         607.38,
+"AAPL.High":         609.68,
+"AAPL.Low":         598.51,
+"price":         600.92,
+"AAPL.Volume":      141283100,
+"AAPL.Adjusted":          81.65,
+"date":          15545 
+},
+{
+ "AAPL.Open":         574.46,
+"AAPL.High":          580.8,
+"AAPL.Low":            570,
+"price":         574.97,
+"AAPL.Volume":      219328200,
+"AAPL.Adjusted":          78.12,
+"date":          15546 
+},
+{
+ "AAPL.Open":         579.76,
+"AAPL.High":          580.4,
+"AAPL.Low":         570.36,
+"price":         574.88,
+"AAPL.Volume":      101658200,
+"AAPL.Adjusted":          78.11,
+"date":          15547 
+},
+{
+ "AAPL.Open":         575.01,
+"AAPL.High":         585.83,
+"AAPL.Low":         571.59,
+"price":         585.16,
+"AAPL.Volume":      100984100,
+"AAPL.Adjusted":          79.51,
+"date":          15548 
+},
+{
+ "AAPL.Open":         590.92,
+"AAPL.High":         599.44,
+"AAPL.Low":         587.82,
+"price":         595.03,
+"AAPL.Volume":       94785600,
+"AAPL.Adjusted":          80.85,
+"date":          15551 
+},
+{
+ "AAPL.Open":         603.23,
+"AAPL.High":          611.7,
+"AAPL.Low":         602.72,
+"price":         610.76,
+"AAPL.Volume":      115581900,
+"AAPL.Adjusted":          82.98,
+"date":          15552 
+},
+{
+ "AAPL.Open":         615.91,
+"AAPL.High":          616.4,
+"AAPL.Low":            603,
+"price":         606.81,
+"AAPL.Volume":       96125400,
+"AAPL.Adjusted":          82.45,
+"date":          15553 
+},
+{
+ "AAPL.Open":         602.84,
+"AAPL.High":         610.69,
+"AAPL.Low":         600.25,
+"price":         607.79,
+"AAPL.Volume":       83039600,
+"AAPL.Adjusted":          82.58,
+"date":          15554 
+},
+{
+ "AAPL.Open":         613.63,
+"AAPL.High":         617.98,
+"AAPL.Low":         611.56,
+"price":          615.7,
+"AAPL.Volume":       86230200,
+"AAPL.Adjusted":          83.65,
+"date":          15555 
+},
+{
+ "AAPL.Open":         617.29,
+"AAPL.High":         624.87,
+"AAPL.Low":         615.26,
+"price":         622.55,
+"AAPL.Volume":       75525800,
+"AAPL.Adjusted":          84.59,
+"date":          15558 
+},
+{
+ "AAPL.Open":         622.77,
+"AAPL.High":            625,
+"AAPL.Low":         618.04,
+"price":         620.91,
+"AAPL.Volume":       72611700,
+"AAPL.Adjusted":          84.36,
+"date":          15559 
+},
+{
+ "AAPL.Open":         619.39,
+"AAPL.High":         623.88,
+"AAPL.Low":          617.1,
+"price":         619.86,
+"AAPL.Volume":       61176500,
+"AAPL.Adjusted":          84.22,
+"date":          15560 
+},
+{
+ "AAPL.Open":         617.85,
+"AAPL.High":         621.73,
+"AAPL.Low":          617.8,
+"price":         620.73,
+"AAPL.Volume":       55410600,
+"AAPL.Adjusted":           84.7,
+"date":          15561 
+},
+{
+ "AAPL.Open":         618.71,
+"AAPL.High":         621.76,
+"AAPL.Low":          618.7,
+"price":          621.7,
+"AAPL.Volume":       48734700,
+"AAPL.Adjusted":          84.83,
+"date":          15562 
+},
+{
+ "AAPL.Open":         623.39,
+"AAPL.High":            630,
+"AAPL.Low":         623.25,
+"price":            630,
+"AAPL.Volume":       69708100,
+"AAPL.Adjusted":          85.97,
+"date":          15565 
+},
+{
+ "AAPL.Open":         631.87,
+"AAPL.High":         638.61,
+"AAPL.Low":         630.21,
+"price":         631.69,
+"AAPL.Volume":       85042300,
+"AAPL.Adjusted":           86.2,
+"date":          15566 
+},
+{
+ "AAPL.Open":          631.3,
+"AAPL.High":            634,
+"AAPL.Low":         627.75,
+"price":         630.83,
+"AAPL.Volume":       64335600,
+"AAPL.Adjusted":          86.08,
+"date":          15567 
+},
+{
+ "AAPL.Open":         631.21,
+"AAPL.High":         636.76,
+"AAPL.Low":          630.5,
+"price":         636.34,
+"AAPL.Volume":       63633500,
+"AAPL.Adjusted":          86.83,
+"date":          15568 
+},
+{
+ "AAPL.Open":            640,
+"AAPL.High":         648.19,
+"AAPL.Low":         638.81,
+"price":         648.11,
+"AAPL.Volume":      110690300,
+"AAPL.Adjusted":          88.44,
+"date":          15569 
+},
+{
+ "AAPL.Open":         650.01,
+"AAPL.High":         665.15,
+"AAPL.Low":          649.9,
+"price":         665.15,
+"AAPL.Volume":      153346200,
+"AAPL.Adjusted":          90.76,
+"date":          15572 
+},
+{
+ "AAPL.Open":         670.82,
+"AAPL.High":         674.88,
+"AAPL.Low":         650.33,
+"price":         656.06,
+"AAPL.Volume":      203179900,
+"AAPL.Adjusted":          89.52,
+"date":          15573 
+},
+{
+ "AAPL.Open":         654.42,
+"AAPL.High":            669,
+"AAPL.Low":         648.11,
+"price":         668.87,
+"AAPL.Volume":      141330700,
+"AAPL.Adjusted":          91.27,
+"date":          15574 
+},
+{
+ "AAPL.Open":         666.11,
+"AAPL.High":          669.9,
+"AAPL.Low":         661.15,
+"price":         662.63,
+"AAPL.Volume":      105032200,
+"AAPL.Adjusted":          90.42,
+"date":          15575 
+},
+{
+ "AAPL.Open":         659.51,
+"AAPL.High":         669.48,
+"AAPL.Low":         655.55,
+"price":         663.22,
+"AAPL.Volume":      109335100,
+"AAPL.Adjusted":           90.5,
+"date":          15576 
+},
+{
+ "AAPL.Open":         679.99,
+"AAPL.High":         680.87,
+"AAPL.Low":         673.54,
+"price":         675.68,
+"AAPL.Volume":      106752100,
+"AAPL.Adjusted":           92.2,
+"date":          15579 
+},
+{
+ "AAPL.Open":         674.98,
+"AAPL.High":          676.1,
+"AAPL.Low":         670.67,
+"price":          674.8,
+"AAPL.Volume":       66854200,
+"AAPL.Adjusted":          92.08,
+"date":          15580 
+},
+{
+ "AAPL.Open":         675.25,
+"AAPL.High":         677.67,
+"AAPL.Low":          672.6,
+"price":         673.47,
+"AAPL.Volume":       50701700,
+"AAPL.Adjusted":           91.9,
+"date":          15581 
+},
+{
+ "AAPL.Open":         670.64,
+"AAPL.High":         671.55,
+"AAPL.Low":         662.85,
+"price":         663.87,
+"AAPL.Volume":       75674900,
+"AAPL.Adjusted":          90.59,
+"date":          15582 
+},
+{
+ "AAPL.Open":         667.25,
+"AAPL.High":          668.6,
+"AAPL.Low":         657.25,
+"price":         665.24,
+"AAPL.Volume":       84580300,
+"AAPL.Adjusted":          90.77,
+"date":          15583 
+},
+{
+ "AAPL.Open":         665.76,
+"AAPL.High":         675.14,
+"AAPL.Low":          664.5,
+"price":         674.97,
+"AAPL.Volume":       91973000,
+"AAPL.Adjusted":           92.1,
+"date":          15587 
+},
+{
+ "AAPL.Open":         675.57,
+"AAPL.High":         676.35,
+"AAPL.Low":          669.6,
+"price":         670.23,
+"AAPL.Volume":       84093800,
+"AAPL.Adjusted":          91.45,
+"date":          15588 
+},
+{
+ "AAPL.Open":         673.17,
+"AAPL.High":         678.29,
+"AAPL.Low":          670.8,
+"price":         676.27,
+"AAPL.Volume":       97799100,
+"AAPL.Adjusted":          92.28,
+"date":          15589 
+},
+{
+ "AAPL.Open":         678.05,
+"AAPL.High":         682.48,
+"AAPL.Low":         675.77,
+"price":         680.44,
+"AAPL.Volume":       82416600,
+"AAPL.Adjusted":          92.85,
+"date":          15590 
+},
+{
+ "AAPL.Open":         680.45,
+"AAPL.High":         683.29,
+"AAPL.Low":          662.1,
+"price":         662.74,
+"AAPL.Volume":      121999500,
+"AAPL.Adjusted":          90.43,
+"date":          15593 
+},
+{
+ "AAPL.Open":         665.11,
+"AAPL.High":          670.1,
+"AAPL.Low":          656.5,
+"price":         660.59,
+"AAPL.Volume":      125995800,
+"AAPL.Adjusted":          90.14,
+"date":          15594 
+},
+{
+ "AAPL.Open":         666.85,
+"AAPL.High":          669.9,
+"AAPL.Low":            656,
+"price":         669.79,
+"AAPL.Volume":      178058300,
+"AAPL.Adjusted":          91.39,
+"date":          15595 
+},
+{
+ "AAPL.Open":         677.37,
+"AAPL.High":          685.5,
+"AAPL.Low":         674.77,
+"price":         682.98,
+"AAPL.Volume":      149590000,
+"AAPL.Adjusted":          93.19,
+"date":          15596 
+},
+{
+ "AAPL.Open":         689.96,
+"AAPL.High":         696.98,
+"AAPL.Low":         687.89,
+"price":         691.28,
+"AAPL.Volume":      150118500,
+"AAPL.Adjusted":          94.33,
+"date":          15597 
+},
+{
+ "AAPL.Open":         699.35,
+"AAPL.High":          699.8,
+"AAPL.Low":         694.61,
+"price":         699.78,
+"AAPL.Volume":       99507800,
+"AAPL.Adjusted":          95.49,
+"date":          15600 
+},
+{
+ "AAPL.Open":         699.88,
+"AAPL.High":         702.33,
+"AAPL.Low":         696.42,
+"price":         701.91,
+"AAPL.Volume":       93375800,
+"AAPL.Adjusted":          95.78,
+"date":          15601 
+},
+{
+ "AAPL.Open":         700.26,
+"AAPL.High":         703.99,
+"AAPL.Low":         699.57,
+"price":          702.1,
+"AAPL.Volume":       81718700,
+"AAPL.Adjusted":           95.8,
+"date":          15602 
+},
+{
+ "AAPL.Open":         699.16,
+"AAPL.High":         700.06,
+"AAPL.Low":         693.62,
+"price":          698.7,
+"AAPL.Volume":       84142100,
+"AAPL.Adjusted":          95.34,
+"date":          15603 
+},
+{
+ "AAPL.Open":         702.41,
+"AAPL.High":         705.07,
+"AAPL.Low":         699.36,
+"price":         700.09,
+"AAPL.Volume":      142897300,
+"AAPL.Adjusted":          95.53,
+"date":          15604 
+},
+{
+ "AAPL.Open":         686.86,
+"AAPL.High":         695.12,
+"AAPL.Low":            683,
+"price":         690.79,
+"AAPL.Volume":      159941600,
+"AAPL.Adjusted":          94.26,
+"date":          15607 
+},
+{
+ "AAPL.Open":         688.26,
+"AAPL.High":         692.78,
+"AAPL.Low":            673,
+"price":         673.54,
+"AAPL.Volume":      129697400,
+"AAPL.Adjusted":          91.91,
+"date":          15608 
+},
+{
+ "AAPL.Open":         668.74,
+"AAPL.High":         672.69,
+"AAPL.Low":          661.2,
+"price":         665.18,
+"AAPL.Volume":      144125800,
+"AAPL.Adjusted":          90.77,
+"date":          15609 
+},
+{
+ "AAPL.Open":         664.29,
+"AAPL.High":         682.17,
+"AAPL.Low":         660.35,
+"price":         681.32,
+"AAPL.Volume":      148522500,
+"AAPL.Adjusted":          92.97,
+"date":          15610 
+},
+{
+ "AAPL.Open":         678.75,
+"AAPL.High":         681.11,
+"AAPL.Low":         666.75,
+"price":          667.1,
+"AAPL.Volume":      133777700,
+"AAPL.Adjusted":          91.03,
+"date":          15611 
+},
+{
+ "AAPL.Open":         671.16,
+"AAPL.High":         676.75,
+"AAPL.Low":          656.5,
+"price":         659.39,
+"AAPL.Volume":      135898700,
+"AAPL.Adjusted":          89.98,
+"date":          15614 
+},
+{
+ "AAPL.Open":         661.81,
+"AAPL.High":         666.35,
+"AAPL.Low":         650.65,
+"price":         661.31,
+"AAPL.Volume":      156998100,
+"AAPL.Adjusted":          90.24,
+"date":          15615 
+},
+{
+ "AAPL.Open":         664.86,
+"AAPL.High":         671.86,
+"AAPL.Low":         662.63,
+"price":         671.45,
+"AAPL.Volume":      106070300,
+"AAPL.Adjusted":          91.62,
+"date":          15616 
+},
+{
+ "AAPL.Open":         671.25,
+"AAPL.High":         674.25,
+"AAPL.Low":         665.55,
+"price":          666.8,
+"AAPL.Volume":       92681400,
+"AAPL.Adjusted":          90.99,
+"date":          15617 
+},
+{
+ "AAPL.Open":          665.2,
+"AAPL.High":            666,
+"AAPL.Low":         651.28,
+"price":         652.59,
+"AAPL.Volume":      148501500,
+"AAPL.Adjusted":          89.05,
+"date":          15618 
+},
+{
+ "AAPL.Open":         646.88,
+"AAPL.High":         647.56,
+"AAPL.Low":         636.11,
+"price":         638.17,
+"AAPL.Volume":      159498500,
+"AAPL.Adjusted":          87.08,
+"date":          15621 
+},
+{
+ "AAPL.Open":         638.65,
+"AAPL.High":         640.49,
+"AAPL.Low":         623.55,
+"price":         635.85,
+"AAPL.Volume":      209649300,
+"AAPL.Adjusted":          86.76,
+"date":          15622 
+},
+{
+ "AAPL.Open":         639.74,
+"AAPL.High":         644.98,
+"AAPL.Low":            637,
+"price":         640.91,
+"AAPL.Volume":      127589000,
+"AAPL.Adjusted":          87.45,
+"date":          15623 
+},
+{
+ "AAPL.Open":          646.5,
+"AAPL.High":          647.2,
+"AAPL.Low":          628.1,
+"price":          628.1,
+"AAPL.Volume":      136520300,
+"AAPL.Adjusted":          85.71,
+"date":          15624 
+},
+{
+ "AAPL.Open":         629.56,
+"AAPL.High":         635.38,
+"AAPL.Low":          625.3,
+"price":         629.71,
+"AAPL.Volume":      115003700,
+"AAPL.Adjusted":          85.93,
+"date":          15625 
+},
+{
+ "AAPL.Open":         632.35,
+"AAPL.High":         635.13,
+"AAPL.Low":         623.85,
+"price":         634.76,
+"AAPL.Volume":      108125500,
+"AAPL.Adjusted":          86.61,
+"date":          15628 
+},
+{
+ "AAPL.Open":         635.37,
+"AAPL.High":          650.3,
+"AAPL.Low":            631,
+"price":         649.79,
+"AAPL.Volume":      137442900,
+"AAPL.Adjusted":          88.67,
+"date":          15629 
+},
+{
+ "AAPL.Open":         648.87,
+"AAPL.High":         652.79,
+"AAPL.Low":            644,
+"price":         644.61,
+"AAPL.Volume":       97259400,
+"AAPL.Adjusted":          87.96,
+"date":          15630 
+},
+{
+ "AAPL.Open":         639.59,
+"AAPL.High":         642.06,
+"AAPL.Low":            630,
+"price":         632.64,
+"AAPL.Volume":      119156100,
+"AAPL.Adjusted":          86.33,
+"date":          15631 
+},
+{
+ "AAPL.Open":         631.05,
+"AAPL.High":         631.77,
+"AAPL.Low":         609.62,
+"price":         609.84,
+"AAPL.Volume":      186021500,
+"AAPL.Adjusted":          83.21,
+"date":          15632 
+},
+{
+ "AAPL.Open":         612.42,
+"AAPL.High":         635.38,
+"AAPL.Low":         610.76,
+"price":         634.03,
+"AAPL.Volume":      136682700,
+"AAPL.Adjusted":          86.52,
+"date":          15635 
+},
+{
+ "AAPL.Open":            631,
+"AAPL.High":          633.9,
+"AAPL.Low":          611.7,
+"price":         613.36,
+"AAPL.Volume":      176786400,
+"AAPL.Adjusted":          83.69,
+"date":          15636 
+},
+{
+ "AAPL.Open":         621.44,
+"AAPL.High":         626.55,
+"AAPL.Low":         610.64,
+"price":         616.83,
+"AAPL.Volume":      139631800,
+"AAPL.Adjusted":          84.17,
+"date":          15637 
+},
+{
+ "AAPL.Open":            620,
+"AAPL.High":            622,
+"AAPL.Low":         605.55,
+"price":         609.54,
+"AAPL.Volume":      164081400,
+"AAPL.Adjusted":          83.17,
+"date":          15638 
+},
+{
+ "AAPL.Open":         609.43,
+"AAPL.High":            614,
+"AAPL.Low":            591,
+"price":            604,
+"AAPL.Volume":      254608200,
+"AAPL.Adjusted":          82.42,
+"date":          15639 
+},
+{
+ "AAPL.Open":         594.88,
+"AAPL.High":         601.96,
+"AAPL.Low":          587.7,
+"price":         595.32,
+"AAPL.Volume":      127500800,
+"AAPL.Adjusted":          81.23,
+"date":          15644 
+},
+{
+ "AAPL.Open":         598.22,
+"AAPL.High":            603,
+"AAPL.Low":         594.17,
+"price":         596.54,
+"AAPL.Volume":       90324500,
+"AAPL.Adjusted":           81.4,
+"date":          15645 
+},
+{
+ "AAPL.Open":         595.89,
+"AAPL.High":         596.95,
+"AAPL.Low":         574.75,
+"price":          576.8,
+"AAPL.Volume":      149843400,
+"AAPL.Adjusted":          78.71,
+"date":          15646 
+},
+{
+ "AAPL.Open":         583.52,
+"AAPL.High":         587.77,
+"AAPL.Low":          577.6,
+"price":         584.62,
+"AAPL.Volume":      132283900,
+"AAPL.Adjusted":          79.77,
+"date":          15649 
+},
+{
+ "AAPL.Open":         590.23,
+"AAPL.High":         590.74,
+"AAPL.Low":         580.09,
+"price":         582.85,
+"AAPL.Volume":       93729300,
+"AAPL.Adjusted":          79.53,
+"date":          15650 
+},
+{
+ "AAPL.Open":         573.84,
+"AAPL.High":         574.54,
+"AAPL.Low":         555.75,
+"price":            558,
+"AAPL.Volume":      198412200,
+"AAPL.Adjusted":          76.49,
+"date":          15651 
+},
+{
+ "AAPL.Open":         560.63,
+"AAPL.High":         562.23,
+"AAPL.Low":         535.29,
+"price":         537.75,
+"AAPL.Volume":      264036500,
+"AAPL.Adjusted":          73.71,
+"date":          15652 
+},
+{
+ "AAPL.Open":         540.42,
+"AAPL.High":         554.88,
+"AAPL.Low":         533.72,
+"price":         547.06,
+"AAPL.Volume":      232478400,
+"AAPL.Adjusted":          74.99,
+"date":          15653 
+},
+{
+ "AAPL.Open":         554.15,
+"AAPL.High":          554.5,
+"AAPL.Low":         538.65,
+"price":         542.83,
+"AAPL.Volume":      128950500,
+"AAPL.Adjusted":          74.41,
+"date":          15656 
+},
+{
+ "AAPL.Open":         538.91,
+"AAPL.High":         550.48,
+"AAPL.Low":         536.36,
+"price":          542.9,
+"AAPL.Volume":      133237300,
+"AAPL.Adjusted":          74.42,
+"date":          15657 
+},
+{
+ "AAPL.Open":          545.5,
+"AAPL.High":         547.45,
+"AAPL.Low":         536.18,
+"price":         536.88,
+"AAPL.Volume":      119292600,
+"AAPL.Adjusted":          73.59,
+"date":          15658 
+},
+{
+ "AAPL.Open":         537.53,
+"AAPL.High":          539.5,
+"AAPL.Low":         522.62,
+"price":         525.62,
+"AAPL.Volume":      197477700,
+"AAPL.Adjusted":          72.05,
+"date":          15659 
+},
+{
+ "AAPL.Open":          525.2,
+"AAPL.High":            530,
+"AAPL.Low":         505.75,
+"price":         527.68,
+"AAPL.Volume":      316723400,
+"AAPL.Adjusted":          72.33,
+"date":          15660 
+},
+{
+ "AAPL.Open":         540.71,
+"AAPL.High":          567.5,
+"AAPL.Low":         539.88,
+"price":         565.73,
+"AAPL.Volume":      205829400,
+"AAPL.Adjusted":          77.55,
+"date":          15663 
+},
+{
+ "AAPL.Open":         571.91,
+"AAPL.High":         571.95,
+"AAPL.Low":         554.58,
+"price":         560.91,
+"AAPL.Volume":      160688500,
+"AAPL.Adjusted":          76.89,
+"date":          15664 
+},
+{
+ "AAPL.Open":         564.25,
+"AAPL.High":         567.37,
+"AAPL.Low":          556.6,
+"price":          561.7,
+"AAPL.Volume":       93250500,
+"AAPL.Adjusted":             77,
+"date":          15665 
+},
+{
+ "AAPL.Open":         567.17,
+"AAPL.High":            572,
+"AAPL.Low":          562.6,
+"price":          571.5,
+"AAPL.Volume":       68206600,
+"AAPL.Adjusted":          78.34,
+"date":          15667 
+},
+{
+ "AAPL.Open":          575.9,
+"AAPL.High":            590,
+"AAPL.Low":         573.71,
+"price":         589.53,
+"AAPL.Volume":      157644900,
+"AAPL.Adjusted":          80.81,
+"date":          15670 
+},
+{
+ "AAPL.Open":         589.55,
+"AAPL.High":         590.42,
+"AAPL.Low":          580.1,
+"price":         584.78,
+"AAPL.Volume":      133332500,
+"AAPL.Adjusted":          80.16,
+"date":          15671 
+},
+{
+ "AAPL.Open":         577.27,
+"AAPL.High":          585.8,
+"AAPL.Low":         572.26,
+"price":         582.94,
+"AAPL.Volume":      130216100,
+"AAPL.Adjusted":          79.91,
+"date":          15672 
+},
+{
+ "AAPL.Open":         590.22,
+"AAPL.High":         594.25,
+"AAPL.Low":         585.25,
+"price":         589.36,
+"AAPL.Volume":      128674700,
+"AAPL.Adjusted":          80.79,
+"date":          15673 
+},
+{
+ "AAPL.Open":         586.79,
+"AAPL.High":          588.4,
+"AAPL.Low":         582.68,
+"price":         585.28,
+"AAPL.Volume":       97829900,
+"AAPL.Adjusted":          80.23,
+"date":          15674 
+},
+{
+ "AAPL.Open":         593.65,
+"AAPL.High":         594.59,
+"AAPL.Low":          585.5,
+"price":         586.19,
+"AAPL.Volume":       91070000,
+"AAPL.Adjusted":          80.35,
+"date":          15677 
+},
+{
+ "AAPL.Open":          581.8,
+"AAPL.High":          581.8,
+"AAPL.Low":         572.13,
+"price":         575.85,
+"AAPL.Volume":      139267100,
+"AAPL.Adjusted":          78.94,
+"date":          15678 
+},
+{
+ "AAPL.Open":         568.91,
+"AAPL.High":         569.25,
+"AAPL.Low":         538.77,
+"price":         538.79,
+"AAPL.Volume":      261159500,
+"AAPL.Adjusted":          73.86,
+"date":          15679 
+},
+{
+ "AAPL.Open":         528.94,
+"AAPL.High":         553.31,
+"AAPL.Low":         518.63,
+"price":         547.24,
+"AAPL.Volume":      294303100,
+"AAPL.Adjusted":          75.01,
+"date":          15680 
+},
+{
+ "AAPL.Open":          553.4,
+"AAPL.High":          555.2,
+"AAPL.Low":            530,
+"price":         533.25,
+"AAPL.Volume":      196760200,
+"AAPL.Adjusted":           73.1,
+"date":          15681 
+},
+{
+ "AAPL.Open":            525,
+"AAPL.High":         538.51,
+"AAPL.Low":         521.58,
+"price":         529.82,
+"AAPL.Volume":      157621100,
+"AAPL.Adjusted":          72.63,
+"date":          15684 
+},
+{
+ "AAPL.Open":         539.77,
+"AAPL.High":         549.56,
+"AAPL.Low":         537.37,
+"price":         541.39,
+"AAPL.Volume":      148086400,
+"AAPL.Adjusted":          74.21,
+"date":          15685 
+},
+{
+ "AAPL.Open":         547.77,
+"AAPL.High":            548,
+"AAPL.Low":         536.27,
+"price":            539,
+"AAPL.Volume":      121786000,
+"AAPL.Adjusted":          73.88,
+"date":          15686 
+},
+{
+ "AAPL.Open":         531.15,
+"AAPL.High":         537.64,
+"AAPL.Low":          525.8,
+"price":         529.69,
+"AAPL.Volume":      156314900,
+"AAPL.Adjusted":          72.61,
+"date":          15687 
+},
+{
+ "AAPL.Open":         514.75,
+"AAPL.High":         518.13,
+"AAPL.Low":         505.58,
+"price":         509.79,
+"AAPL.Volume":      252394800,
+"AAPL.Adjusted":          69.88,
+"date":          15688 
+},
+{
+ "AAPL.Open":         508.93,
+"AAPL.High":            520,
+"AAPL.Low":         501.23,
+"price":         518.83,
+"AAPL.Volume":      189401800,
+"AAPL.Adjusted":          71.12,
+"date":          15691 
+},
+{
+ "AAPL.Open":            525,
+"AAPL.High":          534.9,
+"AAPL.Low":         520.25,
+"price":          533.9,
+"AAPL.Volume":      156421300,
+"AAPL.Adjusted":          73.18,
+"date":          15692 
+},
+{
+ "AAPL.Open":         531.47,
+"AAPL.High":          533.7,
+"AAPL.Low":          525.5,
+"price":         526.31,
+"AAPL.Volume":      112342300,
+"AAPL.Adjusted":          72.14,
+"date":          15693 
+},
+{
+ "AAPL.Open":            530,
+"AAPL.High":          530.2,
+"AAPL.Low":         518.88,
+"price":         521.73,
+"AAPL.Volume":      120422400,
+"AAPL.Adjusted":          71.52,
+"date":          15694 
+},
+{
+ "AAPL.Open":         512.47,
+"AAPL.High":         519.67,
+"AAPL.Low":         510.24,
+"price":         519.33,
+"AAPL.Volume":      149067100,
+"AAPL.Adjusted":          71.19,
+"date":          15695 
+},
+{
+ "AAPL.Open":         520.35,
+"AAPL.High":         524.25,
+"AAPL.Low":         518.71,
+"price":         520.17,
+"AAPL.Volume":       43938300,
+"AAPL.Adjusted":           71.3,
+"date":          15698 
+},
+{
+ "AAPL.Open":            519,
+"AAPL.High":         519.46,
+"AAPL.Low":         511.12,
+"price":            513,
+"AAPL.Volume":       75609100,
+"AAPL.Adjusted":          70.32,
+"date":          15700 
+},
+{
+ "AAPL.Open":         513.54,
+"AAPL.High":         516.25,
+"AAPL.Low":         504.66,
+"price":         515.06,
+"AAPL.Volume":      113780100,
+"AAPL.Adjusted":           70.6,
+"date":          15701 
+},
+{
+ "AAPL.Open":         510.29,
+"AAPL.High":         514.48,
+"AAPL.Low":         508.12,
+"price":         509.59,
+"AAPL.Volume":       88569600,
+"AAPL.Adjusted":          69.85,
+"date":          15702 
+},
+{
+ "AAPL.Open":         510.53,
+"AAPL.High":          535.4,
+"AAPL.Low":            509,
+"price":         532.17,
+"AAPL.Volume":      164873100,
+"AAPL.Adjusted":          72.95,
+"date":          15705 
+},
+{
+ "AAPL.Open":         553.82,
+"AAPL.High":            555,
+"AAPL.Low":         541.63,
+"price":         549.03,
+"AAPL.Volume":      140129500,
+"AAPL.Adjusted":          75.26,
+"date":          15707 
+},
+{
+ "AAPL.Open":         547.88,
+"AAPL.High":         549.67,
+"AAPL.Low":            541,
+"price":          542.1,
+"AAPL.Volume":       88241300,
+"AAPL.Adjusted":          74.31,
+"date":          15708 
+},
+{
+ "AAPL.Open":         536.97,
+"AAPL.High":         538.63,
+"AAPL.Low":         525.83,
+"price":            527,
+"AAPL.Volume":      148583400,
+"AAPL.Adjusted":          72.24,
+"date":          15709 
+},
+{
+ "AAPL.Open":            522,
+"AAPL.High":          529.3,
+"AAPL.Low":          515.2,
+"price":          523.9,
+"AAPL.Volume":      121039100,
+"AAPL.Adjusted":          71.81,
+"date":          15712 
+},
+{
+ "AAPL.Open":         529.21,
+"AAPL.High":         531.89,
+"AAPL.Low":         521.25,
+"price":         525.31,
+"AAPL.Volume":      114676800,
+"AAPL.Adjusted":          72.01,
+"date":          15713 
+},
+{
+ "AAPL.Open":          522.5,
+"AAPL.High":         525.01,
+"AAPL.Low":         515.99,
+"price":          517.1,
+"AAPL.Volume":      101901100,
+"AAPL.Adjusted":          70.88,
+"date":          15714 
+},
+{
+ "AAPL.Open":         528.55,
+"AAPL.High":         528.72,
+"AAPL.Low":         515.52,
+"price":         523.51,
+"AAPL.Volume":      150286500,
+"AAPL.Adjusted":          71.76,
+"date":          15715 
+},
+{
+ "AAPL.Open":            521,
+"AAPL.High":         525.32,
+"AAPL.Low":         519.02,
+"price":          520.3,
+"AAPL.Volume":       87626700,
+"AAPL.Adjusted":          71.32,
+"date":          15716 
+},
+{
+ "AAPL.Open":         502.68,
+"AAPL.High":          507.5,
+"AAPL.Low":         498.51,
+"price":         501.75,
+"AAPL.Volume":      183551900,
+"AAPL.Adjusted":          68.78,
+"date":          15719 
+},
+{
+ "AAPL.Open":          498.3,
+"AAPL.High":         498.99,
+"AAPL.Low":         483.38,
+"price":         485.92,
+"AAPL.Volume":      219193100,
+"AAPL.Adjusted":          66.61,
+"date":          15720 
+},
+{
+ "AAPL.Open":         494.64,
+"AAPL.High":         509.44,
+"AAPL.Low":          492.5,
+"price":         506.09,
+"AAPL.Volume":      172701200,
+"AAPL.Adjusted":          69.37,
+"date":          15721 
+},
+{
+ "AAPL.Open":         510.31,
+"AAPL.High":         510.75,
+"AAPL.Low":         502.03,
+"price":         502.68,
+"AAPL.Volume":      113419600,
+"AAPL.Adjusted":          68.91,
+"date":          15722 
+},
+{
+ "AAPL.Open":         498.52,
+"AAPL.High":         502.22,
+"AAPL.Low":          496.4,
+"price":            500,
+"AAPL.Volume":      118230700,
+"AAPL.Adjusted":          68.54,
+"date":          15723 
+},
+{
+ "AAPL.Open":         504.56,
+"AAPL.High":         507.88,
+"AAPL.Low":         496.63,
+"price":         504.77,
+"AAPL.Volume":      115386600,
+"AAPL.Adjusted":          69.19,
+"date":          15727 
+},
+{
+ "AAPL.Open":         508.81,
+"AAPL.High":         514.99,
+"AAPL.Low":         504.77,
+"price":         514.01,
+"AAPL.Volume":      215377400,
+"AAPL.Adjusted":          70.46,
+"date":          15728 
+},
+{
+ "AAPL.Open":            460,
+"AAPL.High":         465.73,
+"AAPL.Low":         450.25,
+"price":          450.5,
+"AAPL.Volume":      365213100,
+"AAPL.Adjusted":          61.75,
+"date":          15729 
+},
+{
+ "AAPL.Open":         451.69,
+"AAPL.High":         456.23,
+"AAPL.Low":            435,
+"price":         439.88,
+"AAPL.Volume":      302006600,
+"AAPL.Adjusted":           60.3,
+"date":          15730 
+},
+{
+ "AAPL.Open":         437.83,
+"AAPL.High":         453.21,
+"AAPL.Low":         435.86,
+"price":         449.83,
+"AAPL.Volume":      196379400,
+"AAPL.Adjusted":          61.66,
+"date":          15733 
+},
+{
+ "AAPL.Open":          458.5,
+"AAPL.High":          460.2,
+"AAPL.Low":         452.12,
+"price":         458.27,
+"AAPL.Volume":      142789500,
+"AAPL.Adjusted":          62.82,
+"date":          15734 
+},
+{
+ "AAPL.Open":            457,
+"AAPL.High":          462.6,
+"AAPL.Low":          454.5,
+"price":         456.83,
+"AAPL.Volume":      104288800,
+"AAPL.Adjusted":          62.62,
+"date":          15735 
+},
+{
+ "AAPL.Open":         456.98,
+"AAPL.High":         459.28,
+"AAPL.Low":         454.98,
+"price":         455.49,
+"AAPL.Volume":       79833600,
+"AAPL.Adjusted":          62.44,
+"date":          15736 
+},
+{
+ "AAPL.Open":         459.11,
+"AAPL.High":         459.48,
+"AAPL.Low":         448.35,
+"price":         453.62,
+"AAPL.Volume":      134871100,
+"AAPL.Adjusted":          62.18,
+"date":          15737 
+},
+{
+ "AAPL.Open":         453.91,
+"AAPL.High":         455.94,
+"AAPL.Low":            442,
+"price":         442.32,
+"AAPL.Volume":      119279300,
+"AAPL.Adjusted":          60.63,
+"date":          15740 
+},
+{
+ "AAPL.Open":         444.05,
+"AAPL.High":         459.74,
+"AAPL.Low":         442.22,
+"price":         457.84,
+"AAPL.Volume":      143336900,
+"AAPL.Adjusted":          62.76,
+"date":          15741 
+},
+{
+ "AAPL.Open":         456.47,
+"AAPL.High":          466.5,
+"AAPL.Low":         452.58,
+"price":         457.35,
+"AAPL.Volume":      148426600,
+"AAPL.Adjusted":          62.69,
+"date":          15742 
+},
+{
+ "AAPL.Open":         463.25,
+"AAPL.High":            470,
+"AAPL.Low":         454.12,
+"price":         468.22,
+"AAPL.Volume":      176145200,
+"AAPL.Adjusted":          64.56,
+"date":          15743 
+},
+{
+ "AAPL.Open":            474,
+"AAPL.High":         478.81,
+"AAPL.Low":         468.25,
+"price":         474.98,
+"AAPL.Volume":      158289600,
+"AAPL.Adjusted":          65.49,
+"date":          15744 
+},
+{
+ "AAPL.Open":          476.5,
+"AAPL.High":         484.94,
+"AAPL.Low":         473.25,
+"price":         479.93,
+"AAPL.Volume":      129372600,
+"AAPL.Adjusted":          66.17,
+"date":          15747 
+},
+{
+ "AAPL.Open":         479.51,
+"AAPL.High":         482.38,
+"AAPL.Low":         467.74,
+"price":          467.9,
+"AAPL.Volume":      152263300,
+"AAPL.Adjusted":          64.51,
+"date":          15748 
+},
+{
+ "AAPL.Open":         467.21,
+"AAPL.High":         473.64,
+"AAPL.Low":         463.22,
+"price":         467.01,
+"AAPL.Volume":      118801900,
+"AAPL.Adjusted":          64.39,
+"date":          15749 
+},
+{
+ "AAPL.Open":         464.52,
+"AAPL.High":         471.64,
+"AAPL.Low":         464.02,
+"price":         466.59,
+"AAPL.Volume":       88818800,
+"AAPL.Adjusted":          64.33,
+"date":          15750 
+},
+{
+ "AAPL.Open":         468.85,
+"AAPL.High":         470.16,
+"AAPL.Low":         459.92,
+"price":         460.16,
+"AAPL.Volume":       97936300,
+"AAPL.Adjusted":          63.44,
+"date":          15751 
+},
+{
+ "AAPL.Open":          461.1,
+"AAPL.High":         462.73,
+"AAPL.Low":         453.85,
+"price":         459.99,
+"AAPL.Volume":      108945900,
+"AAPL.Adjusted":          63.42,
+"date":          15755 
+},
+{
+ "AAPL.Open":         457.69,
+"AAPL.High":         457.69,
+"AAPL.Low":          448.8,
+"price":         448.85,
+"AAPL.Volume":      119075600,
+"AAPL.Adjusted":          61.89,
+"date":          15756 
+},
+{
+ "AAPL.Open":            446,
+"AAPL.High":         449.17,
+"AAPL.Low":         442.82,
+"price":         446.06,
+"AAPL.Volume":      111795600,
+"AAPL.Adjusted":           61.5,
+"date":          15757 
+},
+{
+ "AAPL.Open":         449.25,
+"AAPL.High":          451.6,
+"AAPL.Low":          446.6,
+"price":         450.81,
+"AAPL.Volume":       82663700,
+"AAPL.Adjusted":          62.16,
+"date":          15758 
+},
+{
+ "AAPL.Open":         453.85,
+"AAPL.High":         455.12,
+"AAPL.Low":         442.57,
+"price":          442.8,
+"AAPL.Volume":       93144800,
+"AAPL.Adjusted":          61.05,
+"date":          15761 
+},
+{
+ "AAPL.Open":         443.82,
+"AAPL.High":         451.54,
+"AAPL.Low":         437.66,
+"price":         448.97,
+"AAPL.Volume":      125374900,
+"AAPL.Adjusted":           61.9,
+"date":          15762 
+},
+{
+ "AAPL.Open":         448.43,
+"AAPL.High":         452.44,
+"AAPL.Low":         440.65,
+"price":         444.57,
+"AAPL.Volume":      146837600,
+"AAPL.Adjusted":           61.3,
+"date":          15763 
+},
+{
+ "AAPL.Open":         444.05,
+"AAPL.High":         447.87,
+"AAPL.Low":          441.4,
+"price":          441.4,
+"AAPL.Volume":       80628800,
+"AAPL.Adjusted":          60.86,
+"date":          15764 
+},
+{
+ "AAPL.Open":            438,
+"AAPL.High":         438.18,
+"AAPL.Low":         429.98,
+"price":         430.47,
+"AAPL.Volume":      138112100,
+"AAPL.Adjusted":          59.35,
+"date":          15765 
+},
+{
+ "AAPL.Open":          427.8,
+"AAPL.High":          428.2,
+"AAPL.Low":            419,
+"price":         420.05,
+"AAPL.Volume":      145688900,
+"AAPL.Adjusted":          57.91,
+"date":          15768 
+},
+{
+ "AAPL.Open":         421.48,
+"AAPL.High":         435.19,
+"AAPL.Low":         420.75,
+"price":         431.14,
+"AAPL.Volume":      159608400,
+"AAPL.Adjusted":          59.44,
+"date":          15769 
+},
+{
+ "AAPL.Open":         434.51,
+"AAPL.High":         435.25,
+"AAPL.Low":         424.43,
+"price":         425.66,
+"AAPL.Volume":      115062500,
+"AAPL.Adjusted":          58.69,
+"date":          15770 
+},
+{
+ "AAPL.Open":          424.5,
+"AAPL.High":         432.01,
+"AAPL.Low":         421.06,
+"price":         430.58,
+"AAPL.Volume":      117118400,
+"AAPL.Adjusted":          59.37,
+"date":          15771 
+},
+{
+ "AAPL.Open":          429.8,
+"AAPL.High":         435.43,
+"AAPL.Low":         428.61,
+"price":         431.72,
+"AAPL.Volume":       97870500,
+"AAPL.Adjusted":          59.52,
+"date":          15772 
+},
+{
+ "AAPL.Open":         429.75,
+"AAPL.High":         439.01,
+"AAPL.Low":         425.14,
+"price":         437.87,
+"AAPL.Volume":      118559000,
+"AAPL.Adjusted":          60.37,
+"date":          15775 
+},
+{
+ "AAPL.Open":          435.6,
+"AAPL.High":         438.88,
+"AAPL.Low":         427.57,
+"price":         428.43,
+"AAPL.Volume":      116477900,
+"AAPL.Adjusted":          59.07,
+"date":          15776 
+},
+{
+ "AAPL.Open":         428.45,
+"AAPL.High":          434.5,
+"AAPL.Low":         425.36,
+"price":         428.35,
+"AAPL.Volume":      101387300,
+"AAPL.Adjusted":          59.06,
+"date":          15777 
+},
+{
+ "AAPL.Open":         432.83,
+"AAPL.High":         434.64,
+"AAPL.Low":         430.45,
+"price":          432.5,
+"AAPL.Volume":       75968900,
+"AAPL.Adjusted":          59.63,
+"date":          15778 
+},
+{
+ "AAPL.Open":         437.93,
+"AAPL.High":         444.23,
+"AAPL.Low":         437.25,
+"price":         443.66,
+"AAPL.Volume":      160990200,
+"AAPL.Adjusted":          61.17,
+"date":          15779 
+},
+{
+ "AAPL.Open":         441.45,
+"AAPL.High":         457.46,
+"AAPL.Low":          441.2,
+"price":         455.72,
+"AAPL.Volume":      151549300,
+"AAPL.Adjusted":          62.83,
+"date":          15782 
+},
+{
+ "AAPL.Open":          459.5,
+"AAPL.High":         460.97,
+"AAPL.Low":          448.5,
+"price":         454.49,
+"AAPL.Volume":      131693800,
+"AAPL.Adjusted":          62.66,
+"date":          15783 
+},
+{
+ "AAPL.Open":         457.42,
+"AAPL.High":         457.63,
+"AAPL.Low":         449.59,
+"price":         452.08,
+"AAPL.Volume":       77165200,
+"AAPL.Adjusted":          62.33,
+"date":          15784 
+},
+{
+ "AAPL.Open":         450.22,
+"AAPL.High":         457.98,
+"AAPL.Low":          450.1,
+"price":         452.73,
+"AAPL.Volume":       95813900,
+"AAPL.Adjusted":          62.42,
+"date":          15785 
+},
+{
+ "AAPL.Open":         454.58,
+"AAPL.High":          462.1,
+"AAPL.Low":         453.11,
+"price":         461.91,
+"AAPL.Volume":       98776300,
+"AAPL.Adjusted":          63.69,
+"date":          15786 
+},
+{
+ "AAPL.Open":         464.69,
+"AAPL.High":         469.95,
+"AAPL.Low":         461.78,
+"price":         463.58,
+"AAPL.Volume":      125283900,
+"AAPL.Adjusted":          63.92,
+"date":          15789 
+},
+{
+ "AAPL.Open":         465.44,
+"AAPL.High":         465.84,
+"AAPL.Low":         460.53,
+"price":         461.14,
+"AAPL.Volume":       73573500,
+"AAPL.Adjusted":          63.58,
+"date":          15790 
+},
+{
+ "AAPL.Open":         456.46,
+"AAPL.High":          456.8,
+"AAPL.Low":         450.73,
+"price":         452.08,
+"AAPL.Volume":       82809300,
+"AAPL.Adjusted":          62.33,
+"date":          15791 
+},
+{
+ "AAPL.Open":         449.82,
+"AAPL.High":         451.82,
+"AAPL.Low":         441.62,
+"price":         442.66,
+"AAPL.Volume":      110709900,
+"AAPL.Adjusted":          61.03,
+"date":          15792 
+},
+{
+ "AAPL.Open":          441.9,
+"AAPL.High":          443.7,
+"AAPL.Low":         427.74,
+"price":         428.91,
+"AAPL.Volume":       97433000,
+"AAPL.Adjusted":          59.14,
+"date":          15796 
+},
+{
+ "AAPL.Open":          427.6,
+"AAPL.High":         438.14,
+"AAPL.Low":          426.4,
+"price":         429.79,
+"AAPL.Volume":      132379800,
+"AAPL.Adjusted":          59.26,
+"date":          15797 
+},
+{
+ "AAPL.Open":         431.37,
+"AAPL.High":         437.28,
+"AAPL.Low":         430.31,
+"price":         431.99,
+"AAPL.Volume":       90804000,
+"AAPL.Adjusted":          59.56,
+"date":          15798 
+},
+{
+ "AAPL.Open":         433.76,
+"AAPL.High":            435,
+"AAPL.Low":         425.25,
+"price":         427.72,
+"AAPL.Volume":       89611900,
+"AAPL.Adjusted":          58.97,
+"date":          15799 
+},
+{
+ "AAPL.Open":          424.5,
+"AAPL.High":         424.95,
+"AAPL.Low":         419.68,
+"price":          423.2,
+"AAPL.Volume":       95923800,
+"AAPL.Adjusted":          58.35,
+"date":          15800 
+},
+{
+ "AAPL.Open":         424.85,
+"AAPL.High":          427.5,
+"AAPL.Low":         422.49,
+"price":         426.21,
+"AAPL.Volume":       75207300,
+"AAPL.Adjusted":          58.76,
+"date":          15803 
+},
+{
+ "AAPL.Open":         426.36,
+"AAPL.High":          428.5,
+"AAPL.Low":         422.75,
+"price":         426.98,
+"AAPL.Volume":       76653500,
+"AAPL.Adjusted":          58.87,
+"date":          15804 
+},
+{
+ "AAPL.Open":          428.1,
+"AAPL.High":         437.06,
+"AAPL.Low":         426.01,
+"price":         435.69,
+"AAPL.Volume":       93982000,
+"AAPL.Adjusted":          60.07,
+"date":          15805 
+},
+{
+ "AAPL.Open":         433.72,
+"AAPL.High":         437.99,
+"AAPL.Low":          431.2,
+"price":         434.33,
+"AAPL.Volume":       82091100,
+"AAPL.Adjusted":          59.88,
+"date":          15806 
+},
+{
+ "AAPL.Open":         434.15,
+"AAPL.High":         434.15,
+"AAPL.Low":         429.09,
+"price":          429.8,
+"AAPL.Volume":       59653300,
+"AAPL.Adjusted":          59.26,
+"date":          15807 
+},
+{
+ "AAPL.Open":            427,
+"AAPL.High":         427.89,
+"AAPL.Low":         419.55,
+"price":         419.85,
+"AAPL.Volume":       79380000,
+"AAPL.Adjusted":          57.89,
+"date":          15810 
+},
+{
+ "AAPL.Open":         421.57,
+"AAPL.High":         426.61,
+"AAPL.Low":         420.57,
+"price":         426.24,
+"AAPL.Volume":       76442800,
+"AAPL.Adjusted":          58.77,
+"date":          15811 
+},
+{
+ "AAPL.Open":         420.27,
+"AAPL.High":          420.6,
+"AAPL.Low":         398.11,
+"price":          402.8,
+"AAPL.Volume":      236264000,
+"AAPL.Adjusted":          55.54,
+"date":          15812 
+},
+{
+ "AAPL.Open":         404.99,
+"AAPL.High":         405.79,
+"AAPL.Low":         389.74,
+"price":         392.05,
+"AAPL.Volume":      166574800,
+"AAPL.Adjusted":          54.05,
+"date":          15813 
+},
+{
+ "AAPL.Open":         387.97,
+"AAPL.High":          399.6,
+"AAPL.Low":          385.1,
+"price":         390.53,
+"AAPL.Volume":      152318600,
+"AAPL.Adjusted":          53.84,
+"date":          15814 
+},
+{
+ "AAPL.Open":         392.64,
+"AAPL.High":          402.2,
+"AAPL.Low":         391.27,
+"price":         398.67,
+"AAPL.Volume":      107480100,
+"AAPL.Adjusted":          54.97,
+"date":          15817 
+},
+{
+ "AAPL.Open":         403.99,
+"AAPL.High":         408.38,
+"AAPL.Low":         398.81,
+"price":         406.13,
+"AAPL.Volume":      166059600,
+"AAPL.Adjusted":             56,
+"date":          15818 
+},
+{
+ "AAPL.Open":         393.54,
+"AAPL.High":         415.25,
+"AAPL.Low":          392.5,
+"price":         405.46,
+"AAPL.Volume":      242412800,
+"AAPL.Adjusted":           55.9,
+"date":          15819 
+},
+{
+ "AAPL.Open":         411.23,
+"AAPL.High":         413.94,
+"AAPL.Low":            407,
+"price":         408.38,
+"AAPL.Volume":       96209400,
+"AAPL.Adjusted":          56.31,
+"date":          15820 
+},
+{
+ "AAPL.Open":         409.81,
+"AAPL.High":         418.77,
+"AAPL.Low":         408.25,
+"price":          417.2,
+"AAPL.Volume":      191024400,
+"AAPL.Adjusted":          57.52,
+"date":          15821 
+},
+{
+ "AAPL.Open":         420.45,
+"AAPL.High":         433.62,
+"AAPL.Low":            420,
+"price":         430.12,
+"AAPL.Volume":      160081600,
+"AAPL.Adjusted":           59.3,
+"date":          15824 
+},
+{
+ "AAPL.Open":          435.1,
+"AAPL.High":         445.25,
+"AAPL.Low":         432.07,
+"price":         442.78,
+"AAPL.Volume":      172884600,
+"AAPL.Adjusted":          61.05,
+"date":          15825 
+},
+{
+ "AAPL.Open":         444.46,
+"AAPL.High":         444.93,
+"AAPL.Low":         434.39,
+"price":         439.29,
+"AAPL.Volume":      126727300,
+"AAPL.Adjusted":          60.57,
+"date":          15826 
+},
+{
+ "AAPL.Open":         441.78,
+"AAPL.High":         448.59,
+"AAPL.Low":         440.63,
+"price":         445.52,
+"AAPL.Volume":      105457100,
+"AAPL.Adjusted":          61.43,
+"date":          15827 
+},
+{
+ "AAPL.Open":         451.31,
+"AAPL.High":         453.23,
+"AAPL.Low":         449.15,
+"price":         449.98,
+"AAPL.Volume":       90325200,
+"AAPL.Adjusted":          62.04,
+"date":          15828 
+},
+{
+ "AAPL.Open":         455.71,
+"AAPL.High":          462.2,
+"AAPL.Low":         454.31,
+"price":         460.71,
+"AAPL.Volume":      124160400,
+"AAPL.Adjusted":          63.52,
+"date":          15831 
+},
+{
+ "AAPL.Open":         464.97,
+"AAPL.High":         465.75,
+"AAPL.Low":          453.7,
+"price":         458.66,
+"AAPL.Volume":      120938300,
+"AAPL.Adjusted":          63.24,
+"date":          15832 
+},
+{
+ "AAPL.Open":         459.04,
+"AAPL.High":         465.37,
+"AAPL.Low":         455.81,
+"price":         463.84,
+"AAPL.Volume":      118149500,
+"AAPL.Adjusted":          63.95,
+"date":          15833 
+},
+{
+ "AAPL.Open":         459.81,
+"AAPL.High":            463,
+"AAPL.Low":         455.58,
+"price":         456.77,
+"AAPL.Volume":       99621900,
+"AAPL.Adjusted":          63.39,
+"date":          15834 
+},
+{
+ "AAPL.Open":         457.97,
+"AAPL.High":         459.71,
+"AAPL.Low":         450.48,
+"price":         452.97,
+"AAPL.Volume":       83713000,
+"AAPL.Adjusted":          62.87,
+"date":          15835 
+},
+{
+ "AAPL.Open":         451.51,
+"AAPL.High":          457.9,
+"AAPL.Low":          451.5,
+"price":         454.74,
+"AAPL.Volume":       79237200,
+"AAPL.Adjusted":          63.11,
+"date":          15838 
+},
+{
+ "AAPL.Open":         453.85,
+"AAPL.High":          455.2,
+"AAPL.Low":         442.15,
+"price":         443.86,
+"AAPL.Volume":      111779500,
+"AAPL.Adjusted":           61.6,
+"date":          15839 
+},
+{
+ "AAPL.Open":         439.16,
+"AAPL.High":            441,
+"AAPL.Low":         422.36,
+"price":         428.85,
+"AAPL.Volume":      185403400,
+"AAPL.Adjusted":          59.52,
+"date":          15840 
+},
+{
+ "AAPL.Open":         423.24,
+"AAPL.High":         437.85,
+"AAPL.Low":          418.9,
+"price":         434.58,
+"AAPL.Volume":      150801000,
+"AAPL.Adjusted":          60.31,
+"date":          15841 
+},
+{
+ "AAPL.Open":         439.05,
+"AAPL.High":         440.09,
+"AAPL.Low":         431.01,
+"price":         433.26,
+"AAPL.Volume":      106976100,
+"AAPL.Adjusted":          60.13,
+"date":          15842 
+},
+{
+ "AAPL.Open":         431.91,
+"AAPL.High":          445.8,
+"AAPL.Low":          430.1,
+"price":         442.93,
+"AAPL.Volume":      112894600,
+"AAPL.Adjusted":          61.47,
+"date":          15845 
+},
+{
+ "AAPL.Open":         438.15,
+"AAPL.High":         445.48,
+"AAPL.Low":          434.2,
+"price":         439.66,
+"AAPL.Volume":      114005500,
+"AAPL.Adjusted":          61.02,
+"date":          15846 
+},
+{
+ "AAPL.Open":         444.05,
+"AAPL.High":         448.35,
+"AAPL.Low":         438.22,
+"price":         441.35,
+"AAPL.Volume":      110759600,
+"AAPL.Adjusted":          61.25,
+"date":          15847 
+},
+{
+ "AAPL.Open":         435.95,
+"AAPL.High":         446.16,
+"AAPL.Low":         435.79,
+"price":         442.14,
+"AAPL.Volume":       88255300,
+"AAPL.Adjusted":          61.36,
+"date":          15848 
+},
+{
+ "AAPL.Open":         440.85,
+"AAPL.High":         445.66,
+"AAPL.Low":         440.36,
+"price":         445.15,
+"AAPL.Volume":       69041700,
+"AAPL.Adjusted":          61.78,
+"date":          15849 
+},
+{
+ "AAPL.Open":          449.9,
+"AAPL.High":         451.11,
+"AAPL.Low":         440.85,
+"price":         441.44,
+"AAPL.Volume":       96536300,
+"AAPL.Adjusted":          61.27,
+"date":          15853 
+},
+{
+ "AAPL.Open":            440,
+"AAPL.High":          447.5,
+"AAPL.Low":          439.4,
+"price":         444.95,
+"AAPL.Volume":       82644100,
+"AAPL.Adjusted":          61.75,
+"date":          15854 
+},
+{
+ "AAPL.Open":         445.65,
+"AAPL.High":          454.5,
+"AAPL.Low":         444.51,
+"price":         451.58,
+"AAPL.Volume":       88379900,
+"AAPL.Adjusted":          62.67,
+"date":          15855 
+},
+{
+ "AAPL.Open":          452.5,
+"AAPL.High":          457.1,
+"AAPL.Low":          449.5,
+"price":         449.73,
+"AAPL.Volume":       96075700,
+"AAPL.Adjusted":          62.42,
+"date":          15856 
+},
+{
+ "AAPL.Open":         450.73,
+"AAPL.High":         452.36,
+"AAPL.Low":         442.48,
+"price":         450.72,
+"AAPL.Volume":       93088100,
+"AAPL.Adjusted":          62.55,
+"date":          15859 
+},
+{
+ "AAPL.Open":         453.22,
+"AAPL.High":         454.43,
+"AAPL.Low":         447.39,
+"price":         449.31,
+"AAPL.Volume":       73182200,
+"AAPL.Adjusted":          62.36,
+"date":          15860 
+},
+{
+ "AAPL.Open":         445.65,
+"AAPL.High":         450.72,
+"AAPL.Low":         443.71,
+"price":         445.11,
+"AAPL.Volume":       72647400,
+"AAPL.Adjusted":          61.78,
+"date":          15861 
+},
+{
+ "AAPL.Open":         445.47,
+"AAPL.High":            447,
+"AAPL.Low":         434.05,
+"price":         438.46,
+"AAPL.Volume":      104233500,
+"AAPL.Adjusted":          60.85,
+"date":          15862 
+},
+{
+ "AAPL.Open":          436.5,
+"AAPL.High":         443.24,
+"AAPL.Low":         432.77,
+"price":         441.81,
+"AAPL.Volume":      101133900,
+"AAPL.Adjusted":          61.32,
+"date":          15863 
+},
+{
+ "AAPL.Open":         444.73,
+"AAPL.High":         449.08,
+"AAPL.Low":          436.8,
+"price":         438.89,
+"AAPL.Volume":      112538300,
+"AAPL.Adjusted":          60.91,
+"date":          15866 
+},
+{
+ "AAPL.Open":         435.74,
+"AAPL.High":         442.76,
+"AAPL.Low":         433.32,
+"price":          437.6,
+"AAPL.Volume":       71528100,
+"AAPL.Adjusted":          60.73,
+"date":          15867 
+},
+{
+ "AAPL.Open":          439.5,
+"AAPL.High":         441.25,
+"AAPL.Low":          431.5,
+"price":         432.19,
+"AAPL.Volume":       66306800,
+"AAPL.Adjusted":          59.98,
+"date":          15868 
+},
+{
+ "AAPL.Open":          432.5,
+"AAPL.High":         437.14,
+"AAPL.Low":         428.75,
+"price":         435.96,
+"AAPL.Volume":       71458100,
+"AAPL.Adjusted":          60.51,
+"date":          15869 
+},
+{
+ "AAPL.Open":          435.4,
+"AAPL.High":         436.29,
+"AAPL.Low":          428.5,
+"price":         430.05,
+"AAPL.Volume":       67966500,
+"AAPL.Adjusted":          59.69,
+"date":          15870 
+},
+{
+ "AAPL.Open":         431.44,
+"AAPL.High":          435.7,
+"AAPL.Low":         430.36,
+"price":            432,
+"AAPL.Volume":       64853600,
+"AAPL.Adjusted":          59.96,
+"date":          15873 
+},
+{
+ "AAPL.Open":         431.56,
+"AAPL.High":          434.9,
+"AAPL.Low":         430.21,
+"price":         431.77,
+"AAPL.Volume":       48756400,
+"AAPL.Adjusted":          59.92,
+"date":          15874 
+},
+{
+ "AAPL.Open":          431.4,
+"AAPL.High":         431.66,
+"AAPL.Low":            423,
+"price":            423,
+"AAPL.Volume":       77735000,
+"AAPL.Adjusted":          58.71,
+"date":          15875 
+},
+{
+ "AAPL.Open":          419.3,
+"AAPL.High":         425.98,
+"AAPL.Low":         415.17,
+"price":         416.84,
+"AAPL.Volume":       89327700,
+"AAPL.Adjusted":          57.85,
+"date":          15876 
+},
+{
+ "AAPL.Open":         418.49,
+"AAPL.High":            420,
+"AAPL.Low":          408.1,
+"price":          413.5,
+"AAPL.Volume":      120279600,
+"AAPL.Adjusted":          57.39,
+"date":          15877 
+},
+{
+ "AAPL.Open":          407.4,
+"AAPL.High":         408.66,
+"AAPL.Low":         398.05,
+"price":         402.54,
+"AAPL.Volume":      120186500,
+"AAPL.Adjusted":          55.87,
+"date":          15880 
+},
+{
+ "AAPL.Open":          405.7,
+"AAPL.High":         407.79,
+"AAPL.Low":         398.83,
+"price":         402.63,
+"AAPL.Volume":       78540700,
+"AAPL.Adjusted":          55.88,
+"date":          15881 
+},
+{
+ "AAPL.Open":          403.9,
+"AAPL.High":         404.79,
+"AAPL.Low":         395.66,
+"price":         398.07,
+"AAPL.Volume":       91931000,
+"AAPL.Adjusted":          55.25,
+"date":          15882 
+},
+{
+ "AAPL.Open":         399.25,
+"AAPL.High":         401.39,
+"AAPL.Low":         393.54,
+"price":         393.78,
+"AAPL.Volume":       84311500,
+"AAPL.Adjusted":          54.65,
+"date":          15883 
+},
+{
+ "AAPL.Open":         391.36,
+"AAPL.High":         400.27,
+"AAPL.Low":         388.87,
+"price":         396.53,
+"AAPL.Volume":      144629100,
+"AAPL.Adjusted":          55.03,
+"date":          15884 
+},
+{
+ "AAPL.Open":         402.69,
+"AAPL.High":         412.27,
+"AAPL.Low":         401.22,
+"price":         409.22,
+"AAPL.Volume":       97763400,
+"AAPL.Adjusted":          56.79,
+"date":          15887 
+},
+{
+ "AAPL.Open":         409.96,
+"AAPL.High":         421.63,
+"AAPL.Low":         409.47,
+"price":         418.49,
+"AAPL.Volume":      117466300,
+"AAPL.Adjusted":          58.08,
+"date":          15888 
+},
+{
+ "AAPL.Open":         420.86,
+"AAPL.High":         422.98,
+"AAPL.Low":         417.45,
+"price":          420.8,
+"AAPL.Volume":       60232200,
+"AAPL.Adjusted":           58.4,
+"date":          15889 
+},
+{
+ "AAPL.Open":         420.39,
+"AAPL.High":         423.29,
+"AAPL.Low":         415.35,
+"price":         417.42,
+"AAPL.Volume":       68506200,
+"AAPL.Adjusted":          57.93,
+"date":          15891 
+},
+{
+ "AAPL.Open":         420.11,
+"AAPL.High":            421,
+"AAPL.Low":         410.65,
+"price":         415.05,
+"AAPL.Volume":       74534600,
+"AAPL.Adjusted":           57.6,
+"date":          15894 
+},
+{
+ "AAPL.Open":          413.6,
+"AAPL.High":          423.5,
+"AAPL.Low":         410.38,
+"price":         422.35,
+"AAPL.Volume":       88146100,
+"AAPL.Adjusted":          58.62,
+"date":          15895 
+},
+{
+ "AAPL.Open":          419.6,
+"AAPL.High":          424.8,
+"AAPL.Low":         418.25,
+"price":         420.73,
+"AAPL.Volume":       70351400,
+"AAPL.Adjusted":          58.39,
+"date":          15896 
+},
+{
+ "AAPL.Open":         422.95,
+"AAPL.High":         428.25,
+"AAPL.Low":         421.17,
+"price":         427.29,
+"AAPL.Volume":       81573100,
+"AAPL.Adjusted":           59.3,
+"date":          15897 
+},
+{
+ "AAPL.Open":         427.65,
+"AAPL.High":         429.79,
+"AAPL.Low":         423.41,
+"price":         426.51,
+"AAPL.Volume":       69890800,
+"AAPL.Adjusted":          59.19,
+"date":          15898 
+},
+{
+ "AAPL.Open":         425.01,
+"AAPL.High":         431.46,
+"AAPL.Low":          424.8,
+"price":         427.44,
+"AAPL.Volume":       60479300,
+"AAPL.Adjusted":          59.32,
+"date":          15901 
+},
+{
+ "AAPL.Open":         426.52,
+"AAPL.High":         430.71,
+"AAPL.Low":         424.17,
+"price":          430.2,
+"AAPL.Volume":       54134500,
+"AAPL.Adjusted":          59.71,
+"date":          15902 
+},
+{
+ "AAPL.Open":          429.7,
+"AAPL.High":         432.22,
+"AAPL.Low":         428.22,
+"price":         430.31,
+"AAPL.Volume":       49747600,
+"AAPL.Adjusted":          59.72,
+"date":          15903 
+},
+{
+ "AAPL.Open":         433.38,
+"AAPL.High":         434.87,
+"AAPL.Low":         430.61,
+"price":         431.76,
+"AAPL.Volume":       54719700,
+"AAPL.Adjusted":          59.92,
+"date":          15904 
+},
+{
+ "AAPL.Open":          433.1,
+"AAPL.High":         433.98,
+"AAPL.Low":         424.35,
+"price":         424.95,
+"AAPL.Volume":       67180400,
+"AAPL.Adjusted":          58.98,
+"date":          15905 
+},
+{
+ "AAPL.Open":         429.46,
+"AAPL.High":         429.75,
+"AAPL.Low":         425.47,
+"price":         426.31,
+"AAPL.Volume":       51949100,
+"AAPL.Adjusted":          59.17,
+"date":          15908 
+},
+{
+ "AAPL.Open":            426,
+"AAPL.High":         426.96,
+"AAPL.Low":         418.71,
+"price":         418.99,
+"AAPL.Volume":       92348900,
+"AAPL.Adjusted":          58.15,
+"date":          15909 
+},
+{
+ "AAPL.Open":         438.93,
+"AAPL.High":         444.59,
+"AAPL.Low":         435.26,
+"price":         440.51,
+"AAPL.Volume":      147984200,
+"AAPL.Adjusted":          61.14,
+"date":          15910 
+},
+{
+ "AAPL.Open":          440.7,
+"AAPL.High":          441.4,
+"AAPL.Low":         435.81,
+"price":          438.5,
+"AAPL.Volume":       57373400,
+"AAPL.Adjusted":          60.86,
+"date":          15911 
+},
+{
+ "AAPL.Open":          435.3,
+"AAPL.High":         441.04,
+"AAPL.Low":         434.34,
+"price":         440.99,
+"AAPL.Volume":       50038100,
+"AAPL.Adjusted":           61.2,
+"date":          15912 
+},
+{
+ "AAPL.Open":          440.8,
+"AAPL.High":         449.99,
+"AAPL.Low":          440.2,
+"price":         447.79,
+"AAPL.Volume":       62014400,
+"AAPL.Adjusted":          62.15,
+"date":          15915 
+},
+{
+ "AAPL.Open":         449.96,
+"AAPL.High":         457.15,
+"AAPL.Low":         449.23,
+"price":         453.32,
+"AAPL.Volume":       77355600,
+"AAPL.Adjusted":          62.92,
+"date":          15916 
+},
+{
+ "AAPL.Open":         454.99,
+"AAPL.High":         457.34,
+"AAPL.Low":         449.43,
+"price":         452.53,
+"AAPL.Volume":       80739400,
+"AAPL.Adjusted":          62.81,
+"date":          15917 
+},
+{
+ "AAPL.Open":         455.75,
+"AAPL.High":          456.8,
+"AAPL.Low":         453.26,
+"price":         456.68,
+"AAPL.Volume":       51562700,
+"AAPL.Adjusted":          63.38,
+"date":          15918 
+},
+{
+ "AAPL.Open":         458.01,
+"AAPL.High":         462.85,
+"AAPL.Low":         456.66,
+"price":         462.54,
+"AAPL.Volume":       68695900,
+"AAPL.Adjusted":          64.19,
+"date":          15919 
+},
+{
+ "AAPL.Open":         464.69,
+"AAPL.High":         470.67,
+"AAPL.Low":         462.15,
+"price":         469.45,
+"AAPL.Volume":       79713900,
+"AAPL.Adjusted":          65.15,
+"date":          15922 
+},
+{
+ "AAPL.Open":         468.02,
+"AAPL.High":         471.89,
+"AAPL.Low":         462.17,
+"price":         465.25,
+"AAPL.Volume":       83714400,
+"AAPL.Adjusted":          64.57,
+"date":          15923 
+},
+{
+ "AAPL.Open":          463.8,
+"AAPL.High":            467,
+"AAPL.Low":         461.77,
+"price":         464.98,
+"AAPL.Volume":       74714500,
+"AAPL.Adjusted":          64.53,
+"date":          15924 
+},
+{
+ "AAPL.Open":         463.86,
+"AAPL.High":          464.1,
+"AAPL.Low":         457.95,
+"price":         461.01,
+"AAPL.Volume":       63944300,
+"AAPL.Adjusted":           64.4,
+"date":          15925 
+},
+{
+ "AAPL.Open":         458.64,
+"AAPL.High":         460.46,
+"AAPL.Low":         453.65,
+"price":         454.45,
+"AAPL.Volume":       66716300,
+"AAPL.Adjusted":          63.49,
+"date":          15926 
+},
+{
+ "AAPL.Open":         456.86,
+"AAPL.High":         468.65,
+"AAPL.Low":         456.63,
+"price":         467.36,
+"AAPL.Volume":       91108500,
+"AAPL.Adjusted":          65.29,
+"date":          15929 
+},
+{
+ "AAPL.Open":         470.94,
+"AAPL.High":         494.66,
+"AAPL.Low":         468.05,
+"price":         489.57,
+"AAPL.Volume":      220485300,
+"AAPL.Adjusted":          68.39,
+"date":          15930 
+},
+{
+ "AAPL.Open":         497.88,
+"AAPL.High":         504.25,
+"AAPL.Low":          493.4,
+"price":          498.5,
+"AAPL.Volume":      189093100,
+"AAPL.Adjusted":          69.64,
+"date":          15931 
+},
+{
+ "AAPL.Open":         496.42,
+"AAPL.High":          502.4,
+"AAPL.Low":         489.08,
+"price":         497.91,
+"AAPL.Volume":      122573500,
+"AAPL.Adjusted":          69.56,
+"date":          15932 
+},
+{
+ "AAPL.Open":         500.15,
+"AAPL.High":         502.94,
+"AAPL.Low":         498.86,
+"price":         502.33,
+"AAPL.Volume":       90576500,
+"AAPL.Adjusted":          70.18,
+"date":          15933 
+},
+{
+ "AAPL.Open":         504.34,
+"AAPL.High":         513.74,
+"AAPL.Low":            504,
+"price":         507.74,
+"AAPL.Volume":      127629600,
+"AAPL.Adjusted":          70.93,
+"date":          15936 
+},
+{
+ "AAPL.Open":         509.71,
+"AAPL.High":         510.57,
+"AAPL.Low":         500.82,
+"price":         501.07,
+"AAPL.Volume":       89672100,
+"AAPL.Adjusted":             70,
+"date":          15937 
+},
+{
+ "AAPL.Open":         503.59,
+"AAPL.High":         507.15,
+"AAPL.Low":          501.2,
+"price":         502.36,
+"AAPL.Volume":       83969900,
+"AAPL.Adjusted":          70.18,
+"date":          15938 
+},
+{
+ "AAPL.Open":         504.98,
+"AAPL.High":         505.59,
+"AAPL.Low":          498.2,
+"price":         502.96,
+"AAPL.Volume":       61051900,
+"AAPL.Adjusted":          70.27,
+"date":          15939 
+},
+{
+ "AAPL.Open":         503.27,
+"AAPL.High":         503.35,
+"AAPL.Low":         499.35,
+"price":         501.02,
+"AAPL.Volume":       55682900,
+"AAPL.Adjusted":          69.99,
+"date":          15940 
+},
+{
+ "AAPL.Open":         500.75,
+"AAPL.High":          510.2,
+"AAPL.Low":          500.5,
+"price":         502.97,
+"AAPL.Volume":       82741400,
+"AAPL.Adjusted":          70.27,
+"date":          15943 
+},
+{
+ "AAPL.Open":            498,
+"AAPL.High":         502.51,
+"AAPL.Low":          486.3,
+"price":         488.59,
+"AAPL.Volume":      106047200,
+"AAPL.Adjusted":          68.26,
+"date":          15944 
+},
+{
+ "AAPL.Open":            486,
+"AAPL.High":          495.8,
+"AAPL.Low":            486,
+"price":          490.9,
+"AAPL.Volume":       76902000,
+"AAPL.Adjusted":          68.58,
+"date":          15945 
+},
+{
+ "AAPL.Open":         491.65,
+"AAPL.High":          496.5,
+"AAPL.Low":         491.13,
+"price":          491.7,
+"AAPL.Volume":       59914400,
+"AAPL.Adjusted":          68.69,
+"date":          15946 
+},
+{
+ "AAPL.Open":            492,
+"AAPL.High":         492.95,
+"AAPL.Low":          486.5,
+"price":         487.22,
+"AAPL.Volume":       68074300,
+"AAPL.Adjusted":          68.07,
+"date":          15947 
+},
+{
+ "AAPL.Open":          493.1,
+"AAPL.High":          500.6,
+"AAPL.Low":         487.35,
+"price":         488.58,
+"AAPL.Volume":       82982200,
+"AAPL.Adjusted":          68.26,
+"date":          15951 
+},
+{
+ "AAPL.Open":         499.56,
+"AAPL.High":         502.24,
+"AAPL.Low":         496.28,
+"price":         498.69,
+"AAPL.Volume":       86258200,
+"AAPL.Adjusted":          69.67,
+"date":          15952 
+},
+{
+ "AAPL.Open":         500.25,
+"AAPL.High":         500.68,
+"AAPL.Low":         493.64,
+"price":         495.27,
+"AAPL.Volume":       59091900,
+"AAPL.Adjusted":          69.19,
+"date":          15953 
+},
+{
+ "AAPL.Open":         498.44,
+"AAPL.High":         499.38,
+"AAPL.Low":         489.95,
+"price":         498.22,
+"AAPL.Volume":       89881400,
+"AAPL.Adjusted":           69.6,
+"date":          15954 
+},
+{
+ "AAPL.Open":            505,
+"AAPL.High":         507.92,
+"AAPL.Low":         503.48,
+"price":         506.17,
+"AAPL.Volume":       85171800,
+"AAPL.Adjusted":          70.71,
+"date":          15957 
+},
+{
+ "AAPL.Open":          506.2,
+"AAPL.High":         507.45,
+"AAPL.Low":          489.5,
+"price":         494.64,
+"AAPL.Volume":      185798900,
+"AAPL.Adjusted":           69.1,
+"date":          15958 
+},
+{
+ "AAPL.Open":         467.01,
+"AAPL.High":         473.69,
+"AAPL.Low":         464.81,
+"price":         467.71,
+"AAPL.Volume":      224674100,
+"AAPL.Adjusted":          65.34,
+"date":          15959 
+},
+{
+ "AAPL.Open":          468.5,
+"AAPL.High":          475.4,
+"AAPL.Low":         466.01,
+"price":         472.69,
+"AAPL.Volume":      101012800,
+"AAPL.Adjusted":          66.04,
+"date":          15960 
+},
+{
+ "AAPL.Open":         469.34,
+"AAPL.High":         471.83,
+"AAPL.Low":          464.7,
+"price":          464.9,
+"AAPL.Volume":       74708900,
+"AAPL.Adjusted":          64.95,
+"date":          15961 
+},
+{
+ "AAPL.Open":            461,
+"AAPL.High":         461.61,
+"AAPL.Low":         447.22,
+"price":         450.12,
+"AAPL.Volume":      135926700,
+"AAPL.Adjusted":          62.88,
+"date":          15964 
+},
+{
+ "AAPL.Open":         447.96,
+"AAPL.High":         459.71,
+"AAPL.Low":          447.5,
+"price":         455.32,
+"AAPL.Volume":       99845200,
+"AAPL.Adjusted":          63.61,
+"date":          15965 
+},
+{
+ "AAPL.Open":         463.18,
+"AAPL.High":         466.35,
+"AAPL.Low":         460.66,
+"price":         464.68,
+"AAPL.Volume":      114215500,
+"AAPL.Adjusted":          64.92,
+"date":          15966 
+},
+{
+ "AAPL.Open":          470.7,
+"AAPL.High":         475.83,
+"AAPL.Low":         469.25,
+"price":          472.3,
+"AAPL.Volume":      101135300,
+"AAPL.Adjusted":          65.98,
+"date":          15967 
+},
+{
+ "AAPL.Open":            478,
+"AAPL.High":         478.55,
+"AAPL.Low":            466,
+"price":         467.41,
+"AAPL.Volume":      174825700,
+"AAPL.Adjusted":           65.3,
+"date":          15968 
+},
+{
+ "AAPL.Open":          496.1,
+"AAPL.High":         496.91,
+"AAPL.Low":          482.6,
+"price":         490.64,
+"AAPL.Volume":      190526700,
+"AAPL.Adjusted":          68.54,
+"date":          15971 
+},
+{
+ "AAPL.Open":         494.88,
+"AAPL.High":         495.47,
+"AAPL.Low":         487.82,
+"price":          489.1,
+"AAPL.Volume":       91086100,
+"AAPL.Adjusted":          68.33,
+"date":          15972 
+},
+{
+ "AAPL.Open":          489.2,
+"AAPL.High":         489.64,
+"AAPL.Low":         481.43,
+"price":         481.53,
+"AAPL.Volume":       79239300,
+"AAPL.Adjusted":          67.27,
+"date":          15973 
+},
+{
+ "AAPL.Open":            486,
+"AAPL.High":         488.56,
+"AAPL.Low":          483.9,
+"price":         486.22,
+"AAPL.Volume":       59305400,
+"AAPL.Adjusted":          67.93,
+"date":          15974 
+},
+{
+ "AAPL.Open":         483.78,
+"AAPL.High":         484.67,
+"AAPL.Low":         480.72,
+"price":         482.75,
+"AAPL.Volume":       57010100,
+"AAPL.Adjusted":          67.44,
+"date":          15975 
+},
+{
+ "AAPL.Open":         477.25,
+"AAPL.High":         481.66,
+"AAPL.Low":         474.41,
+"price":         476.75,
+"AAPL.Volume":       65039100,
+"AAPL.Adjusted":           66.6,
+"date":          15978 
+},
+{
+ "AAPL.Open":         478.45,
+"AAPL.High":         489.14,
+"AAPL.Low":         478.38,
+"price":         487.96,
+"AAPL.Volume":       88470900,
+"AAPL.Adjusted":          68.17,
+"date":          15979 
+},
+{
+ "AAPL.Open":         485.63,
+"AAPL.High":          491.8,
+"AAPL.Low":         483.75,
+"price":         489.56,
+"AAPL.Volume":       72296000,
+"AAPL.Adjusted":          68.39,
+"date":          15980 
+},
+{
+ "AAPL.Open":         490.51,
+"AAPL.High":         492.35,
+"AAPL.Low":         480.74,
+"price":         483.41,
+"AAPL.Volume":       80688300,
+"AAPL.Adjusted":          67.53,
+"date":          15981 
+},
+{
+ "AAPL.Open":         483.86,
+"AAPL.High":          484.6,
+"AAPL.Low":          478.6,
+"price":         483.03,
+"AAPL.Volume":       64717100,
+"AAPL.Adjusted":          67.48,
+"date":          15982 
+},
+{
+ "AAPL.Open":         486.56,
+"AAPL.High":         492.65,
+"AAPL.Low":         485.35,
+"price":         487.75,
+"AAPL.Volume":       78073100,
+"AAPL.Adjusted":          68.14,
+"date":          15985 
+},
+{
+ "AAPL.Open":         489.94,
+"AAPL.High":         490.64,
+"AAPL.Low":         480.54,
+"price":         480.94,
+"AAPL.Volume":       72729300,
+"AAPL.Adjusted":          67.19,
+"date":          15986 
+},
+{
+ "AAPL.Open":         484.64,
+"AAPL.High":         487.79,
+"AAPL.Low":         478.28,
+"price":         486.59,
+"AAPL.Volume":       75431300,
+"AAPL.Adjusted":          67.98,
+"date":          15987 
+},
+{
+ "AAPL.Open":         491.32,
+"AAPL.High":         492.38,
+"AAPL.Low":         487.04,
+"price":         489.64,
+"AAPL.Volume":       69650700,
+"AAPL.Adjusted":           68.4,
+"date":          15988 
+},
+{
+ "AAPL.Open":         486.99,
+"AAPL.High":         493.84,
+"AAPL.Low":         485.16,
+"price":         492.81,
+"AAPL.Volume":       66934700,
+"AAPL.Adjusted":          68.85,
+"date":          15989 
+},
+{
+ "AAPL.Open":         489.83,
+"AAPL.High":         497.58,
+"AAPL.Low":         489.35,
+"price":         496.04,
+"AAPL.Volume":       65474500,
+"AAPL.Adjusted":           69.3,
+"date":          15992 
+},
+{
+ "AAPL.Open":         497.51,
+"AAPL.High":            502,
+"AAPL.Low":         495.52,
+"price":         498.68,
+"AAPL.Volume":       80018400,
+"AAPL.Adjusted":          69.67,
+"date":          15993 
+},
+{
+ "AAPL.Open":         500.79,
+"AAPL.High":         502.53,
+"AAPL.Low":         499.23,
+"price":         501.11,
+"AAPL.Volume":       62775300,
+"AAPL.Adjusted":          70.01,
+"date":          15994 
+},
+{
+ "AAPL.Open":         499.98,
+"AAPL.High":         504.78,
+"AAPL.Low":         499.68,
+"price":          504.5,
+"AAPL.Volume":       63398300,
+"AAPL.Adjusted":          70.48,
+"date":          15995 
+},
+{
+ "AAPL.Open":         505.99,
+"AAPL.High":         509.26,
+"AAPL.Low":         505.71,
+"price":         508.89,
+"AAPL.Volume":       72635500,
+"AAPL.Adjusted":          71.09,
+"date":          15996 
+},
+{
+ "AAPL.Open":         511.77,
+"AAPL.High":          524.3,
+"AAPL.Low":         511.52,
+"price":         521.36,
+"AAPL.Volume":       99526700,
+"AAPL.Adjusted":          72.84,
+"date":          15999 
+},
+{
+ "AAPL.Open":         526.41,
+"AAPL.High":         528.45,
+"AAPL.Low":         508.03,
+"price":         519.87,
+"AAPL.Volume":      133515900,
+"AAPL.Adjusted":          72.63,
+"date":          16000 
+},
+{
+ "AAPL.Open":            519,
+"AAPL.High":         525.67,
+"AAPL.Low":            519,
+"price":         524.96,
+"AAPL.Volume":       78430800,
+"AAPL.Adjusted":          73.34,
+"date":          16001 
+},
+{
+ "AAPL.Open":            525,
+"AAPL.High":         532.47,
+"AAPL.Low":         522.45,
+"price":         531.91,
+"AAPL.Volume":       96191200,
+"AAPL.Adjusted":          74.31,
+"date":          16002 
+},
+{
+ "AAPL.Open":         531.32,
+"AAPL.High":         533.23,
+"AAPL.Low":         525.11,
+"price":         525.96,
+"AAPL.Volume":       84448000,
+"AAPL.Adjusted":          73.48,
+"date":          16003 
+},
+{
+ "AAPL.Open":         529.04,
+"AAPL.High":            531,
+"AAPL.Low":         523.21,
+"price":         529.88,
+"AAPL.Volume":      137610200,
+"AAPL.Adjusted":          74.03,
+"date":          16006 
+},
+{
+ "AAPL.Open":         536.27,
+"AAPL.High":         539.25,
+"AAPL.Low":         514.54,
+"price":         516.68,
+"AAPL.Volume":      158951800,
+"AAPL.Adjusted":          72.18,
+"date":          16007 
+},
+{
+ "AAPL.Open":         519.61,
+"AAPL.High":         527.52,
+"AAPL.Low":         517.02,
+"price":          524.9,
+"AAPL.Volume":       88540900,
+"AAPL.Adjusted":          73.33,
+"date":          16008 
+},
+{
+ "AAPL.Open":            525,
+"AAPL.High":         527.49,
+"AAPL.Low":         521.27,
+"price":          522.7,
+"AAPL.Volume":       68924100,
+"AAPL.Adjusted":          73.02,
+"date":          16009 
+},
+{
+ "AAPL.Open":         524.02,
+"AAPL.High":          524.8,
+"AAPL.Low":         515.84,
+"price":         520.03,
+"AAPL.Volume":       68722500,
+"AAPL.Adjusted":          72.65,
+"date":          16010 
+},
+{
+ "AAPL.Open":          521.1,
+"AAPL.High":         526.82,
+"AAPL.Low":         518.81,
+"price":         526.75,
+"AAPL.Volume":       61156900,
+"AAPL.Adjusted":          73.59,
+"date":          16013 
+},
+{
+ "AAPL.Open":         524.58,
+"AAPL.High":         528.89,
+"AAPL.Low":            523,
+"price":         525.45,
+"AAPL.Volume":       66303300,
+"AAPL.Adjusted":          73.41,
+"date":          16014 
+},
+{
+ "AAPL.Open":         524.15,
+"AAPL.High":         524.86,
+"AAPL.Low":          518.2,
+"price":         520.92,
+"AAPL.Volume":       55843900,
+"AAPL.Adjusted":           73.2,
+"date":          16015 
+},
+{
+ "AAPL.Open":         519.58,
+"AAPL.High":         523.19,
+"AAPL.Low":         512.38,
+"price":         512.49,
+"AAPL.Volume":       65655100,
+"AAPL.Adjusted":          72.01,
+"date":          16016 
+},
+{
+ "AAPL.Open":         514.58,
+"AAPL.High":         521.13,
+"AAPL.Low":         512.59,
+"price":         520.56,
+"AAPL.Volume":       69829200,
+"AAPL.Adjusted":          73.15,
+"date":          16017 
+},
+{
+ "AAPL.Open":         519.99,
+"AAPL.High":         521.67,
+"AAPL.Low":         514.41,
+"price":         519.05,
+"AAPL.Volume":       56863100,
+"AAPL.Adjusted":          72.94,
+"date":          16020 
+},
+{
+ "AAPL.Open":         517.67,
+"AAPL.High":         523.92,
+"AAPL.Low":            517,
+"price":         520.01,
+"AAPL.Volume":       51069200,
+"AAPL.Adjusted":          73.07,
+"date":          16021 
+},
+{
+ "AAPL.Open":            518,
+"AAPL.High":         522.25,
+"AAPL.Low":         516.96,
+"price":         520.63,
+"AAPL.Volume":       49305200,
+"AAPL.Adjusted":          73.16,
+"date":          16022 
+},
+{
+ "AAPL.Open":         522.81,
+"AAPL.High":         529.28,
+"AAPL.Low":         521.87,
+"price":         528.16,
+"AAPL.Volume":       70604800,
+"AAPL.Adjusted":          74.22,
+"date":          16023 
+},
+{
+ "AAPL.Open":         526.58,
+"AAPL.High":         529.09,
+"AAPL.Low":         524.49,
+"price":         524.99,
+"AAPL.Volume":       79480100,
+"AAPL.Adjusted":          73.77,
+"date":          16024 
+},
+{
+ "AAPL.Open":         524.99,
+"AAPL.High":         527.19,
+"AAPL.Low":          518.2,
+"price":         518.63,
+"AAPL.Volume":       61236000,
+"AAPL.Adjusted":          72.88,
+"date":          16027 
+},
+{
+ "AAPL.Open":         519.03,
+"AAPL.High":         523.38,
+"AAPL.Low":         517.97,
+"price":         519.55,
+"AAPL.Volume":       52234700,
+"AAPL.Adjusted":          73.01,
+"date":          16028 
+},
+{
+ "AAPL.Open":         519.23,
+"AAPL.High":         520.42,
+"AAPL.Low":         514.33,
+"price":            515,
+"AAPL.Volume":       48479200,
+"AAPL.Adjusted":          72.37,
+"date":          16029 
+},
+{
+ "AAPL.Open":          517.6,
+"AAPL.High":         521.21,
+"AAPL.Low":         513.67,
+"price":         521.14,
+"AAPL.Volume":       65506700,
+"AAPL.Adjusted":          73.23,
+"date":          16030 
+},
+{
+ "AAPL.Open":         519.52,
+"AAPL.High":         522.16,
+"AAPL.Low":         518.53,
+"price":          519.8,
+"AAPL.Volume":       55931400,
+"AAPL.Adjusted":          73.04,
+"date":          16031 
+},
+{
+ "AAPL.Open":         521.02,
+"AAPL.High":         525.87,
+"AAPL.Low":            521,
+"price":         523.74,
+"AAPL.Volume":       57327900,
+"AAPL.Adjusted":           73.6,
+"date":          16034 
+},
+{
+ "AAPL.Open":         524.12,
+"AAPL.High":         536.14,
+"AAPL.Low":            524,
+"price":          533.4,
+"AAPL.Volume":      100345700,
+"AAPL.Adjusted":          74.95,
+"date":          16035 
+},
+{
+ "AAPL.Open":         536.31,
+"AAPL.High":            546,
+"AAPL.Low":          533.4,
+"price":         545.96,
+"AAPL.Volume":       90862100,
+"AAPL.Adjusted":          76.72,
+"date":          16036 
+},
+{
+ "AAPL.Open":         549.48,
+"AAPL.High":         558.33,
+"AAPL.Low":         547.81,
+"price":         556.07,
+"AAPL.Volume":       79531900,
+"AAPL.Adjusted":          78.14,
+"date":          16038 
+},
+{
+ "AAPL.Open":            558,
+"AAPL.High":         564.33,
+"AAPL.Low":         550.82,
+"price":         551.23,
+"AAPL.Volume":      118136200,
+"AAPL.Adjusted":          77.46,
+"date":          16041 
+},
+{
+ "AAPL.Open":          558.3,
+"AAPL.High":         566.38,
+"AAPL.Low":         557.68,
+"price":         566.32,
+"AAPL.Volume":      112742000,
+"AAPL.Adjusted":          79.58,
+"date":          16042 
+},
+{
+ "AAPL.Open":          565.5,
+"AAPL.High":         569.19,
+"AAPL.Low":         560.82,
+"price":            565,
+"AAPL.Volume":       94452400,
+"AAPL.Adjusted":          79.39,
+"date":          16043 
+},
+{
+ "AAPL.Open":         572.65,
+"AAPL.High":         575.14,
+"AAPL.Low":         566.41,
+"price":          567.9,
+"AAPL.Volume":      111895000,
+"AAPL.Adjusted":           79.8,
+"date":          16044 
+},
+{
+ "AAPL.Open":         565.79,
+"AAPL.High":         566.75,
+"AAPL.Low":         559.57,
+"price":         560.02,
+"AAPL.Volume":       86088100,
+"AAPL.Adjusted":          78.69,
+"date":          16045 
+},
+{
+ "AAPL.Open":          560.9,
+"AAPL.High":         569.58,
+"AAPL.Low":          560.9,
+"price":         566.43,
+"AAPL.Volume":       80123400,
+"AAPL.Adjusted":          79.59,
+"date":          16048 
+},
+{
+ "AAPL.Open":         563.58,
+"AAPL.High":         567.88,
+"AAPL.Low":          561.2,
+"price":         565.55,
+"AAPL.Volume":       69567400,
+"AAPL.Adjusted":          79.47,
+"date":          16049 
+},
+{
+ "AAPL.Open":            567,
+"AAPL.High":         570.97,
+"AAPL.Low":         559.69,
+"price":         561.36,
+"AAPL.Volume":       89929700,
+"AAPL.Adjusted":          78.88,
+"date":          16050 
+},
+{
+ "AAPL.Open":         562.14,
+"AAPL.High":         565.34,
+"AAPL.Low":         560.03,
+"price":         560.54,
+"AAPL.Volume":       65572500,
+"AAPL.Adjusted":          78.77,
+"date":          16051 
+},
+{
+ "AAPL.Open":         562.85,
+"AAPL.High":         562.88,
+"AAPL.Low":         553.67,
+"price":         554.43,
+"AAPL.Volume":       83205500,
+"AAPL.Adjusted":          77.91,
+"date":          16052 
+},
+{
+ "AAPL.Open":         555.02,
+"AAPL.High":         562.64,
+"AAPL.Low":         555.01,
+"price":          557.5,
+"AAPL.Volume":       70648200,
+"AAPL.Adjusted":          78.34,
+"date":          16055 
+},
+{
+ "AAPL.Open":         555.81,
+"AAPL.High":         559.44,
+"AAPL.Low":         553.38,
+"price":         554.99,
+"AAPL.Volume":       57475600,
+"AAPL.Adjusted":          77.99,
+"date":          16056 
+},
+{
+ "AAPL.Open":          549.7,
+"AAPL.High":         551.45,
+"AAPL.Low":          538.8,
+"price":         550.77,
+"AAPL.Volume":      141465800,
+"AAPL.Adjusted":          77.39,
+"date":          16057 
+},
+{
+ "AAPL.Open":          549.5,
+"AAPL.High":            550,
+"AAPL.Low":         543.73,
+"price":         544.46,
+"AAPL.Volume":       80077200,
+"AAPL.Adjusted":          76.51,
+"date":          16058 
+},
+{
+ "AAPL.Open":         545.43,
+"AAPL.High":         551.61,
+"AAPL.Low":         544.82,
+"price":         549.02,
+"AAPL.Volume":      109103400,
+"AAPL.Adjusted":          77.15,
+"date":          16059 
+},
+{
+ "AAPL.Open":            568,
+"AAPL.High":         570.72,
+"AAPL.Low":         562.76,
+"price":         570.09,
+"AAPL.Volume":      125326600,
+"AAPL.Adjusted":          80.11,
+"date":          16062 
+},
+{
+ "AAPL.Open":         569.89,
+"AAPL.High":         571.88,
+"AAPL.Low":         566.03,
+"price":         567.67,
+"AAPL.Volume":       41888700,
+"AAPL.Adjusted":          79.77,
+"date":          16063 
+},
+{
+ "AAPL.Open":          568.1,
+"AAPL.High":          569.5,
+"AAPL.Low":         563.38,
+"price":          563.9,
+"AAPL.Volume":       51002000,
+"AAPL.Adjusted":          79.24,
+"date":          16065 
+},
+{
+ "AAPL.Open":         563.82,
+"AAPL.High":         564.41,
+"AAPL.Low":          559.5,
+"price":         560.09,
+"AAPL.Volume":       56471100,
+"AAPL.Adjusted":           78.7,
+"date":          16066 
+},
+{
+ "AAPL.Open":         557.46,
+"AAPL.High":         560.09,
+"AAPL.Low":         552.32,
+"price":         554.52,
+"AAPL.Volume":       63407400,
+"AAPL.Adjusted":          77.92,
+"date":          16069 
+},
+{
+ "AAPL.Open":         554.17,
+"AAPL.High":         561.28,
+"AAPL.Low":            554,
+"price":         561.02,
+"AAPL.Volume":       55771100,
+"AAPL.Adjusted":          78.83,
+"date":          16070 
+},
+{
+ "AAPL.Open":         555.68,
+"AAPL.High":         557.03,
+"AAPL.Low":         552.02,
+"price":         553.13,
+"AAPL.Volume":       58671200,
+"AAPL.Adjusted":          77.73,
+"date":          16072 
+},
+{
+ "AAPL.Open":         552.86,
+"AAPL.High":          553.7,
+"AAPL.Low":         540.43,
+"price":         540.98,
+"AAPL.Volume":       98116900,
+"AAPL.Adjusted":          76.02,
+"date":          16073 
+},
+{
+ "AAPL.Open":         537.45,
+"AAPL.High":          546.8,
+"AAPL.Low":          533.6,
+"price":         543.93,
+"AAPL.Volume":      103152700,
+"AAPL.Adjusted":          76.43,
+"date":          16076 
+},
+{
+ "AAPL.Open":         544.32,
+"AAPL.High":         545.96,
+"AAPL.Low":         537.92,
+"price":         540.04,
+"AAPL.Volume":       79302300,
+"AAPL.Adjusted":          75.89,
+"date":          16077 
+},
+{
+ "AAPL.Open":         538.81,
+"AAPL.High":         545.56,
+"AAPL.Low":         538.69,
+"price":         543.46,
+"AAPL.Volume":       64632400,
+"AAPL.Adjusted":          76.37,
+"date":          16078 
+},
+{
+ "AAPL.Open":          546.8,
+"AAPL.High":         546.86,
+"AAPL.Low":         535.35,
+"price":         536.52,
+"AAPL.Volume":       69787200,
+"AAPL.Adjusted":          75.39,
+"date":          16079 
+},
+{
+ "AAPL.Open":         539.83,
+"AAPL.High":          540.8,
+"AAPL.Low":         531.11,
+"price":         532.94,
+"AAPL.Volume":       76244000,
+"AAPL.Adjusted":          74.89,
+"date":          16080 
+},
+{
+ "AAPL.Open":         529.91,
+"AAPL.High":          542.5,
+"AAPL.Low":         529.88,
+"price":         535.73,
+"AAPL.Volume":       94623200,
+"AAPL.Adjusted":          75.28,
+"date":          16083 
+},
+{
+ "AAPL.Open":         538.22,
+"AAPL.High":         546.73,
+"AAPL.Low":         537.66,
+"price":         546.39,
+"AAPL.Volume":       83140400,
+"AAPL.Adjusted":          76.78,
+"date":          16084 
+},
+{
+ "AAPL.Open":         553.52,
+"AAPL.High":          560.2,
+"AAPL.Low":         551.66,
+"price":         557.36,
+"AAPL.Volume":       97909700,
+"AAPL.Adjusted":          78.32,
+"date":          16085 
+},
+{
+ "AAPL.Open":          554.9,
+"AAPL.High":         556.85,
+"AAPL.Low":         551.68,
+"price":         554.25,
+"AAPL.Volume":       57319500,
+"AAPL.Adjusted":          77.88,
+"date":          16086 
+},
+{
+ "AAPL.Open":         551.48,
+"AAPL.High":         552.07,
+"AAPL.Low":          539.9,
+"price":         540.67,
+"AAPL.Volume":      106684900,
+"AAPL.Adjusted":          75.97,
+"date":          16087 
+},
+{
+ "AAPL.Open":         540.99,
+"AAPL.High":         550.07,
+"AAPL.Low":         540.42,
+"price":         549.07,
+"AAPL.Volume":       82131700,
+"AAPL.Adjusted":          77.15,
+"date":          16091 
+},
+{
+ "AAPL.Open":         550.91,
+"AAPL.High":         557.29,
+"AAPL.Low":         547.81,
+"price":         551.51,
+"AAPL.Volume":       94996300,
+"AAPL.Adjusted":           77.5,
+"date":          16092 
+},
+{
+ "AAPL.Open":         549.94,
+"AAPL.High":          556.5,
+"AAPL.Low":         544.81,
+"price":         556.18,
+"AAPL.Volume":      100809800,
+"AAPL.Adjusted":          78.15,
+"date":          16093 
+},
+{
+ "AAPL.Open":            554,
+"AAPL.High":         555.62,
+"AAPL.Low":         544.75,
+"price":         546.07,
+"AAPL.Volume":      107338700,
+"AAPL.Adjusted":          76.73,
+"date":          16094 
+},
+{
+ "AAPL.Open":         550.07,
+"AAPL.High":          554.8,
+"AAPL.Low":         545.75,
+"price":          550.5,
+"AAPL.Volume":      138719700,
+"AAPL.Adjusted":          77.36,
+"date":          16097 
+},
+{
+ "AAPL.Open":         508.76,
+"AAPL.High":            515,
+"AAPL.Low":         502.07,
+"price":          506.5,
+"AAPL.Volume":      266380800,
+"AAPL.Adjusted":          71.17,
+"date":          16098 
+},
+{
+ "AAPL.Open":         503.95,
+"AAPL.High":         507.37,
+"AAPL.Low":         498.62,
+"price":         500.75,
+"AAPL.Volume":      125702500,
+"AAPL.Adjusted":          70.37,
+"date":          16099 
+},
+{
+ "AAPL.Open":         502.54,
+"AAPL.High":          506.5,
+"AAPL.Low":          496.7,
+"price":         499.78,
+"AAPL.Volume":      169625400,
+"AAPL.Adjusted":          70.23,
+"date":          16100 
+},
+{
+ "AAPL.Open":         495.18,
+"AAPL.High":         501.53,
+"AAPL.Low":         493.55,
+"price":          500.6,
+"AAPL.Volume":      116199300,
+"AAPL.Adjusted":          70.34,
+"date":          16101 
+},
+{
+ "AAPL.Open":         502.61,
+"AAPL.High":         507.73,
+"AAPL.Low":          499.3,
+"price":         501.53,
+"AAPL.Volume":      100366000,
+"AAPL.Adjusted":          70.47,
+"date":          16104 
+},
+{
+ "AAPL.Open":         505.85,
+"AAPL.High":         509.46,
+"AAPL.Low":         502.76,
+"price":         508.79,
+"AAPL.Volume":       94170300,
+"AAPL.Adjusted":          71.49,
+"date":          16105 
+},
+{
+ "AAPL.Open":         506.56,
+"AAPL.High":         515.28,
+"AAPL.Low":         506.25,
+"price":         512.59,
+"AAPL.Volume":       82086200,
+"AAPL.Adjusted":          72.03,
+"date":          16106 
+},
+{
+ "AAPL.Open":         510.06,
+"AAPL.High":          513.5,
+"AAPL.Low":         507.81,
+"price":         512.51,
+"AAPL.Volume":       64441300,
+"AAPL.Adjusted":          72.45,
+"date":          16107 
+},
+{
+ "AAPL.Open":         521.38,
+"AAPL.High":         522.93,
+"AAPL.Low":         517.38,
+"price":         519.68,
+"AAPL.Volume":       92570100,
+"AAPL.Adjusted":          73.46,
+"date":          16108 
+},
+{
+ "AAPL.Open":         518.66,
+"AAPL.High":         531.99,
+"AAPL.Low":            518,
+"price":         528.99,
+"AAPL.Volume":       86389800,
+"AAPL.Adjusted":          74.78,
+"date":          16111 
+},
+{
+ "AAPL.Open":         530.61,
+"AAPL.High":         537.75,
+"AAPL.Low":          529.5,
+"price":         535.96,
+"AAPL.Volume":       70564200,
+"AAPL.Adjusted":          75.76,
+"date":          16112 
+},
+{
+ "AAPL.Open":         536.95,
+"AAPL.High":         539.56,
+"AAPL.Low":         533.24,
+"price":         535.92,
+"AAPL.Volume":       77025200,
+"AAPL.Adjusted":          75.76,
+"date":          16113 
+},
+{
+ "AAPL.Open":         534.66,
+"AAPL.High":         544.85,
+"AAPL.Low":          534.2,
+"price":         544.43,
+"AAPL.Volume":       76849500,
+"AAPL.Adjusted":          76.96,
+"date":          16114 
+},
+{
+ "AAPL.Open":         542.47,
+"AAPL.High":         545.98,
+"AAPL.Low":         541.21,
+"price":         543.99,
+"AAPL.Volume":       68231100,
+"AAPL.Adjusted":           76.9,
+"date":          16115 
+},
+{
+ "AAPL.Open":            546,
+"AAPL.High":         551.19,
+"AAPL.Low":         545.61,
+"price":         545.99,
+"AAPL.Volume":       65062900,
+"AAPL.Adjusted":          77.18,
+"date":          16119 
+},
+{
+ "AAPL.Open":         544.75,
+"AAPL.High":         546.89,
+"AAPL.Low":         534.35,
+"price":         537.37,
+"AAPL.Volume":       78442000,
+"AAPL.Adjusted":          75.96,
+"date":          16120 
+},
+{
+ "AAPL.Open":         532.99,
+"AAPL.High":            537,
+"AAPL.Low":            529,
+"price":         531.15,
+"AAPL.Volume":       76464500,
+"AAPL.Adjusted":          75.08,
+"date":          16121 
+},
+{
+ "AAPL.Open":         532.79,
+"AAPL.High":         534.57,
+"AAPL.Low":          524.6,
+"price":         525.25,
+"AAPL.Volume":       69696200,
+"AAPL.Adjusted":          74.25,
+"date":          16122 
+},
+{
+ "AAPL.Open":         523.15,
+"AAPL.High":         529.92,
+"AAPL.Low":         522.42,
+"price":         527.55,
+"AAPL.Volume":       72227400,
+"AAPL.Adjusted":          74.57,
+"date":          16125 
+},
+{
+ "AAPL.Open":         529.38,
+"AAPL.High":         529.57,
+"AAPL.Low":            521,
+"price":         522.06,
+"AAPL.Volume":       57988000,
+"AAPL.Adjusted":           73.8,
+"date":          16126 
+},
+{
+ "AAPL.Open":         523.61,
+"AAPL.High":            525,
+"AAPL.Low":          515.6,
+"price":         517.35,
+"AAPL.Volume":       69054300,
+"AAPL.Adjusted":          73.13,
+"date":          16127 
+},
+{
+ "AAPL.Open":         517.14,
+"AAPL.High":         528.78,
+"AAPL.Low":         516.05,
+"price":         527.67,
+"AAPL.Volume":       75470500,
+"AAPL.Adjusted":          74.59,
+"date":          16128 
+},
+{
+ "AAPL.Open":         529.08,
+"AAPL.High":         532.75,
+"AAPL.Low":         522.12,
+"price":         526.24,
+"AAPL.Volume":       92992200,
+"AAPL.Adjusted":          74.39,
+"date":          16129 
+},
+{
+ "AAPL.Open":         523.42,
+"AAPL.High":         530.65,
+"AAPL.Low":         522.81,
+"price":         527.76,
+"AAPL.Volume":       59695300,
+"AAPL.Adjusted":           74.6,
+"date":          16132 
+},
+{
+ "AAPL.Open":            531,
+"AAPL.High":         532.64,
+"AAPL.Low":         527.77,
+"price":         531.24,
+"AAPL.Volume":       64785000,
+"AAPL.Adjusted":           75.1,
+"date":          16133 
+},
+{
+ "AAPL.Open":         530.92,
+"AAPL.High":         534.75,
+"AAPL.Low":         529.13,
+"price":         532.36,
+"AAPL.Volume":       50015700,
+"AAPL.Adjusted":          75.25,
+"date":          16134 
+},
+{
+ "AAPL.Open":         532.79,
+"AAPL.High":         534.44,
+"AAPL.Low":          528.1,
+"price":         530.75,
+"AAPL.Volume":       46372200,
+"AAPL.Adjusted":          75.03,
+"date":          16135 
+},
+{
+ "AAPL.Open":         531.09,
+"AAPL.High":         531.98,
+"AAPL.Low":         526.05,
+"price":         530.44,
+"AAPL.Volume":       55182400,
+"AAPL.Adjusted":          74.98,
+"date":          16136 
+},
+{
+ "AAPL.Open":         528.36,
+"AAPL.High":         533.33,
+"AAPL.Low":         528.34,
+"price":         530.92,
+"AAPL.Volume":       44646000,
+"AAPL.Adjusted":          75.05,
+"date":          16139 
+},
+{
+ "AAPL.Open":         535.45,
+"AAPL.High":         538.74,
+"AAPL.Low":         532.59,
+"price":         536.09,
+"AAPL.Volume":       69806100,
+"AAPL.Adjusted":          75.78,
+"date":          16140 
+},
+{
+ "AAPL.Open":         534.51,
+"AAPL.High":         537.35,
+"AAPL.Low":            532,
+"price":         536.61,
+"AAPL.Volume":       49831600,
+"AAPL.Adjusted":          75.86,
+"date":          16141 
+},
+{
+ "AAPL.Open":         537.44,
+"AAPL.High":         539.66,
+"AAPL.Low":         529.16,
+"price":         530.65,
+"AAPL.Volume":       64435700,
+"AAPL.Adjusted":          75.01,
+"date":          16142 
+},
+{
+ "AAPL.Open":         528.79,
+"AAPL.High":         530.89,
+"AAPL.Low":            523,
+"price":         524.69,
+"AAPL.Volume":       59299800,
+"AAPL.Adjusted":          74.17,
+"date":          16143 
+},
+{
+ "AAPL.Open":          527.7,
+"AAPL.High":         529.97,
+"AAPL.Low":         525.85,
+"price":         526.74,
+"AAPL.Volume":       49886200,
+"AAPL.Adjusted":          74.46,
+"date":          16146 
+},
+{
+ "AAPL.Open":          525.9,
+"AAPL.High":         531.97,
+"AAPL.Low":          525.2,
+"price":          531.4,
+"AAPL.Volume":       52411800,
+"AAPL.Adjusted":          75.12,
+"date":          16147 
+},
+{
+ "AAPL.Open":         532.26,
+"AAPL.High":         536.24,
+"AAPL.Low":            529,
+"price":         531.26,
+"AAPL.Volume":       56189000,
+"AAPL.Adjusted":           75.1,
+"date":          16148 
+},
+{
+ "AAPL.Open":         529.89,
+"AAPL.High":         532.67,
+"AAPL.Low":         527.35,
+"price":          528.7,
+"AAPL.Volume":       52099600,
+"AAPL.Adjusted":          74.74,
+"date":          16149 
+},
+{
+ "AAPL.Open":         531.93,
+"AAPL.High":         533.75,
+"AAPL.Low":         526.33,
+"price":         532.87,
+"AAPL.Volume":       93511600,
+"AAPL.Adjusted":          75.33,
+"date":          16150 
+},
+{
+ "AAPL.Open":         538.42,
+"AAPL.High":          540.5,
+"AAPL.Low":         535.06,
+"price":         539.19,
+"AAPL.Volume":       88925200,
+"AAPL.Adjusted":          76.22,
+"date":          16153 
+},
+{
+ "AAPL.Open":          541.5,
+"AAPL.High":         545.75,
+"AAPL.Low":         539.59,
+"price":         544.99,
+"AAPL.Volume":       70573300,
+"AAPL.Adjusted":          77.04,
+"date":          16154 
+},
+{
+ "AAPL.Open":         546.52,
+"AAPL.High":            549,
+"AAPL.Low":         538.86,
+"price":         539.78,
+"AAPL.Volume":       74942000,
+"AAPL.Adjusted":           76.3,
+"date":          16155 
+},
+{
+ "AAPL.Open":         540.02,
+"AAPL.High":          541.5,
+"AAPL.Low":         535.12,
+"price":         537.46,
+"AAPL.Volume":       55507900,
+"AAPL.Adjusted":          75.98,
+"date":          16156 
+},
+{
+ "AAPL.Open":         538.32,
+"AAPL.High":         538.94,
+"AAPL.Low":         534.25,
+"price":         536.86,
+"AAPL.Volume":       50141000,
+"AAPL.Adjusted":          75.89,
+"date":          16157 
+},
+{
+ "AAPL.Open":         539.23,
+"AAPL.High":         540.81,
+"AAPL.Low":         535.93,
+"price":         536.74,
+"AAPL.Volume":       42167300,
+"AAPL.Adjusted":          75.87,
+"date":          16160 
+},
+{
+ "AAPL.Open":         537.76,
+"AAPL.High":         541.87,
+"AAPL.Low":         536.77,
+"price":         541.65,
+"AAPL.Volume":       50190000,
+"AAPL.Adjusted":          76.57,
+"date":          16161 
+},
+{
+ "AAPL.Open":         542.38,
+"AAPL.High":         543.48,
+"AAPL.Low":         540.26,
+"price":         542.55,
+"AAPL.Volume":       45105200,
+"AAPL.Adjusted":           76.7,
+"date":          16162 
+},
+{
+ "AAPL.Open":         541.39,
+"AAPL.High":          542.5,
+"AAPL.Low":         537.64,
+"price":         538.79,
+"AAPL.Volume":       40586000,
+"AAPL.Adjusted":          76.16,
+"date":          16163 
+},
+{
+ "AAPL.Open":         539.81,
+"AAPL.High":            540,
+"AAPL.Low":         530.58,
+"price":         531.82,
+"AAPL.Volume":       68812800,
+"AAPL.Adjusted":          75.18,
+"date":          16164 
+},
+{
+ "AAPL.Open":         528.02,
+"AAPL.High":          530.9,
+"AAPL.Low":         521.89,
+"price":         523.47,
+"AAPL.Volume":       72462600,
+"AAPL.Adjusted":             74,
+"date":          16167 
+},
+{
+ "AAPL.Open":         525.19,
+"AAPL.High":         526.12,
+"AAPL.Low":          518.7,
+"price":         523.44,
+"AAPL.Volume":       60972100,
+"AAPL.Adjusted":          73.99,
+"date":          16168 
+},
+{
+ "AAPL.Open":         522.64,
+"AAPL.High":         530.49,
+"AAPL.Low":         522.02,
+"price":         530.32,
+"AAPL.Volume":       51542400,
+"AAPL.Adjusted":          74.97,
+"date":          16169 
+},
+{
+ "AAPL.Open":         530.68,
+"AAPL.High":         532.24,
+"AAPL.Low":         523.17,
+"price":         523.48,
+"AAPL.Volume":       59913000,
+"AAPL.Adjusted":             74,
+"date":          16170 
+},
+{
+ "AAPL.Open":            519,
+"AAPL.High":         522.83,
+"AAPL.Low":         517.14,
+"price":         519.61,
+"AAPL.Volume":       67929400,
+"AAPL.Adjusted":          73.45,
+"date":          16171 
+},
+{
+ "AAPL.Open":          521.9,
+"AAPL.High":         522.16,
+"AAPL.Low":         517.21,
+"price":         521.68,
+"AAPL.Volume":       51418500,
+"AAPL.Adjusted":          73.74,
+"date":          16174 
+},
+{
+ "AAPL.Open":         520.27,
+"AAPL.High":         521.64,
+"AAPL.Low":         511.33,
+"price":         517.96,
+"AAPL.Volume":       66622500,
+"AAPL.Adjusted":          73.22,
+"date":          16175 
+},
+{
+ "AAPL.Open":         518.05,
+"AAPL.High":         521.09,
+"AAPL.Low":         514.14,
+"price":         519.01,
+"AAPL.Volume":       53691400,
+"AAPL.Adjusted":          73.37,
+"date":          16176 
+},
+{
+ "AAPL.Open":            520,
+"AAPL.High":         527.76,
+"AAPL.Low":          519.2,
+"price":         524.94,
+"AAPL.Volume":       71083600,
+"AAPL.Adjusted":          74.21,
+"date":          16177 
+},
+{
+ "AAPL.Open":         525.34,
+"AAPL.High":         532.14,
+"AAPL.Low":         523.96,
+"price":         531.17,
+"AAPL.Volume":       45637200,
+"AAPL.Adjusted":          75.09,
+"date":          16181 
+},
+{
+ "AAPL.Open":         528.31,
+"AAPL.High":         531.83,
+"AAPL.Low":          526.5,
+"price":          531.7,
+"AAPL.Volume":       50640800,
+"AAPL.Adjusted":          75.16,
+"date":          16182 
+},
+{
+ "AAPL.Open":         529.06,
+"AAPL.High":         531.13,
+"AAPL.Low":         524.45,
+"price":         524.75,
+"AAPL.Volume":       98735000,
+"AAPL.Adjusted":          74.18,
+"date":          16183 
+},
+{
+ "AAPL.Open":         568.21,
+"AAPL.High":            570,
+"AAPL.Low":         560.73,
+"price":         567.77,
+"AAPL.Volume":      189977900,
+"AAPL.Adjusted":          80.26,
+"date":          16184 
+},
+{
+ "AAPL.Open":         564.53,
+"AAPL.High":         571.99,
+"AAPL.Low":         563.96,
+"price":         571.94,
+"AAPL.Volume":       97568800,
+"AAPL.Adjusted":          80.85,
+"date":          16185 
+},
+{
+ "AAPL.Open":          572.8,
+"AAPL.High":         595.75,
+"AAPL.Low":         572.55,
+"price":         594.09,
+"AAPL.Volume":      167371400,
+"AAPL.Adjusted":          83.98,
+"date":          16188 
+},
+{
+ "AAPL.Open":         593.74,
+"AAPL.High":         595.98,
+"AAPL.Low":         589.51,
+"price":         592.33,
+"AAPL.Volume":       84344400,
+"AAPL.Adjusted":          83.73,
+"date":          16189 
+},
+{
+ "AAPL.Open":         592.64,
+"AAPL.High":         599.43,
+"AAPL.Low":          589.8,
+"price":         590.09,
+"AAPL.Volume":      114160200,
+"AAPL.Adjusted":          83.42,
+"date":          16190 
+},
+{
+ "AAPL.Open":            592,
+"AAPL.High":          594.8,
+"AAPL.Low":         586.36,
+"price":         591.48,
+"AAPL.Volume":       61012000,
+"AAPL.Adjusted":          83.61,
+"date":          16191 
+},
+{
+ "AAPL.Open":         592.34,
+"AAPL.High":          594.2,
+"AAPL.Low":         589.71,
+"price":         592.58,
+"AAPL.Volume":       47878600,
+"AAPL.Adjusted":          83.77,
+"date":          16192 
+},
+{
+ "AAPL.Open":         590.14,
+"AAPL.High":            601,
+"AAPL.Low":            590,
+"price":         600.96,
+"AAPL.Volume":       71766800,
+"AAPL.Adjusted":          84.95,
+"date":          16195 
+},
+{
+ "AAPL.Open":          601.8,
+"AAPL.High":         604.41,
+"AAPL.Low":         594.41,
+"price":         594.41,
+"AAPL.Volume":       93641100,
+"AAPL.Adjusted":          84.03,
+"date":          16196 
+},
+{
+ "AAPL.Open":         595.25,
+"AAPL.High":         597.29,
+"AAPL.Low":         587.73,
+"price":         592.33,
+"AAPL.Volume":       70716100,
+"AAPL.Adjusted":          83.73,
+"date":          16197 
+},
+{
+ "AAPL.Open":         588.25,
+"AAPL.High":         594.41,
+"AAPL.Low":          586.4,
+"price":         587.99,
+"AAPL.Volume":       57574300,
+"AAPL.Adjusted":          83.58,
+"date":          16198 
+},
+{
+ "AAPL.Open":         584.54,
+"AAPL.High":         586.25,
+"AAPL.Low":         580.33,
+"price":         585.54,
+"AAPL.Volume":       72899400,
+"AAPL.Adjusted":          83.23,
+"date":          16199 
+},
+{
+ "AAPL.Open":         587.49,
+"AAPL.High":         593.66,
+"AAPL.Low":          587.4,
+"price":         592.83,
+"AAPL.Volume":       53302200,
+"AAPL.Adjusted":          84.27,
+"date":          16202 
+},
+{
+ "AAPL.Open":            592,
+"AAPL.High":         594.54,
+"AAPL.Low":          590.7,
+"price":         593.76,
+"AAPL.Volume":       39934300,
+"AAPL.Adjusted":           84.4,
+"date":          16203 
+},
+{
+ "AAPL.Open":         592.43,
+"AAPL.High":          597.4,
+"AAPL.Low":         591.74,
+"price":         593.87,
+"AAPL.Volume":       41601000,
+"AAPL.Adjusted":          84.42,
+"date":          16204 
+},
+{
+ "AAPL.Open":          594.7,
+"AAPL.High":          596.6,
+"AAPL.Low":         588.04,
+"price":         588.82,
+"AAPL.Volume":       57711500,
+"AAPL.Adjusted":           83.7,
+"date":          16205 
+},
+{
+ "AAPL.Open":         588.63,
+"AAPL.High":         597.53,
+"AAPL.Low":          585.4,
+"price":         597.51,
+"AAPL.Volume":       69064100,
+"AAPL.Adjusted":          84.94,
+"date":          16206 
+},
+{
+ "AAPL.Open":         597.85,
+"AAPL.High":         607.33,
+"AAPL.Low":         597.33,
+"price":         604.59,
+"AAPL.Volume":       79438800,
+"AAPL.Adjusted":          85.94,
+"date":          16209 
+},
+{
+ "AAPL.Open":         604.51,
+"AAPL.High":          606.4,
+"AAPL.Low":         600.73,
+"price":         604.71,
+"AAPL.Volume":       58709000,
+"AAPL.Adjusted":          85.96,
+"date":          16210 
+},
+{
+ "AAPL.Open":         603.83,
+"AAPL.High":          606.7,
+"AAPL.Low":         602.06,
+"price":         606.31,
+"AAPL.Volume":       49214900,
+"AAPL.Adjusted":          86.19,
+"date":          16211 
+},
+{
+ "AAPL.Open":          606.6,
+"AAPL.High":         609.85,
+"AAPL.Low":          604.1,
+"price":         607.27,
+"AAPL.Volume":       50190000,
+"AAPL.Adjusted":          86.32,
+"date":          16212 
+},
+{
+ "AAPL.Open":         607.25,
+"AAPL.High":         614.73,
+"AAPL.Low":         606.47,
+"price":         614.13,
+"AAPL.Volume":       58052400,
+"AAPL.Adjusted":           87.3,
+"date":          16213 
+},
+{
+ "AAPL.Open":         615.88,
+"AAPL.High":         625.86,
+"AAPL.Low":         615.63,
+"price":         625.63,
+"AAPL.Volume":       87216500,
+"AAPL.Adjusted":          88.93,
+"date":          16217 
+},
+{
+ "AAPL.Open":         626.02,
+"AAPL.High":         629.83,
+"AAPL.Low":         623.78,
+"price":         624.01,
+"AAPL.Volume":       78870400,
+"AAPL.Adjusted":           88.7,
+"date":          16218 
+},
+{
+ "AAPL.Open":         627.85,
+"AAPL.High":         636.87,
+"AAPL.Low":         627.77,
+"price":         635.38,
+"AAPL.Volume":       94118500,
+"AAPL.Adjusted":          90.32,
+"date":          16219 
+},
+{
+ "AAPL.Open":         637.98,
+"AAPL.High":         644.17,
+"AAPL.Low":          628.9,
+"price":            633,
+"AAPL.Volume":      141005200,
+"AAPL.Adjusted":          89.98,
+"date":          16220 
+},
+{
+ "AAPL.Open":         633.96,
+"AAPL.High":         634.83,
+"AAPL.Low":          622.5,
+"price":         628.65,
+"AAPL.Volume":       92337700,
+"AAPL.Adjusted":          89.36,
+"date":          16223 
+},
+{
+ "AAPL.Open":         628.46,
+"AAPL.High":         638.74,
+"AAPL.Low":         628.25,
+"price":         637.54,
+"AAPL.Volume":       73177300,
+"AAPL.Adjusted":          90.63,
+"date":          16224 
+},
+{
+ "AAPL.Open":         637.44,
+"AAPL.High":         647.89,
+"AAPL.Low":         636.11,
+"price":         644.82,
+"AAPL.Volume":       83870500,
+"AAPL.Adjusted":          91.66,
+"date":          16225 
+},
+{
+ "AAPL.Open":          646.2,
+"AAPL.High":         649.37,
+"AAPL.Low":         642.61,
+"price":         647.35,
+"AAPL.Volume":       75951400,
+"AAPL.Adjusted":          92.02,
+"date":          16226 
+},
+{
+ "AAPL.Open":          649.9,
+"AAPL.High":         651.26,
+"AAPL.Low":         644.47,
+"price":         645.57,
+"AAPL.Volume":       87484600,
+"AAPL.Adjusted":          91.77,
+"date":          16227 
+},
+{
+ "AAPL.Open":           92.7,
+"AAPL.High":          93.88,
+"AAPL.Low":          91.75,
+"price":           93.7,
+"AAPL.Volume":       75415000,
+"AAPL.Adjusted":          93.24,
+"date":          16230 
+},
+{
+ "AAPL.Open":          94.73,
+"AAPL.High":          95.05,
+"AAPL.Low":          93.57,
+"price":          94.25,
+"AAPL.Volume":       62777000,
+"AAPL.Adjusted":          93.78,
+"date":          16231 
+},
+{
+ "AAPL.Open":          94.13,
+"AAPL.High":          94.76,
+"AAPL.Low":          93.47,
+"price":          93.86,
+"AAPL.Volume":       45681000,
+"AAPL.Adjusted":           93.4,
+"date":          16232 
+},
+{
+ "AAPL.Open":          94.04,
+"AAPL.High":          94.12,
+"AAPL.Low":           91.9,
+"price":          92.29,
+"AAPL.Volume":       54749000,
+"AAPL.Adjusted":          91.83,
+"date":          16233 
+},
+{
+ "AAPL.Open":           92.2,
+"AAPL.High":          92.44,
+"AAPL.Low":          90.88,
+"price":          91.28,
+"AAPL.Volume":       54525000,
+"AAPL.Adjusted":          90.83,
+"date":          16234 
+},
+{
+ "AAPL.Open":          91.51,
+"AAPL.High":          92.75,
+"AAPL.Low":          91.45,
+"price":           92.2,
+"AAPL.Volume":       35561000,
+"AAPL.Adjusted":          91.74,
+"date":          16237 
+},
+{
+ "AAPL.Open":          92.31,
+"AAPL.High":           92.7,
+"AAPL.Low":           91.8,
+"price":          92.08,
+"AAPL.Volume":       29726000,
+"AAPL.Adjusted":          91.62,
+"date":          16238 
+},
+{
+ "AAPL.Open":          92.27,
+"AAPL.High":          92.29,
+"AAPL.Low":          91.35,
+"price":          92.18,
+"AAPL.Volume":       33514000,
+"AAPL.Adjusted":          91.72,
+"date":          16239 
+},
+{
+ "AAPL.Open":          92.29,
+"AAPL.High":           92.3,
+"AAPL.Low":          91.34,
+"price":          91.86,
+"AAPL.Volume":       35528000,
+"AAPL.Adjusted":          91.41,
+"date":          16240 
+},
+{
+ "AAPL.Open":          91.85,
+"AAPL.High":          92.55,
+"AAPL.Low":           90.9,
+"price":          90.91,
+"AAPL.Volume":      100898000,
+"AAPL.Adjusted":          90.46,
+"date":          16241 
+},
+{
+ "AAPL.Open":          91.32,
+"AAPL.High":          91.62,
+"AAPL.Low":           90.6,
+"price":          90.83,
+"AAPL.Volume":       43694000,
+"AAPL.Adjusted":          90.38,
+"date":          16244 
+},
+{
+ "AAPL.Open":          90.75,
+"AAPL.High":          91.74,
+"AAPL.Low":          90.19,
+"price":          90.28,
+"AAPL.Volume":       39036000,
+"AAPL.Adjusted":          89.83,
+"date":          16245 
+},
+{
+ "AAPL.Open":          90.21,
+"AAPL.High":           90.7,
+"AAPL.Low":          89.65,
+"price":          90.36,
+"AAPL.Volume":       36869000,
+"AAPL.Adjusted":          89.91,
+"date":          16246 
+},
+{
+ "AAPL.Open":          90.37,
+"AAPL.High":          91.05,
+"AAPL.Low":           89.8,
+"price":           90.9,
+"AAPL.Volume":       32629000,
+"AAPL.Adjusted":          90.45,
+"date":          16247 
+},
+{
+ "AAPL.Open":          90.82,
+"AAPL.High":             92,
+"AAPL.Low":          90.77,
+"price":          91.98,
+"AAPL.Volume":       64029000,
+"AAPL.Adjusted":          91.52,
+"date":          16248 
+},
+{
+ "AAPL.Open":           92.1,
+"AAPL.High":          93.73,
+"AAPL.Low":          92.09,
+"price":          92.93,
+"AAPL.Volume":       49589000,
+"AAPL.Adjusted":          92.47,
+"date":          16251 
+},
+{
+ "AAPL.Open":          93.52,
+"AAPL.High":          94.07,
+"AAPL.Low":          93.13,
+"price":          93.52,
+"AAPL.Volume":       38223000,
+"AAPL.Adjusted":          93.06,
+"date":          16252 
+},
+{
+ "AAPL.Open":          93.87,
+"AAPL.High":          94.06,
+"AAPL.Low":          93.09,
+"price":          93.48,
+"AAPL.Volume":       28465000,
+"AAPL.Adjusted":          93.02,
+"date":          16253 
+},
+{
+ "AAPL.Open":          93.67,
+"AAPL.High":           94.1,
+"AAPL.Low":           93.2,
+"price":          94.03,
+"AAPL.Volume":       22891800,
+"AAPL.Adjusted":          93.56,
+"date":          16254 
+},
+{
+ "AAPL.Open":          94.14,
+"AAPL.High":          95.99,
+"AAPL.Low":           94.1,
+"price":          95.97,
+"AAPL.Volume":       56468000,
+"AAPL.Adjusted":           95.5,
+"date":          16258 
+},
+{
+ "AAPL.Open":          96.27,
+"AAPL.High":           96.8,
+"AAPL.Low":          93.92,
+"price":          95.35,
+"AAPL.Volume":       65222000,
+"AAPL.Adjusted":          94.88,
+"date":          16259 
+},
+{
+ "AAPL.Open":          95.44,
+"AAPL.High":          95.95,
+"AAPL.Low":          94.76,
+"price":          95.39,
+"AAPL.Volume":       36436000,
+"AAPL.Adjusted":          94.92,
+"date":          16260 
+},
+{
+ "AAPL.Open":          93.76,
+"AAPL.High":          95.55,
+"AAPL.Low":          93.52,
+"price":          95.04,
+"AAPL.Volume":       39686000,
+"AAPL.Adjusted":          94.57,
+"date":          16261 
+},
+{
+ "AAPL.Open":          95.36,
+"AAPL.High":          95.89,
+"AAPL.Low":          94.86,
+"price":          95.22,
+"AAPL.Volume":       34018000,
+"AAPL.Adjusted":          94.75,
+"date":          16262 
+},
+{
+ "AAPL.Open":          95.86,
+"AAPL.High":          96.89,
+"AAPL.Low":          95.65,
+"price":          96.45,
+"AAPL.Volume":       42810000,
+"AAPL.Adjusted":          95.97,
+"date":          16265 
+},
+{
+ "AAPL.Open":           96.8,
+"AAPL.High":          96.85,
+"AAPL.Low":          95.03,
+"price":          95.32,
+"AAPL.Volume":       45477900,
+"AAPL.Adjusted":          94.85,
+"date":          16266 
+},
+{
+ "AAPL.Open":          96.97,
+"AAPL.High":           97.1,
+"AAPL.Low":          94.74,
+"price":          94.78,
+"AAPL.Volume":       53502000,
+"AAPL.Adjusted":          94.31,
+"date":          16267 
+},
+{
+ "AAPL.Open":          95.03,
+"AAPL.High":          95.28,
+"AAPL.Low":          92.57,
+"price":          93.09,
+"AAPL.Volume":       57298000,
+"AAPL.Adjusted":          92.63,
+"date":          16268 
+},
+{
+ "AAPL.Open":          93.62,
+"AAPL.High":          94.74,
+"AAPL.Low":          93.02,
+"price":          94.43,
+"AAPL.Volume":       49988000,
+"AAPL.Adjusted":          93.96,
+"date":          16269 
+},
+{
+ "AAPL.Open":          94.99,
+"AAPL.High":             95,
+"AAPL.Low":          93.72,
+"price":          93.94,
+"AAPL.Volume":       39079000,
+"AAPL.Adjusted":          93.48,
+"date":          16272 
+},
+{
+ "AAPL.Open":          94.68,
+"AAPL.High":          94.89,
+"AAPL.Low":          94.12,
+"price":          94.72,
+"AAPL.Volume":       55197000,
+"AAPL.Adjusted":          94.25,
+"date":          16273 
+},
+{
+ "AAPL.Open":          95.42,
+"AAPL.High":          97.88,
+"AAPL.Low":          95.17,
+"price":          97.19,
+"AAPL.Volume":       92918000,
+"AAPL.Adjusted":          96.71,
+"date":          16274 
+},
+{
+ "AAPL.Open":          97.04,
+"AAPL.High":          97.32,
+"AAPL.Low":          96.42,
+"price":          97.03,
+"AAPL.Volume":       45729000,
+"AAPL.Adjusted":          96.55,
+"date":          16275 
+},
+{
+ "AAPL.Open":          96.85,
+"AAPL.High":          97.84,
+"AAPL.Low":          96.64,
+"price":          97.67,
+"AAPL.Volume":       43469000,
+"AAPL.Adjusted":          97.19,
+"date":          16276 
+},
+{
+ "AAPL.Open":          97.82,
+"AAPL.High":          99.24,
+"AAPL.Low":          97.55,
+"price":          99.02,
+"AAPL.Volume":       55318000,
+"AAPL.Adjusted":          98.53,
+"date":          16279 
+},
+{
+ "AAPL.Open":          99.33,
+"AAPL.High":          99.44,
+"AAPL.Low":          98.25,
+"price":          98.38,
+"AAPL.Volume":       43143000,
+"AAPL.Adjusted":          97.89,
+"date":          16280 
+},
+{
+ "AAPL.Open":          98.44,
+"AAPL.High":           98.7,
+"AAPL.Low":          97.67,
+"price":          98.15,
+"AAPL.Volume":       33010000,
+"AAPL.Adjusted":          97.66,
+"date":          16281 
+},
+{
+ "AAPL.Open":          97.16,
+"AAPL.High":          97.45,
+"AAPL.Low":          95.33,
+"price":           95.6,
+"AAPL.Volume":       56843000,
+"AAPL.Adjusted":          95.13,
+"date":          16282 
+},
+{
+ "AAPL.Open":           94.9,
+"AAPL.High":          96.62,
+"AAPL.Low":          94.81,
+"price":          96.13,
+"AAPL.Volume":       48511000,
+"AAPL.Adjusted":          95.65,
+"date":          16283 
+},
+{
+ "AAPL.Open":          96.37,
+"AAPL.High":          96.58,
+"AAPL.Low":          95.17,
+"price":          95.59,
+"AAPL.Volume":       39958000,
+"AAPL.Adjusted":          95.12,
+"date":          16286 
+},
+{
+ "AAPL.Open":          95.36,
+"AAPL.High":          95.68,
+"AAPL.Low":          94.36,
+"price":          95.12,
+"AAPL.Volume":       55933000,
+"AAPL.Adjusted":          94.65,
+"date":          16287 
+},
+{
+ "AAPL.Open":          94.75,
+"AAPL.High":          95.48,
+"AAPL.Low":          94.71,
+"price":          94.96,
+"AAPL.Volume":       38558000,
+"AAPL.Adjusted":          94.49,
+"date":          16288 
+},
+{
+ "AAPL.Open":          94.93,
+"AAPL.High":          95.95,
+"AAPL.Low":           94.1,
+"price":          94.48,
+"AAPL.Volume":       46711000,
+"AAPL.Adjusted":          94.48,
+"date":          16289 
+},
+{
+ "AAPL.Open":          94.26,
+"AAPL.High":          94.82,
+"AAPL.Low":          93.28,
+"price":          94.74,
+"AAPL.Volume":       41865000,
+"AAPL.Adjusted":          94.74,
+"date":          16290 
+},
+{
+ "AAPL.Open":          95.27,
+"AAPL.High":          96.08,
+"AAPL.Low":          94.84,
+"price":          95.99,
+"AAPL.Volume":       36585000,
+"AAPL.Adjusted":          95.99,
+"date":          16293 
+},
+{
+ "AAPL.Open":          96.04,
+"AAPL.High":          96.88,
+"AAPL.Low":          95.61,
+"price":          95.97,
+"AAPL.Volume":       33795000,
+"AAPL.Adjusted":          95.97,
+"date":          16294 
+},
+{
+ "AAPL.Open":          96.15,
+"AAPL.High":          97.24,
+"AAPL.Low":          96.04,
+"price":          97.24,
+"AAPL.Volume":       31916000,
+"AAPL.Adjusted":          97.24,
+"date":          16295 
+},
+{
+ "AAPL.Open":          97.33,
+"AAPL.High":          97.57,
+"AAPL.Low":           96.8,
+"price":           97.5,
+"AAPL.Volume":       28116000,
+"AAPL.Adjusted":           97.5,
+"date":          16296 
+},
+{
+ "AAPL.Open":           97.9,
+"AAPL.High":          98.19,
+"AAPL.Low":          96.86,
+"price":          97.98,
+"AAPL.Volume":       48951000,
+"AAPL.Adjusted":          97.98,
+"date":          16297 
+},
+{
+ "AAPL.Open":          98.49,
+"AAPL.High":          99.37,
+"AAPL.Low":          97.98,
+"price":          99.16,
+"AAPL.Volume":       47572000,
+"AAPL.Adjusted":          99.16,
+"date":          16300 
+},
+{
+ "AAPL.Open":          99.41,
+"AAPL.High":         100.68,
+"AAPL.Low":          99.32,
+"price":         100.53,
+"AAPL.Volume":       69274700,
+"AAPL.Adjusted":         100.53,
+"date":          16301 
+},
+{
+ "AAPL.Open":         100.44,
+"AAPL.High":         101.09,
+"AAPL.Low":          99.95,
+"price":         100.57,
+"AAPL.Volume":       52612800,
+"AAPL.Adjusted":         100.57,
+"date":          16302 
+},
+{
+ "AAPL.Open":         100.57,
+"AAPL.High":         100.94,
+"AAPL.Low":         100.11,
+"price":         100.58,
+"AAPL.Volume":       33421900,
+"AAPL.Adjusted":         100.58,
+"date":          16303 
+},
+{
+ "AAPL.Open":         100.29,
+"AAPL.High":         101.47,
+"AAPL.Low":         100.19,
+"price":         101.32,
+"AAPL.Volume":       44102400,
+"AAPL.Adjusted":         101.32,
+"date":          16304 
+},
+{
+ "AAPL.Open":         101.79,
+"AAPL.High":         102.17,
+"AAPL.Low":         101.28,
+"price":         101.54,
+"AAPL.Volume":       40144700,
+"AAPL.Adjusted":         101.54,
+"date":          16307 
+},
+{
+ "AAPL.Open":         101.42,
+"AAPL.High":          101.5,
+"AAPL.Low":         100.86,
+"price":         100.89,
+"AAPL.Volume":       33119800,
+"AAPL.Adjusted":         100.89,
+"date":          16308 
+},
+{
+ "AAPL.Open":         101.02,
+"AAPL.High":         102.57,
+"AAPL.Low":          100.7,
+"price":         102.13,
+"AAPL.Volume":       46827400,
+"AAPL.Adjusted":         102.13,
+"date":          16309 
+},
+{
+ "AAPL.Open":         101.59,
+"AAPL.High":         102.78,
+"AAPL.Low":         101.56,
+"price":         102.25,
+"AAPL.Volume":       68389800,
+"AAPL.Adjusted":         102.25,
+"date":          16310 
+},
+{
+ "AAPL.Open":         102.86,
+"AAPL.High":          102.9,
+"AAPL.Low":          102.2,
+"price":          102.5,
+"AAPL.Volume":       44567000,
+"AAPL.Adjusted":          102.5,
+"date":          16311 
+},
+{
+ "AAPL.Open":         103.06,
+"AAPL.High":         103.74,
+"AAPL.Low":         102.72,
+"price":          103.3,
+"AAPL.Volume":       53491400,
+"AAPL.Adjusted":          103.3,
+"date":          16315 
+},
+{
+ "AAPL.Open":          103.1,
+"AAPL.High":          103.2,
+"AAPL.Low":          98.58,
+"price":          98.94,
+"AAPL.Volume":      125233100,
+"AAPL.Adjusted":          98.94,
+"date":          16316 
+},
+{
+ "AAPL.Open":          98.85,
+"AAPL.High":         100.09,
+"AAPL.Low":          97.79,
+"price":          98.12,
+"AAPL.Volume":       85594800,
+"AAPL.Adjusted":          98.12,
+"date":          16317 
+},
+{
+ "AAPL.Open":           98.8,
+"AAPL.High":          99.39,
+"AAPL.Low":          98.31,
+"price":          98.97,
+"AAPL.Volume":       58353200,
+"AAPL.Adjusted":          98.97,
+"date":          16318 
+},
+{
+ "AAPL.Open":           99.3,
+"AAPL.High":          99.31,
+"AAPL.Low":          98.05,
+"price":          98.36,
+"AAPL.Volume":       46277800,
+"AAPL.Adjusted":          98.36,
+"date":          16321 
+},
+{
+ "AAPL.Open":          99.08,
+"AAPL.High":         103.08,
+"AAPL.Low":          96.14,
+"price":          97.99,
+"AAPL.Volume":      189560600,
+"AAPL.Adjusted":          97.99,
+"date":          16322 
+},
+{
+ "AAPL.Open":          98.01,
+"AAPL.High":         101.11,
+"AAPL.Low":          97.76,
+"price":            101,
+"AAPL.Volume":      100741900,
+"AAPL.Adjusted":            101,
+"date":          16323 
+},
+{
+ "AAPL.Open":         100.41,
+"AAPL.High":         101.44,
+"AAPL.Low":          99.62,
+"price":         101.43,
+"AAPL.Volume":       62353100,
+"AAPL.Adjusted":         101.43,
+"date":          16324 
+},
+{
+ "AAPL.Open":         101.21,
+"AAPL.High":         102.19,
+"AAPL.Low":         101.08,
+"price":         101.66,
+"AAPL.Volume":       62626100,
+"AAPL.Adjusted":         101.66,
+"date":          16325 
+},
+{
+ "AAPL.Open":         102.81,
+"AAPL.High":         103.05,
+"AAPL.Low":         101.44,
+"price":         101.63,
+"AAPL.Volume":       61216500,
+"AAPL.Adjusted":         101.63,
+"date":          16328 
+},
+{
+ "AAPL.Open":           99.8,
+"AAPL.High":         101.26,
+"AAPL.Low":          98.89,
+"price":         100.86,
+"AAPL.Volume":       66818200,
+"AAPL.Adjusted":         100.86,
+"date":          16329 
+},
+{
+ "AAPL.Open":         101.27,
+"AAPL.High":          101.8,
+"AAPL.Low":         100.59,
+"price":         101.58,
+"AAPL.Volume":       60892400,
+"AAPL.Adjusted":         101.58,
+"date":          16330 
+},
+{
+ "AAPL.Open":         101.93,
+"AAPL.High":         102.35,
+"AAPL.Low":         101.56,
+"price":         101.79,
+"AAPL.Volume":       37023900,
+"AAPL.Adjusted":         101.79,
+"date":          16331 
+},
+{
+ "AAPL.Open":         102.29,
+"AAPL.High":         102.35,
+"AAPL.Low":          100.5,
+"price":         100.96,
+"AAPL.Volume":       70838500,
+"AAPL.Adjusted":         100.96,
+"date":          16332 
+},
+{
+ "AAPL.Open":          101.8,
+"AAPL.High":         102.14,
+"AAPL.Low":         100.58,
+"price":         101.06,
+"AAPL.Volume":       52722000,
+"AAPL.Adjusted":         101.06,
+"date":          16335 
+},
+{
+ "AAPL.Open":          100.6,
+"AAPL.High":         102.94,
+"AAPL.Low":         100.54,
+"price":         102.64,
+"AAPL.Volume":       63347200,
+"AAPL.Adjusted":         102.64,
+"date":          16336 
+},
+{
+ "AAPL.Open":         102.16,
+"AAPL.High":         102.85,
+"AAPL.Low":          101.2,
+"price":         101.75,
+"AAPL.Volume":       60049400,
+"AAPL.Adjusted":         101.75,
+"date":          16337 
+},
+{
+ "AAPL.Open":         100.51,
+"AAPL.High":         100.71,
+"AAPL.Low":          97.72,
+"price":          97.87,
+"AAPL.Volume":       99902100,
+"AAPL.Adjusted":          97.87,
+"date":          16338 
+},
+{
+ "AAPL.Open":          98.53,
+"AAPL.High":         100.75,
+"AAPL.Low":           98.4,
+"price":         100.75,
+"AAPL.Volume":       62286100,
+"AAPL.Adjusted":         100.75,
+"date":          16339 
+},
+{
+ "AAPL.Open":          98.65,
+"AAPL.High":         100.44,
+"AAPL.Low":          98.63,
+"price":         100.11,
+"AAPL.Volume":       49579400,
+"AAPL.Adjusted":         100.11,
+"date":          16342 
+},
+{
+ "AAPL.Open":         100.81,
+"AAPL.High":         101.54,
+"AAPL.Low":         100.53,
+"price":         100.75,
+"AAPL.Volume":       55138200,
+"AAPL.Adjusted":         100.75,
+"date":          16343 
+},
+{
+ "AAPL.Open":         100.59,
+"AAPL.High":         100.69,
+"AAPL.Low":           98.7,
+"price":          99.18,
+"AAPL.Volume":       51404400,
+"AAPL.Adjusted":          99.18,
+"date":          16344 
+},
+{
+ "AAPL.Open":          99.27,
+"AAPL.High":         100.22,
+"AAPL.Low":          98.04,
+"price":           99.9,
+"AAPL.Volume":       47681000,
+"AAPL.Adjusted":           99.9,
+"date":          16345 
+},
+{
+ "AAPL.Open":          99.44,
+"AAPL.High":         100.21,
+"AAPL.Low":          99.04,
+"price":          99.62,
+"AAPL.Volume":       43445800,
+"AAPL.Adjusted":          99.62,
+"date":          16346 
+},
+{
+ "AAPL.Open":          99.95,
+"AAPL.High":         100.65,
+"AAPL.Low":          99.42,
+"price":          99.62,
+"AAPL.Volume":       36974800,
+"AAPL.Adjusted":          99.62,
+"date":          16349 
+},
+{
+ "AAPL.Open":          99.43,
+"AAPL.High":         100.12,
+"AAPL.Low":          98.73,
+"price":          98.75,
+"AAPL.Volume":       42068200,
+"AAPL.Adjusted":          98.75,
+"date":          16350 
+},
+{
+ "AAPL.Open":          98.76,
+"AAPL.High":         101.11,
+"AAPL.Low":          98.31,
+"price":          100.8,
+"AAPL.Volume":       57364800,
+"AAPL.Adjusted":          100.8,
+"date":          16351 
+},
+{
+ "AAPL.Open":         101.54,
+"AAPL.High":         102.38,
+"AAPL.Low":         100.61,
+"price":         101.02,
+"AAPL.Volume":       77312200,
+"AAPL.Adjusted":         101.02,
+"date":          16352 
+},
+{
+ "AAPL.Open":         100.69,
+"AAPL.High":         102.03,
+"AAPL.Low":          100.3,
+"price":         100.73,
+"AAPL.Volume":       66270200,
+"AAPL.Adjusted":         100.73,
+"date":          16353 
+},
+{
+ "AAPL.Open":         101.33,
+"AAPL.High":         101.78,
+"AAPL.Low":          99.81,
+"price":          99.81,
+"AAPL.Volume":       53485500,
+"AAPL.Adjusted":          99.81,
+"date":          16356 
+},
+{
+ "AAPL.Open":         100.39,
+"AAPL.High":         100.52,
+"AAPL.Low":          98.57,
+"price":          98.75,
+"AAPL.Volume":       63662200,
+"AAPL.Adjusted":          98.75,
+"date":          16357 
+},
+{
+ "AAPL.Open":          97.97,
+"AAPL.High":          99.15,
+"AAPL.Low":          95.18,
+"price":          97.54,
+"AAPL.Volume":      100875400,
+"AAPL.Adjusted":          97.54,
+"date":          16358 
+},
+{
+ "AAPL.Open":          95.55,
+"AAPL.High":          97.72,
+"AAPL.Low":          95.41,
+"price":          96.26,
+"AAPL.Volume":       72110700,
+"AAPL.Adjusted":          96.26,
+"date":          16359 
+},
+{
+ "AAPL.Open":           97.5,
+"AAPL.High":             99,
+"AAPL.Low":          96.81,
+"price":          97.67,
+"AAPL.Volume":       68032200,
+"AAPL.Adjusted":          97.67,
+"date":          16360 
+},
+{
+ "AAPL.Open":          98.32,
+"AAPL.High":          99.96,
+"AAPL.Low":          98.22,
+"price":          99.76,
+"AAPL.Volume":       77041900,
+"AAPL.Adjusted":          99.76,
+"date":          16363 
+},
+{
+ "AAPL.Open":         103.02,
+"AAPL.High":         103.02,
+"AAPL.Low":         101.27,
+"price":         102.47,
+"AAPL.Volume":       94492300,
+"AAPL.Adjusted":         102.47,
+"date":          16364 
+},
+{
+ "AAPL.Open":         102.84,
+"AAPL.High":         104.11,
+"AAPL.Low":          102.6,
+"price":         102.99,
+"AAPL.Volume":       68159000,
+"AAPL.Adjusted":         102.99,
+"date":          16365 
+},
+{
+ "AAPL.Open":         104.08,
+"AAPL.High":         105.05,
+"AAPL.Low":         103.63,
+"price":         104.83,
+"AAPL.Volume":       71002900,
+"AAPL.Adjusted":         104.83,
+"date":          16366 
+},
+{
+ "AAPL.Open":         105.18,
+"AAPL.High":         105.49,
+"AAPL.Low":         104.53,
+"price":         105.22,
+"AAPL.Volume":       46981700,
+"AAPL.Adjusted":         105.22,
+"date":          16367 
 } 
 ]
   
@@ -513,7 +17785,10 @@ knit        : slidify::knit2slides
          
         
           
-        
+        chart.xAxis
+  .tickFormat(
+                function(d) {return d3.time.format('%m-%d-%y')(new Date(d*1000*3600*24));}
+                )
 
         
         
@@ -532,6 +17807,7 @@ knit        : slidify::knit2slides
 </script>
 
 ---
+
 ## Design Of The App
 
 1. Designed using R **Shiny** Application.
